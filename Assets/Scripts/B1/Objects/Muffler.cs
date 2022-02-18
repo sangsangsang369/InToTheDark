@@ -10,11 +10,13 @@ public class Muffler : Object
     public Text inputTextUI;
     UIManager uiManager;
     InventoryMng inventoryMng;
+    SlotSelectionMng slotSelectMng;
 
     void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
+        slotSelectMng = FindObjectOfType<SlotSelectionMng>();
     }
 
     public override void ObjectFunction()
@@ -27,7 +29,14 @@ public class Muffler : Object
 
     public void MufflerItem()
     {
-        mufflerUI.SetActive(true);
-        uiManager.StartCoroutine(uiManager.LoadTextOneByOne(mufflerText.text, inputTextUI));
+        if(slotSelectMng.selectedItem != this.gameObject)
+        {
+            slotSelectMng.SelectSlot(this.gameObject);
+        }
+        else
+        {
+            mufflerUI.SetActive(true);
+            uiManager.StartCoroutine(uiManager.LoadTextOneByOne(mufflerText.text, inputTextUI));
+        }
     }
 }

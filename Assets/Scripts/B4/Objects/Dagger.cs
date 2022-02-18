@@ -10,16 +10,26 @@ public class Dagger : MonoBehaviour
     [SerializeField] private Text inputTextUI;
     UIManager uiManager;
     InventoryMng inventoryMng;
+    SlotSelectionMng slotSelectMng;
 
     void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
+        slotSelectMng = FindObjectOfType<SlotSelectionMng>();
     }
 
     public void DaggerItem()
     {
-        daggerUI.SetActive(true);
-        StartCoroutine(uiManager.LoadTextOneByOne(daggerText.text, inputTextUI));
+        if(slotSelectMng.selectedItem != this.gameObject)
+        {
+            slotSelectMng.SelectSlot(this.gameObject);
+        }
+        else
+        {
+            daggerUI.SetActive(true);
+            StartCoroutine(uiManager.LoadTextOneByOne(daggerText.text, inputTextUI));
+        }
+        
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DoorToB2 : Object
 {
     UIManager uiManager;
+    SlotSelectionMng slotSelectMng;
     [SerializeField] CardKey cardKey;
     [SerializeField] private GameObject withoutKeyUI;
     [SerializeField] private GameObject withKeyUI;
@@ -17,12 +18,13 @@ public class DoorToB2 : Object
     void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
+        slotSelectMng = FindObjectOfType<SlotSelectionMng>();
     }
 
     public override void ObjectFunction()
     {
         cardKey = FindObjectOfType<CardKey>();
-        if(cardKey && cardKey.isCardOnHand)
+        if(cardKey && slotSelectMng.usableItem == "cardKeySelected")
         {
             withKeyUI.SetActive(true);
             StartCoroutine(uiManager.LoadTextOneByOne(withKeyText.text, inputTextUI));

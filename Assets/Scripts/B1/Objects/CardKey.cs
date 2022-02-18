@@ -5,22 +5,23 @@ using UnityEngine.UI;
 
 public class CardKey : MonoBehaviour
 {
-    [HideInInspector] public bool isCardOnHand = false;
-    [SerializeField] private Sprite slotSelected;
-    [SerializeField] private Sprite slotUnselected;
+    SlotSelectionMng slotSelectMng;
+
+    void Start()
+    {
+        slotSelectMng = FindObjectOfType<SlotSelectionMng>();
+    }
 
     public void CardKeyItem()
     {   
-        GameObject cardkeySlot = this.transform.parent.gameObject;
-        if(!isCardOnHand)
+        if(slotSelectMng.selectedItem != this.gameObject)
         {
-            cardkeySlot.GetComponent<Image>().sprite = slotSelected;
-            isCardOnHand = true;
+            slotSelectMng.SelectSlot(this.gameObject);
+            slotSelectMng.usableItem = "cardKeySelected";
         }
         else
         {
-            cardkeySlot.GetComponent<Image>().sprite = slotUnselected;
-            isCardOnHand = false;
+            slotSelectMng.UnselectSlot(this.gameObject);
         }
     }
 }

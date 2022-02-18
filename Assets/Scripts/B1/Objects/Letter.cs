@@ -9,11 +9,13 @@ public class Letter : Object
     public Sprite letterItemImg;
     UIManager uiManager;
     InventoryMng inventoryMng;
+    SlotSelectionMng slotSelectMng;
 
     void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
+        slotSelectMng = FindObjectOfType<SlotSelectionMng>();
     }
 
     public override void ObjectFunction()
@@ -25,6 +27,13 @@ public class Letter : Object
 
     public void LetterItem()
     {
-        letterUI.SetActive(true);
+        if(slotSelectMng.selectedItem != this.gameObject)
+        {
+            slotSelectMng.SelectSlot(this.gameObject);
+        }
+        else
+        {
+            letterUI.SetActive(true);
+        }
     }
 }

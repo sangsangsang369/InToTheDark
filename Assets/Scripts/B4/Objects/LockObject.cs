@@ -8,6 +8,7 @@ public class LockObject : MonoBehaviour
     LockerWithLock lockerWithLock;
     RedJewel redJewel;
     InventoryMng inventoryMng;
+    SlotSelectionMng slotSelectMng;
     [SerializeField] private GameObject lockHole;
     [SerializeField] private GameObject lockObj;
     [SerializeField] private GameObject lockUIObj;
@@ -19,6 +20,7 @@ public class LockObject : MonoBehaviour
         redJewel = FindObjectOfType<RedJewel>();
         lockerWithLock = FindObjectOfType<LockerWithLock>();
         inventoryMng = FindObjectOfType<InventoryMng>();
+        slotSelectMng = FindObjectOfType<SlotSelectionMng>();
     }
 
     public void Unlock()

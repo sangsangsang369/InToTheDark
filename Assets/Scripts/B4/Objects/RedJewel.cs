@@ -5,21 +5,24 @@ using UnityEngine.UI;
 
 public class RedJewel : MonoBehaviour
 {
+    SlotSelectionMng slotSelectMng;
     [HideInInspector] public bool isJewelOnHand = false;
-    [SerializeField] private Sprite slotSelected;
-    [SerializeField] private Sprite slotUnselected;
+
+    void Start()
+    {
+        slotSelectMng = FindObjectOfType<SlotSelectionMng>();
+    }
 
     public void RedJewelItem()
     {   
-        GameObject jewelSlot = this.transform.parent.gameObject;
-        if(!isJewelOnHand)
+        if(slotSelectMng.selectedItem != this.gameObject)
         {
-            jewelSlot.GetComponent<Image>().sprite = slotSelected;
+            slotSelectMng.SelectSlot(this.gameObject);
             isJewelOnHand = true;
         }
         else
         {
-            jewelSlot.GetComponent<Image>().sprite = slotUnselected;
+            slotSelectMng.UnselectSlot(this.gameObject);
             isJewelOnHand = false;
         }
     }
