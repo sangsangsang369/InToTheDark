@@ -20,7 +20,7 @@ public class DataManager : MonoBehaviour
     public SaveDataClass saveData;
     public static DataManager singleTon;
 
-
+//nalsdkfjasd
     void Awake()
     {
         Screen.SetResolution(1080, 1920, true);
