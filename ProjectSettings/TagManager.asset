@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - DoorToLib
+  - Muffler
+  - Letter
+  - DoorToHW
+  - Book1
+  - Book2
+  - Book3
+  - GoldenBook
+  - Table
+  - Pattern
+  - Candle
+  - Script
+  - Statue
+  - CardKey
+  - DoorToCabinet
+  - DoorToGallery
+  - CabinetToHW
+  - GalleryToHW
+  - SpiralStair
+  - DoorToChapel
+  - DoorToB5
+  - DoorToLab
+  - ChapelToHW
+  - Hands
+  - Sculpture
+  - ChapelDesk
+  - Capsule
+  - ControlDevice
+  - LabToHW
+  - Cabinet
+  - Cabinet1
+  - Cabinet2
+  - Cabinet3
+  - Cabinet4
+  - Cabinet5
+  - StatueSp
+  - Note
+  - Body
+  - Clock
+  - Question
+  - StatuePz
+  - Key1
+  - Key2
+  - Sword1
+  - Sword2
+  - Material
+  - UsableObj
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

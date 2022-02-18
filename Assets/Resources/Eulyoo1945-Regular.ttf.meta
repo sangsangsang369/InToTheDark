@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 09122f1b87e04cb4fa1eea214a099d02
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Eulyoo1945
+  fontNames:
+  - Eulyoo1945
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a61df1c699c004f49804761d806c7dd6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

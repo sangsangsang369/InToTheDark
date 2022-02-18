@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 570cebee5664cf740b0da49601e2f0e9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - selectedItem: {instanceID: 0}
+  - slotSelectedImg: {fileID: 21300000, guid: 37950d2118be0c64aa491d549a6e8c5f, type: 3}
+  - slotUnselectedImg: {fileID: 21300000, guid: aecdd32922332914ca08480870a62710,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
