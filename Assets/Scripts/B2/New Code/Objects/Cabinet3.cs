@@ -9,6 +9,7 @@ public class Cabinet3 : Object
     public GameObject cabinet3UI, clockImg;
     public List<Text> cabinet3Texts;
     public Text inputTextUI;
+    public bool alreadyOpen = false;
     Player player;
     // Start is called before the first frame update
     void Start()
@@ -24,9 +25,17 @@ public class Cabinet3 : Object
         cabinet3UI.SetActive(true);
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            StartCoroutine(uiManager.LoadTexts(cabinet3Texts, inputTextUI, 3));
-            GameObject clock = clockImg;
-            inventoryMng.AddToInventory(clock);
+            if (!alreadyOpen)
+            {
+                StartCoroutine(uiManager.LoadTexts(cabinet3Texts, inputTextUI, 3));
+                GameObject clock = clockImg;
+                inventoryMng.AddToInventory(clock);
+                alreadyOpen = true;
+            }
+            else
+            {
+                Debug.Log("이미 얻은 물품입니다.");
+            }
         }
     }
 }
