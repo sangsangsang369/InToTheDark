@@ -48,7 +48,6 @@ public class MonsterBro : MonoBehaviour
         if(monsterBroUI.activeSelf==false && monsterBroTextNum == 1)        
         {
             player.GetComponent<Animator>().SetBool("leftRight", true);
-
         }
     }
     public void GetMonsterWalk()

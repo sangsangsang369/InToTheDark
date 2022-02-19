@@ -61,7 +61,7 @@ public class Detect : MonoBehaviour
         {
             //클릭했을 때 그래픽레이가 닿은 최상위 오브젝트
             GameObject g_hitObj = results[0].gameObject;
-            Debug.Log(g_hitObj);
+            //Debug.Log(g_hitObj);
             //인벤토리에 선택된 아이템이 존재할 때 && 선택된 아이템 말고 다른 곳 클릭했을 때 
             if(slotSelectMng.selectedItem && slotSelectMng.selectedItem != g_hitObj) 
             {

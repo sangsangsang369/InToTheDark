@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class Platform : Object
 {
-    public GameObject priestUI;
-    public Text priestText;
+    public GameObject priest, priestUI;
+    public List<Text> priestTexts;
     public Text inputTextUI;
     B5_UIManager uiManager;
     Player player;
     public GameObject walls;
     public GameObject globalLight;
+    public bool scptOn = true;
     
 
     // Start is called before the first frame update
@@ -25,12 +26,22 @@ public class Platform : Object
     public override void ObjectFunction()
     {
         player.currRoom = "Estrade";
-        //globalLight.GetComponent<Animator>().SetBool("LightOff", true);
+        globalLight.GetComponent<Animator>().SetBool("LightOff", true);
         walls.GetComponent<Animator>().SetTrigger("Open");
-        //globalLight.GetComponent<Animator>().SetBool("LightOff", false);
+        priest.GetComponent<Animator>().SetBool("WalkOn", true);
+        Invoke("OnScript", 80.5f);
+        if (!scptOn)
+        {
+            priest.GetComponent<Animator>().SetBool("HandsUp", true);
+        }
+    }
 
-
-        //priestUI.SetActive(true);
-        //StartCoroutine(uiManager.LoadTextOneByOne(priestText.text, inputTextUI));
+    void OnScript()
+    {
+        priestUI.SetActive(true);
+        //scptOn = true;
+        uiManager.StartCoroutine(uiManager.LoadTexts(priestTexts, inputTextUI, 10));
+        priestUI.SetActive(false);
+        scptOn = false;
     }
 }
