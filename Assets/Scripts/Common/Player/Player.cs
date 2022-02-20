@@ -6,6 +6,7 @@ public class Player : Detect
 {
     public string currRoom;
     public float speed = 6f;
+    [HideInInspector] public float limit;
 
     void OnTriggerEnter2D(Collider2D collider)
     {
