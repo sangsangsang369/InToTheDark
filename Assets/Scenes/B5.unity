@@ -330,6 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priest: {fileID: 0}
   priestUI: {fileID: 0}
+  playerObj: {fileID: 0}
   walls: {fileID: 0}
   floor: {fileID: 0}
   globalLight: {fileID: 0}
@@ -4155,6 +4156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priest: {fileID: 563222532}
   priestUI: {fileID: 1231266660}
+  playerObj: {fileID: 1488492223}
   walls: {fileID: 1212222869}
   floor: {fileID: 47883544}
   globalLight: {fileID: 1007960824}

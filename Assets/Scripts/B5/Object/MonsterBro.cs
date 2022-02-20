@@ -18,21 +18,35 @@ public class MonsterBro : MonoBehaviour
     }
     void Update()
     {
-        MonsterBroWalking(21.5f);
+        MonsterBroWalking(28.7f);
         AfterMonsterBroWalking();
     }
     private void MonsterBroWalking(float limit)
     {    
         if(this.gameObject.activeSelf == true)
-            if (this.gameObject.transform.position.x < limit)
+            if (player.transform.position.x < limit)
             {
                 this.gameObject.GetComponent<Animator>().SetBool("isWalking", true);
-                this.gameObject.transform.position += Vector3.right * 2.5f * Time.deltaTime;
-                
                 player.GetComponent<Animator>().SetFloat("flip", -1);
                 player.GetComponent<Animator>().SetBool("isWalking", true);
-                player.transform.position += Vector3.right * 2f * Time.deltaTime;
+
+                if(player.transform.position.x <= 21)
+                {
+                    this.gameObject.transform.position += Vector3.right * 1.1f * Time.deltaTime;
+                    player.transform.position += Vector3.right * 0.4f * Time.deltaTime;
+                }
+                else if(player.transform.position.x <= 24 && player.transform.position.x > 21)
+                {
+                    this.gameObject.transform.position += Vector3.right * 1.4f * Time.deltaTime;
+                    player.transform.position += Vector3.right * 1f * Time.deltaTime;
+                }
+                else if(player.transform.position.x > 24)
+                {
+                    this.gameObject.transform.position += Vector3.right * 1.3f * Time.deltaTime;
+                    player.transform.position += Vector3.right * 1.3f * Time.deltaTime;
+                }
             }
+            
             else if(monsterBroTextNum ==0)
             {
                 this.gameObject.GetComponent<Animator>().SetBool("isWalking", false);

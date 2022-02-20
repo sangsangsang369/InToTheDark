@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class Platform : CollisionObject
 {
-    public GameObject priest, priestUI;
+    public GameObject priest, priestUI, playerObj;
     Player player;
     public GameObject walls;
     public GameObject floor;
     public GameObject globalLight;
     public GameObject coverCanvas;
     AfterPriestWalk afterPriestWalk;
+    int onEstrade = 0;
     
     void Start()
     {
@@ -24,6 +25,11 @@ public class Platform : CollisionObject
         {
             priest.GetComponent<Animator>().SetBool("HandsUp", true);
             afterPriestWalk.scptOn++;
+        }
+        if(coverCanvas && coverCanvas.activeSelf == true && onEstrade ==0)
+        {
+            playerObj.GetComponent<Animator>().SetBool("isWalking", false);
+            onEstrade = 1;
         }
     }
 
