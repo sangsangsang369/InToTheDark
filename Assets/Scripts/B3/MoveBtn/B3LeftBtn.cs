@@ -8,6 +8,7 @@ public class B3LeftBtn : MonoBehaviour
     public GameObject creatureEye;
     public bool OnClick;
     Player player;
+    public float limit;
     
 
     void Start()
@@ -21,14 +22,17 @@ public class B3LeftBtn : MonoBehaviour
         if(player.currRoom == "B3_Hallway")
         {
             LeftLimit(37.7f);
+            player.limit = 37.7f;
         }
         else if(player.currRoom == "B3_Treeroom")
         {
             LeftLimit(21.6f);
+            player.limit = 21.6f;
         }
         else if(player.currRoom == "B3_Pianoroom")
         {
             LeftLimit(17.4f);
+            player.limit = 17.4f;
         }
         /*if (B3playerMng.isOnHallway)  //복도일때
         {

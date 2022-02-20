@@ -19,14 +19,17 @@ public class Left : MonoBehaviour
         if(player.currRoom == "B4_Hallway")
         {
             LeftLimit(37.7f);
+            player.limit = 37.7f;
         }
         else if(player.currRoom == "B4_Chapel")
         {
             LeftLimit(13.5f);
+            player.limit = 13.5f;
         }
         else if(player.currRoom == "B4_Lab")
         {
             LeftLimit(17.3f);
+            player.limit = 17.3f;
         }
     }
 
