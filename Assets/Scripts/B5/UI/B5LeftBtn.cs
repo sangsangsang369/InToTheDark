@@ -13,7 +13,6 @@ public class B5LeftBtn : MonoBehaviour
         player = FindObjectOfType<Player>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (player.currRoom == "B5_Hallway")
@@ -22,9 +21,14 @@ public class B5LeftBtn : MonoBehaviour
         }
         else if (player.currRoom == "Estrade")
         {
+            
+        }
+        else if (player.currRoom == "Estrade_Movable")
+        {
             LeftLimit(20.5f);
         }
     }
+
     private void LeftLimit(float limit)
     {
         if (OnClick && playerObj.transform.position.x > limit)

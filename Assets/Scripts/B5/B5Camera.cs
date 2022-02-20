@@ -9,25 +9,23 @@ public class B5Camera : MonoBehaviour
     public GameObject playerCamera;
     bool switchCamera = false; //true일 경우 좌,우 끝에 도달, false일 경우 끝에 도달하지 않은 상태
     Player player;
-    // Start is called before the first frame update
+
     void Start()
     {
         player = FindObjectOfType<Player>();
         player.currRoom = "B5_Hallway";
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (player.currRoom == "B5_Hallway")
         {
             CameraLimit(8.9f, 29f);
-            
         }
-        else if(player.currRoom == "Estrade")
+        else if(player.currRoom == "Estrade" || player.currRoom == "Estrade_Movable")
         {
             this.transform.SetParent(cameraParent.transform);
             this.transform.position = new Vector3(29f, this.transform.position.y, -10);
-
         }
     }
     private void CameraLimit(float bottomLimit, float topLimit)

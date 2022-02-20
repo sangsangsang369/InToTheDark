@@ -20,24 +20,18 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 4a38be18464a85d4d82a0e252f88477a, type: 3}
-    - time: 0.28333333
-      value: {fileID: 21300000, guid: f657b2e73aeb83d479c9c25b8edeed31, type: 3}
-    - time: 0.55
-      value: {fileID: 21300000, guid: 4a38be18464a85d4d82a0e252f88477a, type: 3}
-    - time: 0.8333333
-      value: {fileID: 21300000, guid: f657b2e73aeb83d479c9c25b8edeed31, type: 3}
-    - time: 1.0833334
-      value: {fileID: 21300000, guid: 4a38be18464a85d4d82a0e252f88477a, type: 3}
-    - time: 1.3666667
-      value: {fileID: 21300000, guid: f657b2e73aeb83d479c9c25b8edeed31, type: 3}
-    - time: 1.6333333
-      value: {fileID: 21300000, guid: 4a38be18464a85d4d82a0e252f88477a, type: 3}
+      value: {fileID: 21300000, guid: 22d074761bc3ce643b4b4e15fb6e9994, type: 3}
+    - time: 0.75
+      value: {fileID: 21300000, guid: 048e437fcb2e2714cac9a10f9529a245, type: 3}
+    - time: 2.0833333
+      value: {fileID: 21300000, guid: 22d074761bc3ce643b4b4e15fb6e9994, type: 3}
+    - time: 3.5
+      value: {fileID: 21300000, guid: 22d074761bc3ce643b4b4e15fb6e9994, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 60
+  m_SampleRate: 12
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -52,19 +46,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 4a38be18464a85d4d82a0e252f88477a, type: 3}
-    - {fileID: 21300000, guid: f657b2e73aeb83d479c9c25b8edeed31, type: 3}
-    - {fileID: 21300000, guid: 4a38be18464a85d4d82a0e252f88477a, type: 3}
-    - {fileID: 21300000, guid: f657b2e73aeb83d479c9c25b8edeed31, type: 3}
-    - {fileID: 21300000, guid: 4a38be18464a85d4d82a0e252f88477a, type: 3}
-    - {fileID: 21300000, guid: f657b2e73aeb83d479c9c25b8edeed31, type: 3}
-    - {fileID: 21300000, guid: 4a38be18464a85d4d82a0e252f88477a, type: 3}
+    - {fileID: 21300000, guid: 22d074761bc3ce643b4b4e15fb6e9994, type: 3}
+    - {fileID: 21300000, guid: 048e437fcb2e2714cac9a10f9529a245, type: 3}
+    - {fileID: 21300000, guid: 22d074761bc3ce643b4b4e15fb6e9994, type: 3}
+    - {fileID: 21300000, guid: 22d074761bc3ce643b4b4e15fb6e9994, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.65
+    m_StopTime: 3.5833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -83,4 +74,12 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 3.5
+    functionName: MonsterBroWalkTrigger
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 1a6553330df438a4bb19be87f0a52ec9,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

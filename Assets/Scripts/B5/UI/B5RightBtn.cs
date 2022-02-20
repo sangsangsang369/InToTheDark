@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 
 public class B5RightBtn : MonoBehaviour
@@ -7,7 +8,7 @@ public class B5RightBtn : MonoBehaviour
     public GameObject playerObj;
     bool OnClick;
     Player player;
-    // Start is called before the first frame update
+    
     void Start()
     {
         player = FindObjectOfType<Player>();
@@ -22,7 +23,11 @@ public class B5RightBtn : MonoBehaviour
         }
         else if (player.currRoom == "Estrade")
         {
-            RightLimit(35f);
+            
+        }
+        else if(player.currRoom == "Estrade_Movable")
+        {
+            RightLimit(37.7f);
         }
     }
     private void RightLimit(float limit)

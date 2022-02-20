@@ -6,25 +6,23 @@ public class MonsterTrigger : CollisionObject
 
 {
     Player player;
-    Platform platform;
-    public GameObject monsterBro;
+    public GameObject monsterBro, coverCanvas;
     
 
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<Player>();
-        platform = FindObjectOfType<Platform>();
     }
 
     // Update is called once per frame
     public override void CollisionObjectFunction()
     {
-        if(player.currRoom == "Estrade")
+        if(player.currRoom == "Estrade_Movable")
         {
-            player.currRoom = "Estrade_afterMonster";
+            player.currRoom = "Estrade";
             monsterBro.SetActive(true);
+            coverCanvas.SetActive(true);
         }
-        
     }
 }
