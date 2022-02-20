@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 79162506}
   - component: {fileID: 79162507}
   - component: {fileID: 79162508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Lab_Capsules
   m_TagString: Capsule
   m_Icon: {fileID: 0}
@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 112946919}
   - component: {fileID: 112946920}
   - component: {fileID: 112946921}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Lab_Door
   m_TagString: LabToHW
   m_Icon: {fileID: 0}
@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 115902306}
   - component: {fileID: 115902307}
   - component: {fileID: 115902308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Locker1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 133574913}
   - component: {fileID: 133574914}
   - component: {fileID: 133574915}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Locker3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1565,7 +1565,7 @@ GameObject:
   - component: {fileID: 240921873}
   - component: {fileID: 240921875}
   - component: {fileID: 240921874}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Hallway_Statue(4)
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -1675,7 +1675,7 @@ GameObject:
   - component: {fileID: 250233395}
   - component: {fileID: 250233394}
   - component: {fileID: 250233393}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Candle(1)
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -2590,7 +2590,7 @@ GameObject:
   - component: {fileID: 368682325}
   - component: {fileID: 368682326}
   - component: {fileID: 368682327}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LockerWithLock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2883,7 +2883,7 @@ GameObject:
   - component: {fileID: 385335131}
   - component: {fileID: 385335132}
   - component: {fileID: 385335133}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Chapel_Hands
   m_TagString: Hands
   m_Icon: {fileID: 0}
@@ -3030,7 +3030,7 @@ GameObject:
   - component: {fileID: 386727460}
   - component: {fileID: 386727461}
   - component: {fileID: 386727462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Chapel_Desk
   m_TagString: ChapelDesk
   m_Icon: {fileID: 0}
@@ -4447,7 +4447,7 @@ GameObject:
   - component: {fileID: 553758639}
   - component: {fileID: 553758640}
   - component: {fileID: 553758641}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Chapel_Sculpture
   m_TagString: Sculpture
   m_Icon: {fileID: 0}
@@ -4608,7 +4608,7 @@ GameObject:
   - component: {fileID: 578620570}
   - component: {fileID: 578620572}
   - component: {fileID: 578620571}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Hallway_Statue(1)
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -5354,7 +5354,7 @@ GameObject:
   - component: {fileID: 695077311}
   - component: {fileID: 695077312}
   - component: {fileID: 695077313}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Chapel_Door
   m_TagString: ChapelToHW
   m_Icon: {fileID: 0}
@@ -5699,7 +5699,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 741701379}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5820,7 +5820,7 @@ GameObject:
   - component: {fileID: 725326923}
   - component: {fileID: 725326925}
   - component: {fileID: 725326924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Hallway_Statue(2)
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -5986,6 +5986,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1839348919}
   - {fileID: 1789026021}
   - {fileID: 977781637}
   - {fileID: 1833142467}
@@ -6059,7 +6060,7 @@ GameObject:
   - component: {fileID: 746453048}
   - component: {fileID: 746453047}
   - component: {fileID: 746453046}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Candle
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -6392,7 +6393,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 741701379}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6887,7 +6888,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 741701379}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7954,7 +7955,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 741701379}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8075,7 +8076,7 @@ GameObject:
   - component: {fileID: 979168841}
   - component: {fileID: 979168843}
   - component: {fileID: 979168842}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Hallway_Statue(3)
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -8462,7 +8463,7 @@ RectTransform:
   m_Children:
   - {fileID: 1583591276}
   m_Father: {fileID: 741701379}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9274,7 +9275,7 @@ GameObject:
   - component: {fileID: 1237461352}
   - component: {fileID: 1237461353}
   - component: {fileID: 1237461354}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Lab_Controldevices
   m_TagString: ControlDevice
   m_Icon: {fileID: 0}
@@ -9464,7 +9465,7 @@ GameObject:
   - component: {fileID: 1246541167}
   - component: {fileID: 1246541169}
   - component: {fileID: 1246541168}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Hallway_Statue
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -10912,7 +10913,7 @@ GameObject:
   - component: {fileID: 1448457346}
   - component: {fileID: 1448457345}
   - component: {fileID: 1448457344}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B4_Candle(2)
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -11788,7 +11789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1546966710}
   - component: {fileID: 1546966711}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DoorToB5
   m_TagString: DoorToB5
   m_Icon: {fileID: 0}
@@ -12126,7 +12127,7 @@ GameObject:
   - component: {fileID: 1608074811}
   - component: {fileID: 1608074812}
   - component: {fileID: 1608074813}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Locker2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12957,7 +12958,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 741701379}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13269,7 +13270,7 @@ GameObject:
   - component: {fileID: 1814423030}
   - component: {fileID: 1814423032}
   - component: {fileID: 1814423031}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: RayTargetedCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13666,7 +13667,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 741701379}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13776,6 +13777,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be67227f9b876b74681a1eb959d762fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1839348918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1839348919}
+  - component: {fileID: 1839348921}
+  - component: {fileID: 1839348920}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1839348919
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839348918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 741701379}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 405.2, y: -181.1}
+  m_SizeDelta: {x: 2011.5706, y: 1173.3738}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1839348920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839348918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1839348921
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839348918}
+  m_CullTransparentMesh: 0
 --- !u!1 &1869224466
 GameObject:
   m_ObjectHideFlags: 0
@@ -14694,7 +14769,7 @@ GameObject:
   - component: {fileID: 2013577082}
   - component: {fileID: 2013577081}
   - component: {fileID: 2013577083}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DoorToChapel
   m_TagString: DoorToChapel
   m_Icon: {fileID: 0}
@@ -14819,7 +14894,7 @@ GameObject:
   - component: {fileID: 2013938798}
   - component: {fileID: 2013938799}
   - component: {fileID: 2013938800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DoorToLab
   m_TagString: DoorToLab
   m_Icon: {fileID: 0}
@@ -15022,7 +15097,7 @@ GameObject:
   - component: {fileID: 2028866654}
   - component: {fileID: 2028866655}
   - component: {fileID: 2028866656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpiralStair
   m_TagString: SpiralStair
   m_Icon: {fileID: 0}
@@ -15435,7 +15510,7 @@ GameObject:
   - component: {fileID: 2074332857}
   - component: {fileID: 2074332858}
   - component: {fileID: 2074332859}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dagger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
