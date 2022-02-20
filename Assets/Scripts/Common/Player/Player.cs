@@ -9,11 +9,19 @@ public class Player : Detect
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.GetComponent<Object>())
+        if(collider.GetComponent<CollisionObject>())
         {
-            collider.GetComponent<Object>().enabled = true;
+            collider.GetComponent<CollisionObject>().CollisionObjectFunction();
         }
-        MagnifierTrigger(collider, true);
+        else
+        {
+            if(collider.GetComponent<Object>())
+            {
+                collider.GetComponent<Object>().enabled = true;
+            }
+            MagnifierTrigger(collider, true);
+        }
+        
     }
 
     void OnTriggerExit2D(Collider2D collider)
@@ -32,6 +40,21 @@ public class Player : Detect
         {
             Transform magnifier = activatedObj.transform.GetChild(0);
             magnifier.gameObject.SetActive(boolean);
+        }
+    }
+
+    void AnimationStart(Collider2D collider)
+    {
+        if(collider.GetComponent<CollisionObject>())
+        {
+            Debug.Log("됨");
+            collider.GetComponent<CollisionObject>().enabled = true;
+            CollisionObject collisionObj = collider.GetComponent<CollisionObject>();
+            
+            if(collisionObj.enabled)
+            { 
+                collisionObj.CollisionObjectFunction();
+            }
         }
     }
 }

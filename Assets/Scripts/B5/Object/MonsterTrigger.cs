@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterTrigger : Object
+public class MonsterTrigger : CollisionObject
 
 {
     Player player;
+    Platform platform;
     public GameObject monsterBro;
     
 
@@ -13,12 +14,17 @@ public class MonsterTrigger : Object
     void Start()
     {
         player = FindObjectOfType<Player>();
+        platform = FindObjectOfType<Platform>();
     }
 
     // Update is called once per frame
-    public override void ObjectFunction()
+    public override void CollisionObjectFunction()
     {
-        player.currRoom = "Estrade_afterMonster";
-        monsterBro.SetActive(true);
+        if(player.currRoom == "Estrade")
+        {
+            player.currRoom = "Estrade_afterMonster";
+            monsterBro.SetActive(true);
+        }
+        
     }
 }

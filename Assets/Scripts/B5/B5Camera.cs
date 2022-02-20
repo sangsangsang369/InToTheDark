@@ -20,15 +20,13 @@ public class B5Camera : MonoBehaviour
     {
         if (player.currRoom == "B5_Hallway")
         {
-            CameraLimit(-684.1f, -664f);
+            CameraLimit(8.9f, 29f);
             
         }
         else if(player.currRoom == "Estrade")
         {
-            //CameraLimit(-674f, -664f);
             this.transform.SetParent(cameraParent.transform);
-
-            this.transform.position = new Vector3(-663.7f, this.transform.position.y, -10);
+            this.transform.position = new Vector3(29f, this.transform.position.y, -10);
 
         }
     }

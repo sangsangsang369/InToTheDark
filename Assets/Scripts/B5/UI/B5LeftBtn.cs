@@ -18,11 +18,11 @@ public class B5LeftBtn : MonoBehaviour
     {
         if (player.currRoom == "B5_Hallway")
         {
-            LeftLimit(-692.8f);
+            LeftLimit(0);
         }
         else if (player.currRoom == "Estrade")
         {
-            LeftLimit(-673f);
+            LeftLimit(20.5f);
         }
     }
     private void LeftLimit(float limit)

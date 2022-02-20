@@ -7,6 +7,7 @@ public class B5SetOff : MonoBehaviour
 {
     B5_UIManager uiManager;
     Text inputTextUI;
+    
 
     // Start is called before the first frame update
     void Start()
