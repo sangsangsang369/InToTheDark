@@ -10,14 +10,14 @@ public class Treesap :Object
     public Text treesapText, treesap_AfterText;
     public Text inputTextUI;
     B3UIManager uiManager;
-    B3InventoryMng b3inventoryMng;
+    InventoryMng inventoryMng;
     LabTableItemManager labtableMng;
     SlotSelectionMng slotSelectMng;
 
     void Start()
     {
         uiManager = FindObjectOfType<B3UIManager>();
-        b3inventoryMng = FindObjectOfType<B3InventoryMng>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
     }
@@ -27,7 +27,7 @@ public class Treesap :Object
         treesapUI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(treesapText.text, inputTextUI));
         GameObject treesap = this.gameObject;
-        b3inventoryMng.PickUp(treesap);
+        inventoryMng.PickUp(treesap);
     }
     public void TreesapItem()
     {

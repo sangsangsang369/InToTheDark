@@ -8,8 +8,8 @@ public class DoorToB4 : Object
     public GameObject doorToB4_noEnterUI, doorToB4_EnterUI;
     public Text doorToB4_noEnterText, doorToB4_EnterText;
     public Text inputTextUI;
+    InventoryMng inventoryMng; 
     B3UIManager uiManager;
-    B3InventoryMng b3inventoryMng;
     SlotSelectionMng slotSelectMng;
 
     int doorOpenCount = 0;
@@ -17,8 +17,8 @@ public class DoorToB4 : Object
 
     void Start()
     {
+        inventoryMng = FindObjectOfType<InventoryMng>();
         uiManager = FindObjectOfType<B3UIManager>();
-        b3inventoryMng = FindObjectOfType<B3InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
     }
 
@@ -37,7 +37,9 @@ public class DoorToB4 : Object
             StartCoroutine(uiManager.LoadTextOneByOne(doorToB4_EnterText.text, inputTextUI));
             doorOpenCount++; //문 열린 횟수++
             creature.SetActive(false); //문에 붙은 이형체 꺼주기
-            //slotSelectMng.UseSelectItem(); //투명한 액체 사용 && 파괴
+            
+            inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem);
+            slotSelectMng.SelectionClear();
         }
     }
 }

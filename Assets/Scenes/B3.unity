@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 7057150}
   - component: {fileID: 7057152}
   - component: {fileID: 7057151}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B3_Hallway_Statue(3)
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -2270,7 +2270,7 @@ GameObject:
   - component: {fileID: 241646971}
   - component: {fileID: 241646973}
   - component: {fileID: 241646972}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pianoroom_CreatureOnCeiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2447,13 +2447,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 250733350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65a24ca535cd3dd4aaac1a26043c4679, type: 3}
+  m_Script: {fileID: 11500000, guid: 65a60c7cc4f54aa4aacca7057461c349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPage: 1
   inventoryList:
-  - {fileID: 1949532923}
+  - {fileID: 1074854768}
   slotList: []
   filledCheck: 
+  inventoryPrefab: {fileID: 1074854768}
+  inventoryParent: {fileID: 1521796312}
+  unselectedSlot: {fileID: 21300000, guid: aecdd32922332914ca08480870a62710, type: 3}
 --- !u!4 &250733352
 Transform:
   m_ObjectHideFlags: 0
@@ -3589,7 +3593,7 @@ GameObject:
   - component: {fileID: 395925871}
   - component: {fileID: 395925872}
   - component: {fileID: 395925870}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B3_Hallway_Statue (6)
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -4011,7 +4015,7 @@ GameObject:
   - component: {fileID: 450991800}
   - component: {fileID: 450991802}
   - component: {fileID: 450991801}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B3_Hallway_Statue(2)
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -6749,7 +6753,7 @@ GameObject:
   - component: {fileID: 704890751}
   - component: {fileID: 704890749}
   - component: {fileID: 704890750}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B3_Hallway_Candle (3)
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -6915,7 +6919,7 @@ GameObject:
   - component: {fileID: 705093001}
   - component: {fileID: 705093002}
   - component: {fileID: 705093000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DoorToPianoroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7311,7 +7315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 753670685}
   - component: {fileID: 753670686}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7475,7 +7479,7 @@ GameObject:
   - component: {fileID: 793543639}
   - component: {fileID: 793543640}
   - component: {fileID: 793543638}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B3_Hallway_Statue (5)
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -7726,7 +7730,7 @@ GameObject:
   - component: {fileID: 824633191}
   - component: {fileID: 824633192}
   - component: {fileID: 824633190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TreeroomToHW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8782,7 +8786,7 @@ GameObject:
   - component: {fileID: 966651572}
   - component: {fileID: 966651574}
   - component: {fileID: 966651573}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B3_Hallway_Statue(4)
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -9152,7 +9156,7 @@ GameObject:
   - component: {fileID: 991170199}
   - component: {fileID: 991170200}
   - component: {fileID: 991170198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B3_Pianoroom_Statue
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -9567,7 +9571,7 @@ GameObject:
   - component: {fileID: 1038853864}
   - component: {fileID: 1038853866}
   - component: {fileID: 1038853865}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DoorToB4
   m_TagString: UsableObj
   m_Icon: {fileID: 0}
@@ -9875,6 +9879,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055249596}
   m_CullTransparentMesh: 0
+--- !u!1 &1074854768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1350711542630775657, guid: 252b7bbcd1842004db10b65face8a44b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1949532922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1085231794
 GameObject:
   m_ObjectHideFlags: 0
@@ -10163,7 +10173,7 @@ GameObject:
   - component: {fileID: 1132770971}
   - component: {fileID: 1132770970}
   - component: {fileID: 1132770969}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TreeroomTreesap
   m_TagString: Material
   m_Icon: {fileID: 0}
@@ -10471,7 +10481,7 @@ GameObject:
   - component: {fileID: 1145035154}
   - component: {fileID: 1145035156}
   - component: {fileID: 1145035157}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TreeroomLeaf
   m_TagString: Material
   m_Icon: {fileID: 0}
@@ -11036,7 +11046,7 @@ GameObject:
   - component: {fileID: 1168609379}
   - component: {fileID: 1168609381}
   - component: {fileID: 1168609380}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PianoroomToHW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11452,7 +11462,7 @@ GameObject:
   - component: {fileID: 1238007012}
   - component: {fileID: 1238007011}
   - component: {fileID: 1238007010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TreeroomFruit1
   m_TagString: Material
   m_Icon: {fileID: 0}
@@ -12207,7 +12217,7 @@ GameObject:
   - component: {fileID: 1400040959}
   - component: {fileID: 1400040957}
   - component: {fileID: 1400040958}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B3_Hallway_Candle (1)
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -12464,7 +12474,7 @@ GameObject:
   - component: {fileID: 1411369742}
   - component: {fileID: 1411369741}
   - component: {fileID: 1411369740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TreeroomFruit4
   m_TagString: Material
   m_Icon: {fileID: 0}
@@ -12847,7 +12857,7 @@ GameObject:
   - component: {fileID: 1426619565}
   - component: {fileID: 1426619566}
   - component: {fileID: 1426619564}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TreeroomLabTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13687,7 +13697,7 @@ GameObject:
   - component: {fileID: 1500464870}
   - component: {fileID: 1500464872}
   - component: {fileID: 1500464871}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B3_Hallway_Statue
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -14979,7 +14989,7 @@ GameObject:
   - component: {fileID: 1584809436}
   - component: {fileID: 1584809435}
   - component: {fileID: 1584809434}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TreeroomFruit3
   m_TagString: Material
   m_Icon: {fileID: 0}
@@ -17186,7 +17196,7 @@ GameObject:
   - component: {fileID: 1752787429}
   - component: {fileID: 1752787428}
   - component: {fileID: 1752787427}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TreeroomFruit2
   m_TagString: Material
   m_Icon: {fileID: 0}
@@ -17492,7 +17502,7 @@ GameObject:
   - component: {fileID: 1756742960}
   - component: {fileID: 1756742962}
   - component: {fileID: 1756742961}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pianoroom_Piano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17700,7 +17710,7 @@ GameObject:
   - component: {fileID: 1763929966}
   - component: {fileID: 1763929968}
   - component: {fileID: 1763929967}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DoorToTreeroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18514,7 +18524,7 @@ GameObject:
   - component: {fileID: 1866993475}
   - component: {fileID: 1866993473}
   - component: {fileID: 1866993474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B3_Hallway_Candle (2)
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -18759,7 +18769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1897957710}
   - component: {fileID: 1897957711}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19278,12 +19288,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 252b7bbcd1842004db10b65face8a44b, type: 3}
---- !u!1 &1949532923 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1350711542630775657, guid: 252b7bbcd1842004db10b65face8a44b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1949532922}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1949532924 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2359773886020940057, guid: 252b7bbcd1842004db10b65face8a44b,
@@ -19526,7 +19530,7 @@ GameObject:
   - component: {fileID: 1961628819}
   - component: {fileID: 1961628821}
   - component: {fileID: 1961628820}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TreeroomBranch
   m_TagString: Material
   m_Icon: {fileID: 0}
@@ -20156,7 +20160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1985534465}
   - component: {fileID: 1985534466}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20758,7 +20762,7 @@ GameObject:
   - component: {fileID: 2044415052}
   - component: {fileID: 2044415050}
   - component: {fileID: 2044415051}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B3_Hallway_Candle
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -20998,7 +21002,7 @@ GameObject:
   - component: {fileID: 2072621842}
   - component: {fileID: 2072621844}
   - component: {fileID: 2072621843}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B3_Hallway_Statue(1)
   m_TagString: Statue
   m_Icon: {fileID: 0}

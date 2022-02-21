@@ -36,7 +36,6 @@ public class B3InventoryMng : MonoBehaviour
                 item.GetComponent<SpriteRenderer>().enabled = false; //sprite 꺼줘야
                 item.GetComponent<Image>().enabled = true;
                 item.transform.SetParent(slotList[i].transform);
-
                 RectTransform itemRT = item.GetComponent<RectTransform>();
                 itemRT.anchoredPosition = new Vector2(0, 0);
                 itemRT.localScale = new Vector3(0.4f, 0.4f, 1f);
@@ -94,7 +93,7 @@ public class B3InventoryMng : MonoBehaviour
             }
         }
     }
-
+/*
     //실험대 켜지면 인벤토리 슬롯들 버튼 제어하기
     public void SetInvenSlotBtn_LT()
     {
@@ -129,5 +128,5 @@ public class B3InventoryMng : MonoBehaviour
             }
             Destroy(slotList[i].GetComponent<Button>());
         }
-    }
+    }*/
 }

@@ -15,7 +15,7 @@ public class SlotSelectionMng : MonoBehaviour
     //사용해야 되는 아이템(카드키, B2 칼 등)과 사용 당하는 오브젝트(B2문, 실험실 문 등)간의 상호작용시 사용
     //liquid.cs랑 DoorToB4.cs 참고해주세용
     public string usableItem = null;     
-    public List<string> usableItems = new List<string>();    
+    public List<string> usableItems = new List<string>();
 
     public void SelectSlot(GameObject item)
     {
@@ -25,6 +25,13 @@ public class SlotSelectionMng : MonoBehaviour
     public void UnselectSlot(GameObject item)
     {
         item.transform.parent.GetComponent<Image>().sprite = unselectedSlotImg; //이미지 바꿔주기
+        selectedItem = null; //선택된 아이템 초기화
+        usableItem = null; 
+        usableItems.Clear();
+    }
+    //아이템 선택한 상태에서 Destroy(아이템) 해줄 때 같이 써주기 
+    public void SelectionClear()
+    {
         selectedItem = null; //선택된 아이템 초기화
         usableItem = null; 
         usableItems.Clear();

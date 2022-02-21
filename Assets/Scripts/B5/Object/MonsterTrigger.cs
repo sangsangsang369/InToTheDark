@@ -15,7 +15,6 @@ public class MonsterTrigger : CollisionObject
         player = FindObjectOfType<Player>();
     }
 
-    // Update is called once per frame
     public override void CollisionObjectFunction()
     {
         if(player.currRoom == "Estrade_Movable")

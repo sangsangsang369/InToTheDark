@@ -10,7 +10,7 @@ public class Leaf : Object
     public Text leafText, leaf_AfterText;
     public Text inputTextUI;
     B3UIManager uiManager;
-    B3InventoryMng b3inventoryMng;
+    InventoryMng inventoryMng;
     LabTableItemManager labtableMng;
     SlotSelectionMng slotSelectMng;
 
@@ -18,7 +18,7 @@ public class Leaf : Object
     void Start()
     {
         uiManager = FindObjectOfType<B3UIManager>();
-        b3inventoryMng = FindObjectOfType<B3InventoryMng>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
 
@@ -29,7 +29,7 @@ public class Leaf : Object
         leafUI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(leafText.text, inputTextUI));
         GameObject leaf = this.gameObject;
-        b3inventoryMng.PickUp(leaf);
+        inventoryMng.PickUp(leaf);
     }
     public void LeafItem()
     {

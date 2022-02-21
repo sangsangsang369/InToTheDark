@@ -8,7 +8,7 @@ public class LabTable : Object
     public GameObject labTableUI, labTableExplainUI;
     public Text labTableText, labTableExplainText;
     public Text inputTextUI;
-    B3InventoryMng b3inventoryMng;
+    LabTableItemManager labtableMng;
     B3UIManager uiManager;
     public GameObject labTableObj; //ui틀면 콜라이더 겹쳐지는 거 땜에 추가
 
@@ -16,7 +16,7 @@ public class LabTable : Object
 
     void Start()
     {
-        b3inventoryMng = FindObjectOfType<B3InventoryMng>();
+        labtableMng = FindObjectOfType<LabTableItemManager>();
         uiManager = FindObjectOfType<B3UIManager>();
     }
     public void LabTableColliderOn() //ui끄면 콜라이더 다시 켜주기
@@ -29,7 +29,7 @@ public class LabTable : Object
         if (labTableUI.activeSelf == true)  //실험대 ui 켜지면
         {
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;  //실험대 콜라이더 끄기
-            b3inventoryMng.SetInvenSlotBtn_LT(); //인벤토리 기능 제어
+            labtableMng.SetInvenSlotBtn_LT(); //인벤토리 기능 제어
         }
            
         labTableExplainUI.SetActive(true);  //실험대 설명 스크립트 on

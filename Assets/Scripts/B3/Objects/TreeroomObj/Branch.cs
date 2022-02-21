@@ -10,14 +10,14 @@ public class Branch : Object
     public Text branchText, branch_AfterText;
     public Text inputTextUI;
     B3UIManager uiManager;
-    B3InventoryMng b3inventoryMng;
+    InventoryMng inventoryMng;
     LabTableItemManager labtableMng;
     SlotSelectionMng slotSelectMng;
 
     void Start()
     {
         uiManager = FindObjectOfType<B3UIManager>();
-        b3inventoryMng = FindObjectOfType<B3InventoryMng>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
     }
@@ -27,7 +27,7 @@ public class Branch : Object
         branchUI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(branchText.text, inputTextUI));
         GameObject branch = this.gameObject;
-        b3inventoryMng.PickUp(branch);
+        inventoryMng.PickUp(branch);
     }
     public void BranchItem()
     {

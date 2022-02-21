@@ -59,9 +59,10 @@ public class InventoryMng : MonoBehaviour
             if(!filledCheck[i])
             {
                 filledCheck[i] = true;
-                Instantiate(item, slotList[i].transform);
-                RectTransform itemRT = item.GetComponent<RectTransform>();
+                GameObject item_n = Instantiate(item, slotList[i].transform);
+                RectTransform itemRT = item_n.GetComponent<RectTransform>();
                 itemRT.anchoredPosition = new Vector2(0, 0);
+                itemRT.localScale = new Vector3(0.1f, 0.1f, 1f);
     
                 break;
             }
@@ -99,8 +100,7 @@ public class InventoryMng : MonoBehaviour
                     slotList[i + 1].transform.GetChild(0).SetParent(slotList[i].transform);
                     slotList[i].transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector2(0, 0);
                 }
-            }
-            
+            } 
         }
         for(int i = 0; i < slotList.Count; i++) 
         {
@@ -118,4 +118,64 @@ public class InventoryMng : MonoBehaviour
             Destroy(slotList[slotList.Count - 6].transform.parent.gameObject);
         }
     }
+
+    //위의 함수에서 정리하는 부분만 떼서 함수 만들었습니다
+    public void OrganizeInventory()
+    {
+        for(int i = 0; i < slotList.Count - 1; i++)
+        {
+            if(slotList[i + 1].transform.childCount != 0)
+            {
+                if(slotList[i].transform.childCount == 0 && slotList[i + 1].transform.childCount != 0)
+                {
+                    slotList[i + 1].transform.GetChild(0).SetParent(slotList[i].transform);
+                    slotList[i].transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector2(0, 0);
+                }
+            }
+        }
+        for(int i = 0; i < slotList.Count; i++) 
+        {
+            if(slotList[i].transform.childCount != 0)
+            {
+                filledCheck[i] = true;
+            }
+            else
+            {
+                filledCheck[i] = false;
+            }
+        }
+    }
+
+    //B3InventoryMng에서 옮긴 함수
+    //실험대 슬롯에서 아이템 줍는 함수
+    public void PickUpfromSlot(GameObject item)
+    {
+        for(int i = 0; i < slotList.Count; i++)
+        {
+            if(!filledCheck[i])
+            {
+                filledCheck[i] = true;
+                item.transform.SetParent(slotList[i].transform);
+                RectTransform itemRT = item.GetComponent<RectTransform>();
+                itemRT.anchoredPosition = new Vector2(0, 0);
+                itemRT.localScale = new Vector3(0.4f, 0.4f, 1f);
+    
+                break;
+            }
+        }
+    }
+  
+    //슬롯에서 아이템 위치 찾아서 그 위치의 filledCheck false로 
+    public void FilledChecktoFalse(GameObject item) 
+    {
+        for(int i= 0; i < slotList.Count; i++)
+        {
+            if(slotList[i].transform.childCount>0
+            && slotList[i].transform.GetChild(0).gameObject == item) 
+            {
+                filledCheck[i] = false;
+                break;
+            }
+        }
+    }   
 }

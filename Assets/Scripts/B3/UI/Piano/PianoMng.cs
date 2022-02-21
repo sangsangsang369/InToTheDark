@@ -17,14 +17,15 @@ public class PianoMng : MonoBehaviour
     public GameObject monsterExtractItem;
     [HideInInspector]
     public bool monsterExtractinInventory;
-    B3UIManager uiManager;
-    B3InventoryMng b3inventoryMng;
+    B3UIManager uiManager;    
+    InventoryMng inventoryMng; 
+
 
 
     private void Start() 
     {
         uiManager = FindObjectOfType<B3UIManager>();
-        b3inventoryMng = FindObjectOfType<B3InventoryMng>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
     }
 
     public void CompareKeys(GameObject key)
@@ -41,7 +42,7 @@ public class PianoMng : MonoBehaviour
                 PianoQuizSolvedUI.SetActive(true); //정답 맞췄다는 텍스트 나옴
                 StartCoroutine(uiManager.LoadTextOneByOne(PianoQuizSolvedText.text, inputTextUI));
 
-                b3inventoryMng.AutoPickUp(monsterExtractItem); //진액 인벤토리에 들어오게
+                inventoryMng.AddToInventory(monsterExtractItem); //진액 인벤토리에 들어오게
                 monsterExtractinInventory = true; //나중에 실험대에서 진액 없어지면 얘 false로 바꿔주기
             }
         }

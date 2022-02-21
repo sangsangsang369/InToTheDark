@@ -9,7 +9,7 @@ public class Piano : Object
     public Text pianoExplainText;
     public Text inputTextUI;
     B3UIManager uiManager;
-    B3InventoryMng b3inventoryMng;
+    InventoryMng inventoryMng;
     public GameObject pianoMemoItem;
     int FirstClickCount = 1;
     
@@ -17,7 +17,7 @@ public class Piano : Object
     void Start()
     {
         uiManager = FindObjectOfType<B3UIManager>();
-        b3inventoryMng = FindObjectOfType<B3InventoryMng>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
     }
 
     public override void ObjectFunction()
@@ -33,7 +33,7 @@ public class Piano : Object
             FirstClickCount++;
             pianoExplainUI.SetActive(true);  //설명 스크립트 on
             StartCoroutine(uiManager.LoadTextOneByOne(pianoExplainText.text, inputTextUI));
-            b3inventoryMng.AutoPickUp(pianoMemoItem);
+            inventoryMng.AddToInventory(pianoMemoItem);
         }   
         
     }

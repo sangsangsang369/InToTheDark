@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CloseBtnMng : MonoBehaviour
 {
-    B3InventoryMng b3inventoryMng;
+    InventoryMng inventoryMng; 
     LabTableItemManager labtableMng;
     
 
     void Start()
     {
-        b3inventoryMng = FindObjectOfType<B3InventoryMng>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
     }
 
@@ -20,6 +20,7 @@ public class CloseBtnMng : MonoBehaviour
         labtableMng.UnselectMaterial_Left();
         labtableMng.UnselectMaterial_Right();
         labtableMng.GetResultItem();
-        b3inventoryMng.RevertInvenSlotBtn_LT();
+        labtableMng.RevertInvenSlotBtn_LT();
+        inventoryMng.OrganizeInventory();
     }
 }

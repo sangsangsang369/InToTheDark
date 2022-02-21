@@ -32,18 +32,18 @@ public class MonsterBro : MonoBehaviour
 
                 if(player.transform.position.x <= 21)
                 {
-                    this.gameObject.transform.position += Vector3.right * 1.1f * Time.deltaTime;
+                    this.gameObject.transform.position += Vector3.right * 1.2f * Time.deltaTime;
                     player.transform.position += Vector3.right * 0.4f * Time.deltaTime;
                 }
                 else if(player.transform.position.x <= 24 && player.transform.position.x > 21)
                 {
                     this.gameObject.transform.position += Vector3.right * 1.4f * Time.deltaTime;
-                    player.transform.position += Vector3.right * 1f * Time.deltaTime;
+                    player.transform.position += Vector3.right * 1.2f * Time.deltaTime;
                 }
                 else if(player.transform.position.x > 24)
                 {
-                    this.gameObject.transform.position += Vector3.right * 1.3f * Time.deltaTime;
-                    player.transform.position += Vector3.right * 1.3f * Time.deltaTime;
+                    this.gameObject.transform.position += Vector3.right * 1.5f * Time.deltaTime;
+                    player.transform.position += Vector3.right * 1.5f * Time.deltaTime;
                 }
             }
             

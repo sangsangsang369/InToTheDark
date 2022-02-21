@@ -8,12 +8,14 @@ public class LabTableItemManager : MonoBehaviour
     public GameObject itemOne, itemTwo, resultItem; //재료슬롯 1,2 ,결과슬롯 
     public Dictionary<string, bool> itemActive = new Dictionary<string, bool>(); //아이템 활성화 여부(실험대에 올라왔는지) 저장 
     public bool leftActive, rightActive, resultItemActive; //재료슬롯 1,2 , 결과슬롯 비었는지 찼는지 여부
-    B3InventoryMng b3inventoryMng; 
+    B3UIManager uiManager;
+    InventoryMng inventoryMng; 
     public GameObject labTable; 
 
     void Start()
     {
-        b3inventoryMng = FindObjectOfType<B3InventoryMng>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
+        uiManager = FindObjectOfType<B3UIManager>();
         AddToDictionary();
     }
     //아이템 활성화 전부 false로 초기화해서 넣어주기
@@ -35,7 +37,7 @@ public class LabTableItemManager : MonoBehaviour
         //왼쪽 재료 슬롯 비어있을 때  
         if(!leftActive && !resultItemActive)
         {
-            b3inventoryMng.FilledChecktoFalse(item); //인벤토리에서 해당 위치 filledCheck false로
+            inventoryMng.FilledChecktoFalse(item); //인벤토리에서 해당 위치 filledCheck false로
             item.transform.SetParent(itemOne.transform); //왼쪽 재료슬롯의 자식으로 설정
             leftActive = true; //왼쪽 재료슬롯 활성화
             SetItemSize_Btn(item); //재료슬롯에 맞게 사이즈 조정 & 아이템 버튼 컴포넌트 꺼주기
@@ -44,7 +46,7 @@ public class LabTableItemManager : MonoBehaviour
         //왼쪽 슬롯 차있고 오른쪽 슬롯 비어있을 때
         else if (leftActive && !rightActive && !resultItemActive)
         {
-            b3inventoryMng.FilledChecktoFalse(item);
+            inventoryMng.FilledChecktoFalse(item);
             item.transform.SetParent(itemTwo.transform);
             rightActive = true; 
             SetItemSize_Btn(item);
@@ -65,7 +67,7 @@ public class LabTableItemManager : MonoBehaviour
         if(leftActive && !resultItemActive)
         {
             GameObject item = itemOne.transform.GetChild(0).gameObject; //슬롯 자식에 있는 아이템 찾아주기
-            b3inventoryMng.PickUpfromSlot(item); // 인벤토리에 넣어주기
+            inventoryMng.PickUpfromSlot(item); // 인벤토리에 넣어주기
             leftActive = false;  //왼쪽 재료슬롯 비활성화
             item.GetComponent<Button>().enabled = true; //아이템 버튼 컴포넌트 다시 켜주기      
             item.GetComponent<Object>().ItemDeactive(); //실험대에서 내려갔으니 아이템 비활성화
@@ -77,7 +79,7 @@ public class LabTableItemManager : MonoBehaviour
         if(rightActive && !resultItemActive)
         {
             GameObject item = itemTwo.transform.GetChild(0).gameObject;
-            b3inventoryMng.PickUpfromSlot(item);
+            inventoryMng.PickUpfromSlot(item);
             rightActive = false;  
             item.GetComponent<Button>().enabled = true;
             item.GetComponent<Object>().ItemDeactive();
@@ -89,7 +91,7 @@ public class LabTableItemManager : MonoBehaviour
         if(resultItemActive)
         {
             GameObject item = resultItem.transform.GetChild(0).gameObject;
-            b3inventoryMng.PickUpfromSlot(item);
+            inventoryMng.PickUpfromSlot(item);
             resultItemActive = false; //결과슬롯 비활성화
             item.GetComponent<Button>().enabled = true;
             item.GetComponent<Object>().ItemDeactive();
@@ -110,4 +112,43 @@ public class LabTableItemManager : MonoBehaviour
             itemActive[key] = false; 
         }
     }
+
+
+    //B3InventoryMng에서 옮겨온 애
+     //실험대 켜지면 인벤토리 슬롯들 버튼 제어하기
+    public void SetInvenSlotBtn_LT()
+    {
+        for(int i = 0; i < inventoryMng.slotList.Count; i++)
+        {
+            int index=i;
+            if(inventoryMng.slotList[i].transform.childCount> 0 &&
+                inventoryMng.slotList[i].transform.GetChild(0).tag != "Material")
+            {
+                inventoryMng.slotList[i].transform.GetChild(0).gameObject.
+                GetComponent<Button>().enabled = false;
+                inventoryMng.slotList[i].AddComponent<Button>();
+                Button slotBtn = inventoryMng.slotList[i].GetComponent<Button>();
+                slotBtn.onClick.AddListener(delegate{SlotFunction_LT(index);} );
+            }
+        }
+    }
+    public void  SlotFunction_LT(int i)
+    {
+        Debug.Log("Not material");
+        uiManager.wrongMaterialUI.SetActive(true);  
+        StartCoroutine(uiManager.LoadTextOneByOne(uiManager.wrongMaterialText.text, uiManager.inputTextUI));   
+    }
+    public void RevertInvenSlotBtn_LT()
+    {
+        for(int i = 0; i < inventoryMng.slotList.Count; i++)
+        {
+            if(inventoryMng.slotList[i].transform.childCount> 0)
+            {
+                inventoryMng.slotList[i].transform.GetChild(0).gameObject.
+                GetComponent<Button>().enabled = true;
+            }
+            Destroy(inventoryMng.slotList[i].GetComponent<Button>());
+        }
+    }
+
 }

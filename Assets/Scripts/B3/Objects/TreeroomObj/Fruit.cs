@@ -10,7 +10,7 @@ public class Fruit : Object
     public Text fruitText, fruit_AfterText;
     public Text inputTextUI;
     B3UIManager uiManager;
-    B3InventoryMng b3inventoryMng;
+    InventoryMng inventoryMng;
     LabTableItemManager labtableMng;
     public GameObject fruitGroup;
     SlotSelectionMng slotSelectMng;
@@ -18,7 +18,7 @@ public class Fruit : Object
     void Start()
     {
         uiManager = FindObjectOfType<B3UIManager>();
-        b3inventoryMng = FindObjectOfType<B3InventoryMng>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
 
@@ -29,7 +29,7 @@ public class Fruit : Object
         fruitUI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(fruitText.text, inputTextUI));
         GameObject fruit = this.gameObject;
-        b3inventoryMng.PickUp(fruit);
+        inventoryMng.PickUp(fruit);
 
         GameObject[] fruits= GetChildren(fruitGroup);  //TreeroomFruit에 있는 열매 오브젝트를 배열로
         for(int i=0; i < fruitGroup.transform.childCount; i++)  
