@@ -39,7 +39,7 @@ public class DoorToB4 : Object
             creature.SetActive(false); //문에 붙은 이형체 꺼주기
             
             inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem);
-            slotSelectMng.SelectionClear();
+            slotSelectMng.SelectionClear(); 
         }
     }
 }

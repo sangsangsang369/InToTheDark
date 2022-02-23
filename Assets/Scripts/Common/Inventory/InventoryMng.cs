@@ -29,7 +29,7 @@ public class InventoryMng : MonoBehaviour
         }
     }
 
-    public void PickUp(GameObject item)
+    public void PickUp(GameObject item) //월드에 있는 아이템 줍기
     {
         for(int i = 0; i < slotList.Count; i++)
         {
@@ -52,7 +52,7 @@ public class InventoryMng : MonoBehaviour
         }
     }
 
-    public void AddToInventory(GameObject item)
+    public void AddToInventory(GameObject item) //월드에 없는 아이템 줍기
     {
         for(int i = 0; i < slotList.Count; i++)
         {
@@ -73,7 +73,7 @@ public class InventoryMng : MonoBehaviour
         }
     }
 
-    private void AddNewInventory()
+    private void AddNewInventory() // 새로운 인벤토리창 추가
     {
         GameObject addedInventory = Instantiate(inventoryPrefab, inventoryParent.transform);
         addedInventory.SetActive(false);
@@ -85,7 +85,9 @@ public class InventoryMng : MonoBehaviour
         }
     }
 
-    public void RemoveFromInventory(GameObject item)
+    // slotSelectMng.SelectionClear();
+    // Remove함수와 항상 같이 사용
+    public void RemoveFromInventory(GameObject item) // 아이템 사용 후 없어지는 경우
     {
         item.transform.parent.GetComponent<Image>().sprite = unselectedSlot;
         item.transform.parent.DetachChildren();
@@ -120,7 +122,7 @@ public class InventoryMng : MonoBehaviour
     }
 
     //위의 함수에서 정리하는 부분만 떼서 함수 만들었습니다
-    public void OrganizeInventory()
+    public void OrganizeInventory() // 인벤토리 빈칸 없애는 기능
     {
         for(int i = 0; i < slotList.Count - 1; i++)
         {
@@ -146,7 +148,7 @@ public class InventoryMng : MonoBehaviour
         }
     }
 
-    //B3InventoryMng에서 옮긴 함수
+    //B3InventoryMng에서 옮긴 함수(B3F에서만 사용)
     //실험대 슬롯에서 아이템 줍는 함수
     public void PickUpfromSlot(GameObject item)
     {
