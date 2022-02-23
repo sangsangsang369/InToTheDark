@@ -9,7 +9,7 @@ public class AnsCheck : MonoBehaviour
     MoveHand moveHour;
     MoveMin moveMin;
     B2_UIManager uiManager;
-    public B2_InventoryManager inventoryMng;
+    public InventoryMng inventoryMng;
     public GameObject Img1, Img2, Img3, Img4;
     public GameObject Imgs;
     public Button checkBtn;
@@ -26,7 +26,7 @@ public class AnsCheck : MonoBehaviour
         moveHour = FindObjectOfType<MoveHand>();
         moveMin = FindObjectOfType<MoveMin>();
         uiManager = FindObjectOfType<B2_UIManager>();
-        inventoryMng = FindObjectOfType<B2_InventoryManager>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
         checkBtn.onClick.AddListener(delegate{ CheckAnswer(); });
     }
 

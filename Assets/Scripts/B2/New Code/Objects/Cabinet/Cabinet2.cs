@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Cabinet2 : Object
 {
     public B2_UIManager uiManager;
-    public B2_InventoryManager inventoryMng;
+    public InventoryMng inventoryMng;
     public GameObject cabinet2UI, sword1UI, sword1Img;
     public Text cabinet2Text, sword1Text;
     public Text inputTextUI;
@@ -18,7 +18,7 @@ public class Cabinet2 : Object
     {
         player = FindObjectOfType<Player>();
         uiManager = FindObjectOfType<B2_UIManager>();
-        inventoryMng = FindObjectOfType<B2_InventoryManager>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
     }
 
     // Update is called once per frame

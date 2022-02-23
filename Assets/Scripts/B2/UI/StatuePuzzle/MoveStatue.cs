@@ -11,7 +11,7 @@ public class MoveStatue : MonoBehaviour
     public StatuePuzzle2 SP2;
     public StatuePuzzle3 SP3;
     public StatuePuzzle4 SP4;
-    public B2_InventoryManager inventoryMng;
+    public InventoryMng inventoryMng;
     public GameObject sword2UI, sword2Img;
     public Text sword2Text;
     public Text inputTextUI;
@@ -20,7 +20,7 @@ public class MoveStatue : MonoBehaviour
     void Start()
     {
         uiManager = FindObjectOfType<B2_UIManager>();
-        inventoryMng = FindObjectOfType<B2_InventoryManager>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
     }
 
 

@@ -6,11 +6,11 @@ using System.Text;
 
 public class B2_UIManager : UI
 {
-    B2_InventoryManager inventoryManager;
+    InventoryMng inventoryManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        inventoryManager = FindObjectOfType<B2_InventoryManager>();
+        inventoryManager = FindObjectOfType<InventoryMng>();
     }
 }

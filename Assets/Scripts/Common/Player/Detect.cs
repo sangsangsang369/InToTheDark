@@ -54,7 +54,8 @@ public class Detect : MonoBehaviour
         {
             Object obj = hit.collider.GetComponent<Object>();
             if(obj.enabled && !uiManager.nowTexting)
-            { 
+            {
+                //Debug.Log("지금은 check 돌아감");
                 obj.ObjectFunction(); 
             }
         }
@@ -87,7 +88,6 @@ public class Detect : MonoBehaviour
         eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
-        
         return results.Count > 1;
     }
 }

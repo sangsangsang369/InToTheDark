@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Cabinet3 : Object
 {
     public B2_UIManager uiManager;
-    public B2_InventoryManager inventoryMng;
+    public InventoryMng inventoryMng;
     public GameObject cabinet3UI, clockImg;
     public List<Text> cabinet3Texts;
     public Text inputTextUI;
@@ -16,7 +16,7 @@ public class Cabinet3 : Object
     {
         player = FindObjectOfType<Player>();
         uiManager = FindObjectOfType<B2_UIManager>();
-        inventoryMng = FindObjectOfType<B2_InventoryManager>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
     }
 
     // Update is called once per frame
