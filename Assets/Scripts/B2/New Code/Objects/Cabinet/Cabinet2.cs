@@ -11,7 +11,7 @@ public class Cabinet2 : Object
     public Text cabinet2Text, sword1Text;
     public Text inputTextUI;
     Player player;
-    bool key1Picked = false;
+    public bool key1Picked = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class Cabinet2 : Object
                     sword1UI.SetActive(true);
                     StartCoroutine(uiManager.LoadTextOneByOne(sword1Text.text, inputTextUI));
                     GameObject sword1 = sword1Img;
-                    inventoryMng.AddToInventory(sword1);
+                    inventoryMng.AddToB2Inventory(sword1);
                 }
                 else
                 {

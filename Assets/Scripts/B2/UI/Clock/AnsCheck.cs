@@ -73,8 +73,8 @@ public class AnsCheck : MonoBehaviour
     {
         key1UI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(key1Text.text, inputTextUI));
-        clockUI.SetActive(false);
         GameObject cabinetKey = keyImg;
-        inventoryMng.AddToInventory(cabinetKey);
+        inventoryMng.AddToB2Inventory(cabinetKey);
+        clockUI.SetActive(false);
     }
 }

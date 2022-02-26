@@ -29,7 +29,7 @@ RectTransform:
   m_GameObject: {fileID: 7590534823275251779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.12, y: 0.12, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7590534823435906222}
   m_Father: {fileID: 0}
@@ -145,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiManager: {fileID: 0}
   inventoryMng: {fileID: 0}
+  clockcabinet: {fileID: 0}
 --- !u!1 &7590534823435906223
 GameObject:
   m_ObjectHideFlags: 0

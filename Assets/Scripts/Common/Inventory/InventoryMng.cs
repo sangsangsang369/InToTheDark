@@ -62,11 +62,32 @@ public class InventoryMng : MonoBehaviour
                 GameObject item_n = Instantiate(item, slotList[i].transform);
                 RectTransform itemRT = item_n.GetComponent<RectTransform>();
                 itemRT.anchoredPosition = new Vector2(0, 0);
-                itemRT.localScale = new Vector3(0.1f, 0.1f, 1f);
+                itemRT.localScale = new Vector3(0.1f, 0.1f, 0.1f);
     
                 break;
             }
             else if(filledCheck[slotList.Count - 1])
+            {
+                AddNewInventory();
+            }
+        }
+    }
+
+    public void AddToB2Inventory(GameObject item) //월드에 없는 아이템 줍기
+    {
+        for (int i = 0; i < slotList.Count; i++)
+        {
+            if (!filledCheck[i])
+            {
+                filledCheck[i] = true;
+                GameObject item_n = Instantiate(item, slotList[i].transform);
+                RectTransform itemRT = item_n.GetComponent<RectTransform>();
+                itemRT.anchoredPosition = new Vector2(0, 0);
+                itemRT.localScale = new Vector3(1f, 1f, 1f);
+
+                break;
+            }
+            else if (filledCheck[slotList.Count - 1])
             {
                 AddNewInventory();
             }

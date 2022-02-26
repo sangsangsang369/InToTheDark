@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2315,7 +2315,7 @@ GameObject:
   - component: {fileID: 343637415}
   - component: {fileID: 343637414}
   - component: {fileID: 343637416}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B2_Hallway_Statue(3)
   m_TagString: StatuePz
   m_Icon: {fileID: 0}
@@ -4155,7 +4155,7 @@ GameObject:
   - component: {fileID: 518615198}
   - component: {fileID: 518615197}
   - component: {fileID: 518615199}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B2_Hallway_Statue(2)
   m_TagString: StatuePz
   m_Icon: {fileID: 0}
@@ -8413,6 +8413,7 @@ MonoBehaviour:
   cabinet3UI: {fileID: 1687115827}
   clockImg: {fileID: 7590534823275251779, guid: e4679ec5df21a344db0bbc8f86d6c540,
     type: 3}
+  clockPanel: {fileID: 776830657}
   cabinet3Texts:
   - {fileID: 865172775}
   - {fileID: 477385820}
@@ -9029,6 +9030,7 @@ MonoBehaviour:
   cabinet2Text: {fileID: 395549053}
   sword1Text: {fileID: 305455261}
   inputTextUI: {fileID: 695523062}
+  key1Picked: 0
 --- !u!114 &1145542109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13467,7 +13469,7 @@ MonoBehaviour:
   checkBtn: {fileID: 1881156579}
   ImgNum: 1
   key1UI: {fileID: 1195580252}
-  clockUI: {fileID: 244378500}
+  clockUI: {fileID: 776830657}
   keyImg: {fileID: 7590534823275251779, guid: 157adda470ea4e3418812160dc5c163e, type: 3}
   key1Text: {fileID: 83745036}
   inputTextUI: {fileID: 695523062}
@@ -15502,7 +15504,7 @@ GameObject:
   - component: {fileID: 1952702516}
   - component: {fileID: 1952702515}
   - component: {fileID: 1952702517}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B2_Hallway_Statue(1)
   m_TagString: StatuePz
   m_Icon: {fileID: 0}
@@ -15625,7 +15627,7 @@ GameObject:
   - component: {fileID: 1960811586}
   - component: {fileID: 1960811585}
   - component: {fileID: 1960811587}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B2_Hallway_Statue(4)
   m_TagString: StatuePz
   m_Icon: {fileID: 0}
