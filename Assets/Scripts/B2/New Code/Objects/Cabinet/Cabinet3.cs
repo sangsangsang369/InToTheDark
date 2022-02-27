@@ -12,9 +12,17 @@ public class Cabinet3 : Object
     public Text inputTextUI;
     public bool alreadyOpen = false;
     Player player;
+
+    // DataManager data;
+    // SaveDataClass saveData;
+
     // Start is called before the first frame update
     void Start()
     {
+        // data = FindObjectOfType<DataManager>();
+        // saveData = data.saveData;
+        // alreadyOpen = saveData.alreadyOpen;
+
         player = FindObjectOfType<Player>();
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
@@ -32,6 +40,7 @@ public class Cabinet3 : Object
                 GameObject clock = clockImg;
                 inventoryMng.AddToInventory(clock, 1f);
                 alreadyOpen = true;
+                //data.Save();
             }
             else
             {
