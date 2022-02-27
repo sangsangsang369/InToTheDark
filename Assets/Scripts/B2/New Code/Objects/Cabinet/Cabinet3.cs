@@ -30,7 +30,7 @@ public class Cabinet3 : Object
             {
                 StartCoroutine(uiManager.LoadTexts(cabinet3Texts, inputTextUI, 3));
                 GameObject clock = clockImg;
-                inventoryMng.AddToB2Inventory(clock);
+                inventoryMng.AddToInventory(clock, 1f);
                 alreadyOpen = true;
             }
             else

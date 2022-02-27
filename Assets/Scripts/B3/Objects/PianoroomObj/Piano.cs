@@ -33,7 +33,7 @@ public class Piano : Object
             FirstClickCount++;
             pianoExplainUI.SetActive(true);  //설명 스크립트 on
             StartCoroutine(uiManager.LoadTextOneByOne(pianoExplainText.text, inputTextUI));
-            inventoryMng.AddToInventory(pianoMemoItem);
+            inventoryMng.AddToInventory(pianoMemoItem, 0.1f);
         }   
         
     }

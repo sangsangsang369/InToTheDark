@@ -42,7 +42,7 @@ public class PianoMng : MonoBehaviour
                 PianoQuizSolvedUI.SetActive(true); //정답 맞췄다는 텍스트 나옴
                 StartCoroutine(uiManager.LoadTextOneByOne(PianoQuizSolvedText.text, inputTextUI));
 
-                inventoryMng.AddToInventory(monsterExtractItem); //진액 인벤토리에 들어오게
+                inventoryMng.AddToInventory(monsterExtractItem, 0.1f); //진액 인벤토리에 들어오게
                 monsterExtractinInventory = true; //나중에 실험대에서 진액 없어지면 얘 false로 바꿔주기
             }
         }

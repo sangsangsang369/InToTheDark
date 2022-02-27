@@ -26,7 +26,7 @@ public class DiaryCloseBtn : MonoBehaviour
             cardkeyUI.SetActive(true);
             isClicked = true;
             uiManager.StartCoroutine(uiManager.LoadCardkeyTexts());
-            inventoryMng.AddToInventory(cardKey);
+            inventoryMng.AddToInventory(cardKey, 0.1f);
         }
     }
 }

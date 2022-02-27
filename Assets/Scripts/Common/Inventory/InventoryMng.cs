@@ -52,7 +52,7 @@ public class InventoryMng : MonoBehaviour
         }
     }
 
-    public void AddToInventory(GameObject item) //월드에 없는 아이템 줍기
+    public void AddToInventory(GameObject item, float size) //월드에 없는 아이템 줍기
     {
         for(int i = 0; i < slotList.Count; i++)
         {
@@ -62,7 +62,7 @@ public class InventoryMng : MonoBehaviour
                 GameObject item_n = Instantiate(item, slotList[i].transform);
                 RectTransform itemRT = item_n.GetComponent<RectTransform>();
                 itemRT.anchoredPosition = new Vector2(0, 0);
-                itemRT.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                itemRT.localScale = new Vector3(size, size, size);
     
                 break;
             }
@@ -73,26 +73,6 @@ public class InventoryMng : MonoBehaviour
         }
     }
 
-    public void AddToB2Inventory(GameObject item) //월드에 없는 아이템 줍기
-    {
-        for (int i = 0; i < slotList.Count; i++)
-        {
-            if (!filledCheck[i])
-            {
-                filledCheck[i] = true;
-                GameObject item_n = Instantiate(item, slotList[i].transform);
-                RectTransform itemRT = item_n.GetComponent<RectTransform>();
-                itemRT.anchoredPosition = new Vector2(0, 0);
-                itemRT.localScale = new Vector3(1f, 1f, 1f);
-
-                break;
-            }
-            else if (filledCheck[slotList.Count - 1])
-            {
-                AddNewInventory();
-            }
-        }
-    }
 
     private void AddNewInventory() // 새로운 인벤토리창 추가
     {

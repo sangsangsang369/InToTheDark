@@ -9,6 +9,7 @@ public class AnsCheck : MonoBehaviour
     MoveHand moveHour;
     MoveMin moveMin;
     B2_UIManager uiManager;
+    Clock clock;
     public InventoryMng inventoryMng;
     public GameObject Img1, Img2, Img3, Img4;
     public GameObject Imgs;
@@ -71,10 +72,11 @@ public class AnsCheck : MonoBehaviour
 
     public void ClockOpen()
     {
+        clock = FindObjectOfType<Clock>();
+        inventoryMng.RemoveFromInventory(clock.gameObject);
+        inventoryMng.AddToInventory(keyImg, 1f);
+        clockUI.SetActive(false);
         key1UI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(key1Text.text, inputTextUI));
-        GameObject cabinetKey = keyImg;
-        inventoryMng.AddToB2Inventory(cabinetKey);
-        clockUI.SetActive(false);
     }
 }

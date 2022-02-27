@@ -9,7 +9,6 @@ public class Clock : Object
     public InventoryMng inventoryMng;
     public Cabinet3 clockcabinet;
     SlotSelectionMng slotSelectMng;
-    int useOnce = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -24,23 +23,15 @@ public class Clock : Object
     // Update is called once per frame
     public void UseClock()
     {
-        if (useOnce == 0)
+        if (slotSelectMng.selectedItem != this.gameObject)
         {
-            if (slotSelectMng.selectedItem != this.gameObject)
-            {
-                slotSelectMng.SelectSlot(this.gameObject);
-                clockcabinet.clockPanel.SetActive(true);
-                useOnce++;
-                if(useOnce != 0)
-                {
-                    inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem);
-                    slotSelectMng.SelectionClear();
-                }
-            }
-            else
-            {
-                slotSelectMng.UnselectSlot(this.gameObject);
-            }
+            slotSelectMng.SelectSlot(this.gameObject);
+            clockcabinet.clockPanel.SetActive(true);
+        }
+        else
+        {
+            slotSelectMng.UnselectSlot(this.gameObject);
+            slotSelectMng.SelectionClear();
         }
     }
 }

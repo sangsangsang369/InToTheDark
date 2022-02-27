@@ -31,7 +31,7 @@ public class Cabinet2 : Object
                     sword1UI.SetActive(true);
                     StartCoroutine(uiManager.LoadTextOneByOne(sword1Text.text, inputTextUI));
                     GameObject sword1 = sword1Img;
-                    inventoryMng.AddToB2Inventory(sword1);
+                    inventoryMng.AddToInventory(sword1, 1f);
                 }
                 else
                 {
