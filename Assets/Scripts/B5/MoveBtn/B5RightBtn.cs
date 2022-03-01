@@ -19,15 +19,15 @@ public class B5RightBtn : MonoBehaviour
     {
         if (player.currRoom == "B5_Hallway")
         {
-            RightLimit(37.7f);
+            RightLimit(56.9f);
         }
-        else if (player.currRoom == "Estrade")
+        else if (player.currRoom == "Estrade_immovable")
         {
             
         }
-        else if(player.currRoom == "Estrade_Movable")
+        else if(player.currRoom == "Estrade_Movable"|| player.currRoom == "OnEstradeatFirst")
         {
-            RightLimit(37.7f);
+            RightLimit(50.6f);
         }
     }
     private void RightLimit(float limit)

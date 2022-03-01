@@ -18,39 +18,33 @@ public class MonsterBro : MonoBehaviour
     }
     void Update()
     {
-        MonsterBroWalking(28.7f);
+        MonsterBroWalking(41);
         AfterMonsterBroWalking();
     }
     private void MonsterBroWalking(float limit)
     {    
         if(this.gameObject.activeSelf == true)
-            if (player.transform.position.x < limit)
+            if (this.gameObject.transform.position.x < limit)
             {
                 this.gameObject.GetComponent<Animator>().SetBool("isWalking", true);
-                player.GetComponent<Animator>().SetFloat("flip", -1);
-                player.GetComponent<Animator>().SetBool("isWalking", true);
+                
+                this.gameObject.transform.position += Vector3.right * 1.3f * Time.deltaTime;
 
-                if(player.transform.position.x <= 21)
+                if(player.transform.position.x < 48)
                 {
-                    this.gameObject.transform.position += Vector3.right * 1.2f * Time.deltaTime;
-                    player.transform.position += Vector3.right * 0.4f * Time.deltaTime;
+                    player.GetComponent<Animator>().SetFloat("flip", -1);
+                    player.GetComponent<Animator>().SetBool("isWalking", true);
+                    player.transform.position += Vector3.right * 0.6f * Time.deltaTime;
                 }
-                else if(player.transform.position.x <= 24 && player.transform.position.x > 21)
+                else
                 {
-                    this.gameObject.transform.position += Vector3.right * 1.4f * Time.deltaTime;
-                    player.transform.position += Vector3.right * 1.2f * Time.deltaTime;
-                }
-                else if(player.transform.position.x > 24)
-                {
-                    this.gameObject.transform.position += Vector3.right * 1.5f * Time.deltaTime;
-                    player.transform.position += Vector3.right * 1.5f * Time.deltaTime;
+                    player.GetComponent<Animator>().SetBool("isWalking", false);
                 }
             }
             
             else if(monsterBroTextNum ==0)
             {
                 this.gameObject.GetComponent<Animator>().SetBool("isWalking", false);
-                player.GetComponent<Animator>().SetBool("isWalking", false);
 
                 monsterBroUI.SetActive(true);
                 uiManager.StartCoroutine(uiManager.LoadTextOneByOne(monsterBroText.text, inputTextUI));

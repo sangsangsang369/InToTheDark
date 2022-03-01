@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AfterFadeOut : MonoBehaviour
 {
+    //화면 페이드아웃 되고 실행되는 스크립트
+    //엔딩 텍스트 띄움
 
     public GameObject nextText, prevText;
 

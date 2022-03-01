@@ -19,7 +19,7 @@ public class MonsterTrigger : CollisionObject
     {
         if(player.currRoom == "Estrade_Movable")
         {
-            player.currRoom = "Estrade";
+            player.currRoom = "Estrade_immovable";
             monsterBro.SetActive(true);
             coverCanvas.SetActive(true);
         }

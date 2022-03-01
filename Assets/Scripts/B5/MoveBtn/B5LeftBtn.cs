@@ -19,13 +19,13 @@ public class B5LeftBtn : MonoBehaviour
         {
             LeftLimit(0);
         }
-        else if (player.currRoom == "Estrade")
+        else if (player.currRoom == "Estrade_immovable")
         {
             
         }
-        else if (player.currRoom == "Estrade_Movable")
+        else if (player.currRoom == "Estrade_Movable" || player.currRoom == "OnEstradeatFirst")
         {
-            LeftLimit(20.5f);
+            LeftLimit(45.8f);
         }
     }
 

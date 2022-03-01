@@ -35,7 +35,7 @@ public class Platform : CollisionObject
 
     public override void CollisionObjectFunction()
     {
-        player.currRoom = "Estrade";
+        player.currRoom = "Estrade_immovable";
         coverCanvas.SetActive(true);
         globalLight.GetComponent<Animator>().SetBool("LightOff", true);
         floor.SetActive(false);

@@ -43,19 +43,4 @@ public class Player : Detect
             magnifier.gameObject.SetActive(boolean);
         }
     }
-
-    void AnimationStart(Collider2D collider)
-    {
-        if(collider.GetComponent<CollisionObject>())
-        {
-            Debug.Log("됨");
-            collider.GetComponent<CollisionObject>().enabled = true;
-            CollisionObject collisionObj = collider.GetComponent<CollisionObject>();
-            
-            if(collisionObj.enabled)
-            { 
-                collisionObj.CollisionObjectFunction();
-            }
-        }
-    }
 }

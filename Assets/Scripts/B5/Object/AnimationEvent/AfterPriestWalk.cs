@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class AfterPriestWalk : MonoBehaviour
 {
+    //사제 걸어나오는 애니메이션 이후 실행되는 스크립트
+    //사제 대사 텍스트 나오게
+
     public GameObject priestUI;
     public List<Text> priestTexts;
     public Text inputTextUI;
