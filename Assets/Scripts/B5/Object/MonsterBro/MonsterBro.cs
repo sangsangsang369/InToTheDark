@@ -34,7 +34,7 @@ public class MonsterBro : MonoBehaviour
                 {
                     player.GetComponent<Animator>().SetFloat("flip", -1);
                     player.GetComponent<Animator>().SetBool("isWalking", true);
-                    player.transform.position += Vector3.right * 0.6f * Time.deltaTime;
+                    player.transform.position += Vector3.right * 0.5f * Time.deltaTime;
                 }
                 else
                 {
