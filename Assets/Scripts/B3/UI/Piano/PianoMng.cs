@@ -15,15 +15,31 @@ public class PianoMng : MonoBehaviour
     public Text PianoQuizSolvedText;
     public Text inputTextUI;
     public GameObject monsterExtractItem;
-    [HideInInspector]
-    public bool monsterExtractinInventory;
     B3UIManager uiManager;    
     InventoryMng inventoryMng; 
 
-
+    DataManager data;
+    SaveDataClass saveData;
+    public bool monsterExtractinInventory = false;
+   
 
     private void Start() 
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        monsterExtractinInventory = saveData.monsterExtractinInventory;
+
+        //진액 인벤토리에 있으면
+        //피아노 콜라이더 꺼주기
+        if(monsterExtractinInventory)
+        {
+            pianoObj.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        else
+        {
+            pianoObj.GetComponent<BoxCollider2D>().enabled = true;
+        }
+
         uiManager = FindObjectOfType<B3UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
     }
@@ -38,12 +54,13 @@ public class PianoMng : MonoBehaviour
             {
                 PianoUI.SetActive(false); //피아노 UI 켜지면 자동으로 피아노 Obj 콜라이더 꺼짐(피아노 Obj 콜라이더 꺼진 상태로)
                 KeyInputsList.Clear(); //음 입력 초기화
-
-                PianoQuizSolvedUI.SetActive(true); //정답 맞췄다는 텍스트 나옴
+                //정답 맞췄다는 텍스트 나옴
+                PianoQuizSolvedUI.SetActive(true); 
                 StartCoroutine(uiManager.LoadTextOneByOne(PianoQuizSolvedText.text, inputTextUI));
-
-                inventoryMng.AddToInventory(monsterExtractItem, 0.1f); //진액 인벤토리에 들어오게
+                //진액 획득
+                inventoryMng.AddToInventory(monsterExtractItem, 0.4f); //진액 인벤토리에 들어오게
                 monsterExtractinInventory = true; //나중에 실험대에서 진액 없어지면 얘 false로 바꿔주기
+                data.Save();
             }
         }
         //음 틀렸을 때

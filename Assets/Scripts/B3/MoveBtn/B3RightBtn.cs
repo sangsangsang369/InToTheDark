@@ -30,36 +30,8 @@ public class B3RightBtn : MonoBehaviour
         {
             RightLimit(17.4f);
         }
-        /*if (B3playerMng.isOnHallway)  //복도일때
-        {
-            if (OnClick && player.transform.position.x < 37.7) //OnClick 트루일 때(버튼 눌렀을 때) && 철수 x위치가 27보다 작을 때
-            {
-                player.transform.position += Vector3.right * B3playerMng.speed * Time.deltaTime; //철수의 위치를 오른쪽으로
-                //매 프레임 업뎃 될때마다 if문 들어와서 철수의 위치에 오른쪽으로 속도*시간 더해줌(Time.deltaTime=한 프레임이 처리될때 소요된 시간 반환)
-            }
-        }
-        else if (B3playerMng.isOnTreeroom)  //트리룸일때
-        {
-            if (OnClick && player.transform.position.x < 21.6) //OnClick 트루일 때(버튼 눌렀을 때) && 철수 x위치가 27보다 작을 때
-            {
-                player.transform.position += Vector3.right * B3playerMng.speed * Time.deltaTime; //철수의 위치를 오른쪽으로
-                //매 프레임 업뎃 될때마다 if문 들어와서 철수의 위치에 오른쪽으로 속도*시간 더해줌(Time.deltaTime=한 프레임이 처리될때 소요된 시간 반환)
-            }
-        }
-        else if (B3playerMng.isOnPianoroom)  //피아노룸일때
-        {
-            if (OnClick && player.transform.position.x < 17.4)
-            {
-                player.transform.position += Vector3.right * B3playerMng.speed * Time.deltaTime;
-            }
-            if (OnClick && player.transform.position.x < 11 && player.transform.position.x > -13)
-            {
-                creatureEye.transform.position += Vector3.right * B3playerMng.speed / 8 * Time.deltaTime;
-               
-
-            }
-        }*/
     }
+    
     private void RightLimit(float limit)
     {
         if (OnClick && playerObj.transform.position.x < limit)

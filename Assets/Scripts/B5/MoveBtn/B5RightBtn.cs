@@ -23,7 +23,7 @@ public class B5RightBtn : MonoBehaviour
         }
         else if (player.currRoom == "Estrade_immovable")
         {
-            
+            //못 움직이게 리밋 설정 x
         }
         else if(player.currRoom == "Estrade_Movable"|| player.currRoom == "OnEstradeatFirst")
         {

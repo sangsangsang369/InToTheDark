@@ -3,6 +3,10 @@
     "isUnlocked": true,
     "isDiaryClicked": true,
     "alreadyOpen": false,
+    "isPianoMemoGained": false,
+    "monsterExtractinInventory": false,
+    "isMonsterDisappear": false,
+    "isB4DoorOpened": false,
     "isDaggerPicked": false,
     "isJewelGained": true,
     "isB4LockUnlocked": true

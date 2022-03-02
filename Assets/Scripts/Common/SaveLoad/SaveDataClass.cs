@@ -18,6 +18,10 @@ public class SaveDataClass
     public bool alreadyOpen;
     
     //지하 3층
+    public bool isPianoMemoGained;
+    public bool monsterExtractinInventory; 
+    public bool isMonsterDisappear;
+    public bool isB4DoorOpened;
 
     //지하 4층
     public bool isDaggerPicked;
@@ -38,6 +42,10 @@ public class SaveDataClass
         alreadyOpen = false;
 
         //지하 3층
+        isMonsterDisappear = false;
+        isPianoMemoGained = false;
+        monsterExtractinInventory = false; //이거 좀 봐야할 듯
+        isB4DoorOpened = false;
 
         //지하 4층
         isDaggerPicked = false;

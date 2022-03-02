@@ -12,11 +12,17 @@ public class DoorToB4 : Object
     B3UIManager uiManager;
     SlotSelectionMng slotSelectMng;
 
-    int doorOpenCount = 0;
+    DataManager data;
+    SaveDataClass saveData;
+    public bool isB4DoorOpened = false;
     public GameObject creature;
 
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        isB4DoorOpened = saveData.isB4DoorOpened;
+
         inventoryMng = FindObjectOfType<InventoryMng>();
         uiManager = FindObjectOfType<B3UIManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
@@ -25,21 +31,27 @@ public class DoorToB4 : Object
     public override void ObjectFunction()
     {
         //투명한 액체 선택 안 됐을 때 && 문 열린 적 없을 때
-        if(slotSelectMng.usableItem != "liquidSelected" && doorOpenCount == 0) 
+        if(slotSelectMng.usableItem != "liquidSelected" && !isB4DoorOpened) 
         {
             doorToB4_noEnterUI.SetActive(true); //들어갈 수 없다는 텍스트 출력
             StartCoroutine(uiManager.LoadTextOneByOne(doorToB4_noEnterText.text, inputTextUI));
         }
         //투명한 액체 선택 됐을 때 && 문 열린 적 없을 때
-        else if(slotSelectMng.usableItem == "liquidSelected" && doorOpenCount == 0)
+        else if(slotSelectMng.usableItem == "liquidSelected" && !isB4DoorOpened)
         {
             doorToB4_EnterUI.SetActive(true); //문 열렸다는 텍스트 출력
             StartCoroutine(uiManager.LoadTextOneByOne(doorToB4_EnterText.text, inputTextUI));
-            doorOpenCount++; //문 열린 횟수++
             creature.SetActive(false); //문에 붙은 이형체 꺼주기
             
             inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem);
             slotSelectMng.SelectionClear(); 
+            
+            isB4DoorOpened = true; //문 열림
+            data.Save();
+        }
+        else if(isB4DoorOpened)
+        {
+            //B4로 씬 이동
         }
     }
 }

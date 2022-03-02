@@ -34,32 +34,6 @@ public class B3LeftBtn : MonoBehaviour
             LeftLimit(17.4f);
             player.limit = 17.4f;
         }
-        /*if (B3playerMng.isOnHallway)  //복도일때
-        {
-            if (OnClick && player.transform.position.x > -37.7)
-            {
-                player.transform.position += Vector3.left * B3playerMng.speed * Time.deltaTime;
-            }
-        }
-        else if(B3playerMng.isOnTreeroom)  //트리룸일때
-        {
-            if (OnClick && player.transform.position.x > -21.6)
-            {
-                player.transform.position += Vector3.left * B3playerMng.speed * Time.deltaTime;
-            }
-        }
-        else if (B3playerMng.isOnPianoroom)   //피아노룸일때
-        {
-            if (OnClick && player.transform.position.x > -17.4)
-            {
-                player.transform.position += Vector3.left * B3playerMng.speed * Time.deltaTime;
-            }
-            if (OnClick && player.transform.position.x > -13 && player.transform.position.x < 11)
-            {
-                creatureEye.transform.position += Vector3.left * B3playerMng.speed/ 8 * Time.deltaTime;
-                
-            }
-        }*/
     }
 
      private void LeftLimit(float limit)

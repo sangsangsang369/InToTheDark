@@ -10,14 +10,7 @@ public class B3PlayerMng : MonoBehaviour
     public bool isOnHallway = true; //첨에 복도에 있음
     public bool isOnTreeroom = false; //트리룸off
     public bool isOnPianoroom = false; //피아노룸off
-    //public bool[] boolList;
-    //public string[] tagList;
-
-    // void Start()
-    // {
-    //     boolList = new bool[]{doorToLib, doorToHW, muffler, letter, pattern, goldenBook, book1, book2, book3, table};
-    //     tagList = new string[]{"DoorToLib", "DoorToHW", "Muffler", "Letter", "Pattern", "GoldenBook", "Book1", "Book2", "Book3", "Table"};
-    // }
+   
 
     void OnTriggerEnter2D(Collider2D col)
     {

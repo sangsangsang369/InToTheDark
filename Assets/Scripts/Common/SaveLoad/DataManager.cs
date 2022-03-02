@@ -53,7 +53,8 @@ public class DataManager : MonoBehaviour
 
     //데이터 로드
     public void Load()
-    {//제이슨에서 세이브데이터 로드. 아니 이럴거면 함수를 왜만들어요??
+    {
+        //제이슨에서 세이브데이터 로드. 아니 이럴거면 함수를 왜만들어요??
         //그러게요....혹시나 뭐가 늘어날지도 모르잖아요.
         saveData = jsonManager.LoadSaveData();
     }

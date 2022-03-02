@@ -11,11 +11,18 @@ public class Piano : Object
     B3UIManager uiManager;
     InventoryMng inventoryMng;
     public GameObject pianoMemoItem;
-    int FirstClickCount = 1;
+    
+    DataManager data;
+    SaveDataClass saveData;
+    public bool isPianoMemoGained = false;
     
 
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        isPianoMemoGained = saveData.isPianoMemoGained;
+
         uiManager = FindObjectOfType<B3UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
     }
@@ -27,15 +34,17 @@ public class Piano : Object
         {
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;  //피아노 콜라이더 끄기
         }
-
-        if(FirstClickCount == 1)
+        //피아노 최초로 클릭할 때
+        if(isPianoMemoGained == false)
         {
-            FirstClickCount++;
             pianoExplainUI.SetActive(true);  //설명 스크립트 on
             StartCoroutine(uiManager.LoadTextOneByOne(pianoExplainText.text, inputTextUI));
-            inventoryMng.AddToInventory(pianoMemoItem, 0.1f);
-        }   
-        
+            //피아노 메모 획득
+            inventoryMng.AddToInventory(pianoMemoItem, 0.4f);
+            
+            isPianoMemoGained = true;
+            data.Save();
+        }     
     }
 }
 

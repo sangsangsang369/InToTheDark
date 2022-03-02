@@ -11,11 +11,18 @@ public class ItemCombinationMng : MonoBehaviour
     //아이템 프리펩들 넣어주기
     public GameObject fleshOneItem, patternLeafItem, fleshTwoItem, liquidItem;
 
+    DataManager data;
+    SaveDataClass saveData;
+
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+
         uiManager = FindObjectOfType<B3UIManager>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
         pianoMng = FindObjectOfType<PianoMng>();
+
     }
 
     //조합하기 버튼에 붙어서 조합 실행하는 함수
@@ -53,9 +60,11 @@ public class ItemCombinationMng : MonoBehaviour
                 labtableMng.DestroyMaterials_ResetActive();
                 labtableMng.resultItemActive = true;
                 labtableMng.itemActive["fleshTwoActive"] = true; //살덩어리2 활성화
-                //진액 인벤토리에서 파괴되었으니 피아노 콜라이더 켜주기
-                pianoMng.monsterExtractinInventory = false; 
+                
+                //진액 인벤토리에서 파괴되었으니 피아노 콜라이더 켜주기 
                 pianoMng.pianoObj.GetComponent<BoxCollider2D>().enabled = true;
+                saveData.monsterExtractinInventory = false;
+                data.Save();
             }
             //살덩어리2 + 무늬 나뭇잎
             else if(labtableMng.itemActive["fleshTwoActive"] 

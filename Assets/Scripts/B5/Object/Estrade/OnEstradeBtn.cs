@@ -23,7 +23,7 @@ public class OnEstradeBtn : Object
     }
    public override void ObjectFunction()
    {
-       Debug.Log("올라옴");
+       //Debug.Log("올라옴");
        player.currRoom = "OnEstradeatFirst";
        playerObj.transform.position =  new Vector3 (player.transform.position.x, 0.3f, player.transform.position.z);
    }
