@@ -8,13 +8,13 @@ public class Dagger : MonoBehaviour
     [SerializeField] private GameObject daggerUI;
     [SerializeField] private Text daggerText;
     [SerializeField] private Text inputTextUI;
-    UIManager uiManager;
+    UI uiManager;
     InventoryMng inventoryMng;
     SlotSelectionMng slotSelectMng;
 
     void Start()
     {
-        uiManager = FindObjectOfType<UIManager>();
+        uiManager = FindObjectOfType<UI>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
     }
@@ -29,7 +29,6 @@ public class Dagger : MonoBehaviour
         {
             daggerUI.SetActive(true);
             StartCoroutine(uiManager.LoadTextOneByOne(daggerText.text, inputTextUI));
-        }
-        
+        }  
     }
 }

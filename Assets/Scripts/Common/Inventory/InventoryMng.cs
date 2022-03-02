@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class InventoryMng : MonoBehaviour
 {
+    DataManager data;
+    SaveDataClass saveData;
+
     [HideInInspector] public int currentPage = 1;
     public List<GameObject> inventoryList;
     [HideInInspector] public List<GameObject> slotList;
@@ -16,6 +19,9 @@ public class InventoryMng : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        
         for(int i = 0; i < inventoryList.Count; i++)
         {
             for(int j = 0; j < 6; j++)

@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class Hands : Object
 {
-    private UIManager uiManager;
+    DataManager data;
+    SaveDataClass saveData;
+
+    private UI uiManager;
     private Desk desk;
-    public bool isJewelGained = false;
+    public bool isJewelGained;
     [SerializeField] private GameObject WithoutDaggerUI;
     [SerializeField] private GameObject WithDaggerUI;
     [SerializeField] private Text handsWithoutDaggerText;
@@ -17,7 +20,11 @@ public class Hands : Object
     // Start is called before the first frame update
     void Start()
     {
-        uiManager = FindObjectOfType<UIManager>();
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        isJewelGained = saveData.isJewelGained;
+
+        uiManager = FindObjectOfType<UI>();
         desk = FindObjectOfType<Desk>();
     }
 

@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class Desk : Object
 {
-    UIManager uiManager;
+    DataManager data;
+    SaveDataClass saveData;
+
+    UI uiManager;
     InventoryMng inventoryMng;
-    public bool isDaggerPicked = false;
+    public bool isDaggerPicked;
     [SerializeField] private GameObject deskInChapelUI;
     [SerializeField] private GameObject daggerUI;
     [SerializeField] private Text daggerText;
@@ -16,7 +19,11 @@ public class Desk : Object
 
     void Start()
     {
-        uiManager = FindObjectOfType<UIManager>();
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        isDaggerPicked = saveData.isDaggerPicked;
+
+        uiManager = FindObjectOfType<UI>();
         inventoryMng = FindObjectOfType<InventoryMng>();
     }
 
@@ -28,6 +35,7 @@ public class Desk : Object
             StartCoroutine(uiManager.LoadTextOneByOne(daggerText.text, inputTextUI));
             inventoryMng.PickUp(dagger);
             isDaggerPicked = true;
+            data.Save();
         }
         else
         {

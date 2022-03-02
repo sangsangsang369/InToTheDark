@@ -6,20 +6,27 @@ using System.Text;
 
 public class UIManager : UI
 {
-    [HideInInspector] public int numOfClicked = 0;
-    [HideInInspector] public bool isUnlocked = false;
+    DataManager data;
+    SaveDataClass saveData;
+
+    [HideInInspector] public bool isUnlocked;
     public GameObject note;
     public GameObject noteUI;
     public Text noteText;
     public Text cardkeyNameText;
     public GameObject cardImage;
     public List<Text> cardkeyTexts;
-    bool isFirstGB = true;
+    bool isFirstGB;
     InventoryMng inventoryMng;
 
     // Start is called before the first frame update
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        isUnlocked = saveData.isUnlocked;
+        isFirstGB = saveData.isFirstGB;
+
         inventoryMng = FindObjectOfType<InventoryMng>();
     }
 
@@ -113,6 +120,8 @@ public class UIManager : UI
         if(isFirstGB)
         {
             isFirstGB = false;
+            saveData.isFirstGB = false;
+            data.Save();
         }
         textOrder = 0;
     }

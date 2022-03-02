@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class DiaryCloseBtn : MonoBehaviour
 {
-    public bool isClicked;
+    DataManager data;
+    SaveDataClass saveData;
+
+    public bool isDiaryClicked;
     UIManager uiManager;
     public GameObject cardkeyUI;
     public GameObject cardKey;
@@ -14,19 +17,23 @@ public class DiaryCloseBtn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isClicked = false;
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        isDiaryClicked = saveData.isDiaryClicked;
         uiManager = FindObjectOfType<UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
     }
 
     public void Clicked()
     {
-        if(!isClicked)
+        if(!isDiaryClicked)
         {
             cardkeyUI.SetActive(true);
-            isClicked = true;
+            isDiaryClicked = true;
+            saveData.isDiaryClicked = true;
             uiManager.StartCoroutine(uiManager.LoadCardkeyTexts());
             inventoryMng.AddToInventory(cardKey, 0.1f);
+            data.Save();
         }
     }
 }

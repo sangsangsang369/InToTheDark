@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 7057150}
   - component: {fileID: 7057151}
   - component: {fileID: 7057152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Statue(3)
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c62621706be61d47b59e2d6e2b87c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isClicked: 0
+  isDiaryClicked: 0
   cardkeyUI: {fileID: 265999293}
   cardKey: {fileID: 7590534823275251779, guid: 6d0a5954e62d0754fb2039a8eaf4eca9, type: 3}
 --- !u!1 &162076743
@@ -1309,7 +1309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 169428651}
   - component: {fileID: 169428652}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Library_Bookshelf4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2518,7 +2518,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &300144541
 GameObject:
@@ -3474,7 +3474,7 @@ GameObject:
   - component: {fileID: 450991800}
   - component: {fileID: 450991801}
   - component: {fileID: 450991802}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Statue(2)
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -5154,7 +5154,7 @@ GameObject:
   - component: {fileID: 704890749}
   - component: {fileID: 704890751}
   - component: {fileID: 704890750}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Candle (3)
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -5399,7 +5399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 739961504}
   - component: {fileID: 739961505}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Library_Bookshelf2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6303,7 +6303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 898924774}
   - component: {fileID: 898924775}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Library_Bookshelf3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6751,7 +6751,7 @@ GameObject:
   - component: {fileID: 963646324}
   - component: {fileID: 963646326}
   - component: {fileID: 963646325}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Candle (4)
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -6995,7 +6995,7 @@ GameObject:
   - component: {fileID: 966651572}
   - component: {fileID: 966651573}
   - component: {fileID: 966651574}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Statue(4)
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -7861,7 +7861,7 @@ GameObject:
   - component: {fileID: 1038853864}
   - component: {fileID: 1038853866}
   - component: {fileID: 1038853865}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DoorToB2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9033,7 +9033,7 @@ GameObject:
   - component: {fileID: 1168609379}
   - component: {fileID: 1168609380}
   - component: {fileID: 1168609381}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DoorToHW
   m_TagString: DoorToHW
   m_Icon: {fileID: 0}
@@ -11019,7 +11019,7 @@ GameObject:
   - component: {fileID: 1369859561}
   - component: {fileID: 1369859562}
   - component: {fileID: 1369859563}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Pattern
   m_TagString: Pattern
   m_Icon: {fileID: 0}
@@ -11316,7 +11316,7 @@ GameObject:
   - component: {fileID: 1400040957}
   - component: {fileID: 1400040959}
   - component: {fileID: 1400040958}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Candle (1)
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -11482,7 +11482,7 @@ GameObject:
   - component: {fileID: 1422840282}
   - component: {fileID: 1422840283}
   - component: {fileID: 1422840284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Library_Table
   m_TagString: Table
   m_Icon: {fileID: 0}
@@ -12227,7 +12227,7 @@ GameObject:
   - component: {fileID: 1500464870}
   - component: {fileID: 1500464871}
   - component: {fileID: 1500464872}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Statue
   m_TagString: Statue
   m_Icon: {fileID: 0}
@@ -12702,7 +12702,7 @@ GameObject:
   - component: {fileID: 1570978317}
   - component: {fileID: 1570978318}
   - component: {fileID: 1570978319}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Book1
   m_TagString: Book1
   m_Icon: {fileID: 0}
@@ -14528,7 +14528,7 @@ GameObject:
   - component: {fileID: 1763929966}
   - component: {fileID: 1763929967}
   - component: {fileID: 1763929968}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DoorToLib
   m_TagString: DoorToLib
   m_Icon: {fileID: 0}
@@ -14920,7 +14920,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1787907262
 MonoBehaviour:
@@ -14934,6 +14934,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de45ea03f929ea44286c284470b3ef8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveData:
+    isFirstGB: 1
+    isUnlocked: 0
+    isDiaryClicked: 0
+    alreadyOpen: 0
+    isDaggerPicked: 0
+    isJewelGained: 0
+    isB4LockUnlocked: 0
 --- !u!1 &1801370202
 GameObject:
   m_ObjectHideFlags: 0
@@ -14945,7 +14953,7 @@ GameObject:
   - component: {fileID: 1801370203}
   - component: {fileID: 1801370204}
   - component: {fileID: 1801370205}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GoldenBook
   m_TagString: GoldenBook
   m_Icon: {fileID: 0}
@@ -15463,7 +15471,7 @@ GameObject:
   - component: {fileID: 1846374018}
   - component: {fileID: 1846374019}
   - component: {fileID: 1846374020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Muffler
   m_TagString: Muffler
   m_Icon: {fileID: 0}
@@ -15765,7 +15773,7 @@ GameObject:
   - component: {fileID: 1858484324}
   - component: {fileID: 1858484326}
   - component: {fileID: 1858484325}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Letter
   m_TagString: Letter
   m_Icon: {fileID: 0}
@@ -16089,7 +16097,7 @@ GameObject:
   - component: {fileID: 1866993473}
   - component: {fileID: 1866993475}
   - component: {fileID: 1866993474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Candle (2)
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -16253,7 +16261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870934535}
   - component: {fileID: 1870934536}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Library_Bookshelf1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16409,7 +16417,7 @@ GameObject:
   - component: {fileID: 1888647000}
   - component: {fileID: 1888647001}
   - component: {fileID: 1888647002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Book3
   m_TagString: Book3
   m_Icon: {fileID: 0}
@@ -16727,7 +16735,7 @@ GameObject:
   - component: {fileID: 1923332483}
   - component: {fileID: 1923332486}
   - component: {fileID: 1923332487}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16838,6 +16846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currRoom: 
   speed: 6
+  limit: 0
 --- !u!95 &1923332485
 Animator:
   serializedVersion: 3
@@ -17457,7 +17466,7 @@ GameObject:
   - component: {fileID: 2016661262}
   - component: {fileID: 2016661263}
   - component: {fileID: 2016661264}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Book2
   m_TagString: Book2
   m_Icon: {fileID: 0}
@@ -17794,7 +17803,7 @@ GameObject:
   - component: {fileID: 2044415050}
   - component: {fileID: 2044415052}
   - component: {fileID: 2044415051}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Candle
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -18167,7 +18176,7 @@ GameObject:
   - component: {fileID: 2072621842}
   - component: {fileID: 2072621843}
   - component: {fileID: 2072621844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: B1_Hallway_Statue(1)
   m_TagString: Statue
   m_Icon: {fileID: 0}

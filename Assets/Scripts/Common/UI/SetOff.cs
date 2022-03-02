@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class SetOff : MonoBehaviour
 {
-    UIManager uiManager;
+    UI uiManager;
     Text inputTextUI;
     
     // Start is called before the first frame update
     void Start()
     {
-        uiManager = FindObjectOfType<UIManager>();
+        uiManager = FindObjectOfType<UI>();
         inputTextUI = uiManager.inputTextUI;
     }
 
@@ -40,6 +40,4 @@ public class SetOff : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
-
-    //public void OffAndDo(Function)
 }

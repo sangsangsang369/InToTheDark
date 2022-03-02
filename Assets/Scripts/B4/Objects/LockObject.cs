@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class LockObject : MonoBehaviour
 {
+    DataManager data;
+    SaveDataClass saveData;
+
     LockerWithLock lockerWithLock;
     RedJewel redJewel;
     InventoryMng inventoryMng;
@@ -17,6 +20,9 @@ public class LockObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+
         redJewel = FindObjectOfType<RedJewel>();
         lockerWithLock = FindObjectOfType<LockerWithLock>();
         inventoryMng = FindObjectOfType<InventoryMng>();
@@ -38,8 +44,10 @@ public class LockObject : MonoBehaviour
     private void AfterUnlocked()
     {
         researchRecord.SetActive(true);
-        lockerWithLock.isUnlocked = true;
+        lockerWithLock.isB4LockUnlocked = true;
+        saveData.isB4LockUnlocked = true;
         lockObj.SetActive(false);
         lockUIObj.SetActive(false);
+        data.Save();
     }
 }

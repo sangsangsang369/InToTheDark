@@ -6,21 +6,23 @@ using System;
 
 public class LockerMng : MonoBehaviour
 {
+    DataManager data;
+    SaveDataClass saveData;
+
     [HideInInspector] public int num1, num2, num3, num4 = 0;
     public Text firstNum, secondNum, thirdNum, fourthNum;
     public Button checkNumBtn;
     public GameObject locker;
     public GameObject lockerRing;
     public GameObject diaryUI;
-    //ObjectManager objectManager;
     UIManager uiManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        //objectManager = FindObjectOfType<ObjectManager>();
+        data = DataManager.singleTon;
+        saveData = data.saveData;
         uiManager = FindObjectOfType<UIManager>();
-        //diaryUI = objectManager.diaryUI;
         checkNumBtn.onClick.AddListener(delegate { CheckNumber(); });
     }
 
@@ -41,7 +43,9 @@ public class LockerMng : MonoBehaviour
     void Unlock()
     {
         uiManager.isUnlocked = true;
+        saveData.isUnlocked = true;
         diaryUI.SetActive(true);
         locker.SetActive(false);
+        data.Save();
     }
 }

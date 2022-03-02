@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class PartOrderMng : MonoBehaviour
 {
+    DataManager data;
+    SaveDataClass saveData;
+
     //정답 : 팔 안쪽 → 손등 → 손가락 → 손바닥 → 손가락 → 팔등
-    UIManager uiManager;
+    UI uiManager;
     InventoryMng inventoryMng;
     Hands hands;
     [SerializeField] private GameObject redJewel;
@@ -22,7 +25,9 @@ public class PartOrderMng : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        uiManager = FindObjectOfType<UIManager>();
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        uiManager = FindObjectOfType<UI>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         hands = FindObjectOfType<Hands>();
         answer = new string[6] {"InsideArm", "BackHand", "Finger", "Palm", "Finger", "OutsideArm"};
@@ -52,7 +57,9 @@ public class PartOrderMng : MonoBehaviour
             uiManager.StartCoroutine(uiManager.LoadTextOneByOne(correctText.text, inputTextUI));
             inventoryMng.AddToInventory(redJewel, 0.1f);
             hands.isJewelGained = true;
+            saveData.isJewelGained = true;
             this.gameObject.SetActive(false);
+            data.Save();
         }
     }
 }

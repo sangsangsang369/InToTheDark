@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GoddessStatue : Object
 {
-    private UIManager uiManager;
+    private UI uiManager;
     [SerializeField] private GameObject goddessStatueUI;
     [SerializeField] private Text goddessStatueText;
     [SerializeField] private Text inputTextUI;
@@ -13,7 +13,7 @@ public class GoddessStatue : Object
     // Start is called before the first frame update
     void Start()
     {
-        uiManager = FindObjectOfType<UIManager>();
+        uiManager = FindObjectOfType<UI>();
     }
 
     public override void ObjectFunction()
