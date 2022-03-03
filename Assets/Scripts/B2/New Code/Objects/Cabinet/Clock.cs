@@ -8,6 +8,8 @@ public class Clock : Object
     public B2_UIManager uiManager;
     public InventoryMng inventoryMng;
     public Cabinet3 clockcabinet;
+    public AnsCheck ansCheck;
+    public ClockOpen clockOpen;
     SlotSelectionMng slotSelectMng;
 
     // Start is called before the first frame update
@@ -17,21 +19,27 @@ public class Clock : Object
         inventoryMng = FindObjectOfType<InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
         clockcabinet = FindObjectOfType<Cabinet3>();
-        
+        ansCheck = FindObjectOfType<AnsCheck>();
+        clockOpen = FindObjectOfType<ClockOpen>();
+
     }
 
     // Update is called once per frame
     public void UseClock()
     {
-        if (slotSelectMng.selectedItem != this.gameObject)
+        if ((slotSelectMng.selectedItem != this.gameObject) && !clockOpen.isClockOpen)
         {
             slotSelectMng.SelectSlot(this.gameObject);
             clockcabinet.clockPanel.SetActive(true);
         }
-        else
+        else if ((slotSelectMng.selectedItem == this.gameObject) && !clockOpen.isClockOpen)
         {
             slotSelectMng.UnselectSlot(this.gameObject);
-            slotSelectMng.SelectionClear();
+        }
+        else if ((slotSelectMng.selectedItem == this.gameObject) && clockOpen.isClockOpen)
+        {
+            slotSelectMng.UnselectSlot(this.gameObject);
+            //slotSelectMng.SelectionClear();
         }
     }
 }

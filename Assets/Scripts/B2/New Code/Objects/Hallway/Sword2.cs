@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Key : Object
+public class Sword2 : Object
 {
     public B2_UIManager uiManager;
     public InventoryMng inventoryMng;
     SlotSelectionMng slotSelectMng;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +17,12 @@ public class Key : Object
     }
 
     // Update is called once per frame
-    public void UseCardkey()
+    public void UseSword2()
     {
         if (slotSelectMng.selectedItem != this.gameObject)
         {
             slotSelectMng.SelectSlot(this.gameObject);
-            slotSelectMng.usableItem = "keySelected";
+            slotSelectMng.usableItem = "sword2Selected";
         }
         else
         {
@@ -31,3 +30,4 @@ public class Key : Object
         }
     }
 }
+

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ClockOpen : MonoBehaviour
 {
+    public bool isClockOpen = false;
     //public GameObject MainClock;
     // Start is called before the first frame update
     void Start()
@@ -14,13 +15,9 @@ public class ClockOpen : MonoBehaviour
     // Update is called once per frame
     public void OpenClock()
     {
-        GameObject MainClock = GameObject.Find("ClockPanel");
-        if (MainClock)
-        {
-            MainClock.gameObject.SetActive(true);
+        // if 클락 오픈이면
+                {
+            //불값 바꿔주기;
         }
-        else
-            Debug.Log("뭐임?");
-        
     }
 }

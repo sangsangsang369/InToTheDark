@@ -7,11 +7,12 @@ public class Cabinet2 : Object
 {
     public B2_UIManager uiManager;
     public InventoryMng inventoryMng;
+    SlotSelectionMng slotSelectMng;
     public GameObject cabinet2UI, sword1UI, sword1Img;
     public Text cabinet2Text, sword1Text;
     public Text inputTextUI;
     Player player;
-    public bool key1Picked = false;
+    Key key;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class Cabinet2 : Object
         player = FindObjectOfType<Player>();
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
+        slotSelectMng = FindObjectOfType<SlotSelectionMng>();
     }
 
     // Update is called once per frame
@@ -26,7 +28,8 @@ public class Cabinet2 : Object
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                if (key1Picked)
+                key = FindObjectOfType<Key>();
+                if (key && slotSelectMng.usableItem == "keySelected")
                 {
                     sword1UI.SetActive(true);
                     StartCoroutine(uiManager.LoadTextOneByOne(sword1Text.text, inputTextUI));

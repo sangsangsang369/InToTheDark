@@ -10,12 +10,12 @@ public class AnsCheck : MonoBehaviour
     MoveMin moveMin;
     B2_UIManager uiManager;
     Clock clock;
+    public ClockOpen clockOpen;
     public InventoryMng inventoryMng;
     public GameObject Img1, Img2, Img3, Img4;
     public GameObject Imgs;
     public Button checkBtn;
     public int ImgNum = 1;
-    //public bool isClockOpen = false;
     public GameObject key1UI, clockUI, keyImg;
     public Text key1Text;
     public Text inputTextUI;
@@ -28,6 +28,7 @@ public class AnsCheck : MonoBehaviour
         moveMin = FindObjectOfType<MoveMin>();
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
+        clockOpen = FindObjectOfType<ClockOpen>();
         checkBtn.onClick.AddListener(delegate{ CheckAnswer(); });
     }
 
@@ -65,6 +66,7 @@ public class AnsCheck : MonoBehaviour
             if ((moveHour.fourHour == true) && (moveMin.fourMin == true))
             {
                 Img3.SetActive(false);
+                clockOpen.isClockOpen = true;
                 Invoke("ClockOpen", 0.5f);
             }
         }
@@ -73,7 +75,7 @@ public class AnsCheck : MonoBehaviour
     public void ClockOpen()
     {
         clock = FindObjectOfType<Clock>();
-        inventoryMng.RemoveFromInventory(clock.gameObject);
+        //inventoryMng.RemoveFromInventory(clock.gameObject);
         inventoryMng.AddToInventory(keyImg, 1f);
         clockUI.SetActive(false);
         key1UI.SetActive(true);
