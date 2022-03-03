@@ -14,7 +14,7 @@ public class DoorToB4 : Object
 
     DataManager data;
     SaveDataClass saveData;
-    public bool isB4DoorOpened = false;
+    public bool isB4DoorOpened;
     public GameObject creature;
 
     void Start()
@@ -47,6 +47,7 @@ public class DoorToB4 : Object
             slotSelectMng.SelectionClear(); 
             
             isB4DoorOpened = true; //문 열림
+            saveData.isB4DoorOpened = true;
             data.Save();
         }
         else if(isB4DoorOpened)

@@ -22,7 +22,7 @@ public class Letter : Object
     {
         letterUI.SetActive(true);
         GameObject letter = this.gameObject;
-        inventoryMng.PickUp(letter);
+        inventoryMng.PickUp(letter, 0.1f);
     }
 
     public void LetterItem()

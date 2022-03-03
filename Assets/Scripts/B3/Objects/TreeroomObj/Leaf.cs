@@ -29,7 +29,7 @@ public class Leaf : Object
         leafUI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(leafText.text, inputTextUI));
         GameObject leaf = this.gameObject;
-        inventoryMng.PickUp(leaf);
+        inventoryMng.PickUp(leaf, 0.4f);
     }
     public void LeafItem()
     {

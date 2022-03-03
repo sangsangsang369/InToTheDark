@@ -29,7 +29,7 @@ public class Fruit : Object
         fruitUI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(fruitText.text, inputTextUI));
         GameObject fruit = this.gameObject;
-        inventoryMng.PickUp(fruit);
+        inventoryMng.PickUp(fruit, 0.4f);
 
         GameObject[] fruits= GetChildren(fruitGroup);  //TreeroomFruit에 있는 열매 오브젝트를 배열로
         for(int i=0; i < fruitGroup.transform.childCount; i++)  

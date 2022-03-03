@@ -16,6 +16,10 @@ public class Treesap :Object
 
     void Start()
     {
+        if(this.transform.parent.gameObject.layer != 10 /*&& 이미 주워졌으면*/)
+        {
+            this.gameObject.SetActive(false);
+        }
         uiManager = FindObjectOfType<B3UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
@@ -27,7 +31,7 @@ public class Treesap :Object
         treesapUI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(treesapText.text, inputTextUI));
         GameObject treesap = this.gameObject;
-        inventoryMng.PickUp(treesap);
+        inventoryMng.PickUp(treesap, 0.4f);
     }
     public void TreesapItem()
     {

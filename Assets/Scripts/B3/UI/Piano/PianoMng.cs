@@ -20,7 +20,7 @@ public class PianoMng : MonoBehaviour
 
     DataManager data;
     SaveDataClass saveData;
-    public bool monsterExtractinInventory = false;
+    public bool monsterExtractinInventory;
    
 
     private void Start() 

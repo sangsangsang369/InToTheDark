@@ -63,6 +63,7 @@ public class ItemCombinationMng : MonoBehaviour
                 
                 //진액 인벤토리에서 파괴되었으니 피아노 콜라이더 켜주기 
                 pianoMng.pianoObj.GetComponent<BoxCollider2D>().enabled = true;
+                pianoMng.monsterExtractinInventory = false;
                 saveData.monsterExtractinInventory = false;
                 data.Save();
             }

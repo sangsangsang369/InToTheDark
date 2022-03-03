@@ -11,7 +11,7 @@ public class B3UIManager : UI
     
     DataManager data;
     SaveDataClass saveData;
-    public bool isMonsterDisappear = false;
+    public bool isMonsterDisappear;
 
     // Start is called before the first frame update
     void Start()

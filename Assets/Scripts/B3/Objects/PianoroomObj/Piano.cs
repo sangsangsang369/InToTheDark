@@ -14,7 +14,7 @@ public class Piano : Object
     
     DataManager data;
     SaveDataClass saveData;
-    public bool isPianoMemoGained = false;
+    public bool isPianoMemoGained;
     
 
     void Start()
@@ -43,6 +43,7 @@ public class Piano : Object
             inventoryMng.AddToInventory(pianoMemoItem, 0.4f);
             
             isPianoMemoGained = true;
+            saveData.isPianoMemoGained = true;
             data.Save();
         }     
     }

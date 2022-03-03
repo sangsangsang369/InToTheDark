@@ -35,7 +35,7 @@ public class InventoryMng : MonoBehaviour
         }
     }
 
-    public void PickUp(GameObject item) //월드에 있는 아이템 줍기
+    public void PickUp(GameObject item, float size) //월드에 있는 아이템 줍기
     {
         for(int i = 0; i < slotList.Count; i++)
         {
@@ -47,7 +47,7 @@ public class InventoryMng : MonoBehaviour
                 RectTransform itemRT = item.GetComponent<RectTransform>();
                 item.transform.SetParent(slotList[i].transform);
                 itemRT.anchoredPosition = new Vector2(0, 0);
-                itemRT.localScale = new Vector3(0.1f, 0.1f, 1f);
+                itemRT.localScale = new Vector3(size, size, 1f);
     
                 break;
             }

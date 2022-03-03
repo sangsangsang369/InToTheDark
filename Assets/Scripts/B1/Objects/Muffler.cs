@@ -24,7 +24,7 @@ public class Muffler : Object
         mufflerUI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(mufflerText.text, inputTextUI));
         GameObject muffler = this.gameObject;
-        inventoryMng.PickUp(muffler);
+        inventoryMng.PickUp(muffler, 0.1f);
     }
 
     public void MufflerItem()

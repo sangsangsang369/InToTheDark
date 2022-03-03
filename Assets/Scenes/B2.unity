@@ -7637,7 +7637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &925423295
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13633,6 +13633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3b65080cb01924295f9833db8b21ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clock: {fileID: 0}
   clockOpen: {fileID: 0}
   inventoryMng: {fileID: 0}
   Img1: {fileID: 1936465995}

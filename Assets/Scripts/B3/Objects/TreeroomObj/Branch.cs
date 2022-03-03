@@ -27,7 +27,7 @@ public class Branch : Object
         branchUI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(branchText.text, inputTextUI));
         GameObject branch = this.gameObject;
-        inventoryMng.PickUp(branch);
+        inventoryMng.PickUp(branch, 0.4f);
     }
     public void BranchItem()
     {

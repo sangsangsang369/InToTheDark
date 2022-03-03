@@ -33,7 +33,7 @@ public class Desk : Object
         {
             daggerUI.SetActive(true);
             StartCoroutine(uiManager.LoadTextOneByOne(daggerText.text, inputTextUI));
-            inventoryMng.PickUp(dagger);
+            inventoryMng.PickUp(dagger, 0.1f);
             isDaggerPicked = true;
             data.Save();
         }
