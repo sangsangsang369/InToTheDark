@@ -27,21 +27,14 @@ public class Clock : Object
     // Update is called once per frame
     public void UseClock()
     {
-        ansCheck = FindObjectOfType<AnsCheck>();
-        if ((slotSelectMng.selectedItem != this.gameObject) && !ansCheck.isClockOpen)
+        if (slotSelectMng.selectedItem != this.gameObject)
         {
             slotSelectMng.SelectSlot(this.gameObject);
-            clockcabinet.clockPanel.SetActive(true);
         }
-        else if ((slotSelectMng.selectedItem == this.gameObject) && !ansCheck.isClockOpen)
+        else
         {
-            slotSelectMng.UnselectSlot(this.gameObject);
+            clockcabinet.clockPanel.SetActive(true); 
         }
-        else if ((slotSelectMng.selectedItem == this.gameObject) && ansCheck.isClockOpen)
-        {
-            slotSelectMng.UnselectSlot(this.gameObject);
-            inventoryMng.RemoveFromInventory(this.gameObject);
-            slotSelectMng.SelectionClear();
-        }
+      
     }
 }
