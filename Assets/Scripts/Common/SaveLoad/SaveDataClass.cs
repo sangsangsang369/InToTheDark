@@ -7,7 +7,7 @@ using System;
 public class SaveDataClass
 {
     //인벤토리 및 아이템
-    
+
 
     //지하 1층
     public bool isFirstGB;
@@ -23,6 +23,13 @@ public class SaveDataClass
     public bool isMonsterDisappear;
     public bool isB4DoorOpened;
 
+    public bool isTreesapPicked;
+    public bool isBranchPicked;
+    public bool isLeafPicked;
+    public bool isFruitPicked;
+    public int fruitNum;
+
+
     //지하 4층
     public bool isDaggerPicked;
     public bool isJewelGained;
@@ -31,7 +38,7 @@ public class SaveDataClass
     public SaveDataClass()
     {
         //인벤토리 및 아이템
-        
+
 
         //지하 1층
         isFirstGB = true;
@@ -46,6 +53,12 @@ public class SaveDataClass
         isPianoMemoGained = false;
         monsterExtractinInventory = false; //이거 좀 봐야할 듯
         isB4DoorOpened = false;
+
+        isTreesapPicked = false;
+        isBranchPicked = false;
+        isLeafPicked = false;
+        isFruitPicked = false;
+        fruitNum = 5;
 
         //지하 4층
         isDaggerPicked = false;

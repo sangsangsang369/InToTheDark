@@ -21,27 +21,27 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
-    - time: 0.25
+    - time: 0.5
+      value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
+    - time: 1
+      value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
+    - time: 1.5
+      value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
+    - time: 2
+      value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
+    - time: 2.5
       value: {fileID: 21300000, guid: 99dbdc9f294aa454ca82d71c7e404be7, type: 3}
-    - time: 0.5833333
-      value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
-    - time: 0.9166667
-      value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
-    - time: 1.25
-      value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
-    - time: 1.6666666
-      value: {fileID: 21300000, guid: 99dbdc9f294aa454ca82d71c7e404be7, type: 3}
-    - time: 2.0833333
-      value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
-    - time: 2.4166667
-      value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
-    - time: 3.3333333
+    - time: 3
       value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
     - time: 3.5
-      value: {fileID: 21300000, guid: 40c459888384cd34682bab5205ed26fe, type: 3}
-    - time: 3.6666667
-      value: {fileID: 21300000, guid: 7792cc1c01ac392418b2bc1bca259cfd, type: 3}
+      value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
     - time: 4.3333335
+      value: {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
+    - time: 4.5
+      value: {fileID: 21300000, guid: 40c459888384cd34682bab5205ed26fe, type: 3}
+    - time: 4.6666665
+      value: {fileID: 21300000, guid: 7792cc1c01ac392418b2bc1bca259cfd, type: 3}
+    - time: 5.3333335
       value: {fileID: 21300000, guid: 7792cc1c01ac392418b2bc1bca259cfd, type: 3}
     attribute: m_Sprite
     path: 
@@ -63,7 +63,7 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
-    - {fileID: 21300000, guid: 99dbdc9f294aa454ca82d71c7e404be7, type: 3}
+    - {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
     - {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
     - {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
     - {fileID: 21300000, guid: f5ff7ba22b619c240af4dcf549de5da6, type: 3}
@@ -79,7 +79,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 4.416667
+    m_StopTime: 5.416667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -99,7 +99,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 4.3333335
+  - time: 5.3333335
     functionName: PriestScptOn
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 6bf151153924b0f449a16cee39e9b51b,

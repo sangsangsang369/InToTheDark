@@ -14,12 +14,20 @@ public class Treesap :Object
     LabTableItemManager labtableMng;
     SlotSelectionMng slotSelectMng;
 
+    DataManager data;
+    SaveDataClass saveData;
+    //public bool isTreesapPicked;
+
     void Start()
     {
-        if(this.transform.parent.gameObject.layer != 10 /*&& 이미 주워졌으면*/)
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        //isTreesapPicked = saveData.isTreesapPicked;
+        if(this.transform.parent.gameObject.layer != 10 && saveData.isTreesapPicked)
         {
             this.gameObject.SetActive(false);
         }
+
         uiManager = FindObjectOfType<B3UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
@@ -32,6 +40,9 @@ public class Treesap :Object
         StartCoroutine(uiManager.LoadTextOneByOne(treesapText.text, inputTextUI));
         GameObject treesap = this.gameObject;
         inventoryMng.PickUp(treesap, 0.4f);
+        
+        saveData.isTreesapPicked = true;
+        data.Save();
     }
     public void TreesapItem()
     {

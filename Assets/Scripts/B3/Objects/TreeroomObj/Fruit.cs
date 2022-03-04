@@ -12,31 +12,64 @@ public class Fruit : Object
     B3UIManager uiManager;
     InventoryMng inventoryMng;
     LabTableItemManager labtableMng;
-    public GameObject fruitGroup;
     SlotSelectionMng slotSelectMng;
+    
+    public GameObject fruitGroup;
+    public GameObject[] fruits;
+    
+    DataManager data;
+    SaveDataClass saveData;
+
 
     void Start()
     {
+        fruits= GetChildren(fruitGroup);  //TreeroomFruit에 있는 열매 오브젝트를 배열로
+
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+
+        if(this.transform.parent.gameObject.layer != 10 && saveData.isFruitPicked)
+        {
+            fruits[saveData.fruitNum].SetActive(false);
+            for(int i=0; i < fruitGroup.transform.childCount; i++)  
+            {
+                fruits[i].GetComponent<BoxCollider2D>().enabled = false;  //for문 돌면서 배열의 열매 콜라이더 꺼주기
+            }
+        }
+
         uiManager = FindObjectOfType<B3UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
-
     }
 
     public override void ObjectFunction()
     {
         fruitUI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(fruitText.text, inputTextUI));
+        
         GameObject fruit = this.gameObject;
         inventoryMng.PickUp(fruit, 0.4f);
 
-        GameObject[] fruits= GetChildren(fruitGroup);  //TreeroomFruit에 있는 열매 오브젝트를 배열로
+        for(int i=0; i < fruits.Length; i++)  
+        //fruit가 클릭되면 프리펩화 되기때문에 childCount에 안 잡힘(childCount=3임)
+        //그래서 fruits.length로 해줘야함(start에서 4개 다 저장해주니까)
+        {
+            //Debug.Log(fruits.Length);
+            if(fruits[i] == fruit)
+            {
+                saveData.fruitNum = i;
+                data.Save(); 
+            }
+        }
+        //얘는 그냥 켜져있는거만 콜라이더 끄면 되니까 문제 없을듯
         for(int i=0; i < fruitGroup.transform.childCount; i++)  
         {
             fruits[i].GetComponent<BoxCollider2D>().enabled = false;  //for문 돌면서 배열의 열매 콜라이더 꺼주기
         }
-            
+
+        saveData.isFruitPicked = true;
+        data.Save();   
     }
 
     public void FruitItem()

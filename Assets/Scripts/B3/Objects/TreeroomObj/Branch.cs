@@ -14,8 +14,18 @@ public class Branch : Object
     LabTableItemManager labtableMng;
     SlotSelectionMng slotSelectMng;
 
+    DataManager data;
+    SaveDataClass saveData;
+
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        if(this.transform.parent.gameObject.layer != 10 && saveData.isBranchPicked)
+        {
+            this.gameObject.SetActive(false);
+        }
+
         uiManager = FindObjectOfType<B3UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
@@ -28,6 +38,9 @@ public class Branch : Object
         StartCoroutine(uiManager.LoadTextOneByOne(branchText.text, inputTextUI));
         GameObject branch = this.gameObject;
         inventoryMng.PickUp(branch, 0.4f);
+
+        saveData.isBranchPicked = true;
+        data.Save();
     }
     public void BranchItem()
     {

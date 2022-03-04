@@ -14,14 +14,22 @@ public class Leaf : Object
     LabTableItemManager labtableMng;
     SlotSelectionMng slotSelectMng;
 
+    DataManager data;
+    SaveDataClass saveData;
 
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        if(this.transform.parent.gameObject.layer != 10 && saveData.isLeafPicked)
+        {
+            this.gameObject.SetActive(false);
+        }
+
         uiManager = FindObjectOfType<B3UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
-
     }
 
     public override void ObjectFunction()
@@ -30,6 +38,9 @@ public class Leaf : Object
         StartCoroutine(uiManager.LoadTextOneByOne(leafText.text, inputTextUI));
         GameObject leaf = this.gameObject;
         inventoryMng.PickUp(leaf, 0.4f);
+
+        saveData.isLeafPicked = true;
+        data.Save();
     }
     public void LeafItem()
     {

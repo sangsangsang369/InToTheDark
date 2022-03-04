@@ -27,7 +27,7 @@ public class AfterDoorOpen : MonoBehaviour
         if(priest.transform.position.x > 54)
         {
             priest.GetComponent<Animator>().SetBool("WalkOn", true);
-            priest.transform.position += Vector3.left * 2.0f * Time.deltaTime;
+            priest.transform.position += Vector3.left * 1.8f * Time.deltaTime;
         } 
     }
     

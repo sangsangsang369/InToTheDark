@@ -40,5 +40,12 @@ public class Platform : CollisionObject
         globalLight.GetComponent<Animator>().SetBool("LightOff", true);
         floor.SetActive(false);
         walls.GetComponent<Animator>().SetTrigger("Open");
+        Invoke("PlayerFlip", 3.2f);
+    }
+
+    public void PlayerFlip()
+    {
+        //playerObj.GetComponent<Animator>().SetBool("idleAgain", true);
+        playerObj.GetComponent<SpriteRenderer>().flipX = false;
     }
 }

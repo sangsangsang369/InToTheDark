@@ -26,6 +26,11 @@ public class DoorToB4 : Object
         inventoryMng = FindObjectOfType<InventoryMng>();
         uiManager = FindObjectOfType<B3UIManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
+
+        if(isB4DoorOpened)
+        {
+            creature.SetActive(false);
+        }
     }
 
     public override void ObjectFunction()

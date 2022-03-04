@@ -11611,6 +11611,7 @@ MonoBehaviour:
   fruit_AfterText: {fileID: 1217635452}
   inputTextUI: {fileID: 300144543}
   fruitGroup: {fileID: 1646987158}
+  fruits: []
 --- !u!114 &1411369740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12541,6 +12542,11 @@ MonoBehaviour:
     monsterExtractinInventory: 0
     isMonsterDisappear: 0
     isB4DoorOpened: 0
+    isTreesapPicked: 0
+    isBranchPicked: 0
+    isLeafPicked: 0
+    isFruitPicked: 0
+    fruitNum: 4
     isDaggerPicked: 0
     isJewelGained: 0
     isB4LockUnlocked: 0
@@ -14181,6 +14187,7 @@ MonoBehaviour:
   fruit_AfterText: {fileID: 1217635452}
   inputTextUI: {fileID: 300144543}
   fruitGroup: {fileID: 1646987158}
+  fruits: []
 --- !u!114 &1584809434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16388,6 +16395,7 @@ MonoBehaviour:
   fruit_AfterText: {fileID: 1217635452}
   inputTextUI: {fileID: 300144543}
   fruitGroup: {fileID: 1646987158}
+  fruits: []
 --- !u!114 &1752787427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16587,8 +16595,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756742958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.71, y: 0.48, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 12.8, y: 0.583, z: 0}
+  m_LocalScale: {x: 0.95599437, y: 0.95599437, z: 0.95599437}
   m_Children:
   - {fileID: 1193943703}
   m_Father: {fileID: 2040903369}
