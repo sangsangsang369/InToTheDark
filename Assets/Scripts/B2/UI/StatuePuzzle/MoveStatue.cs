@@ -40,7 +40,7 @@ public class MoveStatue : MonoBehaviour
         sword2UI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(sword2Text.text, inputTextUI));
         GameObject sword2 = sword2Img;
-        inventoryMng.AddToInventory(sword2, 1f);
+        inventoryMng.AddToInventory(sword2, 1f, ItemClass.ItemPrefabOrder.Sword2);
         playOnce = true;
     }
 }

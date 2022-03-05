@@ -37,7 +37,7 @@ public class Branch : Object
         branchUI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(branchText.text, inputTextUI));
         GameObject branch = this.gameObject;
-        inventoryMng.PickUp(branch, 0.4f);
+        inventoryMng.PickUp(branch, 0.4f, ItemClass.ItemPrefabOrder.Branch);
 
         saveData.isBranchPicked = true;
         data.Save();

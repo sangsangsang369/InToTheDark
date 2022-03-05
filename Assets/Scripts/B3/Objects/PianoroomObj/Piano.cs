@@ -40,7 +40,7 @@ public class Piano : Object
             pianoExplainUI.SetActive(true);  //설명 스크립트 on
             StartCoroutine(uiManager.LoadTextOneByOne(pianoExplainText.text, inputTextUI));
             //피아노 메모 획득
-            inventoryMng.AddToInventory(pianoMemoItem, 0.4f);
+            inventoryMng.AddToInventory(pianoMemoItem, 0.4f, ItemClass.ItemPrefabOrder.PianoMemo);
             
             isPianoMemoGained = true;
             saveData.isPianoMemoGained = true;

@@ -32,7 +32,7 @@ public class DiaryCloseBtn : MonoBehaviour
             isDiaryClicked = true;
             saveData.isDiaryClicked = true;
             uiManager.StartCoroutine(uiManager.LoadCardkeyTexts());
-            inventoryMng.AddToInventory(cardKey, 0.1f);
+            inventoryMng.AddToInventory(cardKey, 0.1f, ItemClass.ItemPrefabOrder.CardKey);
             data.Save();
         }
     }

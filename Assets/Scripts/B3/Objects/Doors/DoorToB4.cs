@@ -48,7 +48,7 @@ public class DoorToB4 : Object
             StartCoroutine(uiManager.LoadTextOneByOne(doorToB4_EnterText.text, inputTextUI));
             creature.SetActive(false); //문에 붙은 이형체 꺼주기
             
-            inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem);
+            inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.Liquid);
             slotSelectMng.SelectionClear(); 
             
             isB4DoorOpened = true; //문 열림

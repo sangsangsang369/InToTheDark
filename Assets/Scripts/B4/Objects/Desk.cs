@@ -33,8 +33,9 @@ public class Desk : Object
         {
             daggerUI.SetActive(true);
             StartCoroutine(uiManager.LoadTextOneByOne(daggerText.text, inputTextUI));
-            inventoryMng.PickUp(dagger, 0.1f);
+            inventoryMng.PickUp(dagger, 0.1f, ItemClass.ItemPrefabOrder.Dagger);
             isDaggerPicked = true;
+            saveData.isDaggerPicked = true;
             data.Save();
         }
         else

@@ -49,7 +49,7 @@ public class Fruit : Object
         StartCoroutine(uiManager.LoadTextOneByOne(fruitText.text, inputTextUI));
         
         GameObject fruit = this.gameObject;
-        inventoryMng.PickUp(fruit, 0.4f);
+        inventoryMng.PickUp(fruit, 0.4f, ItemClass.ItemPrefabOrder.Fruit);
 
         for(int i=0; i < fruits.Length; i++)  
         //fruit가 클릭되면 프리펩화 되기때문에 childCount에 안 잡힘(childCount=3임)

@@ -10,8 +10,8 @@ public class InventoryMng : MonoBehaviour
 
     [HideInInspector] public int currentPage = 1;
     public List<GameObject> inventoryList;
-    [HideInInspector] public List<GameObject> slotList;
-    [HideInInspector] public List<bool> filledCheck;
+    public List<GameObject> slotList;
+    public List<bool> filledCheck;
     [SerializeField] private GameObject inventoryPrefab;
     [SerializeField] private GameObject inventoryParent;
     [SerializeField] private Sprite unselectedSlot;
@@ -22,20 +22,80 @@ public class InventoryMng : MonoBehaviour
         data = DataManager.singleTon;
         saveData = data.saveData;
         
-        for(int i = 0; i < inventoryList.Count; i++)
+        //아이템의 갯수가 0이나 6의 배수가 아니면
+        if(saveData.itemList.Count % 6 != 0)
         {
-            for(int j = 0; j < 6; j++)
+            for(int i = 0; i < (int)(saveData.itemList.Count / 6) + 1; i++)
             {
-                slotList.Add(inventoryList[i].transform.GetChild(j).gameObject);
+                if(i == 0)
+                {
+                    AddNewInventory(true);
+                }
+                else
+                {
+                    AddNewInventory(false);
+                }
             }
         }
-        for(int i = 0; i < slotList.Count; i++)
+        //아이템의 갯수가 0이나 6의 배수라면
+        else 
         {
-            filledCheck.Add(false);
+            //아이템의 갯수가 6보다 크거나 같다면
+            if((int)(saveData.itemList.Count / 6) != 0)
+            {
+                for(int i = 0; i < (int)(saveData.itemList.Count / 6); i++)
+                {
+                    if(i == 0)
+                    {
+                        AddNewInventory(true);
+                    }
+                    else
+                    {
+                        AddNewInventory(false);
+                    }
+                }
+            }
+            //아이템의 갯수가 6보다 작다면
+            else
+            {
+                AddNewInventory(true);
+            }
+        }
+
+        for(int i = 0; i < saveData.itemList.Count; i++)
+        {
+            int itemIndex = saveData.itemList[i].prefabOrder;
+            InstantiateItemsOnInventory(data.itemPrefabs[itemIndex].gameObject, 0.1f);
         }
     }
 
-    public void PickUp(GameObject item, float size) //월드에 있는 아이템 줍기
+    private void InstantiateItemsOnInventory(GameObject item, float size)
+    {
+        for(int i = 0; i < slotList.Count; i++)
+        {
+            if(!filledCheck[i])
+            {
+                filledCheck[i] = true;
+                if(item.GetComponent<SpriteRenderer>())
+                {
+                    item.GetComponent<SpriteRenderer>().enabled = false;
+                }
+                item.GetComponent<Image>().enabled = true;
+                GameObject item_n = Instantiate(item, slotList[i].transform);
+                RectTransform itemRT = item_n.GetComponent<RectTransform>();
+                itemRT.anchoredPosition = new Vector2(0, 0);
+                itemRT.localScale = new Vector3(size, size, size);
+    
+                break;
+            }
+            else if(filledCheck[slotList.Count - 1])
+            {
+                AddNewInventory(false);
+            }
+        }
+    }
+
+    public void PickUp(GameObject item, float size, ItemClass.ItemPrefabOrder order) //월드에 있는 아이템 줍기
     {
         for(int i = 0; i < slotList.Count; i++)
         {
@@ -53,12 +113,17 @@ public class InventoryMng : MonoBehaviour
             }
             else if(filledCheck[slotList.Count - 1])
             {
-                AddNewInventory();
+                AddNewInventory(false);
             }
         }
+        ItemClass itemPicked = new ItemClass(order);
+        Debug.Log(order);
+        saveData.itemList.Add(itemPicked);
+        Debug.Log(saveData.itemList[0].prefabOrder);
+        data.Save();
     }
 
-    public void AddToInventory(GameObject item, float size) //월드에 없는 아이템 줍기
+    public void AddToInventory(GameObject item, float size, ItemClass.ItemPrefabOrder order) //월드에 없는 아이템 줍기
     {
         for(int i = 0; i < slotList.Count; i++)
         {
@@ -74,16 +139,18 @@ public class InventoryMng : MonoBehaviour
             }
             else if(filledCheck[slotList.Count - 1])
             {
-                AddNewInventory();
+                AddNewInventory(false);
             }
         }
+        ItemClass itemPicked = new ItemClass(order);
+        saveData.itemList.Add(itemPicked);
+        data.Save();
     }
 
-
-    private void AddNewInventory() // 새로운 인벤토리창 추가
+    private void AddNewInventory(bool OnOff) // 새로운 인벤토리창 추가
     {
         GameObject addedInventory = Instantiate(inventoryPrefab, inventoryParent.transform);
-        addedInventory.SetActive(false);
+        addedInventory.SetActive(OnOff);
         inventoryList.Add(addedInventory);
         for(int j = 0; j < 6; j++)
         {
@@ -94,7 +161,7 @@ public class InventoryMng : MonoBehaviour
 
     // slotSelectMng.SelectionClear();
     // Remove함수와 항상 같이 사용
-    public void RemoveFromInventory(GameObject item) // 아이템 사용 후 없어지는 경우
+    public void RemoveFromInventory(GameObject item, ItemClass.ItemPrefabOrder itemName) // 아이템 사용 후 없어지는 경우
     {
         item.transform.parent.GetComponent<Image>().sprite = unselectedSlot;
         item.transform.parent.DetachChildren();
@@ -125,6 +192,16 @@ public class InventoryMng : MonoBehaviour
         if(!filledCheck[slotList.Count - 6])
         {
             Destroy(slotList[slotList.Count - 6].transform.parent.gameObject);
+        }
+
+        //세이브 데이터의 아이템리스트에서도 제거
+        for(int j = 0; j < saveData.itemList.Count; j++)
+        {
+            if(saveData.itemList[j].prefabOrder == (int)itemName)
+            {
+                saveData.itemList.RemoveAt(j);
+                break;
+            }
         }
     }
 

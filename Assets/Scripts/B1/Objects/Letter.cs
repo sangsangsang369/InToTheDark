@@ -11,8 +11,24 @@ public class Letter : Object
     InventoryMng inventoryMng;
     SlotSelectionMng slotSelectMng;
 
+    DataManager data;
+    SaveDataClass saveData;
+
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        if(this.transform.parent.gameObject.layer != 10 && saveData.isLetterPicked)
+        {
+            this.gameObject.SetActive(false);
+        }
+        else
+        {
+            if(this.GetComponent<SpriteRenderer>())
+            {
+                this.GetComponent<SpriteRenderer>().enabled = true;
+            }
+        }
         uiManager = FindObjectOfType<UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
@@ -22,7 +38,9 @@ public class Letter : Object
     {
         letterUI.SetActive(true);
         GameObject letter = this.gameObject;
-        inventoryMng.PickUp(letter, 0.1f);
+        inventoryMng.PickUp(letter, 0.1f, ItemClass.ItemPrefabOrder.Letter);
+        saveData.isLetterPicked = true;
+        data.Save();
     }
 
     public void LetterItem()

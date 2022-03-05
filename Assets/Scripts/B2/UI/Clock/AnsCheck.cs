@@ -78,7 +78,7 @@ public class AnsCheck : MonoBehaviour
     {
         //clock = FindObjectOfType<Clock>();
         //inventoryMng.RemoveFromInventory(clock.gameObject);
-        inventoryMng.AddToInventory(keyImg, 1f);
+        inventoryMng.AddToInventory(keyImg, 1f, ItemClass.ItemPrefabOrder.CabinetKey);
         clockUI.SetActive(false);
         key1UI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(key1Text.text, inputTextUI));

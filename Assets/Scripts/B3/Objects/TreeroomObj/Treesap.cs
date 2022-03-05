@@ -39,7 +39,7 @@ public class Treesap :Object
         treesapUI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(treesapText.text, inputTextUI));
         GameObject treesap = this.gameObject;
-        inventoryMng.PickUp(treesap, 0.4f);
+        inventoryMng.PickUp(treesap, 0.4f, ItemClass.ItemPrefabOrder.Sap);
         
         saveData.isTreesapPicked = true;
         data.Save();

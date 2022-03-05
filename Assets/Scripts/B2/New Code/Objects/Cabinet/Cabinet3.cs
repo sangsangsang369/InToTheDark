@@ -38,7 +38,7 @@ public class Cabinet3 : Object
             {
                 StartCoroutine(uiManager.LoadTexts(cabinet3Texts, inputTextUI, 3));
                 GameObject clock = clockImg;
-                inventoryMng.AddToInventory(clock, 1f);
+                inventoryMng.AddToInventory(clock, 1f, ItemClass.ItemPrefabOrder.PocketWatch);
                 alreadyOpen = true;
                 saveData.alreadyOpen = true;
                 data.Save();

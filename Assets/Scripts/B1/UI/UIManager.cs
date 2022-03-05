@@ -89,7 +89,7 @@ public class UIManager : UI
                     {
                         if(isFirstGB)
                         {
-                            inventoryMng.AddToInventory(note, 0.1f);
+                            inventoryMng.AddToInventory(note, 0.1f, ItemClass.ItemPrefabOrder.Note);
                         }
                         nameText.text = "책에서 발견된 쪽지";
                         illust.GetComponent<Image>().sprite = letterImage;

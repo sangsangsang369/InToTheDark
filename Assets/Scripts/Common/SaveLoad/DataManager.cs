@@ -16,6 +16,7 @@ using UnityEngine.UI;
 //세이브데이터 관리를 여기서 한다.
 public class DataManager : MonoBehaviour
 {
+    public List<GameObject> itemPrefabs;
     JsonManager jsonManager;
     public SaveDataClass saveData;
     public static DataManager singleTon;
@@ -41,6 +42,7 @@ public class DataManager : MonoBehaviour
         saveData = new SaveDataClass();
     
         Load();
+        //DataInitialize();
     }
 
     //세이브데이터 세이브

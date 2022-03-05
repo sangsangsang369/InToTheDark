@@ -55,7 +55,7 @@ public class PartOrderMng : MonoBehaviour
         {
             correctUI.SetActive(true);
             uiManager.StartCoroutine(uiManager.LoadTextOneByOne(correctText.text, inputTextUI));
-            inventoryMng.AddToInventory(redJewel, 0.1f);
+            inventoryMng.AddToInventory(redJewel, 0.1f, ItemClass.ItemPrefabOrder.RedJewel);
             hands.isJewelGained = true;
             saveData.isJewelGained = true;
             this.gameObject.SetActive(false);

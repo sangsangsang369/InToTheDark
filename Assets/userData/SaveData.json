@@ -1,8 +1,11 @@
 {
-    "isFirstGB": false,
-    "isUnlocked": true,
-    "isDiaryClicked": true,
-    "alreadyOpen": true,
+    "itemList": [],
+    "isFirstGB": true,
+    "isUnlocked": false,
+    "isDiaryClicked": false,
+    "isMufflerPicked": false,
+    "isLetterPicked": false,
+    "alreadyOpen": false,
     "isPianoMemoGained": false,
     "monsterExtractinInventory": false,
     "isMonsterDisappear": false,
@@ -11,8 +14,8 @@
     "isBranchPicked": false,
     "isLeafPicked": false,
     "isFruitPicked": false,
-    "fruitNum": 1,
+    "fruitNum": 5,
     "isDaggerPicked": false,
-    "isJewelGained": true,
-    "isB4LockUnlocked": true
+    "isJewelGained": false,
+    "isB4LockUnlocked": false
 }

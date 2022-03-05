@@ -12,8 +12,24 @@ public class Muffler : Object
     InventoryMng inventoryMng;
     SlotSelectionMng slotSelectMng;
 
+    DataManager data;
+    SaveDataClass saveData;
+
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        if(this.transform.parent.gameObject.layer != 10 && saveData.isMufflerPicked)
+        {
+            this.gameObject.SetActive(false);
+        }
+        else
+        {
+            if(this.GetComponent<SpriteRenderer>())
+            {
+                this.GetComponent<SpriteRenderer>().enabled = true;
+            }
+        }
         uiManager = FindObjectOfType<UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
@@ -24,7 +40,9 @@ public class Muffler : Object
         mufflerUI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(mufflerText.text, inputTextUI));
         GameObject muffler = this.gameObject;
-        inventoryMng.PickUp(muffler, 0.1f);
+        inventoryMng.PickUp(muffler, 0.1f, ItemClass.ItemPrefabOrder.Muffler);
+        saveData.isMufflerPicked = true;
+        data.Save();
     }
 
     public void MufflerItem()

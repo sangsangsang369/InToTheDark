@@ -58,7 +58,7 @@ public class PianoMng : MonoBehaviour
                 PianoQuizSolvedUI.SetActive(true); 
                 StartCoroutine(uiManager.LoadTextOneByOne(PianoQuizSolvedText.text, inputTextUI));
                 //진액 획득
-                inventoryMng.AddToInventory(monsterExtractItem, 0.4f); //진액 인벤토리에 들어오게
+                inventoryMng.AddToInventory(monsterExtractItem, 0.4f, ItemClass.ItemPrefabOrder.MonsterEssence); //진액 인벤토리에 들어오게
                 monsterExtractinInventory = true; //나중에 실험대에서 진액 없어지면 얘 false로 바꿔주기
                 saveData.monsterExtractinInventory = true;
                 data.Save();
