@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SetOff : MonoBehaviour
 {
@@ -38,6 +39,17 @@ public class SetOff : MonoBehaviour
                 uiManager.numOfClicked = 0;
             }
             this.gameObject.SetActive(false);
+        }
+    }
+
+    public void OffAndLoadScene(string sceneName)
+    {
+        if(!uiManager.nowTexting)
+        {
+            inputTextUI.GetComponent<Text>().text = "";
+            inputTextUI.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
+            SceneManager.LoadScene(sceneName);
         }
     }
 }

@@ -1,10 +1,15 @@
 {
     "itemList": [
-        
+        {
+            "prefabOrder": 3
+        },
+        {
+            "prefabOrder": 2
+        }
     ],
-    "isFirstGB": true,
-    "isUnlocked": false,
-    "isDiaryClicked": false,
+    "isFirstGB": false,
+    "isUnlocked": true,
+    "isDiaryClicked": true,
     "isMufflerPicked": false,
     "isLetterPicked": false,
     "alreadyOpen": true,
