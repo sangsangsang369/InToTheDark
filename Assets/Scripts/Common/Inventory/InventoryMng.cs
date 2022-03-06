@@ -102,7 +102,10 @@ public class InventoryMng : MonoBehaviour
             if(!filledCheck[i])
             {
                 filledCheck[i] = true;
-                item.GetComponent<SpriteRenderer>().enabled = false;
+                if(item.GetComponent<SpriteRenderer>())
+                {
+                    item.GetComponent<SpriteRenderer>().enabled = false;
+                }
                 item.GetComponent<Image>().enabled = true;
                 RectTransform itemRT = item.GetComponent<RectTransform>();
                 item.transform.SetParent(slotList[i].transform);
@@ -117,7 +120,6 @@ public class InventoryMng : MonoBehaviour
             }
         }
         ItemClass itemPicked = new ItemClass(order);
-        Debug.Log(order);
         saveData.itemList.Add(itemPicked);
         Debug.Log(saveData.itemList[0].prefabOrder);
         data.Save();

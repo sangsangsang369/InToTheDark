@@ -23,8 +23,6 @@ public class Fruit : Object
 
     void Start()
     {
-        fruits= GetChildren(fruitGroup);  //TreeroomFruit에 있는 열매 오브젝트를 배열로
-
         data = DataManager.singleTon;
         saveData = data.saveData;
 
@@ -35,6 +33,10 @@ public class Fruit : Object
             {
                 fruits[i].GetComponent<BoxCollider2D>().enabled = false;  //for문 돌면서 배열의 열매 콜라이더 꺼주기
             }
+        }
+        else if(this.transform.parent.gameObject.layer != 10 && !saveData.isFruitPicked)
+        {
+            fruits= GetChildren(fruitGroup);  //TreeroomFruit에 있는 열매 오브젝트를 배열로
         }
 
         uiManager = FindObjectOfType<B3UIManager>();

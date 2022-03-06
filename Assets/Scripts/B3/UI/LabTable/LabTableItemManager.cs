@@ -12,8 +12,13 @@ public class LabTableItemManager : MonoBehaviour
     InventoryMng inventoryMng; 
     public GameObject labTable; 
 
+    DataManager data;
+    SaveDataClass saveData;
+
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
         inventoryMng = FindObjectOfType<InventoryMng>();
         uiManager = FindObjectOfType<B3UIManager>();
         AddToDictionary();
@@ -98,10 +103,12 @@ public class LabTableItemManager : MonoBehaviour
         }
     } 
     //조합 성공했을 때 재료 아이템들 파괴 & 아이템 활성화된거 전부 비활성화로 초기화
-    public void DestroyMaterials_ResetActive()
+    public void DestroyMaterials_ResetActive(ItemClass.ItemPrefabOrder item1Name, ItemClass.ItemPrefabOrder item2Name)
     {
-        Destroy(itemOne.transform.GetChild(0).gameObject);
-        Destroy(itemTwo.transform.GetChild(0).gameObject);
+        //Destroy(itemOne.transform.GetChild(0).gameObject);
+        //Destroy(itemTwo.transform.GetChild(0).gameObject);
+        DestroyOnLabTable(itemOne.transform.GetChild(0).gameObject, item1Name);
+        DestroyOnLabTable(itemTwo.transform.GetChild(0).gameObject, item2Name);
         leftActive = false;
         rightActive = false;
 
@@ -110,6 +117,20 @@ public class LabTableItemManager : MonoBehaviour
             List<string> keyList = new List<string>(itemActive.Keys);
             string key = keyList[i];
             itemActive[key] = false; 
+        }
+    }
+
+    private void DestroyOnLabTable(GameObject item, ItemClass.ItemPrefabOrder itemName)
+    {
+        Destroy(item);
+        for(int j = 0; j < saveData.itemList.Count; j++)
+        {
+            if(saveData.itemList[j].prefabOrder == (int)itemName)
+            {
+                saveData.itemList.RemoveAt(j);
+                data.Save();
+                break;
+            }
         }
     }
 

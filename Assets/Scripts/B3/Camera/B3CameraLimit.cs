@@ -10,10 +10,19 @@ public class B3CameraLimit : MonoBehaviour
     bool switchCamera = false; //true일 경우 좌,우 끝에 도달, false일 경우 끝에 도달하지 않은 상태
     Player player;
 
+    DataManager data;
+    SaveDataClass saveData;
+
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
         player = FindObjectOfType<Player>();
         player.currRoom="B3_Hallway";
+        // player.transform.position = saveData.nextScenePlayerPosition;
+        // this.transform.SetParent(mainCharacter.transform); 
+        // playerCamera.transform.localPosition = new Vector3(0, this.transform.localPosition.y, -10);
+        // this.transform.localScale = new Vector3(1, 1, 1);
     }
 
     // Update is called once per frame

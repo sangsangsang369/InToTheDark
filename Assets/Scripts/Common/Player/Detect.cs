@@ -10,7 +10,7 @@ public class Detect : MonoBehaviour
     UI uiManager;
     Vector3 raycastDir = new Vector3(0, 0, 1);
     Vector3 mousePos;
-    Camera mainCamera;
+    public Camera mainCamera;
 
     SlotSelectionMng slotSelectMng;
     Canvas canvas;

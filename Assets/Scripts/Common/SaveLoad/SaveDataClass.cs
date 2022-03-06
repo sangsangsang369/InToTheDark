@@ -6,6 +6,9 @@ using System;
 [System.Serializable]
 public class SaveDataClass
 {
+    //플레이어 위치 정보
+    public Vector2 nextScenePlayerPosition;
+
     //인벤토리 및 아이템
     public List<ItemClass> itemList;
 
@@ -45,6 +48,7 @@ public class SaveDataClass
 
     public SaveDataClass()
     {
+        nextScenePlayerPosition = new Vector2(-32.5f, -0.83f);
         //인벤토리 및 아이템
         itemList = new List<ItemClass>();
 

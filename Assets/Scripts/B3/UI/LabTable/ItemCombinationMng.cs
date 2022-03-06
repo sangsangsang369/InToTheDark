@@ -36,8 +36,10 @@ public class ItemCombinationMng : MonoBehaviour
                 && labtableMng.itemActive["branchActive"])
             {
                 GameObject fleshOne = Instantiate(fleshOneItem, labtableMng.resultItem.transform); //결과슬롯 자식으로 살덩어리1 생성
+                saveData.itemList.Add(new ItemClass(ItemClass.ItemPrefabOrder.Flesh1));
+                data.Save();
                 labtableMng.SetItemSize_Btn(fleshOne); //크기 조정하고 아이템 버튼컴포넌트 꺼주기
-                labtableMng.DestroyMaterials_ResetActive(); //재료 아이템 파괴하고 아이템 활성화 다 false로
+                labtableMng.DestroyMaterials_ResetActive(ItemClass.ItemPrefabOrder.Fruit, ItemClass.ItemPrefabOrder.Branch); //재료 아이템 파괴하고 아이템 활성화 다 false로
                 labtableMng.resultItemActive = true; //결과슬롯 활성화
                 labtableMng.itemActive["fleshOneActive"] = true; //살덩어리1 활성화   
             }
@@ -46,8 +48,10 @@ public class ItemCombinationMng : MonoBehaviour
                 && labtableMng.itemActive["treesapActive"])
             {
                 GameObject patternLeaf = Instantiate(patternLeafItem, labtableMng.resultItem.transform); 
+                saveData.itemList.Add(new ItemClass(ItemClass.ItemPrefabOrder.PatternLeaf));
+                data.Save();
                 labtableMng.SetItemSize_Btn(patternLeaf);
-                labtableMng.DestroyMaterials_ResetActive();
+                labtableMng.DestroyMaterials_ResetActive(ItemClass.ItemPrefabOrder.Leaf, ItemClass.ItemPrefabOrder.Sap);
                 labtableMng.resultItemActive = true;
                 labtableMng.itemActive["patternLeafActive"] = true; //무늬 나뭇잎 활성화
             }
@@ -56,8 +60,10 @@ public class ItemCombinationMng : MonoBehaviour
                 && labtableMng.itemActive["monsterExtractActive"])
             {
                 GameObject fleshTwo = Instantiate(fleshTwoItem, labtableMng.resultItem.transform);
+                saveData.itemList.Add(new ItemClass(ItemClass.ItemPrefabOrder.Flesh2));
+                data.Save();
                 labtableMng.SetItemSize_Btn(fleshTwo);
-                labtableMng.DestroyMaterials_ResetActive();
+                labtableMng.DestroyMaterials_ResetActive(ItemClass.ItemPrefabOrder.Flesh1, ItemClass.ItemPrefabOrder.MonsterEssence);
                 labtableMng.resultItemActive = true;
                 labtableMng.itemActive["fleshTwoActive"] = true; //살덩어리2 활성화
                 
@@ -72,8 +78,10 @@ public class ItemCombinationMng : MonoBehaviour
                 && labtableMng.itemActive["patternLeafActive"])
             {
                 GameObject liquid = Instantiate(liquidItem, labtableMng.resultItem.transform);
+                saveData.itemList.Add(new ItemClass(ItemClass.ItemPrefabOrder.Liquid));
+                data.Save();
                 labtableMng.SetItemSize_Btn(liquid);
-                labtableMng.DestroyMaterials_ResetActive();
+                labtableMng.DestroyMaterials_ResetActive(ItemClass.ItemPrefabOrder.Flesh2, ItemClass.ItemPrefabOrder.PatternLeaf);
                 labtableMng.resultItemActive = true;
                 labtableMng.itemActive["liquidActive"] = true; //투명한 액체 활성화
             }

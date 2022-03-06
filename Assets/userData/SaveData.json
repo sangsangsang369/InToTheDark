@@ -1,22 +1,29 @@
 {
+    "playerPosition": {
+        "x": 0.0,
+        "y": 0.0
+    },
     "itemList": [
         {
-            "prefabOrder": 3
+            "prefabOrder": 8
         },
         {
-            "prefabOrder": 2
+            "prefabOrder": 10
+        },
+        {
+            "prefabOrder": 16
         }
     ],
-    "isFirstGB": false,
-    "isUnlocked": true,
-    "isDiaryClicked": true,
+    "isFirstGB": true,
+    "isUnlocked": false,
+    "isDiaryClicked": false,
     "isMufflerPicked": false,
     "isLetterPicked": false,
-    "alreadyOpen": true,
+    "alreadyOpen": false,
     "playPuzzleOnce": false,
     "isB3DoorOpened": false,
-    "OnB2CandleOnce": true,
-    "playB2StatueOnce": true,
+    "OnB2CandleOnce": false,
+    "playB2StatueOnce": false,
     "statue1Fliped": false,
     "statue2Fliped": false,
     "statue3Fliped": false,
@@ -25,11 +32,11 @@
     "monsterExtractinInventory": false,
     "isMonsterDisappear": false,
     "isB4DoorOpened": false,
-    "isTreesapPicked": false,
-    "isBranchPicked": false,
-    "isLeafPicked": false,
-    "isFruitPicked": false,
-    "fruitNum": 5,
+    "isTreesapPicked": true,
+    "isBranchPicked": true,
+    "isLeafPicked": true,
+    "isFruitPicked": true,
+    "fruitNum": 3,
     "isDaggerPicked": false,
     "isJewelGained": false,
     "isB4LockUnlocked": false

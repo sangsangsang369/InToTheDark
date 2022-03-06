@@ -4025,6 +4025,7 @@ MonoBehaviour:
   - {fileID: 8882906234017663501, guid: 7bd80e8c460e755469629f05f09897dc, type: 3}
   - {fileID: 7202987858791076646, guid: 4627dde752c309f4c8b114e56870636a, type: 3}
   saveData:
+    nextScenePlayerPosition: {x: 0, y: 0}
     itemList: []
     isFirstGB: 1
     isUnlocked: 0
@@ -4032,6 +4033,14 @@ MonoBehaviour:
     isMufflerPicked: 0
     isLetterPicked: 0
     alreadyOpen: 0
+    playPuzzleOnce: 0
+    isB3DoorOpened: 0
+    OnB2CandleOnce: 0
+    playB2StatueOnce: 0
+    statue1Fliped: 0
+    statue2Fliped: 0
+    statue3Fliped: 0
+    statue4Fliped: 0
     isPianoMemoGained: 0
     monsterExtractinInventory: 0
     isMonsterDisappear: 0
@@ -4470,6 +4479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b711234557a0e4593f0ad5f63d99b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
   currRoom: B4_Hallway
   speed: 6
   limit: 0
@@ -13429,6 +13439,7 @@ GameObject:
   - component: {fileID: 2028866654}
   - component: {fileID: 2028866655}
   - component: {fileID: 2028866656}
+  - component: {fileID: 2028866657}
   m_Layer: 9
   m_Name: SpiralStair
   m_TagString: SpiralStair
@@ -13527,6 +13538,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5892506, y: 6.0499706}
   m_EdgeRadius: 0
+--- !u!114 &2028866657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028866653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fdc9045470876745977bc5735a85089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObj: {fileID: 678693264}
 --- !u!1 &2031767256
 GameObject:
   m_ObjectHideFlags: 0
