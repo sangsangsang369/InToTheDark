@@ -33,6 +33,8 @@ public class Cabinet2 : Object
                 {
                     sword1UI.SetActive(true);
                     StartCoroutine(uiManager.LoadTextOneByOne(sword1Text.text, inputTextUI));
+                    inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.CabinetKey);
+                    slotSelectMng.SelectionClear();
                     GameObject sword1 = sword1Img;
                     inventoryMng.AddToInventory(sword1, 1f, ItemClass.ItemPrefabOrder.Sword1);
                 }
