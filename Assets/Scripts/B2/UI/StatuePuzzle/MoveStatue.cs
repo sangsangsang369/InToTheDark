@@ -15,10 +15,16 @@ public class MoveStatue : MonoBehaviour
     public GameObject sword2UI, sword2Img;
     public Text sword2Text;
     public Text inputTextUI;
-    bool playOnce = false;
+    bool playPuzzleOnce = false;
+
+    DataManager data;
+    SaveDataClass saveData;
 
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        playPuzzleOnce = saveData.playPuzzleOnce;
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
     }
@@ -28,7 +34,7 @@ public class MoveStatue : MonoBehaviour
     {
         if((SP.statue1Fliped) && (SP2.statue2Fliped) && (!SP3.statue3Fliped) && (SP4.statue4Fliped))
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) && (!playOnce))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && (!playPuzzleOnce))
             {
                 CheckAnswer();
             }
@@ -41,6 +47,8 @@ public class MoveStatue : MonoBehaviour
         StartCoroutine(uiManager.LoadTextOneByOne(sword2Text.text, inputTextUI));
         GameObject sword2 = sword2Img;
         inventoryMng.AddToInventory(sword2, 1f, ItemClass.ItemPrefabOrder.Sword2);
-        playOnce = true;
+        playPuzzleOnce = true;
+        saveData.playPuzzleOnce = true;
+        data.Save();
     }
 }

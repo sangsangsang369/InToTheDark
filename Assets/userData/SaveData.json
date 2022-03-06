@@ -1,11 +1,21 @@
 {
-    "itemList": [],
+    "itemList": [
+        
+    ],
     "isFirstGB": true,
     "isUnlocked": false,
     "isDiaryClicked": false,
     "isMufflerPicked": false,
     "isLetterPicked": false,
-    "alreadyOpen": false,
+    "alreadyOpen": true,
+    "playPuzzleOnce": false,
+    "isB3DoorOpened": false,
+    "OnB2CandleOnce": true,
+    "playB2StatueOnce": true,
+    "statue1Fliped": false,
+    "statue2Fliped": false,
+    "statue3Fliped": false,
+    "statue4Fliped": false,
     "isPianoMemoGained": false,
     "monsterExtractinInventory": false,
     "isMonsterDisappear": false,

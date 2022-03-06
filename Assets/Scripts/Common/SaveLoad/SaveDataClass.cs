@@ -19,7 +19,12 @@ public class SaveDataClass
 
     //지하 2층
     public bool alreadyOpen;
-    
+    public bool playPuzzleOnce;
+    public bool isB3DoorOpened;
+    public bool OnB2CandleOnce;
+    public bool playB2StatueOnce;
+    public bool statue1Fliped, statue2Fliped, statue3Fliped, statue4Fliped;
+
     //지하 3층
     public bool isPianoMemoGained;
     public bool monsterExtractinInventory; 
@@ -53,6 +58,14 @@ public class SaveDataClass
 
         //지하 2층
         alreadyOpen = false;
+        playPuzzleOnce = false;
+        isB3DoorOpened = false;
+        OnB2CandleOnce = false;
+        playB2StatueOnce = false;
+        statue1Fliped = false;
+        statue2Fliped = false;
+        statue3Fliped = false;
+        statue4Fliped = false;
 
         //지하 3층
         isMonsterDisappear = false;

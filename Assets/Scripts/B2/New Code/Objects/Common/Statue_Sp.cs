@@ -20,9 +20,9 @@ public class Statue_Sp : Object
     // Update is called once per frame
     public override void ObjectFunction()
     {
-        statueSpUI.SetActive(true);
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            statueSpUI.SetActive(true);
             StartCoroutine(uiManager.LoadTexts(statueSpTexts, inputTextUI, 3));
         }
     }

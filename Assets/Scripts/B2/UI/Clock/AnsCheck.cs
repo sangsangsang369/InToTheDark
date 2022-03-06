@@ -11,7 +11,6 @@ public class AnsCheck : MonoBehaviour
     B2_UIManager uiManager;
     [SerializeField] Clock clock;
     public bool isClockOpen = false;
-    public ClockOpen clockOpen;
     public InventoryMng inventoryMng;
     public GameObject Img1, Img2, Img3, Img4;
     public GameObject Imgs;
@@ -30,7 +29,6 @@ public class AnsCheck : MonoBehaviour
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         clock = FindObjectOfType<Clock>();
-        clockOpen = FindObjectOfType<ClockOpen>();
         checkBtn.onClick.AddListener(delegate{ CheckAnswer(); });
     }
 

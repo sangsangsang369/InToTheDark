@@ -20,9 +20,9 @@ public class Body : Object
     // Update is called once per frame
     public override void ObjectFunction()
     {
-        bodyUI.SetActive(true);
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            bodyUI.SetActive(true);
             StartCoroutine(uiManager.LoadTextOneByOne(bodyText.text, inputTextUI));
         }
     }              

@@ -31,11 +31,11 @@ public class Cabinet3 : Object
     // Update is called once per frame
     public override void ObjectFunction()
     {
-        cabinet3UI.SetActive(true);
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (!alreadyOpen)
             {
+                cabinet3UI.SetActive(true);
                 StartCoroutine(uiManager.LoadTexts(cabinet3Texts, inputTextUI, 3));
                 GameObject clock = clockImg;
                 inventoryMng.AddToInventory(clock, 1f, ItemClass.ItemPrefabOrder.PocketWatch);
