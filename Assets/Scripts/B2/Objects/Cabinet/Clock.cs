@@ -9,7 +9,6 @@ public class Clock : Object
     public InventoryMng inventoryMng;
     public Cabinet3 clockcabinet;
     public AnsCheck ansCheck;
-    public ClockOpen clockOpen;
     SlotSelectionMng slotSelectMng;
 
     // Start is called before the first frame update
@@ -20,8 +19,6 @@ public class Clock : Object
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
         clockcabinet = FindObjectOfType<Cabinet3>();
         ansCheck = FindObjectOfType<AnsCheck>();
-        clockOpen = FindObjectOfType<ClockOpen>();
-
     }
 
     // Update is called once per frame

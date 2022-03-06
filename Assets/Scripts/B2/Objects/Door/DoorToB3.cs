@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DoorToB3 : Object
 {
@@ -12,7 +13,7 @@ public class DoorToB3 : Object
     Sword2 sword2;
     public bool isB3DoorOpened = false;
 
-    public GameObject s1, s2, cover, blood, DoorUI;
+    public GameObject s1, s2, cover, blood, swordDown, DoorUI;
     public bool s1On, s2On;
     public Text doorText, inputTextUI;
 
@@ -40,10 +41,14 @@ public class DoorToB3 : Object
             if (slotSelectMng.usableItem == "sword1Selected")
             {
                 s1.SetActive(true);
+                inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.Sword1);
+                slotSelectMng.SelectionClear();
             }
             if (slotSelectMng.usableItem == "sword2Selected")
             {
                 s2.SetActive(true);
+                inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.Sword2);
+                slotSelectMng.SelectionClear();
             }
             if (s1On && s2On)
             {
@@ -52,8 +57,7 @@ public class DoorToB3 : Object
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     GetComponent<Animator>().SetTrigger("GoDown");
-                    Invoke("Wait5Sec", 5f);
-                    
+                    Invoke("Wait5Sec", 3f);
                 }
             }
         }
@@ -69,5 +73,18 @@ public class DoorToB3 : Object
         isB3DoorOpened = true;
         saveData.isB3DoorOpened = true;
         data.Save();
+        //if (Input.GetKeyDown(KeyCode.Mouse0))
+        Invoke("Keeping", 3f);
+    }
+
+    public void Keeping()
+    {
+        cover.SetActive(false);
+        s1.SetActive(false);
+        s2.SetActive(false);
+        swordDown.SetActive(true);
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+            SceneManager.LoadScene("B3");
     }
 }

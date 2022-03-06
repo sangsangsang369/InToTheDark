@@ -1,7 +1,5 @@
 {
-    "itemList": [
-        
-    ],
+    "itemList": [],
     "isFirstGB": true,
     "isUnlocked": false,
     "isDiaryClicked": false,
@@ -9,7 +7,7 @@
     "isLetterPicked": false,
     "alreadyOpen": true,
     "playPuzzleOnce": false,
-    "isB3DoorOpened": false,
+    "isB3DoorOpened": true,
     "OnB2CandleOnce": true,
     "playB2StatueOnce": true,
     "statue1Fliped": false,
