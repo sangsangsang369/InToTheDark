@@ -212,15 +212,25 @@ public class InventoryMng : MonoBehaviour
     {
         for(int i = 0; i < slotList.Count - 1; i++)
         {
-            if(slotList[i + 1].transform.childCount != 0)
+            for (int j = 1; j < slotList.Count - i; j++)
             {
-                if(slotList[i].transform.childCount == 0 && slotList[i + 1].transform.childCount != 0)
+                if(slotList[i].transform.childCount != 0)
                 {
-                    slotList[i + 1].transform.GetChild(0).SetParent(slotList[i].transform);
+                    break;
+                }
+                else if(slotList[i].transform.childCount == 0 && slotList[i + j].transform.childCount == 0)
+                {
+                    continue;
+                }
+                else if(slotList[i].transform.childCount == 0 && slotList[i + j].transform.childCount != 0)
+                {
+                    slotList[i + j].transform.GetChild(0).SetParent(slotList[i].transform);
                     slotList[i].transform.GetChild(0).GetComponent<RectTransform>().localPosition = new Vector2(0, 0);
+                    break;
                 }
             }
         }
+
         for(int i = 0; i < slotList.Count; i++) 
         {
             if(slotList[i].transform.childCount != 0)
@@ -232,6 +242,11 @@ public class InventoryMng : MonoBehaviour
                 filledCheck[i] = false;
             }
         }
+
+        /*if(!filledCheck[slotList.Count - 6])
+        {
+            Destroy(slotList[slotList.Count - 6].transform.parent.gameObject);
+        }*/
     }
 
     //B3InventoryMng에서 옮긴 함수(B3F에서만 사용)

@@ -110,8 +110,6 @@ MonoBehaviour:
   fruitText: {fileID: 0}
   fruit_AfterText: {fileID: 0}
   inputTextUI: {fileID: 0}
-  fruitGroup: {fileID: 0}
-  fruits: []
 --- !u!61 &5872242659911660753
 BoxCollider2D:
   m_ObjectHideFlags: 0

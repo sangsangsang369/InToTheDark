@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class B3SetOff : MonoBehaviour
@@ -35,6 +36,17 @@ public class B3SetOff : MonoBehaviour
             inputTextUI.gameObject.SetActive(false);
             this.gameObject.SetActive(false);
             pianoMng.pianoMemoUI.SetActive(true);
+        }
+    }
+
+    public void OffAndLoadScene(string sceneName)
+    {
+        if(!uiManager.nowTexting)
+        {
+            inputTextUI.GetComponent<Text>().text = "";
+            inputTextUI.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
+            SceneManager.LoadScene(sceneName);
         }
     }
 }

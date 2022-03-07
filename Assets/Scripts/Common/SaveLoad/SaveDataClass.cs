@@ -31,7 +31,8 @@ public class SaveDataClass
     //지하 3층
     public bool isPianoMemoGained;
     public bool monsterExtractinInventory; 
-    public bool isMonsterDisappear;
+    public bool isLabTableReEntered;
+    public bool isB3ReEntered;
     public bool isB4DoorOpened;
 
     public bool isTreesapPicked;
@@ -72,8 +73,9 @@ public class SaveDataClass
         statue4Fliped = false;
 
         //지하 3층
-        isMonsterDisappear = false;
+        isB3ReEntered = false;
         isPianoMemoGained = false;
+        isLabTableReEntered = false;
         monsterExtractinInventory = false; //이거 좀 봐야할 듯
         isB4DoorOpened = false;
 

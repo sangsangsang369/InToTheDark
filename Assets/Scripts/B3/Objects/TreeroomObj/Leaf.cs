@@ -52,8 +52,9 @@ public class Leaf : Object
             }
             else
             {
-                leaf_AfterUI.SetActive(true);
-                StartCoroutine(uiManager.LoadTextOneByOne(leaf_AfterText.text, inputTextUI));
+                slotSelectMng.UnselectSlot(this.gameObject);
+                //leaf_AfterUI.SetActive(true);
+                //StartCoroutine(uiManager.LoadTextOneByOne(leaf_AfterText.text, inputTextUI));
             }
         }
         else if(labtableMng.labTable.activeSelf==true) 

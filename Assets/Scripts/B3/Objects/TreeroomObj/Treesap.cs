@@ -54,8 +54,9 @@ public class Treesap :Object
             }
             else
             {
-                treesap_AfterUI.SetActive(true);
-                StartCoroutine(uiManager.LoadTextOneByOne(treesap_AfterText.text, inputTextUI));
+                slotSelectMng.UnselectSlot(this.gameObject);
+                //treesap_AfterUI.SetActive(true);
+                //StartCoroutine(uiManager.LoadTextOneByOne(treesap_AfterText.text, inputTextUI));
             }
         }
         else if(labtableMng.labTable.activeSelf==true) 

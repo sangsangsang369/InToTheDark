@@ -52,8 +52,9 @@ public class Branch : Object
             }
             else
             {
-                branch_AfterUI.SetActive(true);
-                StartCoroutine(uiManager.LoadTextOneByOne(branch_AfterText.text, inputTextUI));
+                slotSelectMng.UnselectSlot(this.gameObject);
+                //branch_AfterUI.SetActive(true);
+                //StartCoroutine(uiManager.LoadTextOneByOne(branch_AfterText.text, inputTextUI));
             }  
         }
         else if(labtableMng.labTable.activeSelf==true) 

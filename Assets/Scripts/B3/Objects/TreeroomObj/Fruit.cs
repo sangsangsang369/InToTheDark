@@ -13,9 +13,7 @@ public class Fruit : Object
     InventoryMng inventoryMng;
     LabTableItemManager labtableMng;
     SlotSelectionMng slotSelectMng;
-    
-    public GameObject fruitGroup;
-    public GameObject[] fruits;
+    FruitMng fruitMng;
     
     DataManager data;
     SaveDataClass saveData;
@@ -28,21 +26,14 @@ public class Fruit : Object
 
         if(this.transform.parent.gameObject.layer != 10 && saveData.isFruitPicked)
         {
-            fruits[saveData.fruitNum].SetActive(false);
-            for(int i=0; i < fruitGroup.transform.childCount; i++)  
-            {
-                fruits[i].GetComponent<BoxCollider2D>().enabled = false;  //for문 돌면서 배열의 열매 콜라이더 꺼주기
-            }
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;  //for문 돌면서 배열의 열매 콜라이더 꺼주기
         }
-        else if(this.transform.parent.gameObject.layer != 10 && !saveData.isFruitPicked)
-        {
-            fruits= GetChildren(fruitGroup);  //TreeroomFruit에 있는 열매 오브젝트를 배열로
-        }
-
+      
         uiManager = FindObjectOfType<B3UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
+        fruitMng = FindObjectOfType<FruitMng>();
     }
 
     public override void ObjectFunction()
@@ -53,21 +44,21 @@ public class Fruit : Object
         GameObject fruit = this.gameObject;
         inventoryMng.PickUp(fruit, 0.4f, ItemClass.ItemPrefabOrder.Fruit);
 
-        for(int i=0; i < fruits.Length; i++)  
+        for(int i=0; i < fruitMng.fruits.Length; i++)  
         //fruit가 클릭되면 프리펩화 되기때문에 childCount에 안 잡힘(childCount=3임)
         //그래서 fruits.length로 해줘야함(start에서 4개 다 저장해주니까)
         {
             //Debug.Log(fruits.Length);
-            if(fruits[i] == fruit)
+            if(fruitMng.fruits[i] == fruit)
             {
                 saveData.fruitNum = i;
                 data.Save(); 
             }
         }
         //얘는 그냥 켜져있는거만 콜라이더 끄면 되니까 문제 없을듯
-        for(int i=0; i < fruitGroup.transform.childCount; i++)  
+        for(int i=0; i < fruitMng.fruits.Length; i++)  
         {
-            fruits[i].GetComponent<BoxCollider2D>().enabled = false;  //for문 돌면서 배열의 열매 콜라이더 꺼주기
+            fruitMng.fruits[i].GetComponent<BoxCollider2D>().enabled = false;  //for문 돌면서 배열의 열매 콜라이더 꺼주기
         }
 
         saveData.isFruitPicked = true;
@@ -84,8 +75,9 @@ public class Fruit : Object
             }
             else
             {
-                fruit_AfterUI.SetActive(true);
-                StartCoroutine(uiManager.LoadTextOneByOne(fruit_AfterText.text, inputTextUI));
+                slotSelectMng.UnselectSlot(this.gameObject);
+                //fruit_AfterUI.SetActive(true);
+                //StartCoroutine(uiManager.LoadTextOneByOne(fruit_AfterText.text, inputTextUI));
             }
         }
         else if(labtableMng.labTable.activeSelf==true) 
@@ -102,17 +94,5 @@ public class Fruit : Object
     public override void ItemDeactive()
     {
         labtableMng.itemActive["fruitActive"] = false;
-    }
-
-    public GameObject[] GetChildren(GameObject parent) //게임오브젝트의 자식들 배열로 만드는 함수
-    {
-        GameObject[] children = new GameObject[parent.transform.childCount];
-
-        for (int i = 0; i < parent.transform.childCount; i++)
-        {
-            children[i] = parent.transform.GetChild(i).gameObject;
-        }
-
-        return children;
     }
 }
