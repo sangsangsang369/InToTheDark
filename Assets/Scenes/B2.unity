@@ -739,8 +739,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 899189071}
-  - {fileID: 750928496}
   - {fileID: 672103002}
+  - {fileID: 750928496}
   - {fileID: 736288836}
   - {fileID: 417700417}
   - {fileID: 1829368550}
@@ -1821,6 +1821,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3b65080cb01924295f9833db8b21ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveHour: {fileID: 0}
+  moveMin: {fileID: 0}
   clock: {fileID: 0}
   isClockOpen: 0
   inventoryMng: {fileID: 0}
@@ -3508,7 +3510,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417700416}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01845ca6e6f8dd94581d27245eaa70ad, type: 3}
   m_Name: 
@@ -5488,7 +5490,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672103001}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.56, y: 0.54, z: 0}
+  m_LocalPosition: {x: 29.559998, y: 0.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1095625833}
@@ -5499,7 +5501,7 @@ Transform:
   - {fileID: 1904995585}
   - {fileID: 814561945}
   m_Father: {fileID: 94595837}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &672103003
 SpriteRenderer:
@@ -6694,7 +6696,7 @@ Transform:
   m_Children:
   - {fileID: 1016829661}
   m_Father: {fileID: 94595837}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &750928497
 MonoBehaviour:
@@ -7783,7 +7785,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fcf824dbfe6e87f4d8fb0a858ee4eded, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5be490e020ff8c4d9b9bfef3dabceb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8651,7 +8653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1016829661}
   - component: {fileID: 1016829662}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8773,6 +8775,7 @@ MonoBehaviour:
   - {fileID: 8882906234017663501, guid: 7bd80e8c460e755469629f05f09897dc, type: 3}
   - {fileID: 7202987858791076646, guid: 4627dde752c309f4c8b114e56870636a, type: 3}
   saveData:
+    nextScenePlayerPosition: {x: -32.5, y: -0.83}
     itemList: []
     isFirstGB: 1
     isUnlocked: 0
@@ -8790,7 +8793,8 @@ MonoBehaviour:
     statue4Fliped: 0
     isPianoMemoGained: 0
     monsterExtractinInventory: 0
-    isMonsterDisappear: 0
+    isLabTableReEntered: 0
+    isB3ReEntered: 0
     isB4DoorOpened: 0
     isTreesapPicked: 0
     isBranchPicked: 0
@@ -14613,6 +14617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b711234557a0e4593f0ad5f63d99b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
   currRoom: 
   speed: 15
   limit: 0

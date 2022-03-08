@@ -19,9 +19,9 @@ public class DoorToGallery : Object
     public override void ObjectFunction()
     {
         hallwayObj.SetActive(false);
-        cabinetObj.SetActive(true);
+        galleryObj.SetActive(true);
         player.currRoom = "B2_Gallery";
         Debug.Log(player.currRoom);
-        playerObj.transform.position = new Vector2(-31.05f, -0.83f); // 시작지점
+        playerObj.transform.position = new Vector2(7f, -0.83f); // 시작지점
     }
 }

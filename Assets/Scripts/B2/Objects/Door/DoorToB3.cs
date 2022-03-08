@@ -14,7 +14,8 @@ public class DoorToB3 : Object
     public bool isB3DoorOpened = false;
 
     public GameObject s1, s2, cover, blood, swordDown, DoorUI;
-    public bool s1On, s2On;
+    public bool s1On = false;
+    public bool s2On = false;
     public Text doorText, inputTextUI;
 
     DataManager data;
@@ -41,12 +42,14 @@ public class DoorToB3 : Object
             if (slotSelectMng.usableItem == "sword1Selected")
             {
                 s1.SetActive(true);
+                s1On = true;
                 inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.Sword1);
                 slotSelectMng.SelectionClear();
             }
             if (slotSelectMng.usableItem == "sword2Selected")
             {
                 s2.SetActive(true);
+                s2On = true;
                 inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.Sword2);
                 slotSelectMng.SelectionClear();
             }
@@ -67,6 +70,8 @@ public class DoorToB3 : Object
     public void Wait5Sec()
     {
         Debug.Log("5");
+        s1.SetActive(false);
+        s2.SetActive(false);
         cover.SetActive(true);
         cover.GetComponent<Animator>().SetTrigger("MakeDark");
         blood.SetActive(true);
@@ -80,11 +85,7 @@ public class DoorToB3 : Object
     public void Keeping()
     {
         cover.SetActive(false);
-        s1.SetActive(false);
-        s2.SetActive(false);
         swordDown.SetActive(true);
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-            SceneManager.LoadScene("B3");
+        SceneManager.LoadScene("B3");
     }
 }

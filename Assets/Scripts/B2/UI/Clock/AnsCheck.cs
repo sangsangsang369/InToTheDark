@@ -6,8 +6,8 @@ using System;
 
 public class AnsCheck : MonoBehaviour
 {
-    MoveHand moveHour;
-    MoveMin moveMin;
+    public MoveHand moveHour;
+    public MoveMin moveMin;
     B2_UIManager uiManager;
     [SerializeField] Clock clock;
     public bool isClockOpen = false;
@@ -24,16 +24,16 @@ public class AnsCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveHour = FindObjectOfType<MoveHand>();
-        moveMin = FindObjectOfType<MoveMin>();
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         clock = FindObjectOfType<Clock>();
-        checkBtn.onClick.AddListener(delegate{ CheckAnswer(); });
+        //checkBtn.onClick.AddListener(delegate{ CheckAnswer(); });
     }
 
     public void CheckAnswer()
     {
+        moveHour = FindObjectOfType<MoveHand>();
+        moveMin = FindObjectOfType<MoveMin>();
         if (ImgNum == 1)
         {
             if ((moveHour.firstHour == true) && (moveMin.firstMin == true))
@@ -74,8 +74,8 @@ public class AnsCheck : MonoBehaviour
 
     public void ClockOpen()
     {
-        //clock = FindObjectOfType<Clock>();
-        //inventoryMng.RemoveFromInventory(clock.gameObject);
+        clock = FindObjectOfType<Clock>();
+        inventoryMng.RemoveFromInventory(clock.gameObject, ItemClass.ItemPrefabOrder.PocketWatch);
         inventoryMng.AddToInventory(keyImg, 1f, ItemClass.ItemPrefabOrder.CabinetKey);
         clockUI.SetActive(false);
         key1UI.SetActive(true);
