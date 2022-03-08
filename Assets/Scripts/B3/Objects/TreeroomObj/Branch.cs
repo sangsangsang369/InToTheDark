@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Branch : Object
 { 
-    public GameObject branchUI, branch_AfterUI;
+    public GameObject branchUI;
     public Sprite branchItemImg;
-    public Text branchText, branch_AfterText;
+    public Text branchText;
     public Text inputTextUI;
     B3UIManager uiManager;
     InventoryMng inventoryMng;
@@ -35,7 +35,7 @@ public class Branch : Object
     public override void ObjectFunction()
     {
         branchUI.SetActive(true);
-        StartCoroutine(uiManager.LoadTextOneByOne(branchText.text, inputTextUI));
+        uiManager.StartCoroutine(uiManager.LoadTextOneByOne(branchText.text, inputTextUI));
         GameObject branch = this.gameObject;
         inventoryMng.PickUp(branch, 0.4f, ItemClass.ItemPrefabOrder.Branch);
 

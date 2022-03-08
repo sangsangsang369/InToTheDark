@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Leaf : Object
 {
-    public GameObject leafUI, leaf_AfterUI;
+    public GameObject leafUI;
     public Sprite leafItemImg;
-    public Text leafText, leaf_AfterText;
+    public Text leafText;
     public Text inputTextUI;
     B3UIManager uiManager;
     InventoryMng inventoryMng;
@@ -35,7 +35,7 @@ public class Leaf : Object
     public override void ObjectFunction()
     {
         leafUI.SetActive(true);
-        StartCoroutine(uiManager.LoadTextOneByOne(leafText.text, inputTextUI));
+        uiManager.StartCoroutine(uiManager.LoadTextOneByOne(leafText.text, inputTextUI));
         GameObject leaf = this.gameObject;
         inventoryMng.PickUp(leaf, 0.4f, ItemClass.ItemPrefabOrder.Leaf);
 

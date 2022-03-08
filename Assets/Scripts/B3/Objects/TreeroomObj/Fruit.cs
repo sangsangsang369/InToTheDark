@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Fruit : Object
 {
-    public GameObject fruitUI, fruit_AfterUI;
+    public GameObject fruitUI;
      public Sprite fruitItemImg;
-    public Text fruitText, fruit_AfterText;
+    public Text fruitText;
     public Text inputTextUI;
     B3UIManager uiManager;
     InventoryMng inventoryMng;
@@ -39,7 +39,8 @@ public class Fruit : Object
     public override void ObjectFunction()
     {
         fruitUI.SetActive(true);
-        StartCoroutine(uiManager.LoadTextOneByOne(fruitText.text, inputTextUI));
+        //uiManager. 추가하니까 되요..근데 왜 되는지는 모르겠는
+        uiManager.StartCoroutine(uiManager.LoadTextOneByOne(fruitText.text, inputTextUI));
         
         GameObject fruit = this.gameObject;
         inventoryMng.PickUp(fruit, 0.4f, ItemClass.ItemPrefabOrder.Fruit);

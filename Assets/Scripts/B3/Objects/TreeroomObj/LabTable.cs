@@ -15,6 +15,7 @@ public class LabTable : Object
     DataManager data;
     SaveDataClass saveData;
     public bool isLabTableReEntered;
+    public bool isLabTableOn;
 
     void Start()
     {

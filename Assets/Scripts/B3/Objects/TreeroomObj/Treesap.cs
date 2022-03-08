@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Treesap :Object
 {
-    public GameObject treesapUI, treesap_AfterUI;
+    public GameObject treesapUI;
     public Sprite treesapItemImg;
-    public Text treesapText, treesap_AfterText;
+    public Text treesapText;
     public Text inputTextUI;
     B3UIManager uiManager;
     InventoryMng inventoryMng;
@@ -37,7 +37,7 @@ public class Treesap :Object
     public override void ObjectFunction()
     {
         treesapUI.SetActive(true);
-        StartCoroutine(uiManager.LoadTextOneByOne(treesapText.text, inputTextUI));
+        uiManager.StartCoroutine(uiManager.LoadTextOneByOne(treesapText.text, inputTextUI));
         GameObject treesap = this.gameObject;
         inventoryMng.PickUp(treesap, 0.4f, ItemClass.ItemPrefabOrder.Sap);
         
