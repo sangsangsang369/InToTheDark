@@ -6,7 +6,14 @@ using System;
 [System.Serializable]
 public class SaveDataClass
 {
+    public enum playerStartPoint
+    {
+        B1rightDoor, B2leftDoor, B2rightDoor, B3leftDoor, B3rightDoor, B4leftDoor, B4rightDoor, B5leftDoor
+    }
+
     //플레이어 위치 정보
+    public float[] playerXstartPoints = {30.7f, -32.4f, 29.6f, -32.5f, 18f, -32.5f, 15.7f, 3.5f};
+    public float playerXstartPoint;
     public Vector2 nextScenePlayerPosition;
 
     //인벤토리 및 아이템
@@ -49,7 +56,10 @@ public class SaveDataClass
 
     public SaveDataClass()
     {
+        //플레이어 위치
+        playerXstartPoint = -32.5f;
         nextScenePlayerPosition = new Vector2(-32.5f, -0.83f);
+
         //인벤토리 및 아이템
         itemList = new List<ItemClass>();
 

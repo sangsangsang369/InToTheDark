@@ -4,9 +4,22 @@ using UnityEngine;
 
 public class Player : Detect
 {
+    DataManager data;
+    SaveDataClass saveData;
+
     public string currRoom;
     public float speed = 6f;
     [HideInInspector] public float limit;
+
+    new void Start()
+    {
+        base.Start();
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        
+        FindObjectOfType<CameraScript>().CameraSetting();
+        this.transform.position = new Vector2(saveData.playerXstartPoint, this.transform.position.y);
+    }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -22,7 +35,6 @@ public class Player : Detect
             }
             MagnifierTrigger(collider, true);
         }
-        
     }
 
     void OnTriggerExit2D(Collider2D collider)

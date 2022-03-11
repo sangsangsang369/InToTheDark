@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4025,6 +4025,16 @@ MonoBehaviour:
   - {fileID: 8882906234017663501, guid: 7bd80e8c460e755469629f05f09897dc, type: 3}
   - {fileID: 7202987858791076646, guid: 4627dde752c309f4c8b114e56870636a, type: 3}
   saveData:
+    playerXstartPoints:
+    - 30.7
+    - -32.4
+    - 29.6
+    - -32.5
+    - 18
+    - -32.5
+    - 15.7
+    - 3.5
+    playerXstartPoint: -32.5
     nextScenePlayerPosition: {x: 0, y: 0}
     itemList: []
     isFirstGB: 1
@@ -4043,7 +4053,8 @@ MonoBehaviour:
     statue4Fliped: 0
     isPianoMemoGained: 0
     monsterExtractinInventory: 0
-    isMonsterDisappear: 0
+    isLabTableReEntered: 0
+    isB3ReEntered: 0
     isB4DoorOpened: 0
     isTreesapPicked: 0
     isBranchPicked: 0

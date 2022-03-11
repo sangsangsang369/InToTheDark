@@ -17,7 +17,7 @@ public class Detect : MonoBehaviour
     GraphicRaycaster graphicRay;
     List<RaycastResult> results = new List<RaycastResult>();
     
-    void Start()
+    protected void Start()
     {
         mainCamera = FindObjectOfType<Camera>();
         uiManager = FindObjectOfType<UI>();
