@@ -21,8 +21,8 @@ public class SpiralStair : Object
 
     public override void ObjectFunction()
     {
-        SceneManager.LoadScene("B3");
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B3rightDoor];
         data.Save();
+        SceneManager.LoadScene("B3");
     }
 }

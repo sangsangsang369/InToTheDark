@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DoorToB4 : Object
 {
@@ -58,6 +59,9 @@ public class DoorToB4 : Object
         else if(isB4DoorOpened)
         {
             //B4로 씬 이동
+            saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4leftDoor];
+            data.Save();
+            SceneManager.LoadScene("B4");
         }
     }
 }

@@ -8,7 +8,6 @@ public class SpiralStairToB2 : Object
     DataManager data;
     SaveDataClass saveData;
 
-    public GameObject playerObj;
     Player player;
 
     // Start is called before the first frame update
@@ -21,8 +20,9 @@ public class SpiralStairToB2 : Object
 
     public override void ObjectFunction()
     {
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B2rightDoor];
+        data.Save();
         SceneManager.LoadScene("B2");
-        saveData.nextScenePlayerPosition = new Vector2(25.6f, -0.83f);
     }
 }
 

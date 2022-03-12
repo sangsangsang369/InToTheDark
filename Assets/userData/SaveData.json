@@ -9,9 +9,9 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": 18.0,
+    "playerXstartPoint": -35.0,
     "nextScenePlayerPosition": {
-        "x": 25.600000381469728,
+        "x": -32.5,
         "y": -0.8299999833106995
     },
     "itemList": [],
@@ -32,13 +32,13 @@
     "isPianoMemoGained": false,
     "monsterExtractinInventory": false,
     "isLabTableReEntered": false,
-    "isB3ReEntered": true,
+    "isB3ReEntered": false,
     "isB4DoorOpened": false,
     "isTreesapPicked": false,
     "isBranchPicked": false,
     "isLeafPicked": false,
     "isFruitPicked": false,
-    "fruitNum": 1,
+    "fruitNum": 5,
     "isDaggerPicked": false,
     "isJewelGained": false,
     "isB4LockUnlocked": false

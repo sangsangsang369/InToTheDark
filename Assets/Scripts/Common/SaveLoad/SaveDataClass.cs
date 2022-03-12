@@ -57,7 +57,7 @@ public class SaveDataClass
     public SaveDataClass()
     {
         //플레이어 위치
-        playerXstartPoint = -32.5f;
+        playerXstartPoint = -35f;
         nextScenePlayerPosition = new Vector2(-32.5f, -0.83f);
 
         //인벤토리 및 아이템

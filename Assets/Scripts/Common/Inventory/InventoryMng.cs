@@ -77,7 +77,6 @@ public class InventoryMng : MonoBehaviour
             {
                 InstantiateItemsOnInventory(data.itemPrefabs[itemIndex].gameObject, 0.4f);
             }
-            //InstantiateItemsOnInventory(data.itemPrefabs[itemIndex].gameObject, 0.1f);
         }
     }
 
@@ -206,6 +205,9 @@ public class InventoryMng : MonoBehaviour
         if(!filledCheck[slotList.Count - 6])
         {
             Destroy(slotList[slotList.Count - 6].transform.parent.gameObject);
+            slotList[slotList.Count - 12].transform.parent.gameObject.SetActive(true);
+            inventoryList.RemoveAt(inventoryList.Count - 1);
+            currentPage--;
         }
 
         //세이브 데이터의 아이템리스트에서도 제거
@@ -214,6 +216,7 @@ public class InventoryMng : MonoBehaviour
             if(saveData.itemList[j].prefabOrder == (int)itemName)
             {
                 saveData.itemList.RemoveAt(j);
+                data.Save();
                 break;
             }
         }
@@ -255,10 +258,13 @@ public class InventoryMng : MonoBehaviour
             }
         }
 
-        /*if(!filledCheck[slotList.Count - 6])
+        if(!filledCheck[slotList.Count - 6])
         {
+            inventoryList.RemoveAt(inventoryList.Count - 1);
+            currentPage--;
             Destroy(slotList[slotList.Count - 6].transform.parent.gameObject);
-        }*/
+            slotList[slotList.Count - 12].transform.parent.gameObject.SetActive(true);
+        }
     }
 
     //B3InventoryMng에서 옮긴 함수(B3F에서만 사용)

@@ -86,6 +86,8 @@ public class DoorToB3 : Object
     {
         cover.SetActive(false);
         swordDown.SetActive(true);
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4leftDoor];
+        data.Save();
         SceneManager.LoadScene("B3");
     }
 }

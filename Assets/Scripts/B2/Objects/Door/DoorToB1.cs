@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class DoorToB1 : Object
 {
+    DataManager data;
+    SaveDataClass saveData;
     Player player;
     // Start is called before the first frame update
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
         player = FindObjectOfType<Player>();
     }
 
@@ -16,6 +20,8 @@ public class DoorToB1 : Object
     public override void ObjectFunction()
     {
         player.currRoom = "B1_Hallway";
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B1rightDoor];
+        data.Save();
         SceneManager.LoadScene("B1");
     }
 }
