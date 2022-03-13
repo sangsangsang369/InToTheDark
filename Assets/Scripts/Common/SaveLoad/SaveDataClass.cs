@@ -15,6 +15,8 @@ public class SaveDataClass
     public float[] playerXstartPoints = {30.7f, -32.4f, 29.6f, -32.5f, 18f, -32.5f, 15.7f, 3.5f};
     public float playerXstartPoint;
     public Vector2 nextScenePlayerPosition;
+    public string currFloor;
+    public string currRoomPos;
 
     //인벤토리 및 아이템
     public List<ItemClass> itemList;
