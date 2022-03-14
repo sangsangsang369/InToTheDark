@@ -14,7 +14,13 @@
         "x": -32.5,
         "y": -0.8299999833106995
     },
-    "itemList": [],
+    "currFloor": "",
+    "currRoomPos": "",
+    "itemList": [
+        {
+            "prefabOrder": 9
+        }
+    ],
     "isFirstGB": true,
     "isUnlocked": false,
     "isDiaryClicked": false,
@@ -32,11 +38,11 @@
     "isPianoMemoGained": false,
     "monsterExtractinInventory": false,
     "isLabTableReEntered": false,
-    "isB3ReEntered": false,
+    "isB3ReEntered": true,
     "isB4DoorOpened": false,
     "isTreesapPicked": false,
     "isBranchPicked": false,
-    "isLeafPicked": false,
+    "isLeafPicked": true,
     "isFruitPicked": false,
     "fruitNum": 5,
     "isDaggerPicked": false,

@@ -71,5 +71,10 @@ public class Leaf : Object
     {
         labtableMng.itemActive["leafActive"] = false;
     }
+
+    public override void GetItemName()
+    {
+        slotSelectMng.itemName = "나뭇잎";
+    }
 }
 

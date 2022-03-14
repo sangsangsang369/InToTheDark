@@ -57,4 +57,9 @@ public class Muffler : Object
             uiManager.StartCoroutine(uiManager.LoadTextOneByOne(mufflerText.text, inputTextUI));
         }
     }
+
+    public override void GetItemName()
+    {
+        slotSelectMng.itemName = "찢어진 머플러 조각";
+    }
 }

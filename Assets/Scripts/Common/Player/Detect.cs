@@ -75,7 +75,8 @@ public class Detect : MonoBehaviour
                 slotSelectMng.selectedItem.transform.parent.GetComponent<Image>().sprite = slotSelectMng.unselectedSlotImg;
                 slotSelectMng.selectedItem = null;
                 slotSelectMng.usableItem = null;
-                slotSelectMng.usableItems.Clear();       
+                slotSelectMng.usableItems.Clear();  
+                Destroy(slotSelectMng.itemNameText.gameObject);  //아이템 이름 텍스트 파괴 
             } 
         }
         results.Clear(); //다음 클릭을 위해 results 초기화 해주기(이거 꼭 해줘야됨)

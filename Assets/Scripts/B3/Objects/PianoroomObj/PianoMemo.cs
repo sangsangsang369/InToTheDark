@@ -29,5 +29,10 @@ public class PianoMemo : Object
             pianoMng.pianoMemoUI.SetActive(true); 
         }
     }
+
+    public override void GetItemName()
+    {
+        slotSelectMng.itemName = "피아노 메모";
+    }
 }
 

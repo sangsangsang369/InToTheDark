@@ -71,4 +71,9 @@ public class Branch : Object
     {
         labtableMng.itemActive["branchActive"] = false;
     }
+
+    public override void GetItemName()
+    {
+        slotSelectMng.itemName = "나뭇가지";
+    }
 }

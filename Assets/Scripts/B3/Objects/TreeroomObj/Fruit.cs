@@ -96,4 +96,9 @@ public class Fruit : Object
     {
         labtableMng.itemActive["fruitActive"] = false;
     }
+
+    public override void GetItemName()
+    {
+        slotSelectMng.itemName = "나무열매";
+    }
 }

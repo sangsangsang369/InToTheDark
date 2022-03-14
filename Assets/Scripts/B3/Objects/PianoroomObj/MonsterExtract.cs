@@ -41,5 +41,9 @@ public class MonsterExtract :  Object
         labtableMng.itemActive["monsterExtractActive"] = false;
     }
 
+    public override void GetItemName()
+    {
+        slotSelectMng.itemName = "이형체의 진액";
+    }
 }
 

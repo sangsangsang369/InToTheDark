@@ -73,5 +73,10 @@ public class Treesap :Object
     {
         labtableMng.itemActive["treesapActive"] = false;
     }
+
+    public override void GetItemName()
+    {
+        slotSelectMng.itemName = "수액";
+    }
 }
 

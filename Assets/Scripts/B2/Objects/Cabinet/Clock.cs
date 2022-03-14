@@ -32,6 +32,10 @@ public class Clock : Object
         {
             clockcabinet.clockPanel.SetActive(true); 
         }
-      
+    }
+
+    public override void GetItemName()
+    {
+        slotSelectMng.itemName = "회중시계";
     }
 }
