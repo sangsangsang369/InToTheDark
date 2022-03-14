@@ -99,6 +99,6 @@ public class Fruit : Object
 
     public override void GetItemName()
     {
-        slotSelectMng.itemName = "나무열매";
+        slotSelectMng.itemName = "나무 열매";
     }
 }

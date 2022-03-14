@@ -43,4 +43,9 @@ public class PatternLeaf : Object
         labtableMng.itemActive["patternLeafActive"] = false;
         //Debug.Log("deactive");
     }
+
+     public override void GetItemName()
+    {
+        slotSelectMng.itemName = "무늬가 생긴 잎";
+    }
 }

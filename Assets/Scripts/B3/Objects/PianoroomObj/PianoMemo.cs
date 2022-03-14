@@ -32,7 +32,7 @@ public class PianoMemo : Object
 
     public override void GetItemName()
     {
-        slotSelectMng.itemName = "피아노 메모";
+        slotSelectMng.itemName = "악보가 적힌 쪽지";
     }
 }
 

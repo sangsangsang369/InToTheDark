@@ -41,5 +41,8 @@ public class FleshTwo : Object
     {
         labtableMng.itemActive["fleshTwoActive"] = false;
     }
-
+    public override void GetItemName()
+    {
+        slotSelectMng.itemName = "살덩어리2";
+    }
 }

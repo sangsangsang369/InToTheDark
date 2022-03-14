@@ -18,7 +18,10 @@
     "currRoomPos": "",
     "itemList": [
         {
-            "prefabOrder": 9
+            "prefabOrder": 12
+        },
+        {
+            "prefabOrder": 13
         }
     ],
     "isFirstGB": true,
@@ -35,14 +38,14 @@
     "statue2Fliped": false,
     "statue3Fliped": false,
     "statue4Fliped": false,
-    "isPianoMemoGained": false,
-    "monsterExtractinInventory": false,
+    "isPianoMemoGained": true,
+    "monsterExtractinInventory": true,
     "isLabTableReEntered": false,
     "isB3ReEntered": true,
     "isB4DoorOpened": false,
     "isTreesapPicked": false,
     "isBranchPicked": false,
-    "isLeafPicked": true,
+    "isLeafPicked": false,
     "isFruitPicked": false,
     "fruitNum": 5,
     "isDaggerPicked": false,

@@ -41,5 +41,8 @@ public class FleshOne : Object
     {
         labtableMng.itemActive["fleshOneActive"] = false;
     }
-
+    public override void GetItemName()
+    {
+        slotSelectMng.itemName = "살덩어리1";
+    }
 }

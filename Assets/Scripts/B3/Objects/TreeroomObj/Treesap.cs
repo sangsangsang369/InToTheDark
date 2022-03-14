@@ -76,7 +76,7 @@ public class Treesap :Object
 
     public override void GetItemName()
     {
-        slotSelectMng.itemName = "수액";
+        slotSelectMng.itemName = "나무 수액";
     }
 }
 
