@@ -39,6 +39,7 @@ public class Dagger : MonoBehaviour
     {
         if(slotSelectMng.selectedItem != this.gameObject)
         {
+            slotSelectMng.itemName = "단검";
             slotSelectMng.SelectSlot(this.gameObject);
         }
         else

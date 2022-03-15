@@ -49,6 +49,7 @@ public class Muffler : Object
     {
         if(slotSelectMng.selectedItem != this.gameObject)
         {
+            slotSelectMng.itemName = "찢어진 머플러 조각";
             slotSelectMng.SelectSlot(this.gameObject);
         }
         else
@@ -56,10 +57,5 @@ public class Muffler : Object
             mufflerUI.SetActive(true);
             uiManager.StartCoroutine(uiManager.LoadTextOneByOne(mufflerText.text, inputTextUI));
         }
-    }
-
-    public override void GetItemName()
-    {
-        slotSelectMng.itemName = "찢어진 머플러 조각";
     }
 }

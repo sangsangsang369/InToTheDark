@@ -26,6 +26,7 @@ public class Clock : Object
     {
         if (slotSelectMng.selectedItem != this.gameObject)
         {
+            slotSelectMng.itemName = "회중시계";
             slotSelectMng.SelectSlot(this.gameObject);
         }
         else
@@ -34,8 +35,4 @@ public class Clock : Object
         }
     }
 
-    public override void GetItemName()
-    {
-        slotSelectMng.itemName = "회중시계";
-    }
 }

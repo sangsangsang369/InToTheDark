@@ -21,6 +21,7 @@ public class Sword1 : Object
     {
         if (slotSelectMng.selectedItem != this.gameObject)
         {
+            slotSelectMng.itemName = "피 묻은 칼";
             slotSelectMng.SelectSlot(this.gameObject);
             slotSelectMng.usableItem = "sword1Selected";
         }
@@ -29,4 +30,5 @@ public class Sword1 : Object
             slotSelectMng.UnselectSlot(this.gameObject);
         }
     }
+
 }

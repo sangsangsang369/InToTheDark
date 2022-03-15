@@ -17,6 +17,7 @@ public class RedJewel : MonoBehaviour
     {   
         if(slotSelectMng.selectedItem != this.gameObject)
         {
+            slotSelectMng.itemName = "붉은보석";
             slotSelectMng.SelectSlot(this.gameObject);
             isJewelOnHand = true;
         }

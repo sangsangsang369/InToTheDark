@@ -72,6 +72,7 @@ public class Fruit : Object
         {    
             if(slotSelectMng.selectedItem != this.gameObject)
             {
+                slotSelectMng.itemName = "나무 열매";
                 slotSelectMng.SelectSlot(this.gameObject);
             }
             else
@@ -97,8 +98,4 @@ public class Fruit : Object
         labtableMng.itemActive["fruitActive"] = false;
     }
 
-    public override void GetItemName()
-    {
-        slotSelectMng.itemName = "나무 열매";
-    }
 }

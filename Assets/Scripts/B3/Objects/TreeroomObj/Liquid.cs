@@ -20,6 +20,7 @@ public class Liquid : Object
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {
+                slotSelectMng.itemName = "투명한 액체";
                 slotSelectMng.SelectSlot(this.gameObject);
                 slotSelectMng.usableItem = "liquidSelected";
             }
@@ -44,8 +45,4 @@ public class Liquid : Object
         labtableMng.itemActive["liquidActive"] = false;
     }
 
-    public override void GetItemName()
-    {
-        slotSelectMng.itemName = "투명한 액체";
-    }
 }

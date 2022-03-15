@@ -38,10 +38,12 @@ public class SaveDataClass
     public bool statue1Fliped, statue2Fliped, statue3Fliped, statue4Fliped;
 
     //지하 3층
+    public bool isB3ReEntered;
+    public bool OnB3CandleOnce;
+    public bool playB3StatueOnce;
     public bool isPianoMemoGained;
     public bool monsterExtractinInventory; 
     public bool isLabTableReEntered;
-    public bool isB3ReEntered;
     public bool isB4DoorOpened;
 
     public bool isTreesapPicked;
@@ -86,6 +88,8 @@ public class SaveDataClass
 
         //지하 3층
         isB3ReEntered = false;
+        OnB3CandleOnce = false;
+        playB3StatueOnce = false;
         isPianoMemoGained = false;
         isLabTableReEntered = false;
         monsterExtractinInventory = false; //이거 좀 봐야할 듯

@@ -35,7 +35,10 @@ public class SlotSelectionMng : MonoBehaviour
     {
         item.transform.parent.GetComponent<Image>().sprite = selectedSlotImg; //이미지 바꿔주기
         selectedItem = item; //선택된 아이템 selectedItem에 담기
-        selectedItem.GetComponent<Object>().GetItemName();
+        /*if(selectedItem.GetComponent<Object>())
+        {
+            selectedItem.GetComponent<Object>().GetItemName();
+        }*/
         PopItemName();
     }  
     public void UnselectSlot(GameObject item)
@@ -52,6 +55,7 @@ public class SlotSelectionMng : MonoBehaviour
         selectedItem = null; //선택된 아이템 초기화
         usableItem = null; 
         usableItems.Clear();
+        DestoryItemName();
     }
     //아이템 이름 띄워주기
     public void PopItemName() 
@@ -61,7 +65,7 @@ public class SlotSelectionMng : MonoBehaviour
         Text name = Instantiate(itemNameTextPrefab);
         itemNameText = name;
         itemNameText.transform.SetParent(inventory.transform);
-        itemNameText.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 75);
+        itemNameText.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 80);
     }
     //아이템 이름 파괴하기
     public void DestoryItemName()

@@ -10,10 +10,15 @@ public class B3SetOff : MonoBehaviour
     PianoMng pianoMng;
 
     Text inputTextUI;
+    DataManager data;
+    SaveDataClass saveData;
+
     
     // Start is called before the first frame update
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
         uiManager = FindObjectOfType<B3UIManager>();
         pianoMng = FindObjectOfType<PianoMng>();
         inputTextUI = uiManager.inputTextUI;
@@ -46,7 +51,10 @@ public class B3SetOff : MonoBehaviour
             inputTextUI.GetComponent<Text>().text = "";
             inputTextUI.gameObject.SetActive(false);
             this.gameObject.SetActive(false);
-            SceneManager.LoadScene(sceneName);
+            
+            saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4leftDoor];
+            data.Save();
+            SceneManager.LoadScene("B4");
         }
     }
 }

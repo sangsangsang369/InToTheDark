@@ -48,6 +48,7 @@ public class Branch : Object
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {
+                slotSelectMng.itemName = "나뭇가지";
                 slotSelectMng.SelectSlot(this.gameObject);
             }
             else
@@ -70,10 +71,5 @@ public class Branch : Object
     public override void ItemDeactive()
     {
         labtableMng.itemActive["branchActive"] = false;
-    }
-
-    public override void GetItemName()
-    {
-        slotSelectMng.itemName = "나뭇가지";
     }
 }

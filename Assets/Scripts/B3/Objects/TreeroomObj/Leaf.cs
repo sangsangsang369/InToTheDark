@@ -48,6 +48,7 @@ public class Leaf : Object
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {
+                slotSelectMng.itemName = "나뭇잎";
                 slotSelectMng.SelectSlot(this.gameObject);
             }
             else
@@ -72,9 +73,5 @@ public class Leaf : Object
         labtableMng.itemActive["leafActive"] = false;
     }
 
-    public override void GetItemName()
-    {
-        slotSelectMng.itemName = "나뭇잎";
-    }
 }
 

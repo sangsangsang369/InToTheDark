@@ -50,6 +50,7 @@ public class Treesap :Object
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {
+                slotSelectMng.itemName = "나무 수액";
                 slotSelectMng.SelectSlot(this.gameObject);
             }
             else
@@ -72,11 +73,6 @@ public class Treesap :Object
     public override void ItemDeactive()
     {
         labtableMng.itemActive["treesapActive"] = false;
-    }
-
-    public override void GetItemName()
-    {
-        slotSelectMng.itemName = "나무 수액";
     }
 }
 

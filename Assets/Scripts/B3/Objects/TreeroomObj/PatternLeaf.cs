@@ -20,6 +20,7 @@ public class PatternLeaf : Object
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {
+                slotSelectMng.itemName = "무늬가 생긴 잎";
                 slotSelectMng.SelectSlot(this.gameObject);
             }
             else
@@ -44,8 +45,4 @@ public class PatternLeaf : Object
         //Debug.Log("deactive");
     }
 
-     public override void GetItemName()
-    {
-        slotSelectMng.itemName = "무늬가 생긴 잎";
-    }
 }

@@ -47,6 +47,7 @@ public class Letter : Object
     {
         if(slotSelectMng.selectedItem != this.gameObject)
         {
+            slotSelectMng.itemName = "구겨진 편지";
             slotSelectMng.SelectSlot(this.gameObject);
         }
         else

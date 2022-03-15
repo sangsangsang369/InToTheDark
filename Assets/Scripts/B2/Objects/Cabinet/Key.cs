@@ -22,6 +22,7 @@ public class Key : Object
     {
         if (slotSelectMng.selectedItem != this.gameObject)
         {
+            slotSelectMng.itemName = "캐비닛 열쇠";
             slotSelectMng.SelectSlot(this.gameObject);
             slotSelectMng.usableItem = "keySelected";
         }

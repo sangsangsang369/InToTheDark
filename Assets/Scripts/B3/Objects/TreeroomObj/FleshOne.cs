@@ -20,6 +20,7 @@ public class FleshOne : Object
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {
+                slotSelectMng.itemName = "살덩어리1";
                 slotSelectMng.SelectSlot(this.gameObject);
             }
             else
@@ -40,9 +41,5 @@ public class FleshOne : Object
     public override void ItemDeactive()
     {
         labtableMng.itemActive["fleshOneActive"] = false;
-    }
-    public override void GetItemName()
-    {
-        slotSelectMng.itemName = "살덩어리1";
     }
 }

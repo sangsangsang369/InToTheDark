@@ -4036,6 +4036,8 @@ MonoBehaviour:
     - 3.5
     playerXstartPoint: -32.5
     nextScenePlayerPosition: {x: 0, y: 0}
+    currFloor: 
+    currRoomPos: 
     itemList: []
     isFirstGB: 1
     isUnlocked: 0
@@ -7400,6 +7402,11 @@ MonoBehaviour:
   selectedItem: {fileID: 0}
   selectedSlotImg: {fileID: 21300000, guid: 37950d2118be0c64aa491d549a6e8c5f, type: 3}
   unselectedSlotImg: {fileID: 21300000, guid: aecdd32922332914ca08480870a62710, type: 3}
+  itemNameTextPrefab: {fileID: 96675386434388794, guid: b66ef039e2f9b1546bcbb1fcf93336a2,
+    type: 3}
+  itemNameText: {fileID: 0}
+  itemName: 
+  inventory: {fileID: 1272475907}
   usableItem: 
   usableItems: []
 --- !u!4 &1004165650

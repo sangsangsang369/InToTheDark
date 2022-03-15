@@ -16,6 +16,7 @@ public class Note : MonoBehaviour
     {
         if(slotSelectMng.selectedItem != this.gameObject)
         {
+            slotSelectMng.itemName = "책에서 떨어진 편지";
             slotSelectMng.SelectSlot(this.gameObject);
         }
         else

@@ -29,6 +29,7 @@ public class DoorToB2 : Object
         {
             withKeyUI.SetActive(true);
             StartCoroutine(uiManager.LoadTextOneByOne(withKeyText.text, inputTextUI));
+            slotSelectMng.SelectionClear();
         }
         else
         {

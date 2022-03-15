@@ -16,8 +16,10 @@ public class CardKey : MonoBehaviour
     {   
         if(slotSelectMng.selectedItem != this.gameObject)
         {
+            slotSelectMng.itemName = "B2 카드키";
             slotSelectMng.SelectSlot(this.gameObject);
             slotSelectMng.usableItem = "cardKeySelected";
+            
         }
         else
         {

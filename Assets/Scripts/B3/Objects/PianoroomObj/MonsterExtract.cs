@@ -19,6 +19,7 @@ public class MonsterExtract :  Object
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {
+                slotSelectMng.itemName = "이형체의 진액";
                 slotSelectMng.SelectSlot(this.gameObject);
             }
             else
@@ -41,9 +42,5 @@ public class MonsterExtract :  Object
         labtableMng.itemActive["monsterExtractActive"] = false;
     }
 
-    public override void GetItemName()
-    {
-        slotSelectMng.itemName = "이형체의 진액";
-    }
 }
 

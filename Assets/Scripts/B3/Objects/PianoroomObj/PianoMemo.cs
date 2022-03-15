@@ -22,6 +22,7 @@ public class PianoMemo : Object
     {
         if(slotSelectMng.selectedItem != this.gameObject)
         {
+            slotSelectMng.itemName = "악보가 적힌 쪽지";
             slotSelectMng.SelectSlot(this.gameObject);
         }
         else
@@ -30,9 +31,5 @@ public class PianoMemo : Object
         }
     }
 
-    public override void GetItemName()
-    {
-        slotSelectMng.itemName = "악보가 적힌 쪽지";
-    }
 }
 
