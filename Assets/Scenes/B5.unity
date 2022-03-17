@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -568,13 +568,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e53750e7f2c5284e8b047954bb38475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priest: {fileID: 0}
-  priestUI: {fileID: 0}
-  playerObj: {fileID: 0}
-  walls: {fileID: 0}
-  floor: {fileID: 0}
-  globalLight: {fileID: 0}
-  coverCanvas: {fileID: 0}
+  priest: {fileID: 563222532}
+  priestUI: {fileID: 1231266660}
+  playerObj: {fileID: 1488492223}
+  walls: {fileID: 1212222869}
+  floor: {fileID: 47883544}
+  globalLight: {fileID: 1007960824}
+  coverCanvas: {fileID: 1432419029}
 --- !u!1 &72851740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,6 +1931,114 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &415002210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 415002212}
+  - component: {fileID: 415002211}
+  m_Layer: 0
+  m_Name: DataManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &415002211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415002210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de45ea03f929ea44286c284470b3ef8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabs:
+  - {fileID: 5037801981021649956, guid: 28441e65a4c24c946a7e2578f75d2a9b, type: 3}
+  - {fileID: 155613251271061038, guid: cdbd07ebc194220458ca38baca78e471, type: 3}
+  - {fileID: 8235436235699058978, guid: f2450c5108eee464b8f5cac3c549892b, type: 3}
+  - {fileID: 7590534823275251779, guid: 6d0a5954e62d0754fb2039a8eaf4eca9, type: 3}
+  - {fileID: 7590534823275251779, guid: e4679ec5df21a344db0bbc8f86d6c540, type: 3}
+  - {fileID: 7590534823275251779, guid: 157adda470ea4e3418812160dc5c163e, type: 3}
+  - {fileID: 7590534823275251779, guid: 945a9f34f3836dd4bbbfeec0a526b014, type: 3}
+  - {fileID: 7590534823275251779, guid: 7cdd6569bd80202498cdc5dcb52e7b5e, type: 3}
+  - {fileID: 5872242659911660755, guid: 2101578b3e347b84b8a71979f896ac32, type: 3}
+  - {fileID: 1689842710516439070, guid: 813a54629f6609a48bd2199d2d4b29a3, type: 3}
+  - {fileID: 3697475237234219984, guid: c99ccd2a41c69fb41923b098ab7ecdf5, type: 3}
+  - {fileID: 2178899037425167218, guid: 0a83887973086c94a8b09afcf8d6d7db, type: 3}
+  - {fileID: 2298779709005674461, guid: 5c9523ba97f92f34aa194c6316419e0c, type: 3}
+  - {fileID: 1997971926841807070, guid: f14975b21ef7b7d4ca19922c0ac1c122, type: 3}
+  - {fileID: 6278851946174639151, guid: 9d4256346ee747e42bc53f67258a5e3d, type: 3}
+  - {fileID: 1997971926841807070, guid: 062e2b77b5361af4a8ac772966c1ddf3, type: 3}
+  - {fileID: 1997971926841807070, guid: ed8e44a548b669641acd21ebcc982ffe, type: 3}
+  - {fileID: 1997971926841807070, guid: f3c00282843f13641a9ecb94fa21fb38, type: 3}
+  - {fileID: 8882906234017663501, guid: 7bd80e8c460e755469629f05f09897dc, type: 3}
+  - {fileID: 7202987858791076646, guid: 4627dde752c309f4c8b114e56870636a, type: 3}
+  saveData:
+    playerXstartPoints:
+    - 30.7
+    - -32.4
+    - 29.6
+    - -32.5
+    - 18
+    - -32.5
+    - 15.7
+    - 3.5
+    playerXstartPoint: -32.5
+    nextScenePlayerPosition: {x: 0, y: 0}
+    currFloor: 
+    currRoomPos: 
+    itemList: []
+    isFirstGB: 1
+    isUnlocked: 0
+    isDiaryClicked: 0
+    isMufflerPicked: 0
+    isLetterPicked: 0
+    alreadyOpen: 0
+    playPuzzleOnce: 0
+    isB3DoorOpened: 0
+    OnB2CandleOnce: 0
+    playB2StatueOnce: 0
+    statue1Fliped: 0
+    statue2Fliped: 0
+    statue3Fliped: 0
+    statue4Fliped: 0
+    isB3ReEntered: 0
+    OnB3CandleOnce: 0
+    playB3StatueOnce: 0
+    isPianoMemoGained: 0
+    monsterExtractinInventory: 0
+    isLabTableReEntered: 0
+    isB4DoorOpened: 0
+    isTreesapPicked: 0
+    isBranchPicked: 0
+    isLeafPicked: 0
+    isFruitPicked: 0
+    fruitNum: 5
+    isDaggerPicked: 0
+    isJewelGained: 0
+    isB4LockUnlocked: 0
+--- !u!4 &415002212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415002210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &460406519
 GameObject:
   m_ObjectHideFlags: 0
@@ -3264,7 +3372,7 @@ PrefabInstance:
     - target: {fileID: 5960547632288174871, guid: 27a991ca6b608d74fad4c8af90f87be5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5960547632288174871, guid: 27a991ca6b608d74fad4c8af90f87be5,
         type: 3}
@@ -5599,7 +5707,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1929857492
 GameObject:
