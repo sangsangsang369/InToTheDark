@@ -9,34 +9,56 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": -35.0,
+    "playerXstartPoint": -32.400001525878909,
     "nextScenePlayerPosition": {
         "x": -32.5,
         "y": -0.8299999833106995
     },
-    "currFloor": "B2",
-    "currRoomPos": "복도",
-    "itemList": [],
-    "isFirstGB": true,
-    "isUnlocked": false,
-    "isDiaryClicked": false,
-    "isMufflerPicked": false,
-    "isLetterPicked": false,
+    "currFloor": "B3",
+    "currRoomPos": "피아노실",
+    "itemList": [
+        {
+            "prefabOrder": 1
+        },
+        {
+            "prefabOrder": 0
+        },
+        {
+            "prefabOrder": 2
+        },
+        {
+            "prefabOrder": 3
+        },
+        {
+            "prefabOrder": 16
+        },
+        {
+            "prefabOrder": 14
+        },
+        {
+            "prefabOrder": 12
+        }
+    ],
+    "isFirstGB": false,
+    "isUnlocked": true,
+    "isDiaryClicked": true,
+    "isMufflerPicked": true,
+    "isLetterPicked": true,
     "alreadyOpen": false,
-    "playPuzzleOnce": true,
+    "playPuzzleOnce": false,
     "isB3DoorOpened": false,
     "OnB2CandleOnce": false,
     "playB2StatueOnce": false,
-    "statue1Fliped": true,
-    "statue2Fliped": true,
+    "statue1Fliped": false,
+    "statue2Fliped": false,
     "statue3Fliped": false,
-    "statue4Fliped": true,
-    "isB3ReEntered": false,
+    "statue4Fliped": false,
+    "isB3ReEntered": true,
     "OnB3CandleOnce": false,
     "playB3StatueOnce": false,
-    "isPianoMemoGained": false,
+    "isPianoMemoGained": true,
     "monsterExtractinInventory": false,
-    "isLabTableReEntered": false,
+    "isLabTableReEntered": true,
     "isB4DoorOpened": false,
     "isTreesapPicked": false,
     "isBranchPicked": false,

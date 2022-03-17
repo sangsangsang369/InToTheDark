@@ -31,11 +31,8 @@ public class CameraScript : MonoBehaviour
             if (switchCamera == false)
             {
                 switchCamera = true;
-                Debug.Log(this.transform.position.x);
-                Debug.Log(bottomLimit);
                 if (this.transform.position.x <= bottomLimit) // 왼쪽 끝 넘어가면
                 {
-                    Debug.Log("if");
                     this.transform.SetParent(cameraParent.transform);
                     this.transform.position = new Vector3(bottomLimit, this.transform.position.y, -10); // 왼쪽 끝으로 카메라 위치 재조정
                     this.transform.localScale = new Vector3(0.7f, 0.7f, 1);

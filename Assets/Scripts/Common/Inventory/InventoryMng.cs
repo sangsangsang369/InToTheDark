@@ -132,7 +132,6 @@ public class InventoryMng : MonoBehaviour
         }
         ItemClass itemPicked = new ItemClass(order);
         saveData.itemList.Add(itemPicked);
-        Debug.Log(saveData.itemList[0].prefabOrder);
         data.Save();
     }
 
@@ -204,10 +203,14 @@ public class InventoryMng : MonoBehaviour
         }
         if(!filledCheck[slotList.Count - 6] && slotList.Count > 6)
         {
-            Destroy(slotList[slotList.Count - 6].transform.parent.gameObject);
-            slotList[slotList.Count - 12].transform.parent.gameObject.SetActive(true);
             inventoryList.RemoveAt(inventoryList.Count - 1);
-            currentPage--;
+            if(currentPage == 2)
+            {
+                currentPage--;
+            }
+            Destroy(slotList[slotList.Count - 6].transform.parent.gameObject);
+            inventoryList[0].transform.parent.gameObject.SetActive(true);
+            slotList.RemoveRange(6, 6);
         }
 
         //세이브 데이터의 아이템리스트에서도 제거
@@ -257,13 +260,16 @@ public class InventoryMng : MonoBehaviour
                 filledCheck[i] = false;
             }
         }
-
         if(!filledCheck[slotList.Count - 6] && slotList.Count > 6)
         {
             inventoryList.RemoveAt(inventoryList.Count - 1);
-            currentPage--;
+            if(currentPage == 2)
+            {
+                currentPage--;
+            }
             Destroy(slotList[slotList.Count - 6].transform.parent.gameObject);
-            slotList[slotList.Count - 12].transform.parent.gameObject.SetActive(true);
+            inventoryList[0].transform.parent.gameObject.SetActive(true);
+            slotList.RemoveRange(6, 6);
         }
     }
 
