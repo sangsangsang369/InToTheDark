@@ -202,7 +202,7 @@ public class InventoryMng : MonoBehaviour
                 filledCheck[i] = false;
             }
         }
-        if(!filledCheck[slotList.Count - 6])
+        if(!filledCheck[slotList.Count - 6] && slotList.Count > 6)
         {
             Destroy(slotList[slotList.Count - 6].transform.parent.gameObject);
             slotList[slotList.Count - 12].transform.parent.gameObject.SetActive(true);
@@ -258,7 +258,7 @@ public class InventoryMng : MonoBehaviour
             }
         }
 
-        if(!filledCheck[slotList.Count - 6])
+        if(!filledCheck[slotList.Count - 6] && slotList.Count > 6)
         {
             inventoryList.RemoveAt(inventoryList.Count - 1);
             currentPage--;
