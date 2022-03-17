@@ -10,6 +10,9 @@ public class B2Camera : CameraScript
     {
         base.Start();
         player.currRoom = "B2_Hallway";
+        saveData.currFloor = "B2";
+        saveData.currRoomPos = "복도";
+        data.Save();
     }
 
     void Update()

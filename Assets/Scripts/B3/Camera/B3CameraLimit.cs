@@ -8,6 +8,9 @@ public class B3CameraLimit : CameraScript
     {
         base.Start();
         player.currRoom="B3_Hallway";
+        saveData.currFloor = "B3";
+        saveData.currRoomPos = "복도";
+        data.Save();
     }
 
     // Update is called once per frame

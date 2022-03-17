@@ -8,6 +8,9 @@ public class B4Camera : CameraScript
     {
         base.Start();
         player.currRoom = "B4_Hallway";
+        saveData.currFloor = "B4";
+        saveData.currRoomPos = "복도";
+        data.Save();
     }
 
     // Update is called once per frame

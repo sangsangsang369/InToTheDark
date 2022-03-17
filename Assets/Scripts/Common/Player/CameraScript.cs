@@ -9,10 +9,14 @@ public class CameraScript : MonoBehaviour
     public GameObject playerCamera;
     [SerializeField]protected bool switchCamera = false; //true일 경우 좌,우 끝에 도달, false일 경우 끝에 도달하지 않은 상태
     protected Player player;
+    protected DataManager data;
+    protected SaveDataClass saveData;
 
     protected void Start()
     {
         player = FindObjectOfType<Player>();
+        data = DataManager.singleTon;
+        saveData = data.saveData;
     }
 
     public virtual void CameraSetting()

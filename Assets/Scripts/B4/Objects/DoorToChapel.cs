@@ -8,10 +8,14 @@ public class DoorToChapel : Object
     public GameObject hallwayObj;
     public GameObject chapelObj;
     Player player;
+    DataManager data;
+    SaveDataClass saveData;
 
     void Start()
     {
         player = FindObjectOfType<Player>();
+        data = DataManager.singleTon;
+        saveData = data.saveData;
     }
 
     public override void ObjectFunction()
@@ -19,6 +23,9 @@ public class DoorToChapel : Object
         hallwayObj.SetActive(false);
         chapelObj.SetActive(true);
         player.currRoom = "B4_Chapel";
+        saveData.currFloor = "B4";
+        saveData.currRoomPos = "¿¹¹è´ç?";
+        data.Save();
         playerObj.transform.position = new Vector2(-10.9f, -0.83f);
     }
 }

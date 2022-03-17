@@ -87,6 +87,8 @@ public class DoorToB3 : Object
         cover.SetActive(false);
         swordDown.SetActive(true);
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4leftDoor];
+        saveData.currFloor = "B3";
+        saveData.currRoomPos = "복도";
         data.Save();
         SceneManager.LoadScene("B3");
     }

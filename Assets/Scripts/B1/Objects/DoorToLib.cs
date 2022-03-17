@@ -8,10 +8,14 @@ public class DoorToLib : Object
     public GameObject hallwayObj;
     public GameObject libraryObj;
     Player player;
+    DataManager data;
+    SaveDataClass saveData;
 
     void Start()
     {
         player = FindObjectOfType<Player>();
+        data = DataManager.singleTon;
+        saveData = data.saveData;
     }
 
     public override void ObjectFunction()
@@ -19,6 +23,9 @@ public class DoorToLib : Object
         hallwayObj.SetActive(false); // B1F object 끄기
         libraryObj.SetActive(true); // bg sprite를 복도 -> 서재로 변경
         player.currRoom = "B1_Library";
+        saveData.currFloor = "B1";
+        saveData.currRoomPos = "비밀서재";
+        data.Save();
         playerObj.transform.position = new Vector2(7.0f, -0.83f);
     }
 }

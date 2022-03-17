@@ -8,10 +8,14 @@ public class DoorToTreeroom : Object
     public GameObject hallwayObj;
     public GameObject TreeroomObj;
     Player player;
-    // Start is called before the first frame update
+    DataManager data;
+    SaveDataClass saveData;
+
     void Start()
     {
         player = FindObjectOfType<Player>();
+        data = DataManager.singleTon;
+        saveData = data.saveData;
     }
 
     // Update is called once per frame
@@ -20,6 +24,9 @@ public class DoorToTreeroom : Object
         hallwayObj.SetActive(false);
         TreeroomObj.SetActive(true);
         player.currRoom = "B3_Treeroom";
+        saveData.currFloor = "B3";
+        saveData.currRoomPos = "트리룸";
+        data.Save();
         playerObj.transform.position = new Vector2(11.0f, -0.83f);
     }
 }

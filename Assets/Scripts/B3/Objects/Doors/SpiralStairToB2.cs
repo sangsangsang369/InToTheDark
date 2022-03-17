@@ -21,6 +21,8 @@ public class SpiralStairToB2 : Object
     public override void ObjectFunction()
     {
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B2rightDoor];
+        saveData.currFloor = "B2";
+        saveData.currRoomPos = "복도";
         data.Save();
         SceneManager.LoadScene("B2");
     }

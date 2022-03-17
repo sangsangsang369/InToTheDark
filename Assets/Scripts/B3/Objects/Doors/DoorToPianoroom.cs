@@ -8,10 +8,14 @@ public class DoorToPianoroom : Object
     public GameObject hallwayObj;
     public GameObject PianoroomObj;
     Player player;
-    // Start is called before the first frame update
+    DataManager data;
+    SaveDataClass saveData;
+
     void Start()
     {
         player = FindObjectOfType<Player>();
+        data = DataManager.singleTon;
+        saveData = data.saveData;
     }
 
     // Update is called once per frame
@@ -20,6 +24,9 @@ public class DoorToPianoroom : Object
         hallwayObj.SetActive(false);
         PianoroomObj.SetActive(true);
         player.currRoom = "B3_Pianoroom";
+        saveData.currFloor = "B3";
+        saveData.currRoomPos = "피아노실";
+        data.Save();
         playerObj.transform.position = new Vector2(-1.3f, -0.83f);
     }
 }

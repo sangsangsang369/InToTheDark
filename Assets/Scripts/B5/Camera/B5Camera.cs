@@ -9,7 +9,10 @@ public class B5Camera : CameraScript
     new void Start()
     {
         base.Start();
-        player.currRoom = "B5_Hallway";   
+        player.currRoom = "B5_Hallway";
+        saveData.currFloor = "B5";
+        saveData.currRoomPos = "복도";
+        data.Save();
     }
 
     void Update()

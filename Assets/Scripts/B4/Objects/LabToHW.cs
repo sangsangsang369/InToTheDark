@@ -10,11 +10,15 @@ public class LabToHW : Object
     public GameObject hallwayObj;
     public Light2D globalLight;
     Player player;
+    DataManager data;
+    SaveDataClass saveData;
 
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<Player>();
+        data = DataManager.singleTon;
+        saveData = data.saveData;
     }
 
     public override void ObjectFunction()
@@ -23,6 +27,9 @@ public class LabToHW : Object
         hallwayObj.SetActive(true);
         globalLight.intensity = 0.05f;
         player.currRoom = "B4_Hallway";
+        saveData.currFloor = "B4";
+        saveData.currRoomPos = "복도";
+        data.Save();
         playerObj.transform.position = new Vector2(29.9f, -0.83f);
     }
 }

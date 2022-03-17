@@ -20,6 +20,8 @@ public class DoorToB1 : Object
     public override void ObjectFunction()
     {
         player.currRoom = "B1_Hallway";
+        saveData.currFloor = "B1";
+        saveData.currRoomPos = "복도";
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B1rightDoor];
         data.Save();
         SceneManager.LoadScene("B1");
