@@ -15,6 +15,7 @@ public class Cabinet3 : Object
 
     DataManager data;
     SaveDataClass saveData;
+    SoundManager SM;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class Cabinet3 : Object
         player = FindObjectOfType<Player>();
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
+        SM = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,8 @@ public class Cabinet3 : Object
         {
             if (!alreadyOpen)
             {
+                SM.cabinetOpenShortEffectPlay();
+                SM.cabinetOpenLongEffectPlay();
                 cabinet3UI.SetActive(true);
                 StartCoroutine(uiManager.LoadTexts(cabinet3Texts, inputTextUI, 3));
                 GameObject clock = clockImg;

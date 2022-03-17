@@ -10,8 +10,10 @@ public class SoundManager : MonoBehaviour
     public AudioSource effectSource;
     public AudioSource buttonSource;
 
-    public AudioClip prologueBGM;
     public AudioClip mainBGM;
+    public AudioClip B12BGM;
+    public AudioClip B34BGM;
+    public AudioClip endingBGM;
     public AudioClip fishBGM;
     public AudioClip mineBGM;
     public AudioClip huntBGM;
@@ -54,6 +56,17 @@ public class SoundManager : MonoBehaviour
     public AudioClip rillEffect;
     public AudioClip mulEffect;
 
+    //Common Effect
+    public AudioClip getItemEffect;
+
+    //B2 Effect
+    public AudioClip cabinetOpenLongEffect;
+    public AudioClip cabinetOpenShortEffect;
+    public AudioClip pocketwatchEffect;
+    public AudioClip lockerOpenEffect;
+    public AudioClip swipeStatueEffect;
+    public AudioClip knifeEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -89,6 +102,16 @@ public class SoundManager : MonoBehaviour
             return;
         }
         bgmSource.clip = mainBGM;
+        bgmSource.Play();
+    }
+
+    public void B12BGMPlay()
+    {
+        if (bgmSource.clip == B12BGM)
+        {
+            return;
+        }
+        bgmSource.clip = B12BGM;
         bgmSource.Play();
     }
 
@@ -135,6 +158,52 @@ public class SoundManager : MonoBehaviour
         WorkEffectPlay();
     }
 
+
+    public void cabinetOpenLongEffectPlay()
+    {
+        if (effectSource.clip == cabinetOpenShortEffect)
+        {
+            return;
+        }
+        effectSource.clip = cabinetOpenLongEffect;
+        effectSource.Play();
+    }
+
+    public void cabinetOpenShortEffectPlay()
+    {
+        effectSource.clip = cabinetOpenShortEffect;
+        effectSource.Play();
+    }
+
+    public void pocketwatchEffectPlay()
+    {
+        effectSource.clip = pocketwatchEffect;
+        effectSource.Play();
+    }
+
+    public void lockerOpenEffectPlay()
+    {
+        effectSource.clip = lockerOpenEffect;
+        effectSource.Play();
+    }
+
+    public void getItemEffectPlay()
+    {
+        effectSource.clip = getItemEffect;
+        effectSource.Play();
+    }
+
+    public void swipeStatueEffectPlay()
+    {
+        effectSource.clip = swipeStatueEffect;
+        effectSource.Play();
+    }
+
+    public void knifeEffectPlay()
+    {
+        effectSource.clip = knifeEffect;
+        effectSource.Play();
+    }
     void WorkEffectPlay()
     {
         effectSource.clip = workEffect;

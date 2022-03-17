@@ -10,16 +10,20 @@ public class Cabinet1 : Object
     public Text cabinet1Text;
     public Text inputTextUI;
     Player player;
+    SoundManager SM;
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<Player>();
         uiManager = FindObjectOfType<B2_UIManager>();
+        SM = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
     public override void ObjectFunction()
     {
+        SM.cabinetOpenShortEffectPlay();
+        SM.cabinetOpenLongEffectPlay();
         cabinet1UI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(cabinet1Text.text, inputTextUI));
     }

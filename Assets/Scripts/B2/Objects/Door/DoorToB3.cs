@@ -60,30 +60,44 @@ public class DoorToB3 : Object
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     GetComponent<Animator>().SetTrigger("GoDown");
-                    Invoke("Wait5Sec", 3f);
+                    Invoke("WaitSec", 2f);
                 }
+            }
+        }
+        else
+        {
+            s1.SetActive(false);
+            s2.SetActive(false);
+            cover.SetActive(false);
+            blood.SetActive(true);
+            swordDown.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4leftDoor];
+                saveData.currFloor = "B3";
+                saveData.currRoomPos = "복도";
+                data.Save();
+                SceneManager.LoadScene("B3");
             }
         }
         
     }
 
-    public void Wait5Sec()
+    public void WaitSec()
     {
-        Debug.Log("5");
         s1.SetActive(false);
         s2.SetActive(false);
         cover.SetActive(true);
         cover.GetComponent<Animator>().SetTrigger("MakeDark");
-        blood.SetActive(true);
         isB3DoorOpened = true;
         saveData.isB3DoorOpened = true;
         data.Save();
-        //if (Input.GetKeyDown(KeyCode.Mouse0))
         Invoke("Keeping", 3f);
     }
 
     public void Keeping()
     {
+        blood.SetActive(true);
         cover.SetActive(false);
         swordDown.SetActive(true);
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4leftDoor];

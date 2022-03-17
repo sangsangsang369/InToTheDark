@@ -10,16 +10,20 @@ public class Cabinet5 : Object
     public List<Text> cabinet5Texts;
     public Text inputTextUI;
     Player player;
-    // Start is called before the first frame update
+    SoundManager SM;
+
     void Start()
     {
         player = FindObjectOfType<Player>();
         uiManager = FindObjectOfType<B2_UIManager>();
+        SM = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
     public override void ObjectFunction()
     {
+        SM.cabinetOpenShortEffectPlay();
+        SM.cabinetOpenLongEffectPlay();
         cabinet5UI.SetActive(true);
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {

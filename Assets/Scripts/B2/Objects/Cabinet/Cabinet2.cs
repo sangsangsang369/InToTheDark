@@ -12,7 +12,8 @@ public class Cabinet2 : Object
     public Text cabinet2Text, sword1Text;
     public Text inputTextUI;
     Player player;
-    Key key;
+    Key key; 
+    SoundManager SM;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class Cabinet2 : Object
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
+        SM = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -31,7 +33,10 @@ public class Cabinet2 : Object
                 key = FindObjectOfType<Key>();
                 if (key && slotSelectMng.usableItem == "keySelected")
                 {
+                    SM.lockerOpenEffectPlay();
+                    SM.cabinetOpenLongEffectPlay();
                     sword1UI.SetActive(true);
+                    SM.getItemEffectPlay();
                     StartCoroutine(uiManager.LoadTextOneByOne(sword1Text.text, inputTextUI));
                     inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.CabinetKey);
                     slotSelectMng.SelectionClear();
@@ -40,6 +45,7 @@ public class Cabinet2 : Object
                 }
                 else
                 {
+                    SM.cabinetOpenShortEffectPlay();
                     cabinet2UI.SetActive(true);
                     StartCoroutine(uiManager.LoadTextOneByOne(cabinet2Text.text, inputTextUI));
                 }

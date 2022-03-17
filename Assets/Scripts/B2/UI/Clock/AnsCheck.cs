@@ -42,9 +42,8 @@ public class AnsCheck : MonoBehaviour
                 ImgNum = 2;
             }
         }
-        if (ImgNum == 2)
+        else if (ImgNum == 2)
         {
-            
             if ((moveHour.secHour == true) && (moveMin.secMin == true))
             {
                 Img1.SetActive(false);
@@ -52,7 +51,7 @@ public class AnsCheck : MonoBehaviour
                 ImgNum = 3;
             }
         }
-        if (ImgNum == 3)
+        else if (ImgNum == 3)
         {
             if ((moveHour.thrHour == true) && (moveMin.thrMin == true))
             {
@@ -61,7 +60,7 @@ public class AnsCheck : MonoBehaviour
                 ImgNum = 4;
             }
         }
-        if (ImgNum == 4)
+        else if (ImgNum == 4)
         {
             if ((moveHour.fourHour == true) && (moveMin.fourMin == true))
             {

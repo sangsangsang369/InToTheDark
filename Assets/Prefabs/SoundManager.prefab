@@ -49,8 +49,10 @@ MonoBehaviour:
   bgmSource: {fileID: 5960547632288174875}
   effectSource: {fileID: 5960547632288174874}
   buttonSource: {fileID: 5960547632288174873}
-  prologueBGM: {fileID: 0}
   mainBGM: {fileID: 8300000, guid: 7dbc12bb779156a4a89f298da2519397, type: 3}
+  B12BGM: {fileID: 8300000, guid: 9417dd2cbb927ce46aeb9572a061e557, type: 3}
+  B34BGM: {fileID: 0}
+  endingBGM: {fileID: 8300000, guid: f3317955c3d0a054e97bedcc27708712, type: 3}
   fishBGM: {fileID: 0}
   mineBGM: {fileID: 0}
   huntBGM: {fileID: 0}
@@ -88,6 +90,15 @@ MonoBehaviour:
   jjiEffect: {fileID: 0}
   rillEffect: {fileID: 0}
   mulEffect: {fileID: 0}
+  getItemEffect: {fileID: 8300000, guid: 9bebd8e9802497b458e5a943cfc19000, type: 3}
+  cabinetOpenLongEffect: {fileID: 8300000, guid: 5c753ac91555e6d449b172430e18d353,
+    type: 3}
+  cabinetOpenShortEffect: {fileID: 8300000, guid: 2470baa7760c4164a983847ccf9e362c,
+    type: 3}
+  pocketwatchEffect: {fileID: 8300000, guid: ca8d48af4befe694d8e57f2d9f5619a6, type: 3}
+  lockerOpenEffect: {fileID: 0}
+  swipeStatueEffect: {fileID: 8300000, guid: b8df92cf7b77bc041871e20785261329, type: 3}
+  knifeEffect: {fileID: 8300000, guid: 7a25b34a130d20c4192ecd0e0ad4b706, type: 3}
 --- !u!82 &5960547632288174875
 AudioSource:
   m_ObjectHideFlags: 0

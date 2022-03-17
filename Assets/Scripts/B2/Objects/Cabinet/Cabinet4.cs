@@ -9,17 +9,21 @@ public class Cabinet4 : Object
     public Text cabinet4Text;
     public Text inputTextUI;
     Player player;
-    // Start is called before the first frame update
+    SoundManager SM;
+
     void Start()
     {
         player = FindObjectOfType<Player>();
         uiManager = FindObjectOfType<B2_UIManager>();
+        SM = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
     public override void ObjectFunction()
     {
         cabinet4UI.SetActive(true);
+        SM.cabinetOpenShortEffectPlay();
+        SM.cabinetOpenLongEffectPlay();
         StartCoroutine(uiManager.LoadTextOneByOne(cabinet4Text.text, inputTextUI));
     }
 }
