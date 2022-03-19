@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class B4Camera : CameraScript
 {
-    new void Start()
+    FloorTxt Ft;
+
+   new void Start()
     {
         base.Start();
+        Ft = FindObjectOfType<FloorTxt>();
         player.currRoom = "B4_Hallway";
         saveData.currFloor = "B4";
         saveData.currRoomPos = "복도";
         data.Save();
+        Ft.PosUI();
     }
 
     // Update is called once per frame

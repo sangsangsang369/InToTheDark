@@ -7,17 +7,13 @@ public class StatuePuzzle2 : Object
 {
     B2_UIManager uiManager;
     Player player;
+    SoundManager SM;
     public bool statue2Fliped = false;
 
-    DataManager data;
-    SaveDataClass saveData;
     // Start is called before the first frame update
     void Start()
     {
-        data = DataManager.singleTon;
-        saveData = data.saveData;
-        statue2Fliped = saveData.statue2Fliped;
-
+        SM = FindObjectOfType<SoundManager>();
         player = FindObjectOfType<Player>();
         uiManager = FindObjectOfType<B2_UIManager>();
     }
@@ -30,16 +26,14 @@ public class StatuePuzzle2 : Object
             if (!statue2Fliped)
             {
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                SM.swipeStatueEffectPlay();
                 statue2Fliped = true;
-                saveData.statue2Fliped = true;
-                data.Save();
             }
             else
             {
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                SM.swipeStatueEffectPlay();
                 statue2Fliped = false;
-                saveData.statue2Fliped = false;
-                data.Save();
             }
         }
     }

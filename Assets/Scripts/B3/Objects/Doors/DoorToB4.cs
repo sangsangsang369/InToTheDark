@@ -18,6 +18,9 @@ public class DoorToB4 : Object
     public bool isB4DoorOpened;
     public GameObject creature;
 
+    FloorTxt Ft;
+
+
     void Start()
     {
         data = DataManager.singleTon;
@@ -27,6 +30,7 @@ public class DoorToB4 : Object
         inventoryMng = FindObjectOfType<InventoryMng>();
         uiManager = FindObjectOfType<B3UIManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
+        Ft = FindObjectOfType<FloorTxt>();
 
         if(isB4DoorOpened)
         {
@@ -60,9 +64,10 @@ public class DoorToB4 : Object
         {
             //B4로 씬 이동
             saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4leftDoor];
-            data.Save();
             saveData.currFloor = "B4";
             saveData.currRoomPos = "복도";
+            data.Save();
+            Ft.PosUI();
             SceneManager.LoadScene("B4");
         }
     }

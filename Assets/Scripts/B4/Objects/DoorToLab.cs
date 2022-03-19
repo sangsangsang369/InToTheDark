@@ -12,6 +12,7 @@ public class DoorToLab : Object
     Player player;
     DataManager data;
     SaveDataClass saveData;
+    FloorTxt Ft;  
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class DoorToLab : Object
         player = FindObjectOfType<Player>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        Ft = FindObjectOfType<FloorTxt>();
     }
 
     public override void ObjectFunction()
@@ -30,6 +32,7 @@ public class DoorToLab : Object
         saveData.currFloor = "B4";
         saveData.currRoomPos = "연구실";
         data.Save();
+        Ft.PosUI();
         playerObj.transform.position = new Vector2(1.5f, -0.83f);
     }
 }

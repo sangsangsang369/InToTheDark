@@ -11,6 +11,7 @@ public class DoorToGallery : Object
     Player player;
     DataManager data;
     SaveDataClass saveData;
+    FloorTxt Ft;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class DoorToGallery : Object
         player = FindObjectOfType<Player>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        Ft = FindObjectOfType<FloorTxt>();
     }
 
     public override void ObjectFunction()
@@ -28,6 +30,7 @@ public class DoorToGallery : Object
         saveData.currFloor = "B2";
         saveData.currRoomPos = "어머니의 화랑";
         data.Save();
+        Ft.PosUI();
         playerObj.transform.position = new Vector2(7f, -0.83f); // 시작지점
     }
 }

@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class B3CameraLimit : CameraScript
 {
+    FloorTxt Ft;
+
     new void Start()
     {
         base.Start();
+        Ft = FindObjectOfType<FloorTxt>();
         player.currRoom="B3_Hallway";
         saveData.currFloor = "B3";
         saveData.currRoomPos = "복도";
         data.Save();
+        Ft.PosUI();
     }
 
     // Update is called once per frame

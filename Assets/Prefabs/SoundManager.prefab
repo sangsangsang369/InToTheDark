@@ -91,14 +91,14 @@ MonoBehaviour:
   rillEffect: {fileID: 0}
   mulEffect: {fileID: 0}
   getItemEffect: {fileID: 8300000, guid: 9bebd8e9802497b458e5a943cfc19000, type: 3}
-  cabinetOpenLongEffect: {fileID: 8300000, guid: 5c753ac91555e6d449b172430e18d353,
+  cabinetOpenLongEffect: {fileID: 8300000, guid: cec9033314872a44195c2d4884bff1d3,
     type: 3}
-  cabinetOpenShortEffect: {fileID: 8300000, guid: 2470baa7760c4164a983847ccf9e362c,
+  cabinetOpenShortEffect: {fileID: 8300000, guid: 58867b54901cd694982f16e238696ac7,
     type: 3}
-  pocketwatchEffect: {fileID: 8300000, guid: ca8d48af4befe694d8e57f2d9f5619a6, type: 3}
+  pocketwatchEffect: {fileID: 8300000, guid: 02b436fbed001384e93ca2b2c43e2596, type: 3}
   lockerOpenEffect: {fileID: 0}
-  swipeStatueEffect: {fileID: 8300000, guid: b8df92cf7b77bc041871e20785261329, type: 3}
-  knifeEffect: {fileID: 8300000, guid: 7a25b34a130d20c4192ecd0e0ad4b706, type: 3}
+  swipeStatueEffect: {fileID: 8300000, guid: 1d21d673118d0714eab6652627cb7a2c, type: 3}
+  knifeEffect: {fileID: 8300000, guid: 4111d0a316ee01f43ab2ac1f8b09932c, type: 3}
 --- !u!82 &5960547632288174875
 AudioSource:
   m_ObjectHideFlags: 0

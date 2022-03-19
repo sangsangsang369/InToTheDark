@@ -10,12 +10,14 @@ public class DoorToTreeroom : Object
     Player player;
     DataManager data;
     SaveDataClass saveData;
+    FloorTxt Ft; 
 
     void Start()
     {
         player = FindObjectOfType<Player>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        Ft = FindObjectOfType<FloorTxt>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class DoorToTreeroom : Object
         saveData.currFloor = "B3";
         saveData.currRoomPos = "트리룸";
         data.Save();
+        Ft.PosUI();
         playerObj.transform.position = new Vector2(11.0f, -0.83f);
     }
 }

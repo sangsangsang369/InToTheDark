@@ -10,6 +10,7 @@ public class Clock : Object
     public Cabinet3 clockcabinet;
     public AnsCheck ansCheck;
     SlotSelectionMng slotSelectMng;
+    SoundManager SM;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class Clock : Object
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
         clockcabinet = FindObjectOfType<Cabinet3>();
         ansCheck = FindObjectOfType<AnsCheck>();
+        SM = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class Clock : Object
         }
         else
         {
+            SM.pocketwatchEffectPlay();
             clockcabinet.clockPanel.SetActive(true); 
         }
     }

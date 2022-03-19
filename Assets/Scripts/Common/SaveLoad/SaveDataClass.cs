@@ -35,7 +35,7 @@ public class SaveDataClass
     public bool isB3DoorOpened;
     public bool OnB2CandleOnce;
     public bool playB2StatueOnce;
-    public bool statue1Fliped, statue2Fliped, statue3Fliped, statue4Fliped;
+    public bool ReB2;
 
     //지하 3층
     public bool isB3ReEntered;
@@ -63,6 +63,8 @@ public class SaveDataClass
         //플레이어 위치
         playerXstartPoint = -35f;
         nextScenePlayerPosition = new Vector2(-32.5f, -0.83f);
+        currFloor = "B1";
+        currRoomPos = "복도";
 
         //인벤토리 및 아이템
         itemList = new List<ItemClass>();
@@ -81,10 +83,7 @@ public class SaveDataClass
         isB3DoorOpened = false;
         OnB2CandleOnce = false;
         playB2StatueOnce = false;
-        statue1Fliped = false;
-        statue2Fliped = false;
-        statue3Fliped = false;
-        statue4Fliped = false;
+        ReB2 = false;
 
         //지하 3층
         isB3ReEntered = false;

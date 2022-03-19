@@ -10,6 +10,7 @@ public class SpiralStair : Object
 
     public GameObject playerObj;
     Player player;
+    FloorTxt Ft;
 
     // Start is called before the first frame update
     void Start()
@@ -17,14 +18,16 @@ public class SpiralStair : Object
         data = DataManager.singleTon;
         saveData = data.saveData;
         player = FindObjectOfType<Player>();
+        Ft = FindObjectOfType<FloorTxt>();
     }
 
     public override void ObjectFunction()
     {
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B3rightDoor];
-        data.Save();
         saveData.currFloor = "B3";
         saveData.currRoomPos = "복도";
+        data.Save();
+        Ft.PosUI();
         SceneManager.LoadScene("B3");
     }
 }

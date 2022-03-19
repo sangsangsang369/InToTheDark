@@ -10,12 +10,14 @@ public class DoorToChapel : Object
     Player player;
     DataManager data;
     SaveDataClass saveData;
+    FloorTxt Ft;
 
     void Start()
     {
         player = FindObjectOfType<Player>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        Ft = FindObjectOfType<FloorTxt>();
     }
 
     public override void ObjectFunction()
@@ -26,6 +28,7 @@ public class DoorToChapel : Object
         saveData.currFloor = "B4";
         saveData.currRoomPos = "¿¹¹è´ç?";
         data.Save();
+        Ft.PosUI();
         playerObj.transform.position = new Vector2(-10.9f, -0.83f);
     }
 }

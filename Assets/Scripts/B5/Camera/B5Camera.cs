@@ -5,14 +5,16 @@ using UnityEngine;
 public class B5Camera : CameraScript
 {
     float player_xPosition;
-
+    FloorTxt Ft;
     new void Start()
     {
         base.Start();
+        Ft = FindObjectOfType<FloorTxt>();
         player.currRoom = "B5_Hallway";
         saveData.currFloor = "B5";
         saveData.currRoomPos = "복도";
         data.Save();
+        Ft.PosUI();
     }
 
     void Update()
@@ -49,36 +51,4 @@ public class B5Camera : CameraScript
             this.transform.position = new Vector3(48.4f, 0.3f, -10);
         }
     }
-    // private void CameraLimit(float bottomLimit, float topLimit)
-    // {
-    //     if (mainCharacter.transform.position.x <= bottomLimit || mainCharacter.transform.position.x >= topLimit)
-    //     {
-    //         if (switchCamera == false)
-    //         {
-    //             switchCamera = true;
-    //             if (this.transform.position.x <= bottomLimit) // 왼쪽 끝 넘어가면
-    //             {
-    //                 this.transform.SetParent(cameraParent.transform);
-    //                 this.transform.position = new Vector3(bottomLimit, this.transform.position.y, -10); // 왼쪽 끝으로 카메라 위치 재조정
-    //                 this.transform.localScale = new Vector3(0.7f, 0.7f, 1);
-    //             }
-    //             else if (this.transform.position.x >= topLimit) // 오른쪽 끝 넘어가면
-    //             {
-    //                 this.transform.SetParent(cameraParent.transform);
-    //                 this.transform.position = new Vector3(topLimit, this.transform.position.y, -10); // 오른쪽 끝으로 카메라 위치 재조정
-    //                 this.transform.localScale = new Vector3(0.7f, 0.7f, 1);
-    //             }
-    //         }
-    //     }
-    //     else
-    //     {
-    //         if (switchCamera == true)
-    //         {
-    //             switchCamera = false;
-    //             this.transform.SetParent(mainCharacter.transform); // 카메라의 Parent를 player로 다시 바꿔줌
-    //             playerCamera.transform.localPosition = new Vector3(0, this.transform.localPosition.y, -10);
-    //             this.transform.localScale = new Vector3(1, 1, 1);
-    //         }
-    //     }
-    // }
 }

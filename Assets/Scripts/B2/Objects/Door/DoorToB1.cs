@@ -8,12 +8,15 @@ public class DoorToB1 : Object
     DataManager data;
     SaveDataClass saveData;
     Player player;
+    FloorTxt Ft;
+     
     // Start is called before the first frame update
     void Start()
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
         player = FindObjectOfType<Player>();
+        Ft = FindObjectOfType<FloorTxt>();
     }
 
     // Update is called once per frame
@@ -24,6 +27,7 @@ public class DoorToB1 : Object
         saveData.currRoomPos = "복도";
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B1rightDoor];
         data.Save();
+        Ft.PosUI();
         SceneManager.LoadScene("B1");
     }
 }

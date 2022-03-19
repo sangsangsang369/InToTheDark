@@ -11,12 +11,14 @@ public class GalleryToHW : Object
     Player player;
     DataManager data;
     SaveDataClass saveData;
+    FloorTxt Ft;
 
     void Start()
     {
         player = FindObjectOfType<Player>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        Ft = FindObjectOfType<FloorTxt>();
     }
 
     public override void ObjectFunction()
@@ -27,6 +29,7 @@ public class GalleryToHW : Object
         saveData.currFloor = "B2";
         saveData.currRoomPos = "복도";
         data.Save();
+        Ft.PosUI();
         playerObj.transform.position = new Vector2(18.45f, -0.83f); // 시작지점
     }
 }

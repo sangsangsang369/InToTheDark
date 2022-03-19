@@ -9,6 +9,7 @@ public class SpiralStairToB2 : Object
     SaveDataClass saveData;
 
     Player player;
+    FloorTxt Ft;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class SpiralStairToB2 : Object
         data = DataManager.singleTon;
         saveData = data.saveData;
         player = FindObjectOfType<Player>();
+        Ft = FindObjectOfType<FloorTxt>();
     }
 
     public override void ObjectFunction()
@@ -24,6 +26,7 @@ public class SpiralStairToB2 : Object
         saveData.currFloor = "B2";
         saveData.currRoomPos = "복도";
         data.Save();
+        Ft.PosUI();
         SceneManager.LoadScene("B2");
     }
 }

@@ -13,10 +13,12 @@ public class FloorTxt : MonoBehaviour
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        Floor.text = saveData.currFloor;
+        Room.text = saveData.currRoomPos;
     }
 
     // Update is called once per frame
-    void Update()
+    public void PosUI()
     {
         Floor.text = saveData.currFloor;
         Room.text = saveData.currRoomPos;

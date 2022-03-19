@@ -11,6 +11,7 @@ public class DoorToHW : Object
     Camera mainCamera;
     DataManager data;
     SaveDataClass saveData;
+    FloorTxt Ft; 
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class DoorToHW : Object
         mainCamera = FindObjectOfType<Camera>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        Ft = FindObjectOfType<FloorTxt>();
     }
 
     public override void ObjectFunction()
@@ -28,6 +30,7 @@ public class DoorToHW : Object
         saveData.currFloor = "B1";
         saveData.currRoomPos = "복도";
         data.Save();
+        Ft.PosUI();
         playerObj.transform.position = new Vector2(-7.7f, -0.83f);
         mainCamera.transform.SetParent(player.transform);
     }

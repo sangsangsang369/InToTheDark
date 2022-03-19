@@ -19,6 +19,7 @@ public class MoveStatue : MonoBehaviour
 
     DataManager data;
     SaveDataClass saveData;
+    SoundManager SM;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class MoveStatue : MonoBehaviour
         playPuzzleOnce = saveData.playPuzzleOnce;
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
+        SM = FindObjectOfType<SoundManager>();
     }
 
 
@@ -43,6 +45,7 @@ public class MoveStatue : MonoBehaviour
 
     public void CheckAnswer()
     {
+        SM.getItemEffectPlay();
         sword2UI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(sword2Text.text, inputTextUI));
         GameObject sword2 = sword2Img;
