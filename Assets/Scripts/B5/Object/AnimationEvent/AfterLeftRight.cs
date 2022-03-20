@@ -10,6 +10,7 @@ public class AfterLeftRight : MonoBehaviour
     public GameObject monsterBro;
     public GameObject fadeOut;
     bool monsterBroTrigger = false;
+    public GameObject floorTxt;
 
     private void Update() 
     {
@@ -26,6 +27,7 @@ public class AfterLeftRight : MonoBehaviour
         {
             monsterBro.GetComponent<Animator>().SetBool("isWalking", true);
             monsterBro.transform.position += Vector3.right * 0.8f * Time.deltaTime;
+            floorTxt.SetActive(false);
             fadeOut.SetActive(true);
             fadeOut.GetComponent<Animator>().SetBool("fadeOut", true);
         }

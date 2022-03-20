@@ -30,7 +30,7 @@ public class LabToHW : Object
         globalLight.intensity = 0.05f;
         player.currRoom = "B4_Hallway";
         saveData.currFloor = "B4";
-        saveData.currRoomPos = "복도";
+        saveData.currRoomPos = "이형체의 복도";
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(29.9f, -0.83f);

@@ -30,7 +30,7 @@ public class DoorToLab : Object
         globalLight.intensity = 0.66f;
         player.currRoom = "B4_Lab";
         saveData.currFloor = "B4";
-        saveData.currRoomPos = "연구실";
+        saveData.currRoomPos = "수상한 실험실";
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(1.5f, -0.83f);

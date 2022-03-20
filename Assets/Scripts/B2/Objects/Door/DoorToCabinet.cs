@@ -28,7 +28,7 @@ public class DoorToCabinet : Object
         cabinetObj.SetActive(true);
         player.currRoom = "B2_Cabinet";
         saveData.currFloor = "B2";
-        saveData.currRoomPos = "캐비닛룸";
+        saveData.currRoomPos = "시체의 방";
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(-31.05f, -0.83f); // 시작지점

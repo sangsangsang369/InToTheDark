@@ -28,7 +28,7 @@ public class DoorToPianoroom : Object
         PianoroomObj.SetActive(true);
         player.currRoom = "B3_Pianoroom";
         saveData.currFloor = "B3";
-        saveData.currRoomPos = "피아노실";
+        saveData.currRoomPos = "합주실";
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(-1.3f, -0.83f);

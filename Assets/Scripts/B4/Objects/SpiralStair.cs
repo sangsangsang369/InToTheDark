@@ -25,7 +25,7 @@ public class SpiralStair : Object
     {
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B3rightDoor];
         saveData.currFloor = "B3";
-        saveData.currRoomPos = "복도";
+        saveData.currRoomPos = "피투성이 복도";
         data.Save();
         Ft.PosUI();
         SceneManager.LoadScene("B3");

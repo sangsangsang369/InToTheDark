@@ -27,7 +27,7 @@ public class DoorToTreeroom : Object
         TreeroomObj.SetActive(true);
         player.currRoom = "B3_Treeroom";
         saveData.currFloor = "B3";
-        saveData.currRoomPos = "트리룸";
+        saveData.currRoomPos = "거대한 정원";
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(11.0f, -0.83f);

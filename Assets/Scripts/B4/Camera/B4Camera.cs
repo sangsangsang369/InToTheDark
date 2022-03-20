@@ -12,7 +12,7 @@ public class B4Camera : CameraScript
         Ft = FindObjectOfType<FloorTxt>();
         player.currRoom = "B4_Hallway";
         saveData.currFloor = "B4";
-        saveData.currRoomPos = "복도";
+        saveData.currRoomPos = "이형체의 복도";
         data.Save();
         Ft.PosUI();
     }

@@ -27,7 +27,7 @@ public class TreeroomToHW : Object
         TreeroomObj.SetActive(false);
         player.currRoom = "B3_Hallway";
         saveData.currFloor = "B3";
-        saveData.currRoomPos = "복도";
+        saveData.currRoomPos = "피투성이 복도";
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(0.8f, -0.83f);

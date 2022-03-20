@@ -26,7 +26,7 @@ public class DoorToLib : Object
         libraryObj.SetActive(true); // bg sprite를 복도 -> 서재로 변경
         player.currRoom = "B1_Library";
         saveData.currFloor = "B1";
-        saveData.currRoomPos = "비밀서재";
+        saveData.currRoomPos = "낡은 서재";
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(7.0f, -0.83f);

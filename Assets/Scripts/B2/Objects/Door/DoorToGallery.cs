@@ -28,7 +28,7 @@ public class DoorToGallery : Object
         galleryObj.SetActive(true);
         player.currRoom = "B2_Gallery";
         saveData.currFloor = "B2";
-        saveData.currRoomPos = "어머니의 화랑";
+        saveData.currRoomPos = "전시실";
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(7f, -0.83f); // 시작지점
