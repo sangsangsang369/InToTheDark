@@ -2991,7 +2991,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 30431c05e7ef4d74dbce2daec55693c3, type: 3}
-    m_FontSize: 38
+    m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -10087,10 +10087,7 @@ MonoBehaviour:
     isB3DoorOpened: 0
     OnB2CandleOnce: 0
     playB2StatueOnce: 0
-    statue1Fliped: 0
-    statue2Fliped: 0
-    statue3Fliped: 0
-    statue4Fliped: 0
+    ReB2: 0
     isB3ReEntered: 0
     OnB3CandleOnce: 0
     playB3StatueOnce: 0
@@ -10106,6 +10103,7 @@ MonoBehaviour:
     isDaggerPicked: 0
     isJewelGained: 0
     isB4LockUnlocked: 0
+    isB5DoorOpened: 0
 --- !u!4 &1102059354
 Transform:
   m_ObjectHideFlags: 0

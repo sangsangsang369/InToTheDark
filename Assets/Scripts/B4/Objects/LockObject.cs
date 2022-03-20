@@ -16,6 +16,7 @@ public class LockObject : MonoBehaviour
     [SerializeField] private GameObject lockObj;
     [SerializeField] private GameObject lockUIObj;
     [SerializeField] private GameObject researchRecord;
+    [SerializeField] private GameObject DoorToB5Obj;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,10 @@ public class LockObject : MonoBehaviour
         researchRecord.SetActive(true);
         lockerWithLock.isB4LockUnlocked = true;
         saveData.isB4LockUnlocked = true;
+        saveData.isB5DoorOpened = true;
+        DoorToB5Obj.GetComponent<DoorToB5>().isB5DoorOpened = true;
+        DoorToB5Obj.transform.GetChild(1).gameObject.SetActive(false);
+        DoorToB5Obj.transform.GetChild(2).gameObject.SetActive(true);
         lockObj.SetActive(false);
         lockUIObj.SetActive(false);
         data.Save();

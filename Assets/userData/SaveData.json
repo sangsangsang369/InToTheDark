@@ -9,17 +9,27 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": -35.0,
+    "playerXstartPoint": 3.5,
     "nextScenePlayerPosition": {
         "x": -32.5,
         "y": -0.8299999833106995
     },
     "currFloor": "B5",
     "currRoomPos": "복도",
-    "itemList": [],
-    "isFirstGB": true,
-    "isUnlocked": false,
-    "isDiaryClicked": false,
+    "itemList": [
+        {
+            "prefabOrder": 2
+        },
+        {
+            "prefabOrder": 3
+        },
+        {
+            "prefabOrder": 18
+        }
+    ],
+    "isFirstGB": false,
+    "isUnlocked": true,
+    "isDiaryClicked": true,
     "isMufflerPicked": false,
     "isLetterPicked": false,
     "alreadyOpen": false,
@@ -40,7 +50,8 @@
     "isLeafPicked": false,
     "isFruitPicked": false,
     "fruitNum": 5,
-    "isDaggerPicked": false,
-    "isJewelGained": false,
-    "isB4LockUnlocked": false
+    "isDaggerPicked": true,
+    "isJewelGained": true,
+    "isB4LockUnlocked": true,
+    "isB5DoorOpened": true
 }

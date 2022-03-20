@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 92752823}
   - component: {fileID: 92752822}
   - component: {fileID: 92752821}
+  - component: {fileID: 92752824}
   m_Layer: 5
   m_Name: Continue Btn
   m_TagString: Untagged
@@ -435,7 +436,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 92752822}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 92752824}
+        m_MethodName: LoadGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &92752822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,6 +485,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92752819}
   m_CullTransparentMesh: 0
+--- !u!114 &92752824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92752819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d263d44fba1f5408cff85f897bc76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &124380340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,10 +1573,7 @@ MonoBehaviour:
     isB3DoorOpened: 0
     OnB2CandleOnce: 0
     playB2StatueOnce: 0
-    statue1Fliped: 0
-    statue2Fliped: 0
-    statue3Fliped: 0
-    statue4Fliped: 0
+    ReB2: 0
     isB3ReEntered: 0
     OnB3CandleOnce: 0
     playB3StatueOnce: 0
@@ -1568,6 +1589,7 @@ MonoBehaviour:
     isDaggerPicked: 0
     isJewelGained: 0
     isB4LockUnlocked: 0
+    isB5DoorOpened: 0
 --- !u!4 &1217484163
 Transform:
   m_ObjectHideFlags: 0

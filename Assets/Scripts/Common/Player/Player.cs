@@ -18,7 +18,7 @@ public class Player : Detect
         saveData = data.saveData;
         
         this.transform.position = new Vector2(saveData.playerXstartPoint, this.transform.position.y);
-        FindObjectOfType<CameraScript>().CameraSetting();
+        //FindObjectOfType<CameraScript>().CameraSetting();
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -46,7 +46,7 @@ public class Player : Detect
         MagnifierTrigger(collider, false);
     }
 
-    private void MagnifierTrigger(Collider2D col, bool boolean)
+    void MagnifierTrigger(Collider2D col, bool boolean)
     {
         GameObject activatedObj = col.gameObject;
         if(activatedObj.transform.childCount != 0)
@@ -54,5 +54,10 @@ public class Player : Detect
             Transform magnifier = activatedObj.transform.GetChild(0);
             magnifier.gameObject.SetActive(boolean);
         }
+    }
+
+    void YouDied()
+    {
+
     }
 }

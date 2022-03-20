@@ -57,6 +57,7 @@ public class SaveDataClass
     public bool isDaggerPicked;
     public bool isJewelGained;
     public bool isB4LockUnlocked;
+    public bool isB5DoorOpened;
 
     public SaveDataClass()
     {
@@ -104,5 +105,6 @@ public class SaveDataClass
         isDaggerPicked = false;
         isJewelGained = false;
         isB4LockUnlocked = false;
+        isB5DoorOpened = false;
     }
 }

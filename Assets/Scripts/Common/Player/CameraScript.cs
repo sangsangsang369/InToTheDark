@@ -48,16 +48,9 @@ public class CameraScript : MonoBehaviour
         else
         {
             switchCamera = false;
-                this.transform.SetParent(mainCharacter.transform); // 카메라의 Parent를 player로 다시 바꿔줌
-                playerCamera.transform.localPosition = new Vector3(0, this.transform.localPosition.y, -10);
-                this.transform.localScale = new Vector3(1, 1, 1);
-            // if (switchCamera == true)
-            // {
-            //     switchCamera = false;
-            //     this.transform.SetParent(mainCharacter.transform); // 카메라의 Parent를 player로 다시 바꿔줌
-            //     playerCamera.transform.localPosition = new Vector3(0, this.transform.localPosition.y, -10);
-            //     this.transform.localScale = new Vector3(1, 1, 1);
-            // }
+            this.transform.SetParent(mainCharacter.transform); // 카메라의 Parent를 player로 다시 바꿔줌
+            playerCamera.transform.localPosition = new Vector3(0, this.transform.localPosition.y, -10);
+            this.transform.localScale = new Vector3(1, 1, 1);
         }
     }
 }

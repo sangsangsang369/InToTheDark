@@ -41,8 +41,8 @@ public class DataManager : MonoBehaviour
         //load는 세이브데이터 로드다.
         saveData = new SaveDataClass();
     
-        //Load();
-        DataInitialize();
+        Load();
+        //DataInitialize();
     }
 
     //세이브데이터 세이브
