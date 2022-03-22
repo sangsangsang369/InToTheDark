@@ -10073,7 +10073,6 @@ MonoBehaviour:
     - 15.7
     - 3.5
     playerXstartPoint: -32.5
-    nextScenePlayerPosition: {x: -32.5, y: -0.83}
     currFloor: 
     currRoomPos: 
     itemList: []

@@ -8,7 +8,7 @@ public class InventoryMng : MonoBehaviour
     DataManager data;
     SaveDataClass saveData;
 
-    [HideInInspector] public int currentPage = 1;
+    public int currentPage = 1;
     public List<GameObject> inventoryList;
     public List<GameObject> slotList;
     public List<bool> filledCheck;
