@@ -9,6 +9,7 @@ public class Clock : Object
     public InventoryMng inventoryMng;
     //public Cabinet3 clockcabinet;
     public GameObject clockPanel;
+    public GameObject prefabUI;
     public AnsCheck ansCheck;
     SlotSelectionMng slotSelectMng;
     SoundManager SM;
@@ -27,6 +28,10 @@ public class Clock : Object
     // Update is called once per frame
     public void UseClock()
     {
+        if (prefabUI.transform.parent == this.transform)
+        {
+            prefabUI.transform.SetParent(this.transform.parent.parent.parent.parent, false);
+        }
         if (slotSelectMng.selectedItem != this.gameObject)
         {
             slotSelectMng.itemName = "회중시계";
