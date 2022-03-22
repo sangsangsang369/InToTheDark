@@ -65,9 +65,13 @@ public class InventoryMng : MonoBehaviour
         for(int i = 0; i < saveData.itemList.Count; i++)
         {
             int itemIndex = saveData.itemList[i].prefabOrder;
-            if(itemIndex <= 3 || itemIndex > 17)
+            if(itemIndex <= 3 || itemIndex == 18)
             {
                 InstantiateItemsOnInventory(data.itemPrefabs[itemIndex].gameObject, 0.1f);
+            }
+            else if(itemIndex == 19)
+            {
+                InstantiateItemsOnInventory(data.itemPrefabs[itemIndex].gameObject, 0.2f);
             }
             else if(itemIndex > 3 && itemIndex <= 7)
             {

@@ -8,7 +8,8 @@ public class Muffler : Object
     public GameObject mufflerUI;
     public Text mufflerText;
     public Text inputTextUI;
-    UIManager uiManager;
+    [SerializeField] GameObject uiObjects;
+    UI uiManager;
     InventoryMng inventoryMng;
     SlotSelectionMng slotSelectMng;
 
@@ -30,7 +31,7 @@ public class Muffler : Object
                 this.GetComponent<SpriteRenderer>().enabled = true;
             }
         }
-        uiManager = FindObjectOfType<UIManager>();
+        uiManager = FindObjectOfType<UI>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
     }
@@ -47,6 +48,10 @@ public class Muffler : Object
 
     public void MufflerItem()
     {
+        if(uiObjects.transform.parent == this.transform)
+        {
+            uiObjects.transform.SetParent(this.transform.parent.parent.parent.parent, false);
+        }
         if(slotSelectMng.selectedItem != this.gameObject)
         {
             slotSelectMng.itemName = "찢어진 머플러 조각";

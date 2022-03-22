@@ -14,7 +14,6 @@ public class SaveDataClass
     //플레이어 위치 정보
     public float[] playerXstartPoints = {30.7f, -32.5f, 29.6f, -32.5f, 18f, -32.5f, 15.7f, 3.5f};
     public float playerXstartPoint;
-    public Vector2 nextScenePlayerPosition;
     public string currFloor;
     public string currRoomPos;
 
@@ -63,7 +62,6 @@ public class SaveDataClass
     {
         //플레이어 위치
         playerXstartPoint = -35f;
-        nextScenePlayerPosition = new Vector2(-32.5f, -0.83f);
         currFloor = "B1";
         currRoomPos = "복도";
 

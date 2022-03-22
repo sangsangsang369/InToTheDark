@@ -16,6 +16,16 @@ public class SetOff : MonoBehaviour
         inputTextUI = uiManager.inputTextUI;
     }
 
+    public void prefabScrptOff(GameObject inputTextUI)
+    {
+        if(!uiManager.nowTexting)
+        {
+            inputTextUI.GetComponent<Text>().text = "";
+            inputTextUI.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
+        }
+    }
+
     public void Off()
     {
         if(!uiManager.nowTexting)

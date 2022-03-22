@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Note : MonoBehaviour
 {
-    UIManager uiManager;
+    public GameObject noteUI;
+    public Text noteText;
+    public Text inputTextUI;
+    public GameObject prefabUI;
+    UI uiManager;
     SlotSelectionMng slotSelectMng;
 
     void Start()
@@ -14,6 +19,10 @@ public class Note : MonoBehaviour
 
     public void NoteItem()
     {
+        if(prefabUI.transform.parent == this.transform)
+        {
+            prefabUI.transform.SetParent(this.transform.parent.parent.parent.parent, false);
+        }
         if(slotSelectMng.selectedItem != this.gameObject)
         {
             slotSelectMng.itemName = "책에서 떨어진 편지";
@@ -21,9 +30,9 @@ public class Note : MonoBehaviour
         }
         else
         {
-            uiManager = FindObjectOfType<UIManager>();
-            uiManager.noteUI.SetActive(true);
-            StartCoroutine(uiManager.LoadTextOneByOne(uiManager.noteText.text, uiManager.inputTextUI));
+            uiManager = FindObjectOfType<UI>();
+            noteUI.SetActive(true);
+            StartCoroutine(uiManager.LoadTextOneByOne(noteText.text, inputTextUI));
         }
     }
 }

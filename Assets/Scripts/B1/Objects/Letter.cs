@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class Letter : Object
 {
     public GameObject letterUI;
-    public Sprite letterItemImg;
-    UIManager uiManager;
+    UI uiManager;
     InventoryMng inventoryMng;
     SlotSelectionMng slotSelectMng;
 
@@ -29,7 +28,7 @@ public class Letter : Object
                 this.GetComponent<SpriteRenderer>().enabled = true;
             }
         }
-        uiManager = FindObjectOfType<UIManager>();
+        uiManager = FindObjectOfType<UI>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
     }
@@ -45,6 +44,10 @@ public class Letter : Object
 
     public void LetterItem()
     {
+        if(letterUI.transform.parent == this.transform)
+        {
+            letterUI.transform.SetParent(this.transform.parent.parent.parent.parent, false);
+        }
         if(slotSelectMng.selectedItem != this.gameObject)
         {
             slotSelectMng.itemName = "구겨진 편지";

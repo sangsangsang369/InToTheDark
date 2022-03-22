@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PianoMemo : Object
 {
-    B3UIManager uiManager;
+    UI uiManager;
     PianoMng pianoMng;
     LabTableItemManager labtableMng;
     SlotSelectionMng slotSelectMng;
-
+    public GameObject pianoMemoUI;
 
     void Start()
     {
-        uiManager = FindObjectOfType<B3UIManager>();
+        uiManager = FindObjectOfType<UI>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
         pianoMng = FindObjectOfType<PianoMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
@@ -20,6 +20,10 @@ public class PianoMemo : Object
 
     public void PianoMemoItem()
     {
+        if(pianoMemoUI.transform.parent == this.transform)
+        {
+            pianoMemoUI.transform.SetParent(this.transform.parent.parent.parent.parent, false);
+        }
         if(slotSelectMng.selectedItem != this.gameObject)
         {
             slotSelectMng.itemName = "악보가 적힌 쪽지";
@@ -27,7 +31,7 @@ public class PianoMemo : Object
         }
         else
         {
-            pianoMng.pianoMemoUI.SetActive(true); 
+            pianoMemoUI.SetActive(true); 
         }
     }
 

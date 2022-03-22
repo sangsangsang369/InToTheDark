@@ -8,6 +8,7 @@ public class Dagger : MonoBehaviour
     [SerializeField] private GameObject daggerUI;
     [SerializeField] private Text daggerText;
     [SerializeField] private Text inputTextUI;
+    [SerializeField] private GameObject prefabUI;
     UI uiManager;
     InventoryMng inventoryMng;
     SlotSelectionMng slotSelectMng;
@@ -37,6 +38,10 @@ public class Dagger : MonoBehaviour
 
     public void DaggerItem()
     {
+        if(prefabUI.transform.parent == this.transform)
+        {
+            prefabUI.transform.SetParent(this.transform.parent.parent.parent.parent, false);
+        }
         if(slotSelectMng.selectedItem != this.gameObject)
         {
             slotSelectMng.itemName = "단검";

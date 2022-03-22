@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class Clock : Object
 {
-    public B2_UIManager uiManager;
+    public UI uiManager;
     public InventoryMng inventoryMng;
-    public Cabinet3 clockcabinet;
+    //public Cabinet3 clockcabinet;
+    public GameObject clockPanel;
     public AnsCheck ansCheck;
     SlotSelectionMng slotSelectMng;
     SoundManager SM;
@@ -15,10 +16,10 @@ public class Clock : Object
     // Start is called before the first frame update
     void Start()
     {
-        uiManager = FindObjectOfType<B2_UIManager>();
+        uiManager = FindObjectOfType<UI>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
-        clockcabinet = FindObjectOfType<Cabinet3>();
+        
         ansCheck = FindObjectOfType<AnsCheck>();
         SM = FindObjectOfType<SoundManager>();
     }
@@ -34,7 +35,7 @@ public class Clock : Object
         else
         {
             SM.pocketwatchEffectPlay();
-            clockcabinet.clockPanel.SetActive(true); 
+            clockPanel.SetActive(true); 
         }
     }
 

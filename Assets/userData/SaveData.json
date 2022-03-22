@@ -9,27 +9,23 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": 3.5,
-    "nextScenePlayerPosition": {
-        "x": -32.5,
-        "y": -0.8299999833106995
-    },
-    "currFloor": "B5",
-    "currRoomPos": "복도",
+    "playerXstartPoint": -35.0,
+    "currFloor": "B3",
+    "currRoomPos": "피투성이 복도",
     "itemList": [
         {
-            "prefabOrder": 2
-        },
-        {
-            "prefabOrder": 3
-        },
-        {
             "prefabOrder": 18
+        },
+        {
+            "prefabOrder": 19
+        },
+        {
+            "prefabOrder": 12
         }
     ],
-    "isFirstGB": false,
-    "isUnlocked": true,
-    "isDiaryClicked": true,
+    "isFirstGB": true,
+    "isUnlocked": false,
+    "isDiaryClicked": false,
     "isMufflerPicked": false,
     "isLetterPicked": false,
     "alreadyOpen": false,
@@ -38,10 +34,10 @@
     "OnB2CandleOnce": false,
     "playB2StatueOnce": false,
     "ReB2": false,
-    "isB3ReEntered": false,
+    "isB3ReEntered": true,
     "OnB3CandleOnce": false,
     "playB3StatueOnce": false,
-    "isPianoMemoGained": false,
+    "isPianoMemoGained": true,
     "monsterExtractinInventory": false,
     "isLabTableReEntered": false,
     "isB4DoorOpened": false,
@@ -52,6 +48,6 @@
     "fruitNum": 5,
     "isDaggerPicked": true,
     "isJewelGained": true,
-    "isB4LockUnlocked": true,
-    "isB5DoorOpened": true
+    "isB4LockUnlocked": false,
+    "isB5DoorOpened": false
 }
