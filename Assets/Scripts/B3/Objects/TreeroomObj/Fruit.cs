@@ -68,7 +68,7 @@ public class Fruit : Object
 
     public void FruitItem()
     {
-        if(labtableMng.labTable.activeSelf==false)
+        if(!labtableMng || labtableMng && labtableMng.labTable.activeSelf==false)
         {    
             if(slotSelectMng.selectedItem != this.gameObject)
             {

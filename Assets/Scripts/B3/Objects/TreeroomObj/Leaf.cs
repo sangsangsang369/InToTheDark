@@ -44,7 +44,7 @@ public class Leaf : Object
     }
     public void LeafItem()
     {
-        if(labtableMng.labTable.activeSelf==false)
+        if(!labtableMng || labtableMng && labtableMng.labTable.activeSelf==false)
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {

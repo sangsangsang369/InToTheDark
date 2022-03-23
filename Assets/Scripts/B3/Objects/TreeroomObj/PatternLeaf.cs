@@ -16,7 +16,7 @@ public class PatternLeaf : Object
 
     public void PatternLeafItem()
     {
-        if(labtableMng.labTable.activeSelf==false)
+        if(!labtableMng || labtableMng && labtableMng.labTable.activeSelf==false)
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {

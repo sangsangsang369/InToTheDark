@@ -16,7 +16,7 @@ public class FleshTwo : Object
 
     public void FleshTwoItem()
     {
-        if(labtableMng.labTable.activeSelf==false)
+        if(!labtableMng || labtableMng && labtableMng.labTable.activeSelf==false)
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {

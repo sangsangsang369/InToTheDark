@@ -46,7 +46,7 @@ public class Treesap :Object
     }
     public void TreesapItem()
     {
-        if(labtableMng.labTable.activeSelf==false)
+        if(!labtableMng || labtableMng && labtableMng.labTable.activeSelf==false)
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {

@@ -44,7 +44,7 @@ public class Branch : Object
     }
     public void BranchItem()
     {
-        if(labtableMng.labTable.activeSelf==false)
+        if(!labtableMng || labtableMng && labtableMng.labTable.activeSelf==false)
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {

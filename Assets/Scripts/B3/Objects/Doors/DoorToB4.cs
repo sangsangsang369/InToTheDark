@@ -51,7 +51,7 @@ public class DoorToB4 : Object
         {
             doorToB4_EnterUI.SetActive(true); //문 열렸다는 텍스트 출력
             StartCoroutine(uiManager.LoadTextOneByOne(doorToB4_EnterText.text, inputTextUI));
-            creature.SetActive(false); //문에 붙은 이형체 꺼주기
+            StartCoroutine(FadeOut());   //문에 붙은 이형체 꺼주기
             
             inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.Liquid);
             slotSelectMng.SelectionClear(); 
@@ -70,5 +70,18 @@ public class DoorToB4 : Object
             Ft.PosUI();
             SceneManager.LoadScene("B4");
         }
+    }
+
+    IEnumerator FadeOut()
+    {
+        for(int i = 10; i >= 0; i--)
+        {
+            float f = i / 10f;
+            Color c = creature.GetComponent<SpriteRenderer>().color; 
+            c.a = f;
+            creature.GetComponent<SpriteRenderer>().color = c;
+            yield return new WaitForSeconds(0.05f); //시간 조절하는거??
+        }
+        creature.SetActive(false);  
     }
 }

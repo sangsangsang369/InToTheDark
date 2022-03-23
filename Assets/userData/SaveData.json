@@ -9,38 +9,20 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": 3.5,
-    "currFloor": "B5",
-    "currRoomPos": "복도",
+    "playerXstartPoint": -32.5,
+    "currFloor": "B4",
+    "currRoomPos": "이형체의 복도",
     "itemList": [
         {
-            "prefabOrder": 0
-        },
-        {
-            "prefabOrder": 1
-        },
-        {
-            "prefabOrder": 2
-        },
-        {
-            "prefabOrder": 3
-        },
-        {
-            "prefabOrder": 4
-        },
-        {
             "prefabOrder": 12
-        },
-        {
-            "prefabOrder": 18
         }
     ],
-    "isFirstGB": false,
-    "isUnlocked": true,
-    "isDiaryClicked": true,
-    "isMufflerPicked": true,
-    "isLetterPicked": true,
-    "alreadyOpen": true,
+    "isFirstGB": true,
+    "isUnlocked": false,
+    "isDiaryClicked": false,
+    "isMufflerPicked": false,
+    "isLetterPicked": false,
+    "alreadyOpen": false,
     "playPuzzleOnce": false,
     "isB3DoorOpened": false,
     "OnB2CandleOnce": false,
@@ -58,8 +40,8 @@
     "isLeafPicked": true,
     "isFruitPicked": true,
     "fruitNum": 3,
-    "isDaggerPicked": true,
-    "isJewelGained": true,
-    "isB4LockUnlocked": true,
-    "isB5DoorOpened": true
+    "isDaggerPicked": false,
+    "isJewelGained": false,
+    "isB4LockUnlocked": false,
+    "isB5DoorOpened": false
 }
