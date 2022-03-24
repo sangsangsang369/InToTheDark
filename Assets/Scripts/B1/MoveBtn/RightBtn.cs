@@ -5,23 +5,28 @@ using UnityEngine;
 //상은 주석..^^
 public class RightBtn : MonoBehaviour
 {
+    DataManager data;
+    SaveDataClass saveData;
+
     public GameObject playerObj;
     bool OnClick;
     Player player;
 
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
         player = FindObjectOfType<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(player.currRoom == "B1_Hallway")
+        if(saveData.currRoomPos == "복도")
         {
             RightLimit(37.7f);
         }
-        else if(player.currRoom == "B1_Library")
+        else if(saveData.currRoomPos == "낡은 서재")
         {
             RightLimit(15.3f);
         }

@@ -25,6 +25,7 @@ public class DoorToTreeroom : Object
     {
         hallwayObj.SetActive(false);
         TreeroomObj.SetActive(true);
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B3TreeRoom];
         player.currRoom = "B3_Treeroom";
         saveData.currFloor = "B3";
         saveData.currRoomPos = "거대한 정원";

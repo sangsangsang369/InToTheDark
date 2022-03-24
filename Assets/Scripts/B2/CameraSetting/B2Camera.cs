@@ -23,9 +23,9 @@ public class B2Camera : CameraScript
             saveData.ReB2 = true;
             data.Save();
         }
-        player.currRoom = "B2_Hallway";
+        //player.currRoom = "B2_Hallway";
         saveData.currFloor = "B2";
-        saveData.currRoomPos = "복도";
+        //saveData.currRoomPos = "복도";
         data.Save();
         Ft.PosUI();
     }
@@ -37,15 +37,15 @@ public class B2Camera : CameraScript
 
     public override void CameraSetting()
     {
-        if (player.currRoom == "B2_Hallway")
+        if (saveData.currRoomPos == "복도")
         {
             CameraLimit(-28.8f, 28.8f);
         }
-        else if (player.currRoom == "B2_Cabinet")
+        else if (saveData.currRoomPos == "시체의 방")
         {
             CameraLimit(-38.4f, -28.6f);
         }
-        else if (player.currRoom == "B2_Gallery")
+        else if (saveData.currRoomPos == "전시실")
         {
             CameraLimit(-4.065f, 0.55f);
         }

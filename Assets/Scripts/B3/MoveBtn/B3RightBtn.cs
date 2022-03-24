@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class B3RightBtn : MonoBehaviour
 {
+    DataManager data;
+    SaveDataClass saveData;
+
     public GameObject playerObj; //public이어서 유니티 에디터에서 접근 가능
     public GameObject creatureEye;
     bool OnClick; //버튼 눌렸는지 떼어졌는지 판단하는 함수
@@ -12,21 +15,23 @@ public class B3RightBtn : MonoBehaviour
 
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
         player = FindObjectOfType<Player>();
     }
 
     // 매 프레임마다 작동
     void Update()
     {
-        if(player.currRoom == "B3_Hallway")
+        if(saveData.currRoomPos == "피투성이 복도")
         {
             RightLimit(37.7f);
         }
-        else if(player.currRoom == "B3_Treeroom")
+        else if(saveData.currRoomPos == "거대한 정원")
         {
             RightLimit(21.6f);
         }
-        else if(player.currRoom == "B3_Pianoroom")
+        else if(saveData.currRoomPos == "합주실")
         {
             RightLimit(17.4f);
         }
@@ -37,7 +42,7 @@ public class B3RightBtn : MonoBehaviour
         if (OnClick && playerObj.transform.position.x < limit)
         {
             playerObj.transform.position += Vector3.right * player.speed * Time.deltaTime;
-            if(player.currRoom=="B3_Pianoroom")
+            if(saveData.currRoomPos == "합주실")
             {
                 if (OnClick && player.transform.position.x < 11 && player.transform.position.x > -13)
                 {

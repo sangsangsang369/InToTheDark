@@ -26,6 +26,7 @@ public class DoorToCabinet : Object
     {
         hallwayObj.SetActive(false);
         cabinetObj.SetActive(true);
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B2CabinetRoom];
         player.currRoom = "B2_Cabinet";
         saveData.currFloor = "B2";
         saveData.currRoomPos = "시체의 방";

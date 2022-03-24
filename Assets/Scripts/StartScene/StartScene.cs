@@ -17,8 +17,7 @@ public class StartScene : MonoBehaviour
     public void LoadGame() // 버튼 누르면 실행될 함수
     {
         data.Load();
-        
-        SceneManager.LoadScene("B1"); // ()안에 있는 이름을 가진 씬으로 전환됨
+        SceneManager.LoadScene(saveData.currFloor); // ()안에 있는 이름을 가진 씬으로 전환됨
     }
 
     public void StartNewGame()

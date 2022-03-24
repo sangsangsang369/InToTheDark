@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -14972,6 +14972,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1819415013}
+  - component: {fileID: 1819415014}
   m_Layer: 0
   m_Name: GameObjects
   m_TagString: Untagged
@@ -14997,6 +14998,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1819415014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819415012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6915849f4ce7b4284085ecfa83476d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  B2Hallway: {fileID: 94595836}
+  B2CabinetRoom: {fileID: 1389276798}
+  B2Gallery: {fileID: 755443653}
 --- !u!1 &1829368549
 GameObject:
   m_ObjectHideFlags: 0

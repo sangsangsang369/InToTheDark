@@ -4,27 +4,32 @@ using UnityEngine;
 
 public class B2L_Btn : MonoBehaviour
 {
-    public GameObject player;
+    DataManager data;
+    SaveDataClass saveData;
+
+    public GameObject playerObj;
     bool OnClick;
-    Player playerMng;
+    Player player;
 
     void Start()
     {
-        playerMng = FindObjectOfType<Player>();
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        player = FindObjectOfType<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerMng.currRoom == "B2_Hallway")
+        if (saveData.currRoomPos == "복도")
         {
             LeftLimit(37.7f);
         }
-        else if (playerMng.currRoom == "B2_Cabinet")
+        else if (saveData.currRoomPos == "시체의 방")
         {
             LeftLimit(47.63f);
         }
-        else if (playerMng.currRoom == "B2_Gallery")
+        else if (saveData.currRoomPos == "전시실")
         {
             LeftLimit(13.0f); 
         }
@@ -33,7 +38,7 @@ public class B2L_Btn : MonoBehaviour
     {
         if (OnClick && player.transform.position.x > -limit)
         {
-            player.transform.position += Vector3.left * playerMng.speed * Time.deltaTime;
+            player.transform.position += Vector3.left * player.speed * Time.deltaTime;
         }
     }
 

@@ -65,7 +65,7 @@ public class DoorToB4 : Object
             //B4로 씬 이동
             saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4leftDoor];
             saveData.currFloor = "B4";
-            saveData.currRoomPos = "복도";
+            saveData.currRoomPos = "이형체의 복도";
             data.Save();
             Ft.PosUI();
             SceneManager.LoadScene("B4");

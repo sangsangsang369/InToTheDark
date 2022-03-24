@@ -2,37 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.UI;
 
 public class DoorToLab : Object
 {
-    public GameObject playerObj;
-    public GameObject labObj;
-    public GameObject hallwayObj;
-    public Light2D globalLight;
-    Player player;
-    DataManager data;
-    SaveDataClass saveData;
-    FloorTxt Ft;  
+    CardKey cardKey;
+    SlotSelectionMng slotSelectMng;
+    UI uiManager;
+    [SerializeField] private GameObject withoutKeyUI;
+    [SerializeField] private GameObject withKeyUI;
+    [SerializeField] private Text withoutKeyText;
+    [SerializeField] private Text withKeyText;
+    [SerializeField] private Text inputTextUI;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<Player>();
-        data = DataManager.singleTon;
-        saveData = data.saveData;
-        Ft = FindObjectOfType<FloorTxt>();
+        slotSelectMng = FindObjectOfType<SlotSelectionMng>();
+        uiManager = FindObjectOfType<UI>();
     }
 
     public override void ObjectFunction()
     {
-        hallwayObj.SetActive(false);
-        labObj.SetActive(true);
-        globalLight.intensity = 0.66f;
-        player.currRoom = "B4_Lab";
-        saveData.currFloor = "B4";
-        saveData.currRoomPos = "수상한 실험실";
-        data.Save();
-        Ft.PosUI();
-        playerObj.transform.position = new Vector2(1.5f, -0.83f);
+        cardKey = FindObjectOfType<CardKey>();
+        if(cardKey && slotSelectMng.usableItem == "cardKeySelected")
+        {
+            withKeyUI.SetActive(true);
+            StartCoroutine(uiManager.LoadTextOneByOne(withKeyText.text, inputTextUI));
+            slotSelectMng.SelectionClear();
+        }
+        else
+        {
+            withoutKeyUI.SetActive(true);
+            StartCoroutine(uiManager.LoadTextOneByOne(withoutKeyText.text, inputTextUI));
+        }
     }
 }

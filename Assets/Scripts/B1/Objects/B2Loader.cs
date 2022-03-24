@@ -26,7 +26,7 @@ public class B2Loader : MonoBehaviour
         {
             saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B2leftDoor];
             player.currRoom = "B2_Hallway";
-            saveData.currRoomPos = "B2_Hallway";
+            saveData.currRoomPos = "복도";
             data.Save();
             Ft.PosUI();
         }

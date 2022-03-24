@@ -8,11 +8,12 @@ public class SaveDataClass
 {
     public enum playerStartPoint
     {
-        B1rightDoor, B2leftDoor, B2rightDoor, B3leftDoor, B3rightDoor, B4leftDoor, B4rightDoor, B5leftDoor
+        B1rightDoor, B1Library, B2leftDoor, B2CabinetRoom, B2Gallery, B2rightDoor, B3leftDoor, 
+        B3TreeRoom, B3Pianoroom, B3rightDoor, B4leftDoor, B4Chapel, B4Lab, B4rightDoor, B5leftDoor
     }
 
     //플레이어 위치 정보
-    public float[] playerXstartPoints = {30.7f, -32.5f, 29.6f, -32.5f, 18f, -32.5f, 15.7f, 3.5f};
+    public float[] playerXstartPoints = {30.7f, 7.1f, -32.5f, -31.4f, 7.2f, 29.6f, -32.5f, 10.82f, -1.34f, 18f, -32.5f, -10.94f, 1.48f, 15.7f, 3.5f};
     public float playerXstartPoint;
     public string currFloor;
     public string currRoomPos;

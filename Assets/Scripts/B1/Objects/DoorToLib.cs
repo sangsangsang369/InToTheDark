@@ -24,6 +24,7 @@ public class DoorToLib : Object
     {
         hallwayObj.SetActive(false); // B1F object 끄기
         libraryObj.SetActive(true); // bg sprite를 복도 -> 서재로 변경
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B1Library];
         player.currRoom = "B1_Library";
         saveData.currFloor = "B1";
         saveData.currRoomPos = "낡은 서재";

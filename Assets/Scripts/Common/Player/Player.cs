@@ -18,7 +18,6 @@ public class Player : Detect
         saveData = data.saveData;
         
         this.transform.position = new Vector2(saveData.playerXstartPoint, this.transform.position.y);
-        //FindObjectOfType<CameraScript>().CameraSetting();
     }
 
     void OnTriggerEnter2D(Collider2D collider)

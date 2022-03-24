@@ -4,27 +4,32 @@ using UnityEngine;
 
 public class Right : MonoBehaviour
 {
+    DataManager data;
+    SaveDataClass saveData;
+
     public GameObject playerObj;
     bool OnClick;
     Player player;
 
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
         player = FindObjectOfType<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(player.currRoom == "B4_Hallway")
+        if(saveData.currRoomPos == "이형체의 복도")
         {
             RightLimit(37.7f);
         }
-        else if(player.currRoom == "B4_Chapel")
+        else if(saveData.currRoomPos == "예배당")
         {
             RightLimit(13.5f);
         }
-        else if(player.currRoom == "B4_Lab")
+        else if(saveData.currRoomPos == "수상한 실험실")
         {
             RightLimit(17.3f);
         }

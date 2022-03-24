@@ -24,9 +24,10 @@ public class DoorToChapel : Object
     {
         hallwayObj.SetActive(false);
         chapelObj.SetActive(true);
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4Chapel];
         player.currRoom = "B4_Chapel";
         saveData.currFloor = "B4";
-        saveData.currRoomPos = "¿¹¹è´ç?";
+        saveData.currRoomPos = "ì˜ˆë°°ë‹¹";
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(-10.9f, -0.83f);

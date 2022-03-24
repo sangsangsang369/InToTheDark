@@ -10,9 +10,9 @@ public class B4Camera : CameraScript
     {
         base.Start();
         Ft = FindObjectOfType<FloorTxt>();
-        player.currRoom = "B4_Hallway";
+        //player.currRoom = "B4_Hallway";
         saveData.currFloor = "B4";
-        saveData.currRoomPos = "이형체의 복도";
+        //saveData.currRoomPos = "이형체의 복도";
         data.Save();
         Ft.PosUI();
     }
@@ -25,15 +25,15 @@ public class B4Camera : CameraScript
 
     public override void CameraSetting()
     {
-        if(player.currRoom == "B4_Hallway")
+        if(saveData.currRoomPos == "이형체의 복도")
         {
             CameraLimit(-28.8f, 28.8f);
         }
-        else if(player.currRoom == "B4_Chapel")
+        else if(saveData.currRoomPos == "예배당")
         {
             CameraLimit(-4.6f, 4.6f);
         }
-        else if(player.currRoom == "B4_Lab")
+        else if(saveData.currRoomPos == "수상한 실험실")
         {
             CameraLimit(-8.22f, 8.22f);
         }
