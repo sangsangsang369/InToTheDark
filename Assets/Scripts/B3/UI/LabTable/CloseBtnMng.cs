@@ -6,12 +6,16 @@ public class CloseBtnMng : MonoBehaviour
 {
     InventoryMng inventoryMng; 
     LabTableItemManager labtableMng;
-    
+    SaveAlarm saveAlarm;
+    ItemCombinationMng itemCombMng;
+    int alarmNum = 0;
 
     void Start()
     {
         inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
+        saveAlarm = FindObjectOfType<SaveAlarm>();
+        itemCombMng = FindObjectOfType<ItemCombinationMng>();
     }
 
     //실험대 닫으면 실험대 위에 있는 아이템들 인벤토리에 자동으로 들어오게
@@ -22,5 +26,11 @@ public class CloseBtnMng : MonoBehaviour
         labtableMng.GetResultItem();
         labtableMng.RevertInvenSlotBtn_LT();
         inventoryMng.OrganizeInventory();
+        if(itemCombMng.flesh1Made 
+            && itemCombMng.patternLeafMade && alarmNum ==0)
+        {
+            saveAlarm.SaveAlarmPopUp();
+            alarmNum++;
+        }
     }
 }

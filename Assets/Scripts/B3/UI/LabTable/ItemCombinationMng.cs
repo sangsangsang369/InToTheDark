@@ -9,7 +9,9 @@ public class ItemCombinationMng : MonoBehaviour
     LabTableItemManager labtableMng;
     PianoMng pianoMng;
     //아이템 프리펩들 넣어주기
-    public GameObject fleshOneItem, patternLeafItem, fleshTwoItem, liquidItem;
+    public GameObject fleshOneItem, patternLeafItem, fleshTwoItem, liquidItem; 
+    public bool flesh1Made = false;
+    public bool patternLeafMade = false;
 
     DataManager data;
     SaveDataClass saveData;
@@ -42,6 +44,7 @@ public class ItemCombinationMng : MonoBehaviour
                 labtableMng.DestroyMaterials_ResetActive(ItemClass.ItemPrefabOrder.Fruit, ItemClass.ItemPrefabOrder.Branch); //재료 아이템 파괴하고 아이템 활성화 다 false로
                 labtableMng.resultItemActive = true; //결과슬롯 활성화
                 labtableMng.itemActive["fleshOneActive"] = true; //살덩어리1 활성화   
+                flesh1Made = true;
             }
             //나뭇잎 + 수액
             else if(labtableMng.itemActive["leafActive"] 
@@ -54,6 +57,7 @@ public class ItemCombinationMng : MonoBehaviour
                 labtableMng.DestroyMaterials_ResetActive(ItemClass.ItemPrefabOrder.Leaf, ItemClass.ItemPrefabOrder.Sap);
                 labtableMng.resultItemActive = true;
                 labtableMng.itemActive["patternLeafActive"] = true; //무늬 나뭇잎 활성화
+                patternLeafMade = true;
             }
             //살덩어리1 + 진액
             else if(labtableMng.itemActive["fleshOneActive"] 
@@ -66,6 +70,7 @@ public class ItemCombinationMng : MonoBehaviour
                 labtableMng.DestroyMaterials_ResetActive(ItemClass.ItemPrefabOrder.Flesh1, ItemClass.ItemPrefabOrder.MonsterEssence);
                 labtableMng.resultItemActive = true;
                 labtableMng.itemActive["fleshTwoActive"] = true; //살덩어리2 활성화
+                flesh1Made = false;
                 
                 //진액 인벤토리에서 파괴되었으니 피아노 콜라이더 켜주기 
                 pianoMng.pianoObj.GetComponent<BoxCollider2D>().enabled = true;
@@ -84,6 +89,7 @@ public class ItemCombinationMng : MonoBehaviour
                 labtableMng.DestroyMaterials_ResetActive(ItemClass.ItemPrefabOrder.Flesh2, ItemClass.ItemPrefabOrder.PatternLeaf);
                 labtableMng.resultItemActive = true;
                 labtableMng.itemActive["liquidActive"] = true; //투명한 액체 활성화
+                patternLeafMade = false;
             }
             //조합 실패했을 때
             else

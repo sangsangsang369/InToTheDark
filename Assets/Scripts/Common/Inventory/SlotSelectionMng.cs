@@ -81,14 +81,29 @@ public class SlotSelectionMng : MonoBehaviour
     {
         for(int i = 10; i >= 0; i--)
         {
-            float f = i / 10f;
-            if(itemNameText && itemNameText.gameObject) //for문 돌고있을 때 딴데 눌러서 itemtext 파괴되면 
+            if(i == 10)
             {
-                Color c = itemNameText.gameObject.GetComponent<Text>().color; //얘에 접근을 못해서 널레퍼 뜸 >> for문 안에서 itemtext 계속 존재하는지 점검해주기
-                c.a = f;
-                itemNameText.gameObject.GetComponent<Text>().color = c;
-                yield return new WaitForSeconds(0.1f);
+                float f = i / 10f;
+                if(itemNameText && itemNameText.gameObject) //for문 돌고있을 때 딴데 눌러서 itemtext 파괴되면 
+                {
+                    Color c = itemNameText.gameObject.GetComponent<Text>().color; //얘에 접근을 못해서 널레퍼 뜸 >> for문 안에서 itemtext 계속 존재하는지 점검해주기
+                    c.a = f;
+                    itemNameText.gameObject.GetComponent<Text>().color = c;
+                    yield return new WaitForSeconds(0.8f);
+                }
             }
+            else
+            {
+                float f = i / 10f;
+                if(itemNameText && itemNameText.gameObject) //for문 돌고있을 때 딴데 눌러서 itemtext 파괴되면 
+                {
+                    Color c = itemNameText.gameObject.GetComponent<Text>().color; //얘에 접근을 못해서 널레퍼 뜸 >> for문 안에서 itemtext 계속 존재하는지 점검해주기
+                    c.a = f;
+                    itemNameText.gameObject.GetComponent<Text>().color = c;
+                    yield return new WaitForSeconds(0.05f);
+                }
+            }
+            
         }
         //for문 나오고 나서도 itemtext 존재하는지 점검 (조건 제일 겉에 한번에 걸면 안됨!!!!!!!)
         if(itemNameText && itemNameText.gameObject)

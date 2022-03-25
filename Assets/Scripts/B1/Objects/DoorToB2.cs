@@ -13,12 +13,15 @@ public class DoorToB2 : Object
     [SerializeField] private Text withoutKeyText;
     [SerializeField] private Text withKeyText;
     [SerializeField] private Text inputTextUI;
+    SaveAlarm saveAlarm;
+
 
     // Start is called before the first frame update
     void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
+        saveAlarm = FindObjectOfType<SaveAlarm>();
     }
 
     public override void ObjectFunction()
@@ -29,6 +32,7 @@ public class DoorToB2 : Object
             withKeyUI.SetActive(true);
             StartCoroutine(uiManager.LoadTextOneByOne(withKeyText.text, inputTextUI));
             slotSelectMng.SelectionClear();
+            saveAlarm.SaveAlarmPopUp();
         }
         else
         {

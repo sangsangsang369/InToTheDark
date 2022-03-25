@@ -21,6 +21,7 @@ public class PianoMng : MonoBehaviour
     DataManager data;
     SaveDataClass saveData;
     public bool monsterExtractinInventory;
+    SaveAlarm saveAlarm;
    
 
     private void Start() 
@@ -42,6 +43,7 @@ public class PianoMng : MonoBehaviour
 
         uiManager = FindObjectOfType<B3UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
+        saveAlarm = FindObjectOfType<SaveAlarm>();
     }
 
     public void CompareKeys(GameObject key)
@@ -62,6 +64,7 @@ public class PianoMng : MonoBehaviour
                 monsterExtractinInventory = true; //나중에 실험대에서 진액 없어지면 얘 false로 바꿔주기
                 saveData.monsterExtractinInventory = true;
                 data.Save();
+                saveAlarm.SaveAlarmPopUp();
             }
         }
         //음 틀렸을 때

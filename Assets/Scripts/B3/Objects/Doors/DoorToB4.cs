@@ -18,8 +18,9 @@ public class DoorToB4 : Object
     public bool isB4DoorOpened;
     public GameObject creature;
 
+    
     FloorTxt Ft;
-
+    SaveAlarm saveAlarm;
 
     void Start()
     {
@@ -31,11 +32,12 @@ public class DoorToB4 : Object
         uiManager = FindObjectOfType<B3UIManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
         Ft = FindObjectOfType<FloorTxt>();
-
+        
         if(isB4DoorOpened)
         {
             creature.SetActive(false);
         }
+        saveAlarm = FindObjectOfType<SaveAlarm>();
     }
 
     public override void ObjectFunction()
@@ -59,6 +61,7 @@ public class DoorToB4 : Object
             isB4DoorOpened = true; //문 열림
             saveData.isB4DoorOpened = true;
             data.Save();
+            saveAlarm.SaveAlarmPopUp();
         }
         else if(isB4DoorOpened)
         {

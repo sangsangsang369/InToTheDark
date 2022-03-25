@@ -24,6 +24,8 @@ public class DoorToB3 : Object
     SaveDataClass saveData;
     FloorTxt Ft;
     SoundManager SM;
+    SaveAlarm saveAlarm;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,7 @@ public class DoorToB3 : Object
         sword1 = FindObjectOfType<Sword1>();
         sword2 = FindObjectOfType<Sword2>();
         Ft = FindObjectOfType<FloorTxt>();
+        saveAlarm = FindObjectOfType<SaveAlarm>();
     }
 
     // Update is called once per frame
@@ -126,6 +129,7 @@ public class DoorToB3 : Object
         fullSword.SetActive(true);
         cover.SetActive(false);
         endAllAnim = true;
+        saveAlarm.SaveAlarmPopUp();
     }
 
     IEnumerator MakeDark()
