@@ -67,6 +67,29 @@ public class SoundManager : MonoBehaviour
     public AudioClip swipeStatueEffect;
     public AudioClip knifeEffect;
 
+    //B3 Effect
+    public AudioClip leavesShortEffect;
+    public AudioClip monsterGrowlEffect;
+    public AudioClip gooEffect;
+    //Piano Effect
+    public AudioClip doEffect;
+    public AudioClip reEffect;
+    public AudioClip miEffect;
+    public AudioClip faEffect;
+    public AudioClip solEffect;
+    public AudioClip raEffect;
+    public AudioClip siEffect;
+    public AudioClip do_hEffect;
+    public AudioClip re_hEffect;
+    public AudioClip mi_hEffect;
+    public AudioClip fa_hEffect;
+    public AudioClip sol_hEffect;
+    public AudioClip ra_hEffect;
+    public AudioClip si_hEffect;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -206,6 +229,12 @@ public class SoundManager : MonoBehaviour
     public void knifeEffectPlay()
     {
         effectSource.clip = knifeEffect;
+        effectSource.Play();
+    }
+
+    public void PianoKeysPlay(AudioClip key)
+    {
+        effectSource.clip = key;
         effectSource.Play();
     }
     void WorkEffectPlay()

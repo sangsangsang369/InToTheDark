@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -12591,6 +12591,8 @@ MonoBehaviour:
     type: 3}
   fleshTwoItem: {fileID: 0}
   liquidItem: {fileID: 0}
+  flesh1Made: 0
+  patternLeafMade: 0
 --- !u!114 &1540102011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16041,6 +16043,8 @@ MonoBehaviour:
     type: 3}
   liquidItem: {fileID: 1997971926841807070, guid: f3c00282843f13641a9ecb94fa21fb38,
     type: 3}
+  flesh1Made: 0
+  patternLeafMade: 0
 --- !u!114 &1764525746
 MonoBehaviour:
   m_ObjectHideFlags: 0

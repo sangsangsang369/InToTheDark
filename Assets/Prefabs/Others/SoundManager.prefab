@@ -99,6 +99,23 @@ MonoBehaviour:
   lockerOpenEffect: {fileID: 0}
   swipeStatueEffect: {fileID: 8300000, guid: d5dcdd2bb6a1391479f7bca99f725ab4, type: 3}
   knifeEffect: {fileID: 8300000, guid: 4111d0a316ee01f43ab2ac1f8b09932c, type: 3}
+  leavesShortEffect: {fileID: 8300000, guid: 09726acc8fd8c214a9b0bccde80c470f, type: 3}
+  monsterGrowlEffect: {fileID: 8300000, guid: 3dda44f1888bc514faa24b6adf469e87, type: 3}
+  gooEffect: {fileID: 8300000, guid: 7ed205320e2214a41ab43647d37ead4e, type: 3}
+  doEffect: {fileID: 8300000, guid: 40fb4611b27079b409535888166b11a6, type: 3}
+  reEffect: {fileID: 8300000, guid: a289fbfcec1d9e34dbc9e36bdc5f2444, type: 3}
+  miEffect: {fileID: 8300000, guid: 8b68a2183b96d0b4f9caa62ce9f51d25, type: 3}
+  faEffect: {fileID: 8300000, guid: eb351a39091298742b1063da28f62c54, type: 3}
+  solEffect: {fileID: 8300000, guid: 9f328537cff5b5d42a126cc88d39c5cd, type: 3}
+  raEffect: {fileID: 8300000, guid: 5d0b623a44d0d624089221cc6058cbf7, type: 3}
+  siEffect: {fileID: 8300000, guid: 3854fea311cc39a41bb3ab4d8a1143b2, type: 3}
+  do_hEffect: {fileID: 8300000, guid: 84ec3e16a9801eb4fbbad189cc0d9e9c, type: 3}
+  re_hEffect: {fileID: 8300000, guid: 24e4a1a0ce9968e4f860434d06d04dab, type: 3}
+  mi_hEffect: {fileID: 8300000, guid: abb9380a990a07840bc153ada5d14adf, type: 3}
+  fa_hEffect: {fileID: 8300000, guid: a45247d2ddc0146449381a234d64ec0d, type: 3}
+  sol_hEffect: {fileID: 8300000, guid: 3f62ffe94110f164e94dd5e7c803603e, type: 3}
+  ra_hEffect: {fileID: 8300000, guid: 3a136289d45ecf74695640d1458d2068, type: 3}
+  si_hEffect: {fileID: 8300000, guid: 05343b9133d92c941ad2939a09d4125c, type: 3}
 --- !u!82 &5960547632288174875
 AudioSource:
   m_ObjectHideFlags: 0

@@ -7,10 +7,12 @@ public class Ra_h :  PianoKey
 {
     public float AlphaThreshold = 0.1f;
     PianoMng pianoMng;
+    SoundManager SM;
 
     void Start()
     {
         pianoMng = FindObjectOfType<PianoMng>();
+        SM = FindObjectOfType<SoundManager>();
 
         this.GetComponent<Image>().alphaHitTestMinimumThreshold = AlphaThreshold;
     }
@@ -23,5 +25,6 @@ public class Ra_h :  PianoKey
     public void Ra_hFunction() 
     {
         pianoMng.CompareKeys(this.gameObject);
+        SM.PianoKeysPlay(SM.ra_hEffect);
     }
 }

@@ -16,33 +16,36 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": -31.399999618530275,
-    "currFloor": "B2",
-    "currRoomPos": "복도",
+    "playerXstartPoint": -1.340000033378601,
+    "currFloor": "B3",
+    "currRoomPos": "합주실",
     "itemList": [
         {
-            "prefabOrder": 7
+            "prefabOrder": 3
         },
         {
-            "prefabOrder": 5
+            "prefabOrder": 12
+        },
+        {
+            "prefabOrder": 13
         }
     ],
     "isFirstGB": true,
-    "isUnlocked": false,
-    "isDiaryClicked": false,
+    "isUnlocked": true,
+    "isDiaryClicked": true,
     "isMufflerPicked": false,
     "isLetterPicked": false,
-    "alreadyOpen": true,
-    "playPuzzleOnce": true,
+    "alreadyOpen": false,
+    "playPuzzleOnce": false,
     "isB3DoorOpened": false,
     "OnB2CandleOnce": false,
     "playB2StatueOnce": false,
     "ReB2": false,
-    "isB3ReEntered": false,
+    "isB3ReEntered": true,
     "OnB3CandleOnce": false,
     "playB3StatueOnce": false,
-    "isPianoMemoGained": false,
-    "monsterExtractinInventory": false,
+    "isPianoMemoGained": true,
+    "monsterExtractinInventory": true,
     "isLabTableReEntered": false,
     "isB4DoorOpened": false,
     "isTreesapPicked": false,

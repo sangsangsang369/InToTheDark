@@ -8,10 +8,12 @@ public class Re : PianoKey
 {
     public float AlphaThreshold = 0.1f;
     PianoMng pianoMng;
+    SoundManager SM;
 
     void Start()
     {
         pianoMng = FindObjectOfType<PianoMng>();
+        SM = FindObjectOfType<SoundManager>();
 
         this.GetComponent<Image>().alphaHitTestMinimumThreshold = AlphaThreshold;
     }
@@ -24,6 +26,7 @@ public class Re : PianoKey
     public void ReFunction() 
     {
         pianoMng.CompareKeys(this.gameObject);
+        SM.PianoKeysPlay(SM.reEffect);
     }
 }
 

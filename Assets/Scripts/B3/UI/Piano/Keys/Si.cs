@@ -7,10 +7,12 @@ public class Si :  PianoKey
 {
     public float AlphaThreshold = 0.1f;
     PianoMng pianoMng;
+    SoundManager SM;
 
     void Start()
     {
         pianoMng = FindObjectOfType<PianoMng>();
+        SM = FindObjectOfType<SoundManager>();
 
         this.GetComponent<Image>().alphaHitTestMinimumThreshold = AlphaThreshold;
     }
@@ -23,5 +25,6 @@ public class Si :  PianoKey
     public void SiFunction() 
     {
         pianoMng.CompareKeys(this.gameObject);
+        SM.PianoKeysPlay(SM.siEffect);
     }
 }
