@@ -213,7 +213,7 @@ public class InventoryMng : MonoBehaviour
                 currentPage--;
             }
             Destroy(slotList[slotList.Count - 6].transform.parent.gameObject);
-            inventoryList[0].transform.parent.gameObject.SetActive(true);
+            inventoryList[0].gameObject.SetActive(true);
             slotList.RemoveRange(6, 6);
         }
 
@@ -272,7 +272,7 @@ public class InventoryMng : MonoBehaviour
                 currentPage--;
             }
             Destroy(slotList[slotList.Count - 6].transform.parent.gameObject);
-            inventoryList[0].transform.parent.gameObject.SetActive(true);
+            inventoryList[0].gameObject.SetActive(true);
             slotList.RemoveRange(6, 6);
         }
     }

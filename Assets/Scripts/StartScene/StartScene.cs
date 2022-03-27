@@ -22,7 +22,8 @@ public class StartScene : MonoBehaviour
 
     public void StartNewGame()
     {
-        data.DataInitialize();
-        LoadGame();
+        data.saveData = new SaveDataClass();
+        data.Save();
+        SceneManager.LoadScene("B1");
     }
 }

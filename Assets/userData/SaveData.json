@@ -16,18 +16,12 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": -1.340000033378601,
-    "currFloor": "B3",
-    "currRoomPos": "합주실",
+    "playerXstartPoint": 1.4800000190734864,
+    "currFloor": "B4",
+    "currRoomPos": "수상한 실험실",
     "itemList": [
         {
             "prefabOrder": 3
-        },
-        {
-            "prefabOrder": 12
-        },
-        {
-            "prefabOrder": 13
         }
     ],
     "isFirstGB": true,
@@ -41,11 +35,11 @@
     "OnB2CandleOnce": false,
     "playB2StatueOnce": false,
     "ReB2": false,
-    "isB3ReEntered": true,
+    "isB3ReEntered": false,
     "OnB3CandleOnce": false,
     "playB3StatueOnce": false,
-    "isPianoMemoGained": true,
-    "monsterExtractinInventory": true,
+    "isPianoMemoGained": false,
+    "monsterExtractinInventory": false,
     "isLabTableReEntered": false,
     "isB4DoorOpened": false,
     "isTreesapPicked": false,

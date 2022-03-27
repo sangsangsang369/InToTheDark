@@ -12,6 +12,7 @@ public class B3SetOff : MonoBehaviour
     Text inputTextUI;
     DataManager data;
     SaveDataClass saveData;
+    FloorTxt Ft;
 
     
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class B3SetOff : MonoBehaviour
         saveData = data.saveData;
         uiManager = FindObjectOfType<B3UIManager>();
         pianoMng = FindObjectOfType<PianoMng>();
+        Ft = FindObjectOfType<FloorTxt>();
         inputTextUI = uiManager.inputTextUI;
     }
 
@@ -53,6 +55,8 @@ public class B3SetOff : MonoBehaviour
             this.gameObject.SetActive(false);
             
             saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4leftDoor];
+            saveData.currRoomPos = "이형체의 복도";
+            Ft.PosUI();
             data.Save();
             SceneManager.LoadScene("B4");
         }
