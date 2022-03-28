@@ -10,14 +10,17 @@ public class GoldenBook : Object
     public Text inputTextUI, gbNameText;
     public Sprite gbImage, gbLetterImg;
     UIManager uiManager;
+    SoundManager sound;
 
     void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
+        sound = SoundManager.inst;
     }
 
     public override void ObjectFunction()
     {
+        sound.bookSelectEffectPlay();
         goldenBookUI.SetActive(true);
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {

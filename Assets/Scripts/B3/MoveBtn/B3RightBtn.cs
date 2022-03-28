@@ -6,6 +6,7 @@ public class B3RightBtn : MonoBehaviour
 {
     DataManager data;
     SaveDataClass saveData;
+    SoundManager sound;
 
     public GameObject playerObj; //public이어서 유니티 에디터에서 접근 가능
     public GameObject creatureEye;
@@ -17,6 +18,7 @@ public class B3RightBtn : MonoBehaviour
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        sound = SoundManager.inst;
         player = FindObjectOfType<Player>();
     }
 
@@ -53,14 +55,16 @@ public class B3RightBtn : MonoBehaviour
     }
     public void RightBtnUp() //버튼에서 손 뗐을 때
     {
+        sound.playerAudioSource.Stop();
+        sound.playerAudioSource.clip = null;
         OnClick = false; //OnClick false됨
         player.GetComponent<Animator>().SetBool("isWalking", false);
     }
     public void RightBtnDown() //버튼 눌렸을 때
     {
+        sound.playerWalkEffectPlay();
         OnClick = true; //OnClick true됨
         player.GetComponent<Animator>().SetBool("isWalking", true);
-        //playerMng.raycastDir = new Vector3(1, 0, 0); //레이저 방향을 오른쪽으로 설정
         player.GetComponent<SpriteRenderer>().flipX = false;
     }
 }

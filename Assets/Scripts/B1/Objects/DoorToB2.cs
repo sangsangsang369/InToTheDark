@@ -14,6 +14,7 @@ public class DoorToB2 : Object
     [SerializeField] private Text withKeyText;
     [SerializeField] private Text inputTextUI;
     SaveAlarm saveAlarm;
+    SoundManager sound;
 
 
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class DoorToB2 : Object
         uiManager = FindObjectOfType<UIManager>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
         saveAlarm = FindObjectOfType<SaveAlarm>();
+        sound = SoundManager.inst;
     }
 
     public override void ObjectFunction()
@@ -29,6 +31,7 @@ public class DoorToB2 : Object
         cardKey = FindObjectOfType<CardKey>();
         if(cardKey && slotSelectMng.usableItem == "cardKeySelected")
         {
+            sound.doorUnlockEffectPlay();
             withKeyUI.SetActive(true);
             StartCoroutine(uiManager.LoadTextOneByOne(withKeyText.text, inputTextUI));
             slotSelectMng.SelectionClear();

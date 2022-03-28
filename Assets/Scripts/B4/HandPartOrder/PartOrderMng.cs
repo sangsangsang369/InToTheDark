@@ -7,6 +7,7 @@ public class PartOrderMng : MonoBehaviour
 {
     DataManager data;
     SaveDataClass saveData;
+    SoundManager sound;
 
     //정답 : 팔 안쪽 → 손등 → 손가락 → 손바닥 → 손가락 → 팔등
     UI uiManager;
@@ -27,6 +28,7 @@ public class PartOrderMng : MonoBehaviour
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        sound = SoundManager.inst;
         uiManager = FindObjectOfType<UI>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         hands = FindObjectOfType<Hands>();
@@ -53,6 +55,7 @@ public class PartOrderMng : MonoBehaviour
         
         if(isCorrect)
         {
+            sound.getItemEffectPlay();
             correctUI.SetActive(true);
             uiManager.StartCoroutine(uiManager.LoadTextOneByOne(correctText.text, inputTextUI));
             inventoryMng.AddToInventory(redJewel, 0.2f, ItemClass.ItemPrefabOrder.RedJewel);

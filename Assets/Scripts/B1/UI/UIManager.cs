@@ -18,6 +18,7 @@ public class UIManager : UI
     public List<Text> cardkeyTexts;
     bool isFirstGB;
     InventoryMng inventoryMng;
+    SoundManager sound;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class UIManager : UI
         isFirstGB = saveData.isFirstGB;
 
         inventoryMng = FindObjectOfType<InventoryMng>();
+        sound = SoundManager.inst;
     }
 
     public IEnumerator LoadCardkeyTexts()
@@ -45,6 +47,7 @@ public class UIManager : UI
                 {
                     if(textOrder == 0)
                     {
+                        sound.cardkeyDropEffectPlay();
                         cardkeyNameText.text = "";
                         cardImage.GetComponent<Image>().enabled = false;
                     }
@@ -82,6 +85,7 @@ public class UIManager : UI
                     }
                     else if(textOrder == 1)
                     {
+                        sound.letterDropEffectPlay();
                         nameText.text = "";
                         illust.SetActive(false);
                     }

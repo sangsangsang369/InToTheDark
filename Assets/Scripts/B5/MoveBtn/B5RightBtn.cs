@@ -8,10 +8,12 @@ public class B5RightBtn : MonoBehaviour
     public GameObject playerObj;
     bool OnClick;
     Player player;
+    SoundManager sound;
     
     void Start()
     {
         player = FindObjectOfType<Player>();
+        sound = SoundManager.inst;
     }
 
     // Update is called once per frame
@@ -39,11 +41,14 @@ public class B5RightBtn : MonoBehaviour
     }
     public void RightBtnUp()
     {
+        sound.playerAudioSource.Stop();
+        sound.playerAudioSource.clip = null;
         OnClick = false;
         player.GetComponent<Animator>().SetBool("isWalking", false);
     }
     public void RightBtnDown()
     {
+        sound.playerWalkEffectPlay();
         OnClick = true;
         player.GetComponent<Animator>().SetBool("isWalking", true);
         player.GetComponent<SpriteRenderer>().flipX = false;

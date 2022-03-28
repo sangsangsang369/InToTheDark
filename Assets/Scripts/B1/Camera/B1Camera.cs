@@ -5,8 +5,12 @@ using UnityEngine;
 public class B1Camera : CameraScript
 {
     FloorTxt Ft;
+    SoundManager sound;
+
     new void Start()
     {
+        sound = SoundManager.inst;
+        sound.B12BGMPlay();
         base.Start();
         Ft = FindObjectOfType<FloorTxt>();
         //player.currRoom = "B1_Hallway";

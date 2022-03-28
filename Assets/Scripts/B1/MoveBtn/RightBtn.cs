@@ -7,6 +7,7 @@ public class RightBtn : MonoBehaviour
 {
     DataManager data;
     SaveDataClass saveData;
+    SoundManager sound;
 
     public GameObject playerObj;
     bool OnClick;
@@ -16,6 +17,7 @@ public class RightBtn : MonoBehaviour
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        sound = SoundManager.inst;
         player = FindObjectOfType<Player>();
     }
 
@@ -41,11 +43,14 @@ public class RightBtn : MonoBehaviour
     }
     public void RightBtnUp()
     {
+        sound.playerAudioSource.Stop();
+        sound.playerAudioSource.clip = null;
         OnClick = false;
         player.GetComponent<Animator>().SetBool("isWalking", false);
     }
     public void RightBtnDown()
     {
+        sound.playerWalkEffectPlay();
         OnClick = true;
         player.GetComponent<Animator>().SetBool("isWalking", true);
         player.GetComponent<SpriteRenderer>().flipX = false;

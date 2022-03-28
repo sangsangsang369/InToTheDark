@@ -9,6 +9,7 @@ public class DoorToLab : Object
     CardKey cardKey;
     SlotSelectionMng slotSelectMng;
     UI uiManager;
+    SoundManager sound;
     [SerializeField] private GameObject withoutKeyUI;
     [SerializeField] private GameObject withKeyUI;
     [SerializeField] private Text withoutKeyText;
@@ -20,6 +21,7 @@ public class DoorToLab : Object
     {
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
         uiManager = FindObjectOfType<UI>();
+        sound = SoundManager.inst;
     }
 
     public override void ObjectFunction()
@@ -27,6 +29,7 @@ public class DoorToLab : Object
         cardKey = FindObjectOfType<CardKey>();
         if(cardKey && slotSelectMng.usableItem == "cardKeySelected")
         {
+            sound.doorUnlockEffectPlay();
             withKeyUI.SetActive(true);
             StartCoroutine(uiManager.LoadTextOneByOne(withKeyText.text, inputTextUI));
             slotSelectMng.SelectionClear();

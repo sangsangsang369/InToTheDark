@@ -6,6 +6,7 @@ public class LeftBtn : MonoBehaviour
 {
     DataManager data;
     SaveDataClass saveData;
+    SoundManager sound;
 
     public GameObject playerObj;
     bool OnClick;
@@ -15,6 +16,7 @@ public class LeftBtn : MonoBehaviour
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        sound = SoundManager.inst;
         player = FindObjectOfType<Player>();
     }
 
@@ -40,11 +42,14 @@ public class LeftBtn : MonoBehaviour
     }
     public void LeftBtnUp()
     {
+        sound.playerAudioSource.Stop();
+        sound.playerAudioSource.clip = null;
         OnClick = false;
         player.GetComponent<Animator>().SetBool("isWalking", false);
     }
     public void LeftBtnDown()
     {
+        sound.playerWalkEffectPlay();
         OnClick = true;
         player.GetComponent<Animator>().SetBool("isWalking", true);
         player.GetComponent<SpriteRenderer>().flipX = true;

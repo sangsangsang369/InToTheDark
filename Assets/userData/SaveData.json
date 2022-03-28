@@ -16,17 +16,13 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": 1.4800000190734864,
-    "currFloor": "B4",
-    "currRoomPos": "수상한 실험실",
-    "itemList": [
-        {
-            "prefabOrder": 3
-        }
-    ],
+    "playerXstartPoint": -35.0,
+    "currFloor": "B1",
+    "currRoomPos": "복도",
+    "itemList": [],
     "isFirstGB": true,
-    "isUnlocked": true,
-    "isDiaryClicked": true,
+    "isUnlocked": false,
+    "isDiaryClicked": false,
     "isMufflerPicked": false,
     "isLetterPicked": false,
     "alreadyOpen": false,

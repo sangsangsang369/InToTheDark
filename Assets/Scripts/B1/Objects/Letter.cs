@@ -12,11 +12,13 @@ public class Letter : Object
 
     DataManager data;
     SaveDataClass saveData;
+    SoundManager sound;
 
     void Start()
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        sound = SoundManager.inst;
         if(this.transform.parent.gameObject.layer != 10 && saveData.isLetterPicked)
         {
             this.gameObject.SetActive(false);
@@ -35,6 +37,7 @@ public class Letter : Object
 
     public override void ObjectFunction()
     {
+        sound.getItemEffectPlay();
         letterUI.SetActive(true);
         GameObject letter = this.gameObject;
         inventoryMng.PickUp(letter, 0.1f, ItemClass.ItemPrefabOrder.Letter);

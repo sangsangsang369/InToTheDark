@@ -15,11 +15,13 @@ public class Muffler : Object
 
     DataManager data;
     SaveDataClass saveData;
+    SoundManager sound;
 
     void Start()
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        sound = SoundManager.inst;
         if(this.transform.parent.gameObject.layer != 10 && saveData.isMufflerPicked)
         {
             this.gameObject.SetActive(false);
@@ -38,6 +40,7 @@ public class Muffler : Object
 
     public override void ObjectFunction()
     {
+        sound.getItemEffectPlay();
         mufflerUI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(mufflerText.text, inputTextUI));
         GameObject muffler = this.gameObject;

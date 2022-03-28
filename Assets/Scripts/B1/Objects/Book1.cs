@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Book1 : Object
 {
+    SoundManager sound;
     public GameObject book1UI;
+
+    void Start()
+    {
+        sound = SoundManager.inst;
+    }
 
     public override void ObjectFunction()
     {
+        sound.bookSelectEffectPlay();
         book1UI.SetActive(true);
     }
 }

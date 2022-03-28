@@ -6,9 +6,12 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager inst;
 
+    //AudioSources
     public AudioSource bgmSource;
     public AudioSource effectSource;
     public AudioSource buttonSource;
+    public AudioSource playerAudioSource;
+    public AudioSource monsterAudioSource;
 
     //BGM
     public AudioClip mainBGM;
@@ -24,6 +27,15 @@ public class SoundManager : MonoBehaviour
     public AudioClip buttonEffect;
     public AudioClip conversationEffect;
     public AudioClip puzzleFailedEffect;
+
+    //B1 Effect
+    public AudioClip bookSelectEffect;
+    public AudioClip cardkeyDropEffect;
+    public AudioClip letterDropEffect;
+    public AudioClip turnPaperEffect;
+    public AudioClip unlockEffect;
+    public AudioClip unlockFailedEffect;
+    public AudioClip doorUnlockEffect;
 
     //B2 Effect
     public AudioClip cabinetOpenLongEffect;
@@ -53,8 +65,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip ra_hEffect;
     public AudioClip si_hEffect;
 
-
-
+    //B4 Effect
+    public AudioClip consoleTouchEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -74,6 +86,7 @@ public class SoundManager : MonoBehaviour
 
     }
 
+    //BGM
     public void BGMStop()
     {
         bgmSource.Stop();
@@ -104,6 +117,44 @@ public class SoundManager : MonoBehaviour
         bgmSource.Play();
     }
 
+    //B1
+    public void bookSelectEffectPlay()
+    {
+        effectSource.clip = bookSelectEffect;
+        effectSource.Play();
+    }
+    public void cardkeyDropEffectPlay()
+    {
+        effectSource.clip = cardkeyDropEffect;
+        effectSource.Play();
+    }
+    public void letterDropEffectPlay()
+    {
+        effectSource.clip = letterDropEffect;
+        effectSource.Play();
+    }
+    public void turnPaperEffectPlay()
+    {
+        effectSource.clip = turnPaperEffect;
+        effectSource.Play();
+    }
+    public void unlockEffectPlay()
+    {
+        effectSource.clip = unlockEffect;
+        effectSource.Play();
+    }
+    public void unlockFailedEffectPlay()
+    {
+        effectSource.clip = unlockFailedEffect;
+        effectSource.Play();
+    }
+    public void doorUnlockEffectPlay()
+    {
+        effectSource.clip = doorUnlockEffect;
+        effectSource.Play();
+    }
+
+    //B2
     public void cabinetOpenLongEffectPlay() // 끼익
     {
         // if (effectSource.clip == cabinetOpenShortEffect)
@@ -136,12 +187,6 @@ public class SoundManager : MonoBehaviour
         effectSource.Play();
     }
 
-    public void getItemEffectPlay()
-    {
-        effectSource.clip = getItemEffect;
-        effectSource.Play();
-    }
-
     public void swipeStatueEffectPlay()
     {
         effectSource.clip = swipeStatueEffect;
@@ -154,9 +199,34 @@ public class SoundManager : MonoBehaviour
         effectSource.Play();
     }
 
+    //B3
     public void PianoKeysPlay(AudioClip key)
     {
         effectSource.clip = key;
+        effectSource.Play();
+    }
+
+    //B4
+    public void consoleEffectPlay()
+    {
+        effectSource.clip = consoleTouchEffect;
+        effectSource.Play();
+    }
+
+    //Common
+    public void playerWalkEffectPlay()
+    {
+        if (playerAudioSource.clip == playerWalkEffect)
+        {
+            return;
+        }
+        playerAudioSource.clip = playerWalkEffect;
+        playerAudioSource.Play();
+    }
+
+    public void getItemEffectPlay()
+    {
+        effectSource.clip = getItemEffect;
         effectSource.Play();
     }
 

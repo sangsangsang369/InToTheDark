@@ -16,6 +16,7 @@ public class LockerMng : MonoBehaviour
     public GameObject lockerRing;
     public GameObject diaryUI;
     UIManager uiManager;
+    SoundManager sound;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class LockerMng : MonoBehaviour
         data = DataManager.singleTon;
         saveData = data.saveData;
         uiManager = FindObjectOfType<UIManager>();
+        sound = SoundManager.inst;
         checkNumBtn.onClick.AddListener(delegate { CheckNumber(); });
     }
 
@@ -35,8 +37,13 @@ public class LockerMng : MonoBehaviour
 
         if(num1 == 8 && num2 == 8 && num3 == 3 && num4 == 7)
         {
+            sound.unlockEffectPlay();
             lockerRing.GetComponent<Animator>().SetTrigger("RingTrigger");
             Invoke("Unlock", 1f);
+        }
+        else
+        {
+            sound.unlockFailedEffectPlay();
         }
     }
 

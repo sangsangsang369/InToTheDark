@@ -6,6 +6,7 @@ public class B3LeftBtn : MonoBehaviour
 {
     DataManager data;
     SaveDataClass saveData;
+    SoundManager sound;
 
     public GameObject playerObj;
     public GameObject creatureEye;
@@ -18,6 +19,7 @@ public class B3LeftBtn : MonoBehaviour
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        sound = SoundManager.inst;
         player = FindObjectOfType<Player>();
     }
 
@@ -57,14 +59,16 @@ public class B3LeftBtn : MonoBehaviour
     }
     public void LeftBtnUp()
     {
+        sound.playerAudioSource.Stop();
+        sound.playerAudioSource.clip = null;
         OnClick = false;
         player.GetComponent<Animator>().SetBool("isWalking", false);
     }
     public void LeftBtnDown()
     {
+        sound.playerWalkEffectPlay();
         OnClick = true;
         player.GetComponent<Animator>().SetBool("isWalking", true);
-        //playerMng.raycastDir = new Vector3(-1, 0, 0);
         player.GetComponent<SpriteRenderer>().flipX = true;
     }
 }
