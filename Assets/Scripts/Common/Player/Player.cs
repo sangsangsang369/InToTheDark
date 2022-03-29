@@ -34,6 +34,12 @@ public class Player : Detect
             }
             MagnifierTrigger(collider, true);
         }
+        //이형체와 닿으면 죽는거
+        if(collider.GetComponent<Monster>())
+        {
+            collider.GetComponent<Monster>().areYouDied = true;
+            collider.GetComponent<Monster>().GetComponent<Animator>().enabled = false;
+        }
     }
 
     void OnTriggerExit2D(Collider2D collider)
@@ -53,10 +59,5 @@ public class Player : Detect
             Transform magnifier = activatedObj.transform.GetChild(0);
             magnifier.gameObject.SetActive(boolean);
         }
-    }
-
-    void YouDied()
-    {
-
     }
 }

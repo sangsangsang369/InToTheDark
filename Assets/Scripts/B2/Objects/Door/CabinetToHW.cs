@@ -27,6 +27,7 @@ public class CabinetToHW : Object
     {
         cabinetObj.SetActive(false);
         hallwayObj.SetActive(true);
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B2leftDoor];
         player.currRoom = "B2_Hallway";
         saveData.currFloor = "B2";
         saveData.currRoomPos = "복도";

@@ -28,6 +28,7 @@ public class LabToHW : Object
         labObj.SetActive(false);
         hallwayObj.SetActive(true);
         globalLight.intensity = 0.05f;
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4leftDoor];
         player.currRoom = "B4_Hallway";
         saveData.currFloor = "B4";
         saveData.currRoomPos = "이형체의 복도";

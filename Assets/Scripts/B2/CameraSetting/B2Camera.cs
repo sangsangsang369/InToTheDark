@@ -12,7 +12,7 @@ public class B2Camera : CameraScript
     new void Start()
     {
         Ft = FindObjectOfType<FloorTxt>();
-        SM = FindObjectOfType<SoundManager>();
+        SM = SoundManager.inst;
         ToB3 = FindObjectOfType<DoorToB3>();
         SM.B12BGMPlay();
         base.Start();

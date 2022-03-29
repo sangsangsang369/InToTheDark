@@ -24,6 +24,7 @@ public class PianoroomToHW : Object
     {
         hallwayObj.SetActive(true);
         PianoroomObj.SetActive(false);
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B3leftDoor];
         player.currRoom = "B3_Hallway";
         saveData.currFloor = "B3";
         saveData.currRoomPos = "피투성이 복도";

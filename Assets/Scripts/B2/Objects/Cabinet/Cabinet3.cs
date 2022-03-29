@@ -27,7 +27,7 @@ public class Cabinet3 : Object
         player = FindObjectOfType<Player>();
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
-        SM = FindObjectOfType<SoundManager>();
+        SM = SoundManager.inst;
     }
 
     // Update is called once per frame

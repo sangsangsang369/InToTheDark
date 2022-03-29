@@ -12,7 +12,7 @@ public class StatuePuzzle3 : Object
     // Start is called before the first frame update
     void Start()
     {
-        SM = FindObjectOfType<SoundManager>();
+        SM = SoundManager.inst;
         player = FindObjectOfType<Player>();
         uiManager = FindObjectOfType<B2_UIManager>();
     }

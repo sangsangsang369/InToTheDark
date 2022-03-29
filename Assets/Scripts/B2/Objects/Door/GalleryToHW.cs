@@ -25,6 +25,7 @@ public class GalleryToHW : Object
     {
         galleryObj.SetActive(false);
         hallwayObj.SetActive(true);
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B2rightDoor];
         player.currRoom = "B2_Hallway";
         saveData.currFloor = "B2";
         saveData.currRoomPos = "복도";

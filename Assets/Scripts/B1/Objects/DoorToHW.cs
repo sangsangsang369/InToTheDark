@@ -26,6 +26,7 @@ public class DoorToHW : Object
     {
         libraryObj.SetActive(false); // bg sprite를 복도 -> 서재로 변경
         hallwayObj.SetActive(true); // B1F object 끄기
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B2leftDoor];
         player.currRoom = "B1_Hallway";
         saveData.currFloor = "B1";
         saveData.currRoomPos = "복도";

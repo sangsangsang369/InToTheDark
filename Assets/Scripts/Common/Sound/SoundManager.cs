@@ -125,7 +125,7 @@ public class SoundManager : MonoBehaviour
     }
     public void cardkeyDropEffectPlay()
     {
-        effectSource.clip = cardkeyDropEffect;
+        effectSource.clip = letterDropEffect;
         effectSource.Play();
     }
     public void letterDropEffectPlay()

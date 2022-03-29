@@ -28,7 +28,7 @@ public class MoveStatue : MonoBehaviour
         playPuzzleOnce = saveData.playPuzzleOnce;
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
-        SM = FindObjectOfType<SoundManager>();
+        SM = SoundManager.inst;
     }
 
 

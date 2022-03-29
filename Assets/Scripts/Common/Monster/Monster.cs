@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
+    SoundManager sound;
     RaycastHit2D hit;
     Player player;
-    private float rayLength = 15f;
+    float rayLength = 15f;
+    bool isGoingLeft;
+    public GameObject gameOverPanel;
     [SerializeField] private float monsterSpeed = 4f;
-    [SerializeField] private bool isGoingLeft;
+    [HideInInspector] public bool areYouDied = false;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        sound = SoundManager.inst;
         player = FindObjectOfType<Player>();
     }
 
@@ -56,7 +61,12 @@ public class Monster : MonoBehaviour
     private void MonsterMoving()
     {
         int layerMask = (1 << LayerMask.NameToLayer("Player"));
-        if(isGoingLeft)
+        if(areYouDied)
+        {
+            gameOverPanel.SetActive(true);
+            return;
+        }
+        else if(isGoingLeft)
         {
             transform.Translate(Vector3.left * monsterSpeed * Time.deltaTime);
             Debug.DrawRay(this.transform.position, Vector3.left * rayLength, Color.red, 0.1f); 
@@ -74,7 +84,15 @@ public class Monster : MonoBehaviour
     {
         if(hit && hit.transform.GetComponent<Player>())
         {
-            Debug.Log("ㄷㄷ");
+            //Debug.Log("ㄷㄷ");
+        }
+        else
+        {
+            if(sound.monsterAudioSource.clip != null)
+            {
+                sound.monsterAudioSource.Stop();
+                sound.monsterAudioSource.clip = null;
+            }  
         }
     }
 }

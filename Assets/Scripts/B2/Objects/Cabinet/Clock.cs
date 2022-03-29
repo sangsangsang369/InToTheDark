@@ -22,7 +22,7 @@ public class Clock : Object
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
         
         ansCheck = FindObjectOfType<AnsCheck>();
-        SM = FindObjectOfType<SoundManager>();
+        SM = SoundManager.inst;
     }
 
     // Update is called once per frame

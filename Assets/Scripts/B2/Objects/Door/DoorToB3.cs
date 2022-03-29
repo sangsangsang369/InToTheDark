@@ -34,7 +34,7 @@ public class DoorToB3 : Object
         saveData = data.saveData;
         isB3DoorOpened = saveData.isB3DoorOpened;
 
-        SM = FindObjectOfType<SoundManager>();
+        SM = SoundManager.inst;
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();

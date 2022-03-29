@@ -22,7 +22,7 @@ public class Cabinet2 : Object
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
-        SM = FindObjectOfType<SoundManager>();
+        SM = SoundManager.inst;
     }
 
     // Update is called once per frame
