@@ -25,6 +25,7 @@ public class Letter : Object
         }
         else
         {
+            this.GetComponent<Object>().enabled = false;
             if(this.GetComponent<SpriteRenderer>())
             {
                 this.GetComponent<SpriteRenderer>().enabled = true;

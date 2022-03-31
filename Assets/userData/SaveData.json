@@ -16,21 +16,24 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": -32.5,
-    "currFloor": "B2",
+    "playerXstartPoint": -35.0,
+    "currFloor": "B4",
     "currRoomPos": "복도",
     "itemList": [
         {
-            "prefabOrder": 3
+            "prefabOrder": 1
+        },
+        {
+            "prefabOrder": 0
         }
     ],
     "isFirstGB": true,
-    "isUnlocked": true,
-    "isDiaryClicked": true,
-    "isMufflerPicked": false,
-    "isLetterPicked": false,
+    "isUnlocked": false,
+    "isDiaryClicked": false,
+    "isMufflerPicked": true,
+    "isLetterPicked": true,
     "alreadyOpen": false,
-    "playPuzzleOnce": true,
+    "playPuzzleOnce": false,
     "isB3DoorOpened": false,
     "OnB2CandleOnce": false,
     "playB2StatueOnce": false,
