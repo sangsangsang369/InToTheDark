@@ -6,26 +6,25 @@ using UnityEngine.UI;
 
 public class Volume : MonoBehaviour
 {
-    public AudioMixer BGMmixer, SFXmixer;
+    //DataManager data;
+    //SaveDataClass saveData;
+    SoundManager inst;
     public Slider BGMslider, SFXslider;
 
-    private void Start()
+    private void Start() {
+        inst = SoundManager.inst;
+    }
+    public void BGMControl()
     {
-        float sound = BGMslider.value;
-        sound = PlayerPrefs.GetFloat("BGM only", 0.75f);
+        inst.bgmSource.volume = BGMslider.value;
     }
 
-    public void BGMControl(float sliderValue1)
+    public void SFXControl()
     {
-        BGMmixer.SetFloat("BGM only", Mathf.Log10(sliderValue1) * 20);
-        PlayerPrefs.SetFloat("BGM only", sliderValue1);
+        inst.effectSource.volume = SFXslider.value;
+        inst.buttonSource.volume = SFXslider.value;
+        inst.playerAudioSource.volume = SFXslider.value;
+        inst.monsterAudioSource.volume = SFXslider.value;
     }
-
-    public void SFXControl(float silderValue2)
-    {
-        SFXmixer.SetFloat("SFX only", Mathf.Log10(silderValue2) * 20);
-        PlayerPrefs.SetFloat("SFX only", silderValue2);
-    }
-
 }
 

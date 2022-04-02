@@ -14,6 +14,7 @@ public class DoorToB3 : Object
     public bool isB3DoorOpened = false;
     public bool ReB2;
     public bool endAllAnim = false;
+    bool OnScript = false;
 
     public GameObject s1, s2, cover, blood, upblood, swordDown, DoorUI, fullSword;
     public bool s1On = false;
@@ -81,14 +82,18 @@ public class DoorToB3 : Object
             if (s1On && s2On)
             {
                 SM.swipeStatueEffectPlay();
-                DoorUI.SetActive(true);
-                StartCoroutine(uiManager.LoadTextOneByOne(doorText.text, inputTextUI));
-                if (Input.GetKeyDown(KeyCode.Mouse0))
+                if (!OnScript)
                 {
-                    GetComponent<Animator>().SetTrigger("GoDown");
-                    s1.SetActive(false);
-                    s2.SetActive(false);
-                    Invoke("WaitSec", 3f);
+                    DoorUI.SetActive(true);
+                    StartCoroutine(uiManager.LoadTextOneByOne(doorText.text, inputTextUI));
+                    OnScript = true;
+                    if (Input.GetKeyDown(KeyCode.Mouse0))
+                    {
+                        GetComponent<Animator>().SetTrigger("GoDown");
+                        s1.SetActive(false);
+                        s2.SetActive(false);
+                        Invoke("WaitSec", 3f);
+                    }
                 }
             }
         }
@@ -120,7 +125,7 @@ public class DoorToB3 : Object
         isB3DoorOpened = true;
         saveData.isB3DoorOpened = true;
         data.Save();
-        Invoke("Keeping", 5f);
+        Invoke("Keeping", 4f);
     }
 
     public void Keeping()
@@ -137,7 +142,7 @@ public class DoorToB3 : Object
         float fadeCount = 0; //투명도(알파값) 초기 설정
         while (fadeCount < 1.0f) //알파값 255가 될 때까지
         {
-            fadeCount += 0.25f;
+            fadeCount += 0.15f;
             yield return new WaitForSeconds(0.1f);
             cover.GetComponent<Image>().color = new Color(0, 0, 0, fadeCount);
         }

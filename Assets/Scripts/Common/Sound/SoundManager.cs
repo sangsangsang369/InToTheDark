@@ -5,7 +5,9 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager inst;
-
+    
+    DataManager data;
+    SaveDataClass saveData;
     //AudioSources
     public AudioSource bgmSource;
     public AudioSource effectSource;
@@ -71,6 +73,14 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        bgmSource.volume = saveData.volume1;
+        effectSource.volume = saveData.volume2;
+        buttonSource.volume = saveData.volume2;
+        playerAudioSource.volume = saveData.volume2;
+        monsterAudioSource.volume = saveData.volume2;
+
         if(inst == null)
         {
             inst = this;

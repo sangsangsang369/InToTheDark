@@ -8,16 +8,21 @@ public class Menu : MonoBehaviour
 {
     DataManager data;
     SaveDataClass saveData;
+    SoundManager inst;
 
     private Button TapOpenBtn, TapCloseBtn, ResumeBtn, SettingsBtn, MainBtn;
     public static bool GameIsPaused = false;
     public GameObject MenuCanvas, pauseTap, settingTap;
     public Text Floor;
+    public Slider BGM, SFX;
 
     private void Start()
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        inst = SoundManager.inst;
+        BGM.value = saveData.volume1;
+        SFX.value = saveData.volume2;
     }
 
     public void OpenTap() // 메뉴 전체 창 열기
@@ -76,9 +81,25 @@ public class Menu : MonoBehaviour
         }
     }
 
+    public void MuteAllBtn()
+    {
+        inst.bgmSource.volume = 0;
+        inst.effectSource.volume = 0;
+        inst.buttonSource.volume = 0;
+        inst.playerAudioSource.volume = 0;
+        inst.monsterAudioSource.volume = 0;
+        BGM.value = 0;
+        SFX.value = 0;
+    }
+
     public void ApplyBtn()
     {
-        // 사운드 설정 바꾼거 적용하기
+        saveData.volume1 = inst.bgmSource.volume;
+        saveData.volume2 = inst.effectSource.volume;
+        saveData.volume2 = inst.buttonSource.volume;
+        saveData.volume2 = inst.playerAudioSource.volume;
+        saveData.volume2 = inst.monsterAudioSource.volume;
+        data.Save();
     }
     
 }

@@ -18,6 +18,9 @@ public class SaveDataClass
     public string currFloor;
     public string currRoomPos;
 
+    // 사운드
+    public float volume1, volume2;
+
     //인벤토리 및 아이템
     public List<ItemClass> itemList;
 
@@ -65,6 +68,9 @@ public class SaveDataClass
         playerXstartPoint = -35f;
         currFloor = "B1";
         currRoomPos = "복도";
+
+        volume1 = 1;
+        volume2 = 1;
 
         //인벤토리 및 아이템
         itemList = new List<ItemClass>();
