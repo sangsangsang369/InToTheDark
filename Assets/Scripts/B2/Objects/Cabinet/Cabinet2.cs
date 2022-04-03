@@ -17,6 +17,7 @@ public class Cabinet2 : Object
     DataManager data;
     SaveDataClass saveData;
     public bool keyUsed;
+    SaveAlarm saveAlarm;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class Cabinet2 : Object
         data = DataManager.singleTon;
         saveData = data.saveData;
         keyUsed = saveData.keyUsed;
+        saveAlarm = FindObjectOfType<SaveAlarm>();
     }
 
     // Update is called once per frame
@@ -39,6 +41,7 @@ public class Cabinet2 : Object
                 key = FindObjectOfType<Key>();
                 if (!keyUsed && key && slotSelectMng.usableItem == "keySelected")
                 {
+                    saveAlarm.SaveAlarmPopUp();
                     SM.lockerOpenEffectPlay();
                     SM.cabinetOpenLongEffectPlay();
                     sword1UI.SetActive(true);

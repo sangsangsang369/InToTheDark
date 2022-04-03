@@ -10,10 +10,12 @@ public class Table : Object
     public List<Text> diaryTexts;
     public Text inputTextUI;
     UIManager uiManager;
+    SaveAlarm saveAlarm;
 
     void Start()
     {
         uiManager = FindObjectOfType<UIManager>();
+        saveAlarm = FindObjectOfType<SaveAlarm>();
     }
 
     public override void ObjectFunction()
@@ -24,6 +26,7 @@ public class Table : Object
             {
                 tableUI.SetActive(true);
                 StartCoroutine(uiManager.LoadTexts(diaryTexts, inputTextUI, 2));
+                saveAlarm.SaveAlarmPopUp();
             }
             else
             {
