@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
     DataManager data;
     SaveDataClass saveData;
     SoundManager inst;
+    SceneLoadManager sceneLoader;
 
     private Button TapOpenBtn, TapCloseBtn, ResumeBtn, SettingsBtn, MainBtn;
     public static bool GameIsPaused = false;
@@ -21,6 +22,7 @@ public class Menu : MonoBehaviour
         data = DataManager.singleTon;
         saveData = data.saveData;
         inst = SoundManager.inst;
+        sceneLoader = SceneLoadManager.instance;
         // BGM.value = saveData.volume1;
         // SFX.value = saveData.volume2;
     }
@@ -65,7 +67,7 @@ public class Menu : MonoBehaviour
         if (GameIsPaused)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("Start");
+            sceneLoader.LoadScene("Start");
         }
     }
 
