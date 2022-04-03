@@ -30,27 +30,26 @@ public class SceneLoadManager : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void Start()
-    {
-        Canvas canvas = this.gameObject.GetComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceCamera;
-        canvas.worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
-    }
-
+    //씬 이동할 때 이 함수
     public void LoadScene(string sceneName)
     {
         gameObject.SetActive(true);
-
-        Canvas canvas = this.gameObject.GetComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceCamera;
-        canvas.worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
-
         myKoala.SetActive(true);
         loadingBar.SetActive(true);
         SceneManager.sceneLoaded += LoadSceneEnd;
         loadSceneName = sceneName;
 
         StartCoroutine(Load(sceneName));
+    }
+
+    //방 이동할 때 이 함수
+    public void LoadRoom()
+    {
+        gameObject.SetActive(true);
+        myKoala.SetActive(true);
+        loadingBar.SetActive(true);
+
+        StartCoroutine(LoadRoomCoroutine());
     }
 
     private IEnumerator Load(string sceneName)
@@ -88,6 +87,13 @@ public class SceneLoadManager : MonoBehaviour
         }
     }
 
+    private IEnumerator LoadRoomCoroutine()
+    {
+        progressBar.fillAmount = 0f;
+        yield return StartCoroutine(Fade(true));
+        yield return StartCoroutine(Fade(false));
+    }
+
     private void LoadSceneEnd(Scene scene, LoadSceneMode loadSceneMode)
     {
         if (scene.name == loadSceneName)
@@ -106,7 +112,7 @@ public class SceneLoadManager : MonoBehaviour
         {
             yield return null;
             timer += Time.unscaledDeltaTime * 2f;
-            sceneLoaderCanvasGroup.alpha = Mathf.Lerp(isFadeIn ? 0 : 1, isFadeIn ? 1 : 0, timer);
+            sceneLoaderCanvasGroup.alpha = Mathf.Lerp(isFadeIn ? 1 : 1, isFadeIn ? 1 : 0, timer);
         }
 
         if (!isFadeIn)

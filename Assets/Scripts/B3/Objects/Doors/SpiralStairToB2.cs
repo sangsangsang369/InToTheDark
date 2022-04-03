@@ -27,7 +27,7 @@ public class SpiralStairToB2 : Object
         saveData.currRoomPos = "복도";
         data.Save();
         Ft.PosUI();
-        SceneManager.LoadScene("B2");
+        LoadScene("B2");
     }
 }
 

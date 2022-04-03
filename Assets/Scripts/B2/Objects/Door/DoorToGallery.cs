@@ -24,6 +24,11 @@ public class DoorToGallery : Object
 
     public override void ObjectFunction()
     {
+        LoadRoom("LoadGallery");
+    }
+
+    void LoadGallery()
+    {
         hallwayObj.SetActive(false);
         galleryObj.SetActive(true);
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B2Gallery];

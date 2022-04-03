@@ -15,6 +15,7 @@ public class EnterB4Lab : MonoBehaviour
     FloorTxt Ft;  
     SlotSelectionMng slotSelectMng;
     UI uiManager;
+    SceneLoadManager sceneLoader;
 
     // Start is called before the first frame update
     void Start()
@@ -25,23 +26,30 @@ public class EnterB4Lab : MonoBehaviour
         Ft = FindObjectOfType<FloorTxt>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
         uiManager = FindObjectOfType<UI>();
+        sceneLoader = SceneLoadManager.instance;
     }
 
     public void EnterLab()
     {
         if(!uiManager.nowTexting)
         {
-            slotSelectMng.UnselectSlot(FindObjectOfType<CardKey>().gameObject);
-            hallwayObj.SetActive(false);
-            labObj.SetActive(true);
-            globalLight.intensity = 0.66f;
-            saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4Lab];
-            player.currRoom = "B4_Lab";
-            saveData.currFloor = "B4";
-            saveData.currRoomPos = "수상한 실험실";
-            data.Save();
-            Ft.PosUI();
-            playerObj.transform.position = new Vector2(1.5f, -0.83f);
+            sceneLoader.LoadRoom();
+            Invoke("LoadLab", 0.5f);
         }
+    }
+
+    void LoadLab()
+    {
+        slotSelectMng.UnselectSlot(FindObjectOfType<CardKey>().gameObject);
+        hallwayObj.SetActive(false);
+        labObj.SetActive(true);
+        globalLight.intensity = 0.66f;
+        saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4Lab];
+        player.currRoom = "B4_Lab";
+        saveData.currFloor = "B4";
+        saveData.currRoomPos = "수상한 실험실";
+        data.Save();
+        Ft.PosUI();
+        playerObj.transform.position = new Vector2(1.5f, -0.83f);
     }
 }

@@ -24,6 +24,11 @@ public class DoorToPianoroom : Object
     // Update is called once per frame
     public override void ObjectFunction()
     {
+        LoadRoom("LoadPianoroom");
+    }
+
+    void LoadPianoroom()
+    {
         hallwayObj.SetActive(false);
         PianoroomObj.SetActive(true);
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B3Pianoroom];

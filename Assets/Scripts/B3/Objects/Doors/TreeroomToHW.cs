@@ -23,6 +23,11 @@ public class TreeroomToHW : Object
     // Update is called once per frame
     public override void ObjectFunction()
     {
+        LoadRoom("LoadHallway");
+    }
+
+    void LoadHallway()
+    {
         hallwayObj.SetActive(true);
         TreeroomObj.SetActive(false);
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B3leftDoor];

@@ -71,7 +71,7 @@ public class DoorToB4 : Object
             saveData.currRoomPos = "이형체의 복도";
             data.Save();
             Ft.PosUI();
-            SceneManager.LoadScene("B4");
+            LoadScene("B4");
         }
     }
 

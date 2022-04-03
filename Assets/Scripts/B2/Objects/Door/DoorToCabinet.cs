@@ -24,6 +24,11 @@ public class DoorToCabinet : Object
 
     public override void ObjectFunction()
     {
+        LoadRoom("LoadCabinet");
+    }
+
+    void LoadCabinet()
+    {
         hallwayObj.SetActive(false);
         cabinetObj.SetActive(true);
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B2CabinetRoom];

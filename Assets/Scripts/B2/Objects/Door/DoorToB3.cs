@@ -59,7 +59,7 @@ public class DoorToB3 : Object
             data.Save();
             Ft.PosUI();
             endAllAnim = false;
-            SceneManager.LoadScene("B3");
+            LoadScene("B3");
         }
         if (!isB3DoorOpened)
         {
@@ -111,7 +111,7 @@ public class DoorToB3 : Object
             saveData.currRoomPos = "피투성이 복도";
             data.Save();
             Ft.PosUI();
-            SceneManager.LoadScene("B3");
+            LoadScene("B3");
         }
     }
 

@@ -24,6 +24,11 @@ public class ChapelToHW : Object
 
     public override void ObjectFunction()
     {
+        LoadRoom("LoadHallway");
+    }
+
+    void LoadHallway()
+    {
         chapelObj.SetActive(false);
         hallwayObj.SetActive(true);
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4leftDoor];

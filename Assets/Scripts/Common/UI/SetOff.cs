@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class SetOff : MonoBehaviour
 {
     UI uiManager;
     Text inputTextUI;
+    SceneLoadManager sceneLoader;
     
     // Start is called before the first frame update
     void Start()
     {
         uiManager = FindObjectOfType<UI>();
         inputTextUI = uiManager.inputTextUI;
+        sceneLoader = SceneLoadManager.instance;
     }
 
     public void prefabScrptOff(GameObject inputTextUI)
@@ -59,7 +60,7 @@ public class SetOff : MonoBehaviour
             inputTextUI.GetComponent<Text>().text = "";
             inputTextUI.gameObject.SetActive(false);
             this.gameObject.SetActive(false);
-            SceneManager.LoadScene(sceneName);
+            sceneLoader.LoadScene(sceneName);
         }
     }
 }

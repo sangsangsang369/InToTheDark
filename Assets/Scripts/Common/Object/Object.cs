@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Object : MonoBehaviour
 {
+    SceneLoadManager sceneLoader = SceneLoadManager.instance;
     public virtual void ObjectFunction()
     {
         Debug.Log("virtualFunction");
@@ -17,5 +18,16 @@ public class Object : MonoBehaviour
     public virtual void ItemDeactive()
     {
         Debug.Log("ItemDeactive");
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        sceneLoader.LoadScene(sceneName);
+    }
+
+    public void LoadRoom(string functionName)
+    {
+        sceneLoader.LoadRoom();
+        Invoke(functionName, 0.5f);
     }
 }

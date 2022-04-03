@@ -23,6 +23,11 @@ public class GalleryToHW : Object
 
     public override void ObjectFunction()
     {
+        LoadRoom("LoadHallway");
+    }
+
+    void LoadHallway()
+    {
         galleryObj.SetActive(false);
         hallwayObj.SetActive(true);
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B2rightDoor];

@@ -22,6 +22,11 @@ public class PianoroomToHW : Object
 
     public override void ObjectFunction()
     {
+        LoadRoom("LoadHallway");
+    }
+
+    void LoadHallway()
+    {
         hallwayObj.SetActive(true);
         PianoroomObj.SetActive(false);
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B3leftDoor];

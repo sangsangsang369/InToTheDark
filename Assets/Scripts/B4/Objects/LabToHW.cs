@@ -25,6 +25,11 @@ public class LabToHW : Object
 
     public override void ObjectFunction()
     {
+        LoadRoom("LoadHallway");
+    }
+
+    void LoadHallway()
+    {
         labObj.SetActive(false);
         hallwayObj.SetActive(true);
         globalLight.intensity = 0.05f;

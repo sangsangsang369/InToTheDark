@@ -25,6 +25,11 @@ public class CabinetToHW : Object
     // Update is called once per frame
     public override void ObjectFunction()
     {
+        LoadRoom("LoadHallway");
+    }
+
+    void LoadHallway()
+    {
         cabinetObj.SetActive(false);
         hallwayObj.SetActive(true);
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B2leftDoor];

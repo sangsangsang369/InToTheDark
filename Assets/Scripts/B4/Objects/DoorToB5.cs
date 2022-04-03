@@ -43,7 +43,7 @@ public class DoorToB5 : Object
             saveData.currFloor = "B5";
             saveData.currRoomPos = "복도";
             data.Save();
-            SceneManager.LoadScene("B5");
+            LoadScene("B5");
         }
     }
 }

@@ -24,6 +24,11 @@ public class DoorToHW : Object
 
     public override void ObjectFunction()
     {
+        LoadRoom("LoadHallway");
+    }
+
+    void LoadHallway()
+    {
         libraryObj.SetActive(false); // bg sprite를 복도 -> 서재로 변경
         hallwayObj.SetActive(true); // B1F object 끄기
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B2leftDoor];

@@ -22,6 +22,11 @@ public class DoorToLib : Object
 
     public override void ObjectFunction()
     {
+        LoadRoom("LoadLibrary");
+    }
+
+    void LoadLibrary()
+    {
         hallwayObj.SetActive(false); // B1F object 끄기
         libraryObj.SetActive(true); // bg sprite를 복도 -> 서재로 변경
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B1Library];

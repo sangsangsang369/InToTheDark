@@ -28,6 +28,6 @@ public class DoorToB1 : Object
         saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B1rightDoor];
         data.Save();
         Ft.PosUI();
-        SceneManager.LoadScene("B1");
+        LoadScene("B1");
     }
 }

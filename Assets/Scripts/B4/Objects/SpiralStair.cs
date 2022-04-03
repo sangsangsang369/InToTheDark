@@ -28,6 +28,6 @@ public class SpiralStair : Object
         saveData.currRoomPos = "피투성이 복도";
         data.Save();
         Ft.PosUI();
-        SceneManager.LoadScene("B3");
+        LoadScene("B3");
     }
 }
