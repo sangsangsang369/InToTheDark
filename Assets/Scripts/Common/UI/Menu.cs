@@ -21,8 +21,8 @@ public class Menu : MonoBehaviour
         data = DataManager.singleTon;
         saveData = data.saveData;
         inst = SoundManager.inst;
-        BGM.value = saveData.volume1;
-        SFX.value = saveData.volume2;
+        // BGM.value = saveData.volume1;
+        // SFX.value = saveData.volume2;
     }
 
     public void OpenTap() // 메뉴 전체 창 열기
@@ -56,11 +56,8 @@ public class Menu : MonoBehaviour
 
     public void Settings() // 사운드 셋팅 창 열기
     {
-        if (GameIsPaused)
-        {
-            settingTap.SetActive(true);
-            pauseTap.SetActive(false);
-        }
+        BGM.value = saveData.volume1;
+        SFX.value = saveData.volume2;
     }
     
     public void Mains() // 스타트 화면으로 돌아가기

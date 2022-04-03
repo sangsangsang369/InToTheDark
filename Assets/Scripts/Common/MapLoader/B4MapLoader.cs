@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class B4MapLoader : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class B4MapLoader : MonoBehaviour
     [SerializeField] GameObject B4Lab;
     DataManager data;
     SaveDataClass saveData;
+    public Light2D globalLight;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,6 @@ public class B4MapLoader : MonoBehaviour
         data = DataManager.singleTon;
         saveData = data.saveData;
 
-        //Invoke("LoadB4Map", 0.1f);
         LoadB4Map();
     }
 
@@ -36,6 +37,7 @@ public class B4MapLoader : MonoBehaviour
         }
         else if(saveData.currRoomPos == "수상한 실험실")
         {
+            globalLight.intensity = 0.66f;
             B4Hallway.SetActive(false);
             B4Chapel.SetActive(false);
             B4Lab.SetActive(true);

@@ -33,7 +33,7 @@ public class LockObject : MonoBehaviour
     public void Unlock()
     {
         redJewel = FindObjectOfType<RedJewel>();
-        if(redJewel.isJewelOnHand)
+        if(redJewel && redJewel.isJewelOnHand)
         {
             Color color = lockHole.GetComponent<Image>().color;
             color.a = 1f;

@@ -6,21 +6,28 @@ using UnityEngine.UI;
 
 public class Volume : MonoBehaviour
 {
-    //DataManager data;
-    //SaveDataClass saveData;
+    DataManager data;
+    SaveDataClass saveData;
     SoundManager inst;
     public Slider BGMslider, SFXslider;
 
-    private void Start() {
+    private void Start() 
+    {
         inst = SoundManager.inst;
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        BGMslider.value = saveData.volume1;
+        SFXslider.value = saveData.volume2;
     }
     public void BGMControl()
     {
+        inst = SoundManager.inst;
         inst.bgmSource.volume = BGMslider.value;
     }
 
     public void SFXControl()
     {
+        inst = SoundManager.inst;
         inst.effectSource.volume = SFXslider.value;
         inst.buttonSource.volume = SFXslider.value;
         inst.playerAudioSource.volume = SFXslider.value;

@@ -31,6 +31,11 @@ public class Detect : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
+            if(canvas == null)
+            {
+                canvas = FindObjectOfType<Canvas>();
+                graphicRay = canvas.transform.GetComponent<GraphicRaycaster>();
+            }
             if(!IsPointerOverUIObject())
             {
                 int layerMask = (1 << LayerMask.NameToLayer("Object"));
@@ -43,6 +48,7 @@ public class Detect : MonoBehaviour
               //그래픽 레이캐스트 세팅
             var g_RayPosition = new PointerEventData(null);
             g_RayPosition.position = Input.mousePosition;
+            Debug.Log(canvas);
             graphicRay.Raycast(g_RayPosition, results);
             Check_GraphicRay();        
         }

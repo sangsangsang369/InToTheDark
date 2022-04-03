@@ -1,20 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class B4Camera : CameraScript
 {
     FloorTxt Ft;
+    UI uiManager;
+    public bool isB4ReEntered;
+    public GameObject startUI;
+    public Text startText;
 
    new void Start()
     {
         base.Start();
         Ft = FindObjectOfType<FloorTxt>();
-        //player.currRoom = "B4_Hallway";
+        uiManager = FindObjectOfType<UI>();
         saveData.currFloor = "B4";
-        //saveData.currRoomPos = "이형체의 복도";
         data.Save();
         Ft.PosUI();
+
+        //이형체 복도에 존재할 때만 스크립트 뜨게
+        if(isB4ReEntered == false) 
+        {
+            startUI.SetActive(true);
+            StartCoroutine(uiManager.LoadTextOneByOne(startText.text, uiManager.inputTextUI));
+            
+            isB4ReEntered = true;
+            saveData.isB4ReEntered = true;
+            data.Save();
+        }
     }
 
     // Update is called once per frame

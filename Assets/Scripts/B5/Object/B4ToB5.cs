@@ -26,7 +26,6 @@ public class B4ToB5 : Object
         saveData.currFloor = "B4";
         saveData.currRoomPos = "이형체의 복도";
         data.Save();
-        Ft.PosUI();
         LoadScene("B4");
     }
 }

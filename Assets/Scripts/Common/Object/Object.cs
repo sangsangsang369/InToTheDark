@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Object : MonoBehaviour
 {
-    SceneLoadManager sceneLoader = SceneLoadManager.instance;
+    SceneLoadManager sceneLoader;
     public virtual void ObjectFunction()
     {
         Debug.Log("virtualFunction");
@@ -22,11 +22,13 @@ public class Object : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        sceneLoader = SceneLoadManager.instance;
         sceneLoader.LoadScene(sceneName);
     }
 
     public void LoadRoom(string functionName)
     {
+        sceneLoader = SceneLoadManager.instance;
         sceneLoader.LoadRoom();
         Invoke(functionName, 0.5f);
     }
