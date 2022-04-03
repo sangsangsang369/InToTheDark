@@ -23,6 +23,16 @@ public class B2Camera : CameraScript
             saveData.ReB2 = true;
             data.Save();
         }
+        if (saveData.s1On)
+        {
+            ToB3.s1On = true;
+            ToB3.s1.SetActive(true);
+        }
+        if (saveData.s2On)
+        {
+            ToB3.s2On = true;
+            ToB3.s2.SetActive(true);
+        }
         //player.currRoom = "B2_Hallway";
         saveData.currFloor = "B2";
         //saveData.currRoomPos = "복도";

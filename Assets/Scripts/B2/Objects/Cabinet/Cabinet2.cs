@@ -5,15 +5,18 @@ using UnityEngine.UI;
 
 public class Cabinet2 : Object
 {
-    public B2_UIManager uiManager;
+    public UI uiManager;
     public InventoryMng inventoryMng;
     SlotSelectionMng slotSelectMng;
     public GameObject cabinet2UI, sword1UI, sword1Img;
-    public Text cabinet2Text, sword1Text;
+    public Text cabinet2Text, sword1Text, cabinet2openedText;
     public Text inputTextUI;
     Player player;
     Key key; 
     SoundManager SM;
+    DataManager data;
+    SaveDataClass saveData;
+    public bool keyUsed;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,9 @@ public class Cabinet2 : Object
         inventoryMng = FindObjectOfType<InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
         SM = SoundManager.inst;
+        data = DataManager.singleTon;
+        saveData = data.saveData;
+        keyUsed = saveData.keyUsed;
     }
 
     // Update is called once per frame
@@ -31,7 +37,7 @@ public class Cabinet2 : Object
         if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 key = FindObjectOfType<Key>();
-                if (key && slotSelectMng.usableItem == "keySelected")
+                if (!keyUsed && key && slotSelectMng.usableItem == "keySelected")
                 {
                     SM.lockerOpenEffectPlay();
                     SM.cabinetOpenLongEffectPlay();
@@ -42,12 +48,20 @@ public class Cabinet2 : Object
                     slotSelectMng.SelectionClear();
                     GameObject sword1 = sword1Img;
                     inventoryMng.AddToInventory(sword1, 1f, ItemClass.ItemPrefabOrder.Sword1);
+                    keyUsed = true;
+                    saveData.keyUsed = true;
+                    data.Save();
                 }
-                else
+                else if (!keyUsed)
                 {
                     SM.cabinetOpenShortEffectPlay();
                     cabinet2UI.SetActive(true);
                     StartCoroutine(uiManager.LoadTextOneByOne(cabinet2Text.text, inputTextUI));
+                }
+                else if (keyUsed)
+                {
+                    cabinet2UI.SetActive(true);
+                    StartCoroutine(uiManager.LoadTextOneByOne(cabinet2openedText.text, inputTextUI));
                 }
             } 
     }

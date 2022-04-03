@@ -79,6 +79,7 @@ MonoBehaviour:
   lockerOpenEffect: {fileID: 0}
   swipeStatueEffect: {fileID: 8300000, guid: d5dcdd2bb6a1391479f7bca99f725ab4, type: 3}
   knifeEffect: {fileID: 8300000, guid: 4111d0a316ee01f43ab2ac1f8b09932c, type: 3}
+  moveClockEffect: {fileID: 8300000, guid: 16079573408e2df4a80976ba80797dbc, type: 3}
   leavesShortEffect: {fileID: 8300000, guid: 09726acc8fd8c214a9b0bccde80c470f, type: 3}
   monsterGrowlEffect: {fileID: 8300000, guid: 3dda44f1888bc514faa24b6adf469e87, type: 3}
   gooEffect: {fileID: 8300000, guid: 7ed205320e2214a41ab43647d37ead4e, type: 3}

@@ -46,6 +46,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip lockerOpenEffect;
     public AudioClip swipeStatueEffect;
     public AudioClip knifeEffect;
+    public AudioClip moveClockEffect;
 
     //B3 Effect
     public AudioClip leavesShortEffect;
@@ -208,6 +209,11 @@ public class SoundManager : MonoBehaviour
         effectSource.clip = knifeEffect;
         effectSource.Play();
     }
+    public void moveClockEffectPlay()
+    {
+        effectSource.clip = moveClockEffect;
+        effectSource.Play();
+    }
 /////////////////////////////////////////////////////////////////
     //B3
     public void PianoKeysPlay(AudioClip key)
@@ -252,7 +258,8 @@ public class SoundManager : MonoBehaviour
 
     public void ButtonEffectPlay()
     {
-        buttonSource.Play();
+        effectSource.clip = buttonEffect;
+        effectSource.Play();
     }
 
     public void Mute(bool muteOnTrue)

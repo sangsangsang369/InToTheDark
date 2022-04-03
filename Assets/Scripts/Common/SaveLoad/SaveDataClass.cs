@@ -33,12 +33,14 @@ public class SaveDataClass
     public bool isLetterPicked;
 
     //지하 2층
+    public bool keyUsed;
     public bool alreadyOpen;
     public bool playPuzzleOnce;
     public bool isB3DoorOpened;
     public bool OnB2CandleOnce;
     public bool playB2StatueOnce;
     public bool ReB2;
+    public bool s1On, s2On;
 
     //지하 3층
     public bool isB3ReEntered;
@@ -84,12 +86,15 @@ public class SaveDataClass
         isLetterPicked = false;
 
         //지하 2층
+        keyUsed = false;
         alreadyOpen = false;
         playPuzzleOnce = false;
         isB3DoorOpened = false;
         OnB2CandleOnce = false;
         playB2StatueOnce = false;
         ReB2 = false;
+        s1On = false;
+        s2On = false;
 
         //지하 3층
         isB3ReEntered = false;

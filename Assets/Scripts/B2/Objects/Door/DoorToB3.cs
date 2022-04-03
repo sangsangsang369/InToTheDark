@@ -34,6 +34,9 @@ public class DoorToB3 : Object
         data = DataManager.singleTon;
         saveData = data.saveData;
         isB3DoorOpened = saveData.isB3DoorOpened;
+        s1On = saveData.s1On;
+        s2On = saveData.s2On;
+        ReB2 = saveData.ReB2;
 
         SM = SoundManager.inst;
         uiManager = FindObjectOfType<B2_UIManager>();
@@ -68,6 +71,8 @@ public class DoorToB3 : Object
                 SM.knifeEffectPlay();
                 s1.SetActive(true);
                 s1On = true;
+                saveData.s1On = true;
+                data.Save();
                 inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.Sword1);
                 slotSelectMng.SelectionClear();
             }
@@ -76,6 +81,8 @@ public class DoorToB3 : Object
                 SM.knifeEffectPlay();
                 s2.SetActive(true);
                 s2On = true;
+                saveData.s2On = true;
+                data.Save();
                 inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.Sword2);
                 slotSelectMng.SelectionClear();
             }

@@ -6,6 +6,7 @@ public class MoveMin : MonoBehaviour
 {
     public GameObject minuteHand;
     RectTransform rectMin;
+    SoundManager SM;
     Vector3 mousePos;
     public bool firstMin = false;
     public bool secMin = false;
@@ -16,6 +17,7 @@ public class MoveMin : MonoBehaviour
     void Start()
     {
         rectMin = minuteHand.GetComponent<RectTransform>();
+        SM = SoundManager.inst;
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class MoveMin : MonoBehaviour
             mousePos = Input.mousePosition;
             //Debug.Log("x pos = " + mousePos.x);
             //Debug.Log("y pos = " + mousePos.y);
+            //SM.moveClockEffectPlay();
             if (((mousePos.x > 935) && (mousePos.x < 984)) && ((mousePos.y > 635) && (mousePos.y < 722)))
             {
                 //0.0 00분

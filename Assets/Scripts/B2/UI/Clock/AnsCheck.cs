@@ -19,6 +19,7 @@ public class AnsCheck : MonoBehaviour
     public GameObject key1UI, clockUI, keyImg;
     public Text key1Text;
     public Text inputTextUI;
+    SoundManager SM;
 
 
     // Start is called before the first frame update
@@ -28,10 +29,12 @@ public class AnsCheck : MonoBehaviour
         inventoryMng = FindObjectOfType<InventoryMng>();
         clock = FindObjectOfType<Clock>();
         //checkBtn.onClick.AddListener(delegate{ CheckAnswer(); });
+        SM = SoundManager.inst;
     }
 
     public void CheckAnswer()
     {
+        SM.ButtonEffectPlay();
         moveHour = FindObjectOfType<MoveHand>();
         moveMin = FindObjectOfType<MoveMin>();
         if (ImgNum == 1)
@@ -74,9 +77,11 @@ public class AnsCheck : MonoBehaviour
     public void ClockOpen()
     {
         clock = FindObjectOfType<Clock>();
+        SM.lockerOpenEffectPlay();
         inventoryMng.RemoveFromInventory(clock.gameObject, ItemClass.ItemPrefabOrder.PocketWatch);
         inventoryMng.AddToInventory(keyImg, 1f, ItemClass.ItemPrefabOrder.CabinetKey);
         clockUI.SetActive(false);
+        SM.getItemEffectPlay();
         key1UI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(key1Text.text, inputTextUI));
     }
