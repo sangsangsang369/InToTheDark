@@ -112,6 +112,10 @@ public class SlotSelectionMng : MonoBehaviour
             itemNameText.gameObject.SetActive(false);
         }  
     }
-
+    public void ResultItemNamePopUp()
+    {
+        PopItemName();
+        StartCoroutine(FadeOut()); 
+    }
 }
 

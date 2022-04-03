@@ -22,6 +22,7 @@ public class PianoMng : MonoBehaviour
     SaveDataClass saveData;
     public bool monsterExtractinInventory;
     SaveAlarm saveAlarm;
+    SoundManager sound;
    
 
     private void Start() 
@@ -29,6 +30,7 @@ public class PianoMng : MonoBehaviour
         data = DataManager.singleTon;
         saveData = data.saveData;
         monsterExtractinInventory = saveData.monsterExtractinInventory;
+        sound = SoundManager.inst;
 
         //진액 인벤토리에 있으면
         //피아노 콜라이더 꺼주기
@@ -54,6 +56,8 @@ public class PianoMng : MonoBehaviour
         {
             if(i == 9) //정답일 때
             {
+                sound.monsterExtractEffectPlay();
+
                 PianoUI.SetActive(false); //피아노 UI 켜지면 자동으로 피아노 Obj 콜라이더 꺼짐(피아노 Obj 콜라이더 꺼진 상태로)
                 KeyInputsList.Clear(); //음 입력 초기화
                 //정답 맞췄다는 텍스트 나옴

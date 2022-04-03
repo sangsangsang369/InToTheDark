@@ -17,18 +17,27 @@ public class Fruit : Object
     
     DataManager data;
     SaveDataClass saveData;
+    SoundManager sound;
 
 
     void Start()
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        sound = SoundManager.inst;
 
         if(this.transform.parent.gameObject.layer != 10 && saveData.isFruitPicked)
         {
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;  //for문 돌면서 배열의 열매 콜라이더 꺼주기
         }
-      
+       else
+        {
+            this.GetComponent<Object>().enabled = false;
+            if(this.GetComponent<SpriteRenderer>())
+            {
+                this.GetComponent<SpriteRenderer>().enabled = true;
+            }
+        }
         uiManager = FindObjectOfType<B3UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
@@ -38,6 +47,7 @@ public class Fruit : Object
 
     public override void ObjectFunction()
     {
+        sound.leavesEffectPlay();
         fruitUI.SetActive(true);
         //uiManager. 추가하니까 되요..근데 왜 되는지는 모르겠는
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(fruitText.text, inputTextUI));

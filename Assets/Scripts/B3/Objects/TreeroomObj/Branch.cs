@@ -16,16 +16,25 @@ public class Branch : Object
 
     DataManager data;
     SaveDataClass saveData;
+    SoundManager sound;
 
     void Start()
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        sound = SoundManager.inst;
         if(this.transform.parent.gameObject.layer != 10 && saveData.isBranchPicked)
         {
             this.gameObject.SetActive(false);
         }
-
+        else
+        {
+            this.GetComponent<Object>().enabled = false;
+            if(this.GetComponent<SpriteRenderer>())
+            {
+                this.GetComponent<SpriteRenderer>().enabled = true;
+            }
+        }
         uiManager = FindObjectOfType<B3UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
@@ -34,6 +43,7 @@ public class Branch : Object
 
     public override void ObjectFunction()
     {
+        sound.leavesEffectPlay();
         branchUI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(branchText.text, inputTextUI));
         GameObject branch = this.gameObject;

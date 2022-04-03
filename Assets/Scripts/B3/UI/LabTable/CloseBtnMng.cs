@@ -8,6 +8,8 @@ public class CloseBtnMng : MonoBehaviour
     LabTableItemManager labtableMng;
     SaveAlarm saveAlarm;
     ItemCombinationMng itemCombMng;
+    SlotSelectionMng slotSelectMng;
+
     int alarmNum = 0;
 
     void Start()
@@ -15,6 +17,7 @@ public class CloseBtnMng : MonoBehaviour
         inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
         saveAlarm = FindObjectOfType<SaveAlarm>();
+        slotSelectMng = FindObjectOfType<SlotSelectionMng>();
         itemCombMng = FindObjectOfType<ItemCombinationMng>();
     }
 
@@ -32,5 +35,6 @@ public class CloseBtnMng : MonoBehaviour
             saveAlarm.SaveAlarmPopUp();
             alarmNum++;
         }
+        slotSelectMng.DestoryItemName();
     }
 }

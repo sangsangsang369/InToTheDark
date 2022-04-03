@@ -15,15 +15,20 @@ public class ItemCombinationMng : MonoBehaviour
 
     DataManager data;
     SaveDataClass saveData;
+    SlotSelectionMng slotSelectMng;
+    SoundManager sound;
+
 
     void Start()
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        sound = SoundManager.inst;
 
         uiManager = FindObjectOfType<B3UIManager>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
         pianoMng = FindObjectOfType<PianoMng>();
+        slotSelectMng = FindObjectOfType<SlotSelectionMng>();
 
     }
 
@@ -45,7 +50,13 @@ public class ItemCombinationMng : MonoBehaviour
                 labtableMng.resultItemActive = true; //결과슬롯 활성화
                 labtableMng.itemActive["fleshOneActive"] = true; //살덩어리1 활성화   
                 flesh1Made = true;
-            }
+
+                slotSelectMng.itemName = "살덩어리1";
+                slotSelectMng.ResultItemNamePopUp(); 
+
+                sound.getItemEffectPlay();
+
+            } 
             //나뭇잎 + 수액
             else if(labtableMng.itemActive["leafActive"] 
                 && labtableMng.itemActive["treesapActive"])
@@ -58,6 +69,11 @@ public class ItemCombinationMng : MonoBehaviour
                 labtableMng.resultItemActive = true;
                 labtableMng.itemActive["patternLeafActive"] = true; //무늬 나뭇잎 활성화
                 patternLeafMade = true;
+
+                slotSelectMng.itemName = "무늬가 생긴 잎";
+                slotSelectMng.ResultItemNamePopUp();
+
+                sound.getItemEffectPlay();
             }
             //살덩어리1 + 진액
             else if(labtableMng.itemActive["fleshOneActive"] 
@@ -71,6 +87,10 @@ public class ItemCombinationMng : MonoBehaviour
                 labtableMng.resultItemActive = true;
                 labtableMng.itemActive["fleshTwoActive"] = true; //살덩어리2 활성화
                 flesh1Made = false;
+
+                slotSelectMng.itemName = "살덩어리2";
+                slotSelectMng.ResultItemNamePopUp();
+                sound.getItemEffectPlay();
                 
                 //진액 인벤토리에서 파괴되었으니 피아노 콜라이더 켜주기 
                 pianoMng.pianoObj.GetComponent<BoxCollider2D>().enabled = true;
@@ -90,12 +110,19 @@ public class ItemCombinationMng : MonoBehaviour
                 labtableMng.resultItemActive = true;
                 labtableMng.itemActive["liquidActive"] = true; //투명한 액체 활성화
                 patternLeafMade = false;
+
+                slotSelectMng.itemName = "투명한 액체";
+                slotSelectMng.ResultItemNamePopUp();
+        
+                sound.getItemEffectPlay();
             }
             //조합 실패했을 때
             else
             {
                 uiManager.wrongCombineUI.SetActive(true);  //조합 실패했을 때 뜨는 스크립트 띄워주기
                 StartCoroutine(uiManager.LoadTextOneByOne(uiManager.wrongCombineText.text, uiManager.inputTextUI));
+                labtableMng.UnselectMaterial_Left();
+                labtableMng.UnselectMaterial_Right();
             }
         }
     }

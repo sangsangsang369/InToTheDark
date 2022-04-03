@@ -16,16 +16,25 @@ public class Leaf : Object
 
     DataManager data;
     SaveDataClass saveData;
+    SoundManager sound;
 
     void Start()
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        sound = SoundManager.inst;
         if(this.transform.parent.gameObject.layer != 10 && saveData.isLeafPicked)
         {
             this.gameObject.SetActive(false);
         }
-
+        else
+        {
+            this.GetComponent<Object>().enabled = false;
+            if(this.GetComponent<SpriteRenderer>())
+            {
+                this.GetComponent<SpriteRenderer>().enabled = true;
+            }
+        }
         uiManager = FindObjectOfType<B3UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         labtableMng = FindObjectOfType<LabTableItemManager>();
@@ -34,6 +43,7 @@ public class Leaf : Object
 
     public override void ObjectFunction()
     {
+        sound.leavesEffectPlay();
         leafUI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(leafText.text, inputTextUI));
         GameObject leaf = this.gameObject;

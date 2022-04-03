@@ -208,7 +208,7 @@ public class SoundManager : MonoBehaviour
         effectSource.clip = knifeEffect;
         effectSource.Play();
     }
-
+/////////////////////////////////////////////////////////////////
     //B3
     public void PianoKeysPlay(AudioClip key)
     {
@@ -216,6 +216,16 @@ public class SoundManager : MonoBehaviour
         effectSource.Play();
     }
 
+    public void leavesEffectPlay()
+    {
+        effectSource.clip = leavesShortEffect;
+        effectSource.Play();
+    }
+    public void monsterExtractEffectPlay()
+    {
+        effectSource.clip = gooEffect;
+        effectSource.Play();
+    }
     //B4
     public void consoleEffectPlay()
     {
