@@ -41,9 +41,9 @@ public class Cabinet2 : Object
                 key = FindObjectOfType<Key>();
                 if (!keyUsed && key && slotSelectMng.usableItem == "keySelected")
                 {
+                    SM.cabinetOpenLongEffectPlay();
                     saveAlarm.SaveAlarmPopUp();
                     SM.lockerOpenEffectPlay();
-                    SM.cabinetOpenLongEffectPlay();
                     sword1UI.SetActive(true);
                     SM.getItemEffectPlay();
                     StartCoroutine(uiManager.LoadTextOneByOne(sword1Text.text, inputTextUI));

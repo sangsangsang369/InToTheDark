@@ -168,19 +168,11 @@ public class SoundManager : MonoBehaviour
     //B2
     public void cabinetOpenLongEffectPlay() // 끼익
     {
-        // if (effectSource.clip == cabinetOpenShortEffect)
-        // {
-        //     return;
-        // }
-        // else if (effectSource.clip == lockerOpenEffect)
-        // {
-        //     return;
-        // }
         effectSource.clip = cabinetOpenLongEffect;
         effectSource.Play();
     }
 
-    public void cabinetOpenShortEffectPlay() // 덜컹덜컹
+    public void cabinetOpenShortEffectPlay() // 덜컹덜컹-끼익
     {
         effectSource.clip = cabinetOpenShortEffect;
         effectSource.Play();

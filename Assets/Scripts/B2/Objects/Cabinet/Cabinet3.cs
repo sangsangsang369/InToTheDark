@@ -38,8 +38,9 @@ public class Cabinet3 : Object
             if (!alreadyOpen)
             {
                 SM.cabinetOpenShortEffectPlay();
-                SM.cabinetOpenLongEffectPlay();
+                //SM.cabinetOpenLongEffectPlay();
                 cabinet3UI.SetActive(true);
+                SM.getItemEffectPlay();
                 StartCoroutine(uiManager.LoadTexts(cabinet3Texts, inputTextUI, 3));
                 GameObject clock = clockImg;
                 inventoryMng.AddToInventory(clock, 1f, ItemClass.ItemPrefabOrder.PocketWatch);
@@ -49,6 +50,7 @@ public class Cabinet3 : Object
             }
             else
             {
+                SM.cabinetOpenShortEffectPlay();
                 Debug.Log("이미 얻은 물품입니다.");
             }
         }

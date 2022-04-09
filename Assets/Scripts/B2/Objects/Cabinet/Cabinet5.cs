@@ -23,7 +23,7 @@ public class Cabinet5 : Object
     public override void ObjectFunction()
     {
         SM.cabinetOpenShortEffectPlay();
-        SM.cabinetOpenLongEffectPlay();
+        //SM.cabinetOpenLongEffectPlay();
         cabinet5UI.SetActive(true);
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {

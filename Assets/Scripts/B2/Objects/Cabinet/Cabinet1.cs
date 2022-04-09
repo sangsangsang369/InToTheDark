@@ -23,7 +23,7 @@ public class Cabinet1 : Object
     public override void ObjectFunction()
     {
         SM.cabinetOpenShortEffectPlay();
-        SM.cabinetOpenLongEffectPlay();
+        //SM.cabinetOpenLongEffectPlay();
         cabinet1UI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(cabinet1Text.text, inputTextUI));
     }

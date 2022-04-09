@@ -23,7 +23,7 @@ public class Cabinet4 : Object
     {
         cabinet4UI.SetActive(true);
         SM.cabinetOpenShortEffectPlay();
-        SM.cabinetOpenLongEffectPlay();
+        //SM.cabinetOpenLongEffectPlay();
         StartCoroutine(uiManager.LoadTextOneByOne(cabinet4Text.text, inputTextUI));
     }
 }
