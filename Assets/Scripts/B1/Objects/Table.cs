@@ -9,6 +9,7 @@ public class Table : Object
     public GameObject diaryUI;
     public List<Text> diaryTexts;
     public Text inputTextUI;
+    int saveAlarmNum;
     UIManager uiManager;
     SaveAlarm saveAlarm;
 
@@ -26,7 +27,11 @@ public class Table : Object
             {
                 tableUI.SetActive(true);
                 StartCoroutine(uiManager.LoadTexts(diaryTexts, inputTextUI, 2));
-                saveAlarm.SaveAlarmPopUp();
+                if(saveAlarmNum==0)
+                {
+                    saveAlarm.SaveAlarmPopUp();
+                    saveAlarmNum++;
+                }
             }
             else
             {

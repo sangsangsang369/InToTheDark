@@ -7,7 +7,7 @@ public class LockerWithLock : Object
     DataManager data;
     SaveDataClass saveData;
     SaveAlarm saveAlarm;
-
+    int saveAlarmNum;
     public bool isB4LockUnlocked;
     [SerializeField] private GameObject lockImage;
     [SerializeField] private GameObject lockObj;
@@ -30,7 +30,11 @@ public class LockerWithLock : Object
     {
         if(!isB4LockUnlocked)
         {
-            saveAlarm.SaveAlarmPopUp();
+            if(saveAlarmNum==0)
+            {
+                saveAlarm.SaveAlarmPopUp();
+                saveAlarmNum++;
+            }
             lockObj.SetActive(true);
         }
         else

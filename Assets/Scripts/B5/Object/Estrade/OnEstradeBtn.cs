@@ -18,7 +18,7 @@ public class OnEstradeBtn : Object
     {
         if(player.currRoom == "OnEstradeatFirst")
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }    
     }
    public override void ObjectFunction()
