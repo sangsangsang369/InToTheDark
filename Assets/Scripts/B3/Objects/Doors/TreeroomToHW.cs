@@ -37,5 +37,8 @@ public class TreeroomToHW : Object
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(0.8f, -0.83f);
+        Monster monster = FindObjectOfType<Monster>();
+        monster.MonsterRandomPosition(-32, -5);
+        monster.StartCoroutine(monster.RandomDirectionChange());
     }
 }

@@ -36,6 +36,9 @@ public class PianoroomToHW : Object
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(30.2f, -0.83f);
+        Monster monster = FindObjectOfType<Monster>();
+        monster.MonsterRandomPosition(-32, 35);
+        monster.StartCoroutine(monster.RandomDirectionChange());
     }
 }
 

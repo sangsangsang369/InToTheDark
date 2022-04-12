@@ -70,6 +70,7 @@ public class SoundManager : MonoBehaviour
 
     //B4 Effect
     public AudioClip consoleTouchEffect;
+    public AudioClip capsuleBrokenEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -224,10 +225,17 @@ public class SoundManager : MonoBehaviour
         effectSource.clip = gooEffect;
         effectSource.Play();
     }
+
     //B4
     public void consoleEffectPlay()
     {
         effectSource.clip = consoleTouchEffect;
+        effectSource.Play();
+    }
+
+    public void capsuleBrokenEffectPlay()
+    {
+        effectSource.clip = capsuleBrokenEffect;
         effectSource.Play();
     }
 

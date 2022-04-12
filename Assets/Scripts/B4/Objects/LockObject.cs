@@ -7,6 +7,11 @@ public class LockObject : MonoBehaviour
 {
     DataManager data;
     SaveDataClass saveData;
+    SoundManager inst;
+
+    public GameObject monster;
+    public GameObject laboratory;
+    public GameObject brokenCapsule;
 
     LockerWithLock lockerWithLock;
     RedJewel redJewel;
@@ -23,6 +28,7 @@ public class LockObject : MonoBehaviour
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        inst = SoundManager.inst;
 
         redJewel = FindObjectOfType<RedJewel>();
         lockerWithLock = FindObjectOfType<LockerWithLock>();
@@ -55,5 +61,8 @@ public class LockObject : MonoBehaviour
         lockObj.SetActive(false);
         lockUIObj.SetActive(false);
         data.Save();
+        brokenCapsule.SetActive(true);
+        Instantiate(monster, new Vector3(-9.57f, 0.75f, 0f), Quaternion.identity, laboratory.transform);
+        inst.capsuleBrokenEffectPlay();
     }
 }

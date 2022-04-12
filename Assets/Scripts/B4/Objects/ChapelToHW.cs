@@ -38,5 +38,8 @@ public class ChapelToHW : Object
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(-6.92f, -0.83f);
+        Monster monster = FindObjectOfType<Monster>();
+        monster.MonsterRandomPosition(-32, -12);
+        monster.StartCoroutine(monster.RandomDirectionChange());
     }
 }

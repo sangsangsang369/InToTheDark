@@ -40,5 +40,8 @@ public class LabToHW : Object
         data.Save();
         Ft.PosUI();
         playerObj.transform.position = new Vector2(29.9f, -0.83f);
+        Monster monster = FindObjectOfType<Monster>();
+        monster.MonsterRandomPosition(-32, 35);
+        monster.StartCoroutine(monster.RandomDirectionChange());
     }
 }
