@@ -45,14 +45,13 @@ public class Monster : MonoBehaviour
         { 
             isStanding = false; 
             this.GetComponent<Animator>().SetBool("IsWalking", true);
-            isHeadingLeft = (Random.value > 0.5f);
         }
         else 
         { 
             isStanding = true; 
             this.GetComponent<Animator>().SetBool("IsWalking", false);
-            isHeadingLeft = (Random.value > 0.5f);
         }
+        isHeadingLeft = (Random.value > 0.5f);
         StartCoroutine(RandomDirectionChange());
     }
 
