@@ -11,6 +11,12 @@ public class AfterLeftRight : MonoBehaviour
     public GameObject fadeOut;
     bool monsterBroTrigger = false;
     public GameObject floorTxt;
+    SoundManager sound;
+
+    void Start()
+    {
+        sound = SoundManager.inst;
+    }
 
     private void Update() 
     {
@@ -30,6 +36,12 @@ public class AfterLeftRight : MonoBehaviour
             floorTxt.SetActive(false);
             fadeOut.SetActive(true);
             fadeOut.GetComponent<Animator>().SetBool("fadeOut", true);
+            Invoke("PlayScreamSound",0.5f);
         }
+    }
+
+    private void PlayScreamSound()
+    {
+        sound.playerScreamEffectPlay();
     }
 }

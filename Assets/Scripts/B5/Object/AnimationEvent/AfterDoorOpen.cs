@@ -9,6 +9,12 @@ public class AfterDoorOpen : MonoBehaviour
 
     public GameObject priest;
     bool priestTrigger = false;
+    SoundManager sound;
+
+    void Start()
+    {
+        sound = SoundManager.inst;
+    }
 
     private void Update() 
     {
@@ -27,6 +33,7 @@ public class AfterDoorOpen : MonoBehaviour
         if(priest.transform.position.x > 54)
         {
             priest.GetComponent<Animator>().SetBool("WalkOn", true);
+            // 이거 다시 sound.priestWalkEffectPlay();
             priest.transform.position += Vector3.left * 1.8f * Time.deltaTime;
         } 
     }

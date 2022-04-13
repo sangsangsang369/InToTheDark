@@ -13,11 +13,13 @@ public class Platform : CollisionObject
     public GameObject coverCanvas;
     AfterPriestWalk afterPriestWalk;
     int onEstrade = 0;
+    SoundManager sound;
     
     void Start()
     {
         player = FindObjectOfType<Player>();
         afterPriestWalk = FindObjectOfType<AfterPriestWalk>();
+        sound = SoundManager.inst;
     }
     void Update() 
     {
@@ -38,6 +40,7 @@ public class Platform : CollisionObject
         player.currRoom = "Estrade_immovable";
         coverCanvas.SetActive(true);
         globalLight.GetComponent<Animator>().SetBool("LightOff", true);
+        sound.doorSlideEffectPlay();
         floor.SetActive(false);
         walls.GetComponent<Animator>().SetTrigger("Open");
         Invoke("PlayerFlip", 3.2f);

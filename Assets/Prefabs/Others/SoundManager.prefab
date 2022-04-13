@@ -98,6 +98,9 @@ MonoBehaviour:
   ra_hEffect: {fileID: 8300000, guid: 3a136289d45ecf74695640d1458d2068, type: 3}
   si_hEffect: {fileID: 8300000, guid: 05343b9133d92c941ad2939a09d4125c, type: 3}
   consoleTouchEffect: {fileID: 0}
+  capsuleBrokenEffect: {fileID: 0}
+  doorSlideEffect: {fileID: 8300000, guid: c8fa121f1f8ef3c4da133a3dd4e6b49f, type: 3}
+  playerScreamEffect: {fileID: 8300000, guid: fddac895f73548949ba371b1a8825235, type: 3}
 --- !u!82 &5960547632288174875
 AudioSource:
   m_ObjectHideFlags: 0

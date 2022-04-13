@@ -72,6 +72,11 @@ public class SoundManager : MonoBehaviour
     public AudioClip consoleTouchEffect;
     public AudioClip capsuleBrokenEffect;
 
+    //B5 Effect
+    public AudioClip doorSlideEffect;
+    public AudioClip playerScreamEffect;
+    public AudioClip priestWalkEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -236,6 +241,23 @@ public class SoundManager : MonoBehaviour
     public void capsuleBrokenEffectPlay()
     {
         effectSource.clip = capsuleBrokenEffect;
+        effectSource.Play();
+    }
+
+    //B5
+    public void doorSlideEffectPlay()
+    {
+        effectSource.clip = doorSlideEffect;
+        effectSource.Play();
+    }
+    public void playerScreamEffectPlay()
+    {
+        effectSource.clip = playerScreamEffect;
+        effectSource.Play();
+    }
+    public void priestWalkEffectPlay()
+    {
+        effectSource.clip = priestWalkEffect;
         effectSource.Play();
     }
 

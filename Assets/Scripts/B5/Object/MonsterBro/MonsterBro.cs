@@ -11,10 +11,12 @@ public class MonsterBro : MonoBehaviour
     public Text monsterBroText;
     public Text inputTextUI;
     int monsterBroTextNum = 0;
+    SoundManager sound;
 
     void Start()
     {
         uiManager = FindObjectOfType<B5_UIManager>();
+        sound = SoundManager.inst;
     }
     void Update()
     {
@@ -34,10 +36,12 @@ public class MonsterBro : MonoBehaviour
                 {
                     player.GetComponent<Animator>().SetFloat("flip", -1);
                     player.GetComponent<Animator>().SetBool("isWalking", true);
-                    player.transform.position += Vector3.right * 0.5f * Time.deltaTime;
+                    sound.playerWalkEffectPlay();
+                    player.transform.position += Vector3.right * 0.9f * Time.deltaTime;
                 }
                 else
                 {
+                    sound.playerAudioSource.Stop();
                     player.GetComponent<Animator>().SetBool("isWalking", false);
                 }
             }
