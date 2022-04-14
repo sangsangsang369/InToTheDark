@@ -21,6 +21,9 @@ public class UI : MonoBehaviour
     {
         nowTexting = true;
         inputTextUI.gameObject.SetActive(true);
+        SoundManager inst = SoundManager.inst;
+        inst.conversationAudioSource.clip = inst.conversationEffect;
+        inst.conversationAudioSource.Play();
         float miniTimer = 0f; 
         float currentTargetNumber = 0f; 
         int currentNumber = 0; 
@@ -38,6 +41,10 @@ public class UI : MonoBehaviour
 
             if(Input.GetMouseButtonDown(0))
             {
+                if(inst.conversationAudioSource.clip == inst.conversationEffect)
+                {
+                    inst.conversationAudioSource.clip = null;
+                }
                 break;
             }
 

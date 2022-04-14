@@ -11,8 +11,10 @@ public class UIManager : UI
 
     [HideInInspector] public bool isUnlocked;
     public GameObject note;
-    public GameObject noteUI;
-    public Text noteText;
+    public GameObject cardkeyScrpt;
+    public GameObject goldenBookScrpt;
+    public Sprite textBaseWithout;
+    public Sprite textBase;
     public Text cardkeyNameText;
     public GameObject cardImage;
     public List<Text> cardkeyTexts;
@@ -48,12 +50,15 @@ public class UIManager : UI
                     if(textOrder == 0)
                     {
                         sound.cardkeyDropEffectPlay();
+                        cardkeyScrpt.GetComponent<Image>().sprite = textBaseWithout;
                         cardkeyNameText.text = "";
                         cardImage.GetComponent<Image>().enabled = false;
                     }
                     else if(textOrder == 1)
                     {
-                        cardkeyNameText.text = "B2 카드키";
+
+                        cardkeyScrpt.GetComponent<Image>().sprite = textBase;
+                        cardkeyNameText.text = "실험실 카드키";
                         cardImage.GetComponent<Image>().enabled = true;
                     }
                     StartCoroutine(LoadTextOneByOne(cardkeyTexts[j].text, inputTextUI));
@@ -67,14 +72,14 @@ public class UIManager : UI
     public IEnumerator LoadGoldenBookText(List<Text> texts, Text inputTextUI, Text nameText, GameObject illust, Sprite bookImage, Sprite letterImage)
     {
         yield return null;
-        for(int i = 0; i < 8; i++)
+        for(int i = 0; i < 9; i++)
         {
             while(nowTexting)
             {
                 yield return null;
             }
 
-            for(int j = 0; j < 8; j++)
+            for(int j = 0; j < 9; j++)
             {
                 
                 if(textOrder == j)
@@ -82,11 +87,14 @@ public class UIManager : UI
                     if(textOrder == 0)
                     {
                         nameText.text = "금테가 둘러진 책";
+                        sound.EffectPlay(sound.turnPaperEffect);
                     }
                     else if(textOrder == 1)
                     {
                         sound.letterDropEffectPlay();
                         nameText.text = "";
+                        //여기서 텍스트 베이스 바꿔주고
+                        goldenBookScrpt.GetComponent<Image>().sprite = textBaseWithout;
                         illust.SetActive(false);
                     }
                     else if(textOrder == 2)
@@ -96,6 +104,8 @@ public class UIManager : UI
                             inventoryMng.AddToInventory(note, 0.1f, ItemClass.ItemPrefabOrder.Note);
                         }
                         nameText.text = "책에서 발견된 쪽지";
+                        //다시 텍스트 베이스 바꿔주고
+                        goldenBookScrpt.GetComponent<Image>().sprite = textBase;
                         illust.GetComponent<Image>().sprite = letterImage;
                         illust.SetActive(true);
                     }

@@ -7,7 +7,7 @@ public class Desk : Object
 {
     DataManager data;
     SaveDataClass saveData;
-    SoundManager sound;
+    SoundManager inst;
 
     UI uiManager;
     InventoryMng inventoryMng;
@@ -26,14 +26,14 @@ public class Desk : Object
 
         uiManager = FindObjectOfType<UI>();
         inventoryMng = FindObjectOfType<InventoryMng>();
-        sound = SoundManager.inst;
+        inst = SoundManager.inst;
     }
 
     public override void ObjectFunction()
     {
         if(!isDaggerPicked)
         {
-            sound.getItemEffectPlay();
+            inst.getItemEffectPlay();
             daggerUI.SetActive(true);
             StartCoroutine(uiManager.LoadTextOneByOne(daggerText.text, inputTextUI));
             inventoryMng.PickUp(dagger, 0.1f, ItemClass.ItemPrefabOrder.Dagger);
@@ -43,6 +43,7 @@ public class Desk : Object
         }
         else
         {
+            inst.EffectPlay(inst.turnPaperEffect);
             deskInChapelUI.SetActive(true);
         }
     }

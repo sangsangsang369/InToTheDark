@@ -8,11 +8,11 @@ public class Statue : Object
     public GameObject statueUI;
     public Text statueText;
     public Text inputTextUI;
-    UIManager uiManager;
+    UI uiManager;
 
     void Start()
     {
-        uiManager = FindObjectOfType<UIManager>();
+        uiManager = FindObjectOfType<UI>();
     }
 
     public override void ObjectFunction()

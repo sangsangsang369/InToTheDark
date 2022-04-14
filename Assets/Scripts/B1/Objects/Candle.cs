@@ -8,11 +8,11 @@ public class Candle : Object
     public GameObject candleUI;
     public Text candleText;
     public Text inputTextUI;
-    UIManager uiManager;
+    UI uiManager;
 
     void Start()
     {
-        uiManager = FindObjectOfType<UIManager>();
+        uiManager = FindObjectOfType<UI>();
     }
 
     public override void ObjectFunction()

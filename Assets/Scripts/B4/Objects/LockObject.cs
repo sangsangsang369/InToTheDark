@@ -45,6 +45,7 @@ public class LockObject : MonoBehaviour
             color.a = 1f;
             lockHole.GetComponent<Image>().color = color;
             inventoryMng.RemoveFromInventory(redJewel.gameObject, ItemClass.ItemPrefabOrder.RedJewel);
+            inst.EffectPlay(inst.unlockEffect);
             Invoke("AfterUnlocked", 2f);
         }
     }

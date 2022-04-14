@@ -60,6 +60,7 @@ public class SetOff : MonoBehaviour
             inputTextUI.GetComponent<Text>().text = "";
             inputTextUI.gameObject.SetActive(false);
             this.gameObject.SetActive(false);
+            SoundManager.inst.EffectPlay(SoundManager.inst.stairEffect);
             sceneLoader.LoadScene(sceneName);
         }
     }

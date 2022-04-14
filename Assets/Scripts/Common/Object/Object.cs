@@ -22,12 +22,14 @@ public class Object : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        SoundManager.inst.EffectPlay(SoundManager.inst.stairEffect);
         sceneLoader = SceneLoadManager.instance;
         sceneLoader.LoadScene(sceneName);
     }
 
     public void LoadRoom(string functionName)
     {
+        SoundManager.inst.EffectPlay(SoundManager.inst.doorOpenEffect);
         sceneLoader = SceneLoadManager.instance;
         sceneLoader.LoadRoom();
         Invoke(functionName, 0.5f);

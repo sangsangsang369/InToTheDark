@@ -8,12 +8,14 @@ public class SoundManager : MonoBehaviour
     
     DataManager data;
     SaveDataClass saveData;
+
     //AudioSources
     public AudioSource bgmSource;
     public AudioSource effectSource;
     public AudioSource buttonSource;
     public AudioSource playerAudioSource;
     public AudioSource monsterAudioSource;
+    public AudioSource conversationAudioSource;
 
     //BGM
     public AudioClip mainBGM;
@@ -29,6 +31,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip buttonEffect;
     public AudioClip conversationEffect;
     public AudioClip puzzleFailedEffect;
+    public AudioClip doorOpenEffect;
+    public AudioClip stairEffect;
 
     //B1 Effect
     public AudioClip bookSelectEffect;
@@ -38,6 +42,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip unlockEffect;
     public AudioClip unlockFailedEffect;
     public AudioClip doorUnlockEffect;
+    public AudioClip lockNumberChangeEffect;
 
     //B2 Effect
     public AudioClip cabinetOpenLongEffect;
@@ -281,6 +286,12 @@ public class SoundManager : MonoBehaviour
     public void ButtonEffectPlay()
     {
         effectSource.clip = buttonEffect;
+        effectSource.Play();
+    }
+
+    public void EffectPlay(AudioClip clip)
+    {
+        effectSource.clip = clip;
         effectSource.Play();
     }
 
