@@ -137,6 +137,7 @@ public class DoorToB3 : Object
 
     public void Keeping()
     {
+        upblood.SetActive(true);
         blood.SetActive(true);
         fullSword.SetActive(true);
         cover.SetActive(false);
