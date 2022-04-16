@@ -10,6 +10,7 @@ public class Cabinet4 : Object
     public Text inputTextUI;
     Player player;
     SoundManager SM;
+    public AudioClip cabinetOpenShortEffect;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class Cabinet4 : Object
     public override void ObjectFunction()
     {
         cabinet4UI.SetActive(true);
-        SM.cabinetOpenShortEffectPlay();
+        SM.EffectPlay(cabinetOpenShortEffect);
         //SM.cabinetOpenLongEffectPlay();
         StartCoroutine(uiManager.LoadTextOneByOne(cabinet4Text.text, inputTextUI));
     }

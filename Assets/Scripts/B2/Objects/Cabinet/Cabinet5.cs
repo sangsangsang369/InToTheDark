@@ -11,6 +11,7 @@ public class Cabinet5 : Object
     public Text inputTextUI;
     Player player;
     SoundManager SM;
+    public AudioClip cabinetOpenShortEffect;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class Cabinet5 : Object
     // Update is called once per frame
     public override void ObjectFunction()
     {
-        SM.cabinetOpenShortEffectPlay();
+        SM.EffectPlay(cabinetOpenShortEffect);
         //SM.cabinetOpenLongEffectPlay();
         cabinet5UI.SetActive(true);
         if (Input.GetKeyDown(KeyCode.Mouse0))

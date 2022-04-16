@@ -21,6 +21,7 @@ public class AnsCheck : MonoBehaviour
     public Text inputTextUI;
     SoundManager SM;
     SaveAlarm saveAlarm;
+    public AudioClip lockerOpenEffect;
 
 
     // Start is called before the first frame update
@@ -80,7 +81,7 @@ public class AnsCheck : MonoBehaviour
     {
         saveAlarm.SaveAlarmPopUp();
         clock = FindObjectOfType<Clock>();
-        SM.lockerOpenEffectPlay();
+        SM.EffectPlay(lockerOpenEffect);
         inventoryMng.RemoveFromInventory(clock.gameObject, ItemClass.ItemPrefabOrder.PocketWatch);
         inventoryMng.AddToInventory(keyImg, 1f, ItemClass.ItemPrefabOrder.CabinetKey);
         clockUI.SetActive(false);

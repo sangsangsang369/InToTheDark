@@ -45,13 +45,13 @@ public class SoundManager : MonoBehaviour
     public AudioClip lockNumberChangeEffect;
 
     //B2 Effect
-    public AudioClip cabinetOpenLongEffect;
-    public AudioClip cabinetOpenShortEffect;
-    public AudioClip pocketwatchEffect;
-    public AudioClip lockerOpenEffect;
-    public AudioClip swipeStatueEffect;
-    public AudioClip knifeEffect;
-    public AudioClip moveClockEffect;
+    // public AudioClip cabinetOpenLongEffect;
+    // public AudioClip cabinetOpenShortEffect;
+    // public AudioClip pocketwatchEffect;
+    // public AudioClip lockerOpenEffect;
+    // public AudioClip swipeStatueEffect;
+    // public AudioClip knifeEffect;
+    // public AudioClip moveClockEffect;
 
     //B3 Effect
     public AudioClip leavesShortEffect;
@@ -138,49 +138,6 @@ public class SoundManager : MonoBehaviour
         bgmSource.clip = B12BGM;
         bgmSource.Play();
     }
-
-    //B2
-    public void cabinetOpenLongEffectPlay() // 끼익
-    {
-        effectSource.clip = cabinetOpenLongEffect;
-        effectSource.Play();
-    }
-
-    public void cabinetOpenShortEffectPlay() // 덜컹덜컹-끼익
-    {
-        effectSource.clip = cabinetOpenShortEffect;
-        effectSource.Play();
-    }
-
-    public void pocketwatchEffectPlay()
-    {
-        effectSource.clip = pocketwatchEffect;
-        effectSource.Play();
-    }
-
-    public void lockerOpenEffectPlay()
-    {
-        effectSource.clip = lockerOpenEffect;
-        effectSource.Play();
-    }
-
-    public void swipeStatueEffectPlay()
-    {
-        effectSource.clip = swipeStatueEffect;
-        effectSource.Play();
-    }
-
-    public void knifeEffectPlay()
-    {
-        effectSource.clip = knifeEffect;
-        effectSource.Play();
-    }
-    public void moveClockEffectPlay()
-    {
-        effectSource.clip = moveClockEffect;
-        effectSource.Play();
-    }
-    
     //B3
     public void PianoKeysPlay(AudioClip key)
     {

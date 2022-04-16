@@ -16,6 +16,7 @@ public class Cabinet3 : Object
     DataManager data;
     SaveDataClass saveData;
     SoundManager SM;
+    public AudioClip cabinetOpenShortEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,7 @@ public class Cabinet3 : Object
         {
             if (!alreadyOpen)
             {
-                SM.cabinetOpenShortEffectPlay();
+                SM.EffectPlay(cabinetOpenShortEffect);
                 //SM.cabinetOpenLongEffectPlay();
                 cabinet3UI.SetActive(true);
                 SM.getItemEffectPlay();
@@ -50,7 +51,7 @@ public class Cabinet3 : Object
             }
             else
             {
-                SM.cabinetOpenShortEffectPlay();
+                SM.EffectPlay(cabinetOpenShortEffect);
                 Debug.Log("이미 얻은 물품입니다.");
             }
         }

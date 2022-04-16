@@ -18,6 +18,9 @@ public class Cabinet2 : Object
     SaveDataClass saveData;
     public bool keyUsed;
     SaveAlarm saveAlarm;
+    public AudioClip cabinetOpenShortEffect;
+    public AudioClip cabinetOpenLongEffect;
+    public AudioClip lockerOpenEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +44,9 @@ public class Cabinet2 : Object
                 key = FindObjectOfType<Key>();
                 if (!keyUsed && key && slotSelectMng.usableItem == "keySelected")
                 {
-                    SM.cabinetOpenLongEffectPlay();
+                    SM.EffectPlay(cabinetOpenLongEffect);
                     saveAlarm.SaveAlarmPopUp();
-                    SM.lockerOpenEffectPlay();
+                    SM.EffectPlay(lockerOpenEffect);
                     sword1UI.SetActive(true);
                     SM.getItemEffectPlay();
                     StartCoroutine(uiManager.LoadTextOneByOne(sword1Text.text, inputTextUI));
@@ -57,7 +60,7 @@ public class Cabinet2 : Object
                 }
                 else if (!keyUsed)
                 {
-                    SM.cabinetOpenShortEffectPlay();
+                    SM.EffectPlay(cabinetOpenShortEffect);
                     cabinet2UI.SetActive(true);
                     StartCoroutine(uiManager.LoadTextOneByOne(cabinet2Text.text, inputTextUI));
                 }

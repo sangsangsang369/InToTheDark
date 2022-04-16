@@ -13,7 +13,7 @@ public class Clock : Object
     public AnsCheck ansCheck;
     SlotSelectionMng slotSelectMng;
     SoundManager SM;
-
+    public AudioClip pocketwatchEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +39,7 @@ public class Clock : Object
         }
         else
         {
-            SM.pocketwatchEffectPlay();
+            SM.EffectPlay(pocketwatchEffect);
             clockPanel.SetActive(true); 
         }
     }
