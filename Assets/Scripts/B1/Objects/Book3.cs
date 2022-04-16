@@ -14,7 +14,7 @@ public class Book3 : Object
 
     public override void ObjectFunction()
     {
-        sound.bookSelectEffectPlay();
+        sound.EffectPlay(sound.bookSelectEffect);
         book3UI.SetActive(true);
     }
 }

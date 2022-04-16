@@ -96,8 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74f6017ec400884982ee18450029c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverPanel: {fileID: 0}
   monsterSpeed: 4
-  isGoingLeft: 0
+  areYouDied: 0
 --- !u!95 &4939504528248802928
 Animator:
   serializedVersion: 3

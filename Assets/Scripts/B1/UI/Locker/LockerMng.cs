@@ -37,13 +37,13 @@ public class LockerMng : MonoBehaviour
 
         if(num1 == 8 && num2 == 8 && num3 == 3 && num4 == 7)
         {
-            sound.unlockEffectPlay();
+            sound.EffectPlay(sound.unlockEffect);
             lockerRing.GetComponent<Animator>().SetTrigger("RingTrigger");
             Invoke("Unlock", 1f);
         }
         else
         {
-            sound.unlockFailedEffectPlay();
+            sound.EffectPlay(sound.unlockFailedEffect);
         }
     }
 

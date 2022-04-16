@@ -49,7 +49,7 @@ public class UIManager : UI
                 {
                     if(textOrder == 0)
                     {
-                        sound.cardkeyDropEffectPlay();
+                        sound.EffectPlay(sound.cardkeyDropEffect);
                         cardkeyScrpt.GetComponent<Image>().sprite = textBaseWithout;
                         cardkeyNameText.text = "";
                         cardImage.GetComponent<Image>().enabled = false;
@@ -91,7 +91,7 @@ public class UIManager : UI
                     }
                     else if(textOrder == 1)
                     {
-                        sound.letterDropEffectPlay();
+                        sound.EffectPlay(sound.cardkeyDropEffect);
                         nameText.text = "";
                         //여기서 텍스트 베이스 바꿔주고
                         goldenBookScrpt.GetComponent<Image>().sprite = textBaseWithout;

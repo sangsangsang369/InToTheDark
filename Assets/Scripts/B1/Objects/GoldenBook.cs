@@ -20,7 +20,7 @@ public class GoldenBook : Object
 
     public override void ObjectFunction()
     {
-        sound.bookSelectEffectPlay();
+        sound.EffectPlay(sound.bookSelectEffect);
         goldenBookUI.SetActive(true);
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {

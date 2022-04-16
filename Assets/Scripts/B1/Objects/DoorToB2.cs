@@ -31,7 +31,7 @@ public class DoorToB2 : Object
         cardKey = FindObjectOfType<CardKey>();
         if(cardKey && slotSelectMng.usableItem == "cardKeySelected")
         {
-            sound.doorUnlockEffectPlay();
+            sound.EffectPlay(sound.doorUnlockEffect);
             withKeyUI.SetActive(true);
             StartCoroutine(uiManager.LoadTextOneByOne(withKeyText.text, inputTextUI));
             slotSelectMng.SelectionClear();

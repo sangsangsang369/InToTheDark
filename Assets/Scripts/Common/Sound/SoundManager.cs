@@ -139,43 +139,6 @@ public class SoundManager : MonoBehaviour
         bgmSource.Play();
     }
 
-    //B1
-    public void bookSelectEffectPlay()
-    {
-        effectSource.clip = bookSelectEffect;
-        effectSource.Play();
-    }
-    public void cardkeyDropEffectPlay()
-    {
-        effectSource.clip = letterDropEffect;
-        effectSource.Play();
-    }
-    public void letterDropEffectPlay()
-    {
-        effectSource.clip = letterDropEffect;
-        effectSource.Play();
-    }
-    public void turnPaperEffectPlay()
-    {
-        effectSource.clip = turnPaperEffect;
-        effectSource.Play();
-    }
-    public void unlockEffectPlay()
-    {
-        effectSource.clip = unlockEffect;
-        effectSource.Play();
-    }
-    public void unlockFailedEffectPlay()
-    {
-        effectSource.clip = unlockFailedEffect;
-        effectSource.Play();
-    }
-    public void doorUnlockEffectPlay()
-    {
-        effectSource.clip = doorUnlockEffect;
-        effectSource.Play();
-    }
-
     //B2
     public void cabinetOpenLongEffectPlay() // 끼익
     {
@@ -233,19 +196,6 @@ public class SoundManager : MonoBehaviour
     public void monsterExtractEffectPlay()
     {
         effectSource.clip = gooEffect;
-        effectSource.Play();
-    }
-
-    //B4
-    public void consoleEffectPlay()
-    {
-        effectSource.clip = consoleTouchEffect;
-        effectSource.Play();
-    }
-
-    public void capsuleBrokenEffectPlay()
-    {
-        effectSource.clip = capsuleBrokenEffect;
         effectSource.Play();
     }
 

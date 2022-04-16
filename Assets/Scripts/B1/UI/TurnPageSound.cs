@@ -14,6 +14,6 @@ public class TurnPageSound : MonoBehaviour
 
     public void turnPageEffectPlay()
     {
-        sound.turnPaperEffectPlay();
+        sound.EffectPlay(sound.turnPaperEffect);
     }
 }

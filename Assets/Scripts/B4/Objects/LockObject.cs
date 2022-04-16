@@ -64,6 +64,6 @@ public class LockObject : MonoBehaviour
         data.Save();
         brokenCapsule.SetActive(true);
         Instantiate(monster, new Vector3(-9.57f, 0.75f, 0f), Quaternion.identity, laboratory.transform);
-        inst.capsuleBrokenEffectPlay();
+        inst.EffectPlay(inst.capsuleBrokenEffect);
     }
 }
