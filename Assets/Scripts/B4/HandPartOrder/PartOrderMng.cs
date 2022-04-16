@@ -55,7 +55,7 @@ public class PartOrderMng : MonoBehaviour
         
         if(isCorrect)
         {
-            sound.getItemEffectPlay();
+            sound.EffectPlay(sound.getItemEffect);
             correctUI.SetActive(true);
             uiManager.StartCoroutine(uiManager.LoadTextOneByOne(correctText.text, inputTextUI));
             inventoryMng.AddToInventory(redJewel, 0.2f, ItemClass.ItemPrefabOrder.RedJewel);

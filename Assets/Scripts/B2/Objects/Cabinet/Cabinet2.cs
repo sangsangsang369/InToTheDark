@@ -48,7 +48,7 @@ public class Cabinet2 : Object
                     saveAlarm.SaveAlarmPopUp();
                     SM.EffectPlay(lockerOpenEffect);
                     sword1UI.SetActive(true);
-                    SM.getItemEffectPlay();
+                    SM.EffectPlay(SM.getItemEffect);
                     StartCoroutine(uiManager.LoadTextOneByOne(sword1Text.text, inputTextUI));
                     inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.CabinetKey);
                     slotSelectMng.SelectionClear();

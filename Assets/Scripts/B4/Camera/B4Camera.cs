@@ -17,6 +17,7 @@ public class B4Camera : CameraScript
         Ft = FindObjectOfType<FloorTxt>();
         uiManager = FindObjectOfType<UI>();
         saveData.currFloor = "B4";
+        isB4ReEntered = saveData.isB4ReEntered;
         data.Save();
         Ft.PosUI();
 

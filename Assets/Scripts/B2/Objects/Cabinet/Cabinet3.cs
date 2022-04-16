@@ -41,7 +41,7 @@ public class Cabinet3 : Object
                 SM.EffectPlay(cabinetOpenShortEffect);
                 //SM.cabinetOpenLongEffectPlay();
                 cabinet3UI.SetActive(true);
-                SM.getItemEffectPlay();
+                SM.EffectPlay(SM.getItemEffect);
                 StartCoroutine(uiManager.LoadTexts(cabinet3Texts, inputTextUI, 3));
                 GameObject clock = clockImg;
                 inventoryMng.AddToInventory(clock, 1f, ItemClass.ItemPrefabOrder.PocketWatch);

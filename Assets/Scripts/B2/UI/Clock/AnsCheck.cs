@@ -37,7 +37,7 @@ public class AnsCheck : MonoBehaviour
 
     public void CheckAnswer()
     {
-        SM.ButtonEffectPlay();
+        SM.ButtonEffectPlay(SM.buttonEffect);
         moveHour = FindObjectOfType<MoveHand>();
         moveMin = FindObjectOfType<MoveMin>();
         if (ImgNum == 1)
@@ -85,7 +85,7 @@ public class AnsCheck : MonoBehaviour
         inventoryMng.RemoveFromInventory(clock.gameObject, ItemClass.ItemPrefabOrder.PocketWatch);
         inventoryMng.AddToInventory(keyImg, 1f, ItemClass.ItemPrefabOrder.CabinetKey);
         clockUI.SetActive(false);
-        SM.getItemEffectPlay();
+        SM.EffectPlay(SM.getItemEffect);
         key1UI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(key1Text.text, inputTextUI));
     }

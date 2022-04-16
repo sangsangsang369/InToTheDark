@@ -33,7 +33,7 @@ public class Desk : Object
     {
         if(!isDaggerPicked)
         {
-            inst.getItemEffectPlay();
+            inst.EffectPlay(inst.getItemEffect);
             daggerUI.SetActive(true);
             StartCoroutine(uiManager.LoadTextOneByOne(daggerText.text, inputTextUI));
             inventoryMng.PickUp(dagger, 0.1f, ItemClass.ItemPrefabOrder.Dagger);

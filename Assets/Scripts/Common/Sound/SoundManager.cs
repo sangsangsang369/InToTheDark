@@ -138,6 +138,7 @@ public class SoundManager : MonoBehaviour
         bgmSource.clip = B12BGM;
         bgmSource.Play();
     }
+
     //B3
     public void PianoKeysPlay(AudioClip key)
     {
@@ -157,16 +158,10 @@ public class SoundManager : MonoBehaviour
         playerAudioSource.Play();
     }
 
-    public void getItemEffectPlay()
+    public void ButtonEffectPlay(AudioClip clip)
     {
-        effectSource.clip = getItemEffect;
-        effectSource.Play();
-    }
-
-    public void ButtonEffectPlay()
-    {
-        effectSource.clip = buttonEffect;
-        effectSource.Play();
+        buttonSource.clip = clip;
+        buttonSource.Play();
     }
 
     public void EffectPlay(AudioClip clip)

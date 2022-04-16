@@ -11,6 +11,8 @@ public class B4MapLoader : MonoBehaviour
     DataManager data;
     SaveDataClass saveData;
     public Light2D globalLight;
+    [SerializeField] private GameObject monster;
+    [SerializeField] private GameObject brokenCapsule;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,12 @@ public class B4MapLoader : MonoBehaviour
             B4Hallway.SetActive(false);
             B4Chapel.SetActive(false);
             B4Lab.SetActive(true);
+            if(saveData.isMonsterAppeared)
+            {
+                monster.SetActive(true);
+                monster.GetComponent<Animator>().speed = 0f;
+                brokenCapsule.SetActive(true);
+            }
         }
     }
 }

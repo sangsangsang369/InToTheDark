@@ -45,7 +45,7 @@ public class MoveStatue : MonoBehaviour
 
     public void CheckAnswer()
     {
-        SM.getItemEffectPlay();
+        SM.EffectPlay(SM.getItemEffect);
         sword2UI.SetActive(true);
         StartCoroutine(uiManager.LoadTextOneByOne(sword2Text.text, inputTextUI));
         GameObject sword2 = sword2Img;

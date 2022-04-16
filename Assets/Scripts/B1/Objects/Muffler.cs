@@ -41,7 +41,7 @@ public class Muffler : Object
 
     public override void ObjectFunction()
     {
-        sound.getItemEffectPlay();
+        sound.EffectPlay(sound.getItemEffect);
         mufflerUI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(mufflerText.text, inputTextUI));
         GameObject muffler = this.gameObject;

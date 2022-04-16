@@ -63,7 +63,12 @@ public class LockObject : MonoBehaviour
         lockUIObj.SetActive(false);
         data.Save();
         brokenCapsule.SetActive(true);
-        Instantiate(monster, new Vector3(-9.57f, 0.75f, 0f), Quaternion.identity, laboratory.transform);
+        //GameObject sample = Instantiate(monster, new Vector3(-9.57f, 0.75f, 0f), Quaternion.identity, laboratory.transform);
+        monster.SetActive(true);
+        monster.GetComponent<Monster>().monsterSpeed = 0f;
+        monster.GetComponent<Animator>().speed = 0f;
+        saveData.isMonsterAppeared = true;
+        data.Save();
         inst.EffectPlay(inst.capsuleBrokenEffect);
     }
 }

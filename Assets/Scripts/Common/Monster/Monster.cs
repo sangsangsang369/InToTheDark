@@ -11,7 +11,7 @@ public class Monster : MonoBehaviour
     bool isHeadingLeft;
     bool isStanding = false;
     public GameObject gameOverPanel;
-    [SerializeField] private float monsterSpeed = 4f;
+    public float monsterSpeed = 4f;
     [HideInInspector] public bool areYouDied = false;
     
     // Start is called before the first frame update

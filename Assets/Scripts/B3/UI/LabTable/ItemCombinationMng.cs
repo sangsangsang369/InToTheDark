@@ -54,7 +54,7 @@ public class ItemCombinationMng : MonoBehaviour
                 slotSelectMng.itemName = "살덩어리1";
                 slotSelectMng.ResultItemNamePopUp(); 
 
-                sound.getItemEffectPlay();
+                sound.EffectPlay(sound.getItemEffect);
 
             } 
             //나뭇잎 + 수액
@@ -73,7 +73,7 @@ public class ItemCombinationMng : MonoBehaviour
                 slotSelectMng.itemName = "무늬가 생긴 잎";
                 slotSelectMng.ResultItemNamePopUp();
 
-                sound.getItemEffectPlay();
+                sound.EffectPlay(sound.getItemEffect);
             }
             //살덩어리1 + 진액
             else if(labtableMng.itemActive["fleshOneActive"] 
@@ -90,7 +90,7 @@ public class ItemCombinationMng : MonoBehaviour
 
                 slotSelectMng.itemName = "살덩어리2";
                 slotSelectMng.ResultItemNamePopUp();
-                sound.getItemEffectPlay();
+                sound.EffectPlay(sound.getItemEffect);
                 
                 //진액 인벤토리에서 파괴되었으니 피아노 콜라이더 켜주기 
                 pianoMng.pianoObj.GetComponent<BoxCollider2D>().enabled = true;
@@ -114,7 +114,7 @@ public class ItemCombinationMng : MonoBehaviour
                 slotSelectMng.itemName = "투명한 액체";
                 slotSelectMng.ResultItemNamePopUp();
         
-                sound.getItemEffectPlay();
+                sound.EffectPlay(sound.getItemEffect);
             }
             //조합 실패했을 때
             else

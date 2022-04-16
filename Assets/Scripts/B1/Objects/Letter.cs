@@ -38,7 +38,7 @@ public class Letter : Object
 
     public override void ObjectFunction()
     {
-        sound.getItemEffectPlay();
+        sound.EffectPlay(sound.getItemEffect);
         letterUI.SetActive(true);
         GameObject letter = this.gameObject;
         inventoryMng.PickUp(letter, 0.1f, ItemClass.ItemPrefabOrder.Letter);
