@@ -180,7 +180,7 @@ public class SoundManager : MonoBehaviour
         effectSource.clip = moveClockEffect;
         effectSource.Play();
     }
-/////////////////////////////////////////////////////////////////
+    
     //B3
     public void PianoKeysPlay(AudioClip key)
     {
@@ -188,33 +188,6 @@ public class SoundManager : MonoBehaviour
         effectSource.Play();
     }
 
-    public void leavesEffectPlay()
-    {
-        effectSource.clip = leavesShortEffect;
-        effectSource.Play();
-    }
-    public void monsterExtractEffectPlay()
-    {
-        effectSource.clip = gooEffect;
-        effectSource.Play();
-    }
-
-    //B5
-    public void doorSlideEffectPlay()
-    {
-        effectSource.clip = doorSlideEffect;
-        effectSource.Play();
-    }
-    public void playerScreamEffectPlay()
-    {
-        effectSource.clip = playerScreamEffect;
-        effectSource.Play();
-    }
-    public void priestWalkEffectPlay()
-    {
-        effectSource.clip = priestWalkEffect;
-        effectSource.Play();
-    }
 
     //Common
     public void playerWalkEffectPlay()

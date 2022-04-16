@@ -46,7 +46,7 @@ public class Treesap :Object
 
     public override void ObjectFunction()
     {
-        sound.leavesEffectPlay();
+        sound.EffectPlay(sound.leavesShortEffect);
         treesapUI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(treesapText.text, inputTextUI));
         GameObject treesap = this.gameObject;

@@ -43,7 +43,7 @@ public class Branch : Object
 
     public override void ObjectFunction()
     {
-        sound.leavesEffectPlay();
+        sound.EffectPlay(sound.leavesShortEffect);
         branchUI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(branchText.text, inputTextUI));
         GameObject branch = this.gameObject;

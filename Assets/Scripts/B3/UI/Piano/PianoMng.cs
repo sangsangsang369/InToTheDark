@@ -56,7 +56,7 @@ public class PianoMng : MonoBehaviour
         {
             if(i == 9) //정답일 때
             {
-                sound.monsterExtractEffectPlay();
+                sound.EffectPlay(sound.gooEffect);
 
                 PianoUI.SetActive(false); //피아노 UI 켜지면 자동으로 피아노 Obj 콜라이더 꺼짐(피아노 Obj 콜라이더 꺼진 상태로)
                 KeyInputsList.Clear(); //음 입력 초기화

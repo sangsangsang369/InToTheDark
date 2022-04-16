@@ -43,7 +43,7 @@ public class Leaf : Object
 
     public override void ObjectFunction()
     {
-        sound.leavesEffectPlay();
+        sound.EffectPlay(sound.leavesShortEffect);
         leafUI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(leafText.text, inputTextUI));
         GameObject leaf = this.gameObject;

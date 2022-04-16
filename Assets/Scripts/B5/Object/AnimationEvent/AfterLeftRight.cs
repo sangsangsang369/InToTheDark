@@ -42,6 +42,6 @@ public class AfterLeftRight : MonoBehaviour
 
     private void PlayScreamSound()
     {
-        sound.playerScreamEffectPlay();
+        sound.EffectPlay(sound.playerScreamEffect);
     }
 }

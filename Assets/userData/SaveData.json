@@ -16,9 +16,9 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": 1.4800000190734864,
-    "currFloor": "B4",
-    "currRoomPos": "수상한 실험실",
+    "playerXstartPoint": -32.5,
+    "currFloor": "B3",
+    "currRoomPos": "피투성이 복도",
     "volume1": 1.0,
     "volume2": 1.0,
     "itemList": [
@@ -39,6 +39,21 @@
         },
         {
             "prefabOrder": 19
+        },
+        {
+            "prefabOrder": 9
+        },
+        {
+            "prefabOrder": 8
+        },
+        {
+            "prefabOrder": 11
+        },
+        {
+            "prefabOrder": 12
+        },
+        {
+            "prefabOrder": 13
         }
     ],
     "isFirstGB": false,
@@ -55,18 +70,18 @@
     "ReB2": false,
     "s1On": false,
     "s2On": false,
-    "isB3ReEntered": false,
+    "isB3ReEntered": true,
     "OnB3CandleOnce": false,
     "playB3StatueOnce": false,
-    "isPianoMemoGained": false,
-    "monsterExtractinInventory": false,
+    "isPianoMemoGained": true,
+    "monsterExtractinInventory": true,
     "isLabTableReEntered": false,
     "isB4DoorOpened": false,
-    "isTreesapPicked": false,
+    "isTreesapPicked": true,
     "isBranchPicked": false,
-    "isLeafPicked": false,
-    "isFruitPicked": false,
-    "fruitNum": 5,
+    "isLeafPicked": true,
+    "isFruitPicked": true,
+    "fruitNum": 3,
     "isB4ReEntered": true,
     "isDaggerPicked": true,
     "isJewelGained": true,

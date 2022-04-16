@@ -47,7 +47,7 @@ public class Fruit : Object
 
     public override void ObjectFunction()
     {
-        sound.leavesEffectPlay();
+        sound.EffectPlay(sound.leavesShortEffect);
         fruitUI.SetActive(true);
         //uiManager. 추가하니까 되요..근데 왜 되는지는 모르겠는
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(fruitText.text, inputTextUI));

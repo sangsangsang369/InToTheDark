@@ -40,7 +40,7 @@ public class Platform : CollisionObject
         player.currRoom = "Estrade_immovable";
         coverCanvas.SetActive(true);
         globalLight.GetComponent<Animator>().SetBool("LightOff", true);
-        sound.doorSlideEffectPlay();
+        sound.EffectPlay(sound.doorSlideEffect);
         floor.SetActive(false);
         walls.GetComponent<Animator>().SetTrigger("Open");
         Invoke("PlayerFlip", 3.2f);
