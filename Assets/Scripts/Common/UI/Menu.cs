@@ -12,7 +12,6 @@ public class Menu : MonoBehaviour
     SceneLoadManager sceneLoader;
 
     private Button TapOpenBtn, TapCloseBtn, ResumeBtn, SettingsBtn, MainBtn;
-    public static bool GameIsPaused = false;
     public GameObject MenuCanvas, pauseTap, settingTap;
     public Text Floor;
     public Slider BGM, SFX;
@@ -33,7 +32,6 @@ public class Menu : MonoBehaviour
         Floor.text = saveData.currFloor + " - " + saveData.currRoomPos;
         pauseTap.SetActive(true);
         Time.timeScale = 0f;
-        GameIsPaused = true;
     }
 
     public void CloseTap() // 메뉴 전체 창 닫기 -> 쓸 일 없을 듯
@@ -47,13 +45,8 @@ public class Menu : MonoBehaviour
     
     public void Resume() // 게임 재개
     {
-        if (GameIsPaused)
-        {
-            Time.timeScale = 1f;
-            GameIsPaused = false;
-            MenuCanvas.SetActive(false);
-            pauseTap.SetActive(false);
-        }
+        Time.timeScale = 1f;
+        MenuCanvas.SetActive(false);
     }
 
     public void Settings() // 사운드 셋팅 창 열기
@@ -64,20 +57,14 @@ public class Menu : MonoBehaviour
     
     public void Mains() // 스타트 화면으로 돌아가기
     {
-        if (GameIsPaused)
-        {
-            Time.timeScale = 1f;
-            sceneLoader.LoadScene("Start");
-        }
+        Time.timeScale = 1f;
+        sceneLoader.LoadScene("Start");
     }
 
     public void BackBtn() //사운드 셋팅 창 -> 메뉴 전체 창으로 돌아가기
     {
-        if (GameIsPaused)
-        {
-            settingTap.SetActive(false);
-            pauseTap.SetActive(true);
-        }
+        settingTap.SetActive(false);
+        pauseTap.SetActive(true);
     }
 
     public void MuteAllBtn()
