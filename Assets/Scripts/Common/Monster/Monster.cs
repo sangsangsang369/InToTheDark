@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    SoundManager sound;
+    [SerializeField] private AudioSource monsterAudio;
+    [SerializeField] private AudioSource monsterWalkingAudio;
+    [SerializeField] private AudioClip monsterRoaring;
+    [SerializeField] private AudioClip monsterBreathing;
     RaycastHit2D hit;
+    RaycastHit2D hit1;
+    RaycastHit2D hit2;
     Player player;
     float rayLength = 15f;
     bool isHeadingLeft;
@@ -17,7 +22,6 @@ public class Monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sound = SoundManager.inst;
         player = FindObjectOfType<Player>();
         StartCoroutine(RandomDirectionChange());
     }
@@ -61,7 +65,8 @@ public class Monster : MonoBehaviour
         CheckMonsterDirection();
         CheckFlip();
         MonsterMoving();
-        //ScaredEffect();
+        ScaredEffect();
+        WalkingEffect();
     }
 
     private void CheckMonsterDirection()
@@ -104,11 +109,13 @@ public class Monster : MonoBehaviour
         {
             transform.Translate(Vector3.left * monsterSpeed * Time.deltaTime);
             ShootingRay(layerMask, Vector2.left);
+            WalkingSoundRay(layerMask);
         }
         else if(!isStanding && !isHeadingLeft) // 서있지 않고 오른쪽으로 향하고 있을 경우
         {
             transform.Translate(Vector3.right * monsterSpeed * Time.deltaTime);
             ShootingRay(layerMask, Vector2.right);
+            WalkingSoundRay(layerMask);
         }
         else // 서있을 경우
         {
@@ -123,19 +130,53 @@ public class Monster : MonoBehaviour
         hit = Physics2D.Raycast(this.transform.position, direction, rayLength, layerMask);
     }
 
+    private void WalkingSoundRay(int layerMask)
+    {
+        Debug.DrawRay(this.transform.position, Vector2.right * rayLength, Color.green, 0.1f);
+        Debug.DrawRay(this.transform.position, Vector2.left * rayLength, Color.green, 0.1f);
+        hit1 = Physics2D.Raycast(this.transform.position, Vector2.right, rayLength, layerMask);
+        hit2 = Physics2D.Raycast(this.transform.position, Vector2.left, rayLength, layerMask);
+    }
+
     private void ScaredEffect()
     {
-        if(hit && hit.transform.GetComponent<Player>())
+        if(hit.collider != null)
         {
-            //Debug.Log("ㄷㄷ");
+            if(monsterAudio.clip == monsterRoaring)
+            {
+                return;
+            }
+            monsterAudio.clip = monsterRoaring;
+            monsterAudio.Play();
         }
         else
         {
-            if(sound.monsterAudioSource.clip != null)
+            if(monsterAudio.clip != null)
             {
-                sound.monsterAudioSource.Stop();
-                sound.monsterAudioSource.clip = null;
-            }  
+                monsterAudio.Stop();
+                monsterAudio.clip = null;
+            }
+        }
+    }
+
+    private void WalkingEffect()
+    {
+        if(hit1.collider != null || hit2.collider != null)
+        {
+            if(monsterWalkingAudio.clip == monsterBreathing)
+            {
+                return;
+            }
+            monsterWalkingAudio.clip = monsterBreathing;
+            monsterWalkingAudio.Play();
+        }
+        else if(hit1.collider == null && hit2.collider == null)
+        {
+            if(monsterWalkingAudio.clip != null)
+            {
+                monsterWalkingAudio.Stop();
+                monsterWalkingAudio.clip = null;
+            }
         }
     }
 

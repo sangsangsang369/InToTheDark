@@ -49,14 +49,14 @@ public class UIManager : UI
                 {
                     if(textOrder == 0)
                     {
-                        sound.EffectPlay(sound.cardkeyDropEffect);
+                        sound.EffectPlay(sound.letterDropEffect);
                         cardkeyScrpt.GetComponent<Image>().sprite = textBaseWithout;
                         cardkeyNameText.text = "";
                         cardImage.GetComponent<Image>().enabled = false;
                     }
                     else if(textOrder == 1)
                     {
-
+                        sound.EffectPlay(sound.getItemEffect);
                         cardkeyScrpt.GetComponent<Image>().sprite = textBase;
                         cardkeyNameText.text = "실험실 카드키";
                         cardImage.GetComponent<Image>().enabled = true;
@@ -91,7 +91,7 @@ public class UIManager : UI
                     }
                     else if(textOrder == 1)
                     {
-                        sound.EffectPlay(sound.cardkeyDropEffect);
+                        sound.EffectPlay(sound.letterDropEffect);
                         nameText.text = "";
                         //여기서 텍스트 베이스 바꿔주고
                         goldenBookScrpt.GetComponent<Image>().sprite = textBaseWithout;
@@ -104,6 +104,7 @@ public class UIManager : UI
                             inventoryMng.AddToInventory(note, 0.1f, ItemClass.ItemPrefabOrder.Note);
                         }
                         nameText.text = "책에서 발견된 쪽지";
+                        sound.EffectPlay(sound.getItemEffect);
                         //다시 텍스트 베이스 바꿔주고
                         goldenBookScrpt.GetComponent<Image>().sprite = textBase;
                         illust.GetComponent<Image>().sprite = letterImage;
