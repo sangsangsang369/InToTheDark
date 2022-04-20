@@ -16,9 +16,9 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": 18.0,
-    "currFloor": "B3",
-    "currRoomPos": "피투성이 복도",
+    "playerXstartPoint": -10.9399995803833,
+    "currFloor": "B4",
+    "currRoomPos": "예배당",
     "volume1": 1.0,
     "volume2": 1.0,
     "itemList": [
@@ -27,6 +27,9 @@
         },
         {
             "prefabOrder": 2
+        },
+        {
+            "prefabOrder": 18
         }
     ],
     "isFirstGB": false,
@@ -56,7 +59,7 @@
     "isFruitPicked": false,
     "fruitNum": 5,
     "isB4ReEntered": true,
-    "isDaggerPicked": false,
+    "isDaggerPicked": true,
     "isJewelGained": false,
     "isB4LockUnlocked": false,
     "isB5DoorOpened": false,
