@@ -10,6 +10,7 @@ public class B4MapLoader : MonoBehaviour
     [SerializeField] GameObject B4Lab;
     DataManager data;
     SaveDataClass saveData;
+    SoundManager inst;
     public Light2D globalLight;
     [SerializeField] private GameObject monster;
     [SerializeField] private GameObject brokenCapsule;
@@ -19,6 +20,7 @@ public class B4MapLoader : MonoBehaviour
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        inst = SoundManager.inst;
 
         LoadB4Map();
     }
@@ -43,6 +45,7 @@ public class B4MapLoader : MonoBehaviour
             B4Hallway.SetActive(false);
             B4Chapel.SetActive(false);
             B4Lab.SetActive(true);
+            inst.monsterWalkingSource.volume = 0;
             if(saveData.isMonsterAppeared)
             {
                 monster.SetActive(true);

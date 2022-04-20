@@ -49,7 +49,7 @@ public class UIManager : UI
                 {
                     if(textOrder == 0)
                     {
-                        sound.EffectPlay(sound.letterDropEffect);
+                        sound.EffectPlay(sound.dropEffect);
                         cardkeyScrpt.GetComponent<Image>().sprite = textBaseWithout;
                         cardkeyNameText.text = "";
                         cardImage.GetComponent<Image>().enabled = false;
@@ -87,11 +87,11 @@ public class UIManager : UI
                     if(textOrder == 0)
                     {
                         nameText.text = "금테가 둘러진 책";
-                        sound.EffectPlay(sound.turnPaperEffect);
+                        sound.EffectPlay(sound.bookSelectEffect);
                     }
                     else if(textOrder == 1)
                     {
-                        sound.EffectPlay(sound.letterDropEffect);
+                        sound.EffectPlay(sound.turnPaperEffect);
                         nameText.text = "";
                         //여기서 텍스트 베이스 바꿔주고
                         goldenBookScrpt.GetComponent<Image>().sprite = textBaseWithout;

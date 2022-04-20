@@ -26,4 +26,9 @@ public class HandPartBtn : MonoBehaviour
             }
         }
     }
+
+    public void CancelBtn()
+    {
+        partOrderMng.answerSheet = new List<string>();
+    }
 }

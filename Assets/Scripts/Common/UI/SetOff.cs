@@ -37,6 +37,21 @@ public class SetOff : MonoBehaviour
         }
     }
 
+    void Reset()
+    {
+        inputTextUI.GetComponent<Text>().text = "";
+        inputTextUI.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
+    }
+
+    public void OffAfterMoment()
+    {
+        if(!uiManager.nowTexting)
+        {
+            Invoke("Reset", 0.3f);
+        }
+    }
+
     public void OffAndLoadObject(GameObject obj)
     {
         if(!uiManager.nowTexting)

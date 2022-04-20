@@ -12,6 +12,7 @@ public class EnterB4Lab : MonoBehaviour
     Player player;
     DataManager data;
     SaveDataClass saveData;
+    SoundManager inst;
     FloorTxt Ft;  
     SlotSelectionMng slotSelectMng;
     UI uiManager;
@@ -23,6 +24,7 @@ public class EnterB4Lab : MonoBehaviour
         player = FindObjectOfType<Player>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        inst = SoundManager.inst;
         Ft = FindObjectOfType<FloorTxt>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
         uiManager = FindObjectOfType<UI>();
@@ -40,6 +42,7 @@ public class EnterB4Lab : MonoBehaviour
 
     void LoadLab()
     {
+        inst.monsterWalkingSource.volume = 0;
         slotSelectMng.UnselectSlot(FindObjectOfType<CardKey>().gameObject);
         hallwayObj.SetActive(false);
         labObj.SetActive(true);
@@ -50,6 +53,8 @@ public class EnterB4Lab : MonoBehaviour
         saveData.currRoomPos = "수상한 실험실";
         data.Save();
         Ft.PosUI();
+        inst.monsterWalkingSource.clip = null;
+        inst.monsterGrowlingSource.clip = null;
         playerObj.transform.position = new Vector2(1.5f, -0.83f);
     }
 }

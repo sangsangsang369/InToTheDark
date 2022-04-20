@@ -14,8 +14,10 @@ public class SoundManager : MonoBehaviour
     public AudioSource effectSource;
     public AudioSource buttonSource;
     public AudioSource playerAudioSource;
-    public AudioSource monsterAudioSource;
     public AudioSource conversationAudioSource;
+    public AudioSource playerHeartBeatSource; //
+    public AudioSource monsterWalkingSource; //
+    public AudioSource monsterGrowlingSource; //
 
     //BGM
     public AudioClip mainBGM;
@@ -36,8 +38,7 @@ public class SoundManager : MonoBehaviour
 
     //B1 Effect
     public AudioClip bookSelectEffect;
-    public AudioClip cardkeyDropEffect;
-    public AudioClip letterDropEffect;
+    public AudioClip dropEffect;
     public AudioClip turnPaperEffect;
     public AudioClip unlockEffect;
     public AudioClip unlockFailedEffect;
@@ -91,7 +92,10 @@ public class SoundManager : MonoBehaviour
         effectSource.volume = saveData.volume2;
         buttonSource.volume = saveData.volume2;
         playerAudioSource.volume = saveData.volume2;
-        monsterAudioSource.volume = saveData.volume2;
+        playerHeartBeatSource.volume = saveData.volume2;
+        monsterGrowlingSource.volume = saveData.volume2;
+        monsterWalkingSource.volume = saveData.volume2;
+        conversationAudioSource.volume = saveData.volume2;
 
         if(inst == null)
         {

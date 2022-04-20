@@ -32,6 +32,7 @@ public class DoorToB5 : Object
 
     public override void ObjectFunction()
     {
+        SoundManager inst = SoundManager.inst;
         if(!isB5DoorOpened)
         {
             doorToB5UI.SetActive(true);
@@ -43,6 +44,8 @@ public class DoorToB5 : Object
             saveData.currFloor = "B5";
             saveData.currRoomPos = "복도";
             data.Save();
+            inst.monsterWalkingSource.clip = null;
+            inst.monsterGrowlingSource.clip = null;
             LoadScene("B5");
         }
     }

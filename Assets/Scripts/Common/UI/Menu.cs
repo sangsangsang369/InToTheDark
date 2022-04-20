@@ -73,7 +73,10 @@ public class Menu : MonoBehaviour
         inst.effectSource.volume = 0;
         inst.buttonSource.volume = 0;
         inst.playerAudioSource.volume = 0;
-        inst.monsterAudioSource.volume = 0;
+        inst.playerHeartBeatSource.volume = 0;
+        inst.monsterGrowlingSource.volume = 0;
+        inst.monsterWalkingSource.volume = 0;
+        inst.conversationAudioSource.volume = 0;
         BGM.value = 0;
         SFX.value = 0;
     }
@@ -84,7 +87,10 @@ public class Menu : MonoBehaviour
         saveData.volume2 = inst.effectSource.volume;
         saveData.volume2 = inst.buttonSource.volume;
         saveData.volume2 = inst.playerAudioSource.volume;
-        saveData.volume2 = inst.monsterAudioSource.volume;
+        saveData.volume2 = inst.playerHeartBeatSource.volume;
+        saveData.volume2 = inst.monsterGrowlingSource.volume;
+        saveData.volume2 = inst.monsterWalkingSource.volume;
+        saveData.volume2 = inst.conversationAudioSource.volume;
         data.Save();
     }
     

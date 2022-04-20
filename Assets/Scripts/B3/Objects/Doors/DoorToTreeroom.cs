@@ -36,6 +36,9 @@ public class DoorToTreeroom : Object
         saveData.currRoomPos = "거대한 정원";
         data.Save();
         Ft.PosUI();
+        SoundManager inst = SoundManager.inst;
+        inst.monsterWalkingSource.clip = null;
+        inst.monsterGrowlingSource.clip = null;
         playerObj.transform.position = new Vector2(11.0f, -0.83f);
     }
 }

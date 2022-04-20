@@ -16,36 +16,24 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": 3.5,
-    "currFloor": "B5",
-    "currRoomPos": "복도",
+    "playerXstartPoint": 18.0,
+    "currFloor": "B3",
+    "currRoomPos": "피투성이 복도",
     "volume1": 1.0,
     "volume2": 1.0,
     "itemList": [
         {
-            "prefabOrder": 0
-        },
-        {
-            "prefabOrder": 1
-        },
-        {
-            "prefabOrder": 2
-        },
-        {
             "prefabOrder": 3
         },
         {
-            "prefabOrder": 12
-        },
-        {
-            "prefabOrder": 18
+            "prefabOrder": 2
         }
     ],
     "isFirstGB": false,
     "isUnlocked": true,
     "isDiaryClicked": true,
-    "isMufflerPicked": true,
-    "isLetterPicked": true,
+    "isMufflerPicked": false,
+    "isLetterPicked": false,
     "keyUsed": true,
     "alreadyOpen": true,
     "playPuzzleOnce": true,
@@ -58,19 +46,19 @@
     "isB3ReEntered": true,
     "OnB3CandleOnce": false,
     "playB3StatueOnce": false,
-    "isPianoMemoGained": true,
+    "isPianoMemoGained": false,
     "monsterExtractinInventory": false,
-    "isLabTableReEntered": true,
-    "isB4DoorOpened": true,
-    "isTreesapPicked": true,
-    "isBranchPicked": true,
-    "isLeafPicked": true,
-    "isFruitPicked": true,
-    "fruitNum": 3,
+    "isLabTableReEntered": false,
+    "isB4DoorOpened": false,
+    "isTreesapPicked": false,
+    "isBranchPicked": false,
+    "isLeafPicked": false,
+    "isFruitPicked": false,
+    "fruitNum": 5,
     "isB4ReEntered": true,
-    "isDaggerPicked": true,
-    "isJewelGained": true,
-    "isB4LockUnlocked": true,
-    "isB5DoorOpened": true,
-    "isMonsterAppeared": true
+    "isDaggerPicked": false,
+    "isJewelGained": false,
+    "isB4LockUnlocked": false,
+    "isB5DoorOpened": false,
+    "isMonsterAppeared": false
 }

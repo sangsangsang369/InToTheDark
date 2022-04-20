@@ -31,7 +31,10 @@ public class Volume : MonoBehaviour
         inst.effectSource.volume = SFXslider.value;
         inst.buttonSource.volume = SFXslider.value;
         inst.playerAudioSource.volume = SFXslider.value;
-        inst.monsterAudioSource.volume = SFXslider.value;
+        inst.playerHeartBeatSource.volume = SFXslider.value;
+        inst.monsterGrowlingSource.volume = SFXslider.value;
+        inst.monsterWalkingSource.volume = SFXslider.value;
+        inst.conversationAudioSource.volume = SFXslider.value;
     }
 }
 

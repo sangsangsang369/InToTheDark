@@ -71,6 +71,9 @@ public class DoorToB4 : Object
             saveData.currRoomPos = "이형체의 복도";
             data.Save();
             Ft.PosUI();
+            SoundManager inst = SoundManager.inst;
+            inst.monsterWalkingSource.clip = null;
+            inst.monsterGrowlingSource.clip = null;
             LoadScene("B4");
         }
     }

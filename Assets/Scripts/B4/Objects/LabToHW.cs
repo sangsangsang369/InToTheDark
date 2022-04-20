@@ -12,6 +12,7 @@ public class LabToHW : Object
     Player player;
     DataManager data;
     SaveDataClass saveData;
+    SoundManager inst;
     FloorTxt Ft;
 
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class LabToHW : Object
         player = FindObjectOfType<Player>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        inst = SoundManager.inst;
         Ft = FindObjectOfType<FloorTxt>();
     }
 
@@ -30,6 +32,7 @@ public class LabToHW : Object
 
     void LoadHallway()
     {
+        inst.monsterWalkingSource.volume = saveData.volume2;
         labObj.SetActive(false);
         hallwayObj.SetActive(true);
         globalLight.intensity = 0.05f;

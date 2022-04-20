@@ -37,6 +37,9 @@ public class DoorToPianoroom : Object
         saveData.currRoomPos = "합주실";
         data.Save();
         Ft.PosUI();
+        SoundManager inst = SoundManager.inst;
+        inst.monsterWalkingSource.clip = null;
+        inst.monsterGrowlingSource.clip = null;
         playerObj.transform.position = new Vector2(-1.3f, -0.83f);
     }
 }

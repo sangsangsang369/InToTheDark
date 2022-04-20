@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    [SerializeField] private AudioSource monsterAudio;
-    [SerializeField] private AudioSource monsterWalkingAudio;
     [SerializeField] private AudioClip monsterRoaring;
-    [SerializeField] private AudioClip monsterBreathing;
+    [SerializeField] private AudioClip monsterStepClip;
     RaycastHit2D hit;
     RaycastHit2D hit1;
     RaycastHit2D hit2;
+    SoundManager inst;
     Player player;
     float rayLength = 15f;
     bool isHeadingLeft;
@@ -23,11 +22,14 @@ public class Monster : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<Player>();
+        //inst = FindObjectOfType<SoundManager>();
+        inst = SoundManager.inst;
         StartCoroutine(RandomDirectionChange());
     }
 
     public IEnumerator RandomDirectionChange()
     {
+        //isStanding = (Random.value > 0.5f);
         // 방에서 나왔을 때 멈춰있던 상태였던지 아닌지 확인
         if(isStanding)
         {
@@ -103,6 +105,10 @@ public class Monster : MonoBehaviour
         if(areYouDied)
         {
             gameOverPanel.SetActive(true);
+            if(inst.monsterWalkingSource.clip != null)
+            {
+                inst.monsterWalkingSource.clip = null;
+            }
             return;
         }
         else if(!isStanding && isHeadingLeft) // 서있지 않고 왼쪽으로 향하고 있을 경우
@@ -121,6 +127,8 @@ public class Monster : MonoBehaviour
         {
             if(isHeadingLeft) { ShootingRay(layerMask, Vector2.left); }
             else { ShootingRay(layerMask, Vector2.right); }
+            hit1 = new RaycastHit2D();
+            hit2 = new RaycastHit2D();
         }
     }
 
@@ -132,51 +140,56 @@ public class Monster : MonoBehaviour
 
     private void WalkingSoundRay(int layerMask)
     {
-        Debug.DrawRay(this.transform.position, Vector2.right * rayLength, Color.green, 0.1f);
-        Debug.DrawRay(this.transform.position, Vector2.left * rayLength, Color.green, 0.1f);
-        hit1 = Physics2D.Raycast(this.transform.position, Vector2.right, rayLength, layerMask);
-        hit2 = Physics2D.Raycast(this.transform.position, Vector2.left, rayLength, layerMask);
+        Debug.DrawRay(this.transform.position, Vector2.right * rayLength * 1.4f, Color.green, 0.1f);
+        Debug.DrawRay(this.transform.position, Vector2.left * rayLength * 1.4f, Color.green, 0.1f);
+        hit1 = Physics2D.Raycast(this.transform.position, Vector2.right, rayLength * 1.4f, layerMask);
+        hit2 = Physics2D.Raycast(this.transform.position, Vector2.left, rayLength * 1.4f, layerMask);
     }
 
     private void ScaredEffect()
     {
+        if(inst == null)
+        {
+            inst = SoundManager.inst;
+        }
         if(hit.collider != null)
         {
-            if(monsterAudio.clip == monsterRoaring)
+            if(inst.monsterGrowlingSource.clip == monsterRoaring)
             {
                 return;
             }
-            monsterAudio.clip = monsterRoaring;
-            monsterAudio.Play();
+            inst.monsterGrowlingSource.clip = monsterRoaring;
+            inst.monsterGrowlingSource.Play();
         }
         else
         {
-            if(monsterAudio.clip != null)
+            if(inst.monsterGrowlingSource.clip != null)
             {
-                monsterAudio.Stop();
-                monsterAudio.clip = null;
+                inst.monsterGrowlingSource.Stop();
+                inst.monsterGrowlingSource.clip = null;
             }
         }
     }
 
     private void WalkingEffect()
     {
-        if(hit1.collider != null || hit2.collider != null)
+        if(areYouDied)
         {
-            if(monsterWalkingAudio.clip == monsterBreathing)
+            return;
+        }
+        else if(hit1.collider != null || hit2.collider != null)
+        {
+            if(inst.monsterWalkingSource.clip == monsterStepClip)
             {
                 return;
             }
-            monsterWalkingAudio.clip = monsterBreathing;
-            monsterWalkingAudio.Play();
+            inst.monsterWalkingSource.clip = monsterStepClip;
+            inst.monsterWalkingSource.Play();
         }
         else if(hit1.collider == null && hit2.collider == null)
         {
-            if(monsterWalkingAudio.clip != null)
-            {
-                monsterWalkingAudio.Stop();
-                monsterWalkingAudio.clip = null;
-            }
+            inst.monsterWalkingSource.Stop();
+            inst.monsterWalkingSource.clip = null;
         }
     }
 

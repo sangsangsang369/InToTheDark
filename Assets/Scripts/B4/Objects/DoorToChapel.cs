@@ -35,6 +35,9 @@ public class DoorToChapel : Object
         saveData.currRoomPos = "예배당";
         data.Save();
         Ft.PosUI();
+        SoundManager inst = SoundManager.inst;
+        inst.monsterWalkingSource.clip = null;
+        inst.monsterGrowlingSource.clip = null;
         playerObj.transform.position = new Vector2(-10.9f, -0.83f);
     }
 }

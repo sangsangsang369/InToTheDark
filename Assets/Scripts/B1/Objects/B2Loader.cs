@@ -9,6 +9,7 @@ public class B2Loader : MonoBehaviour
     UI uiManager;
     Player player;
     FloorTxt Ft;
+    SceneLoadManager sceneLoader;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class B2Loader : MonoBehaviour
         uiManager = FindObjectOfType<UI>();
         player = FindObjectOfType<Player>();
         Ft = FindObjectOfType<FloorTxt>();
+        sceneLoader = SceneLoadManager.instance;
     }
 
     public void LoadB2()
@@ -28,7 +30,7 @@ public class B2Loader : MonoBehaviour
             player.currRoom = "B2_Hallway";
             saveData.currRoomPos = "복도";
             data.Save();
-            Ft.PosUI();
+            sceneLoader.LoadScene("B2");
         }
     }
 }

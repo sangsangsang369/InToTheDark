@@ -27,6 +27,9 @@ public class SpiralStairToB2 : Object
         saveData.currRoomPos = "복도";
         data.Save();
         Ft.PosUI();
+        SoundManager inst = SoundManager.inst;
+        inst.monsterWalkingSource.clip = null;
+        inst.monsterGrowlingSource.clip = null;
         LoadScene("B2");
     }
 }
