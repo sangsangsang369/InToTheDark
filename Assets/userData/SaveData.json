@@ -17,10 +17,10 @@
         3.5
     ],
     "playerXstartPoint": -10.9399995803833,
-    "currFloor": "B4",
+    "currFloor": "B2",
     "currRoomPos": "예배당",
-    "volume1": 1.0,
-    "volume2": 1.0,
+    "volume1": 0.0,
+    "volume2": 0.0,
     "itemList": [
         {
             "prefabOrder": 3
@@ -43,7 +43,7 @@
     "isB3DoorOpened": true,
     "OnB2CandleOnce": false,
     "playB2StatueOnce": false,
-    "ReB2": false,
+    "ReB2": true,
     "s1On": true,
     "s2On": true,
     "isB3ReEntered": true,

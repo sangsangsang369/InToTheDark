@@ -7,8 +7,14 @@ public class BtnDisabled : MonoBehaviour
 {
     public Button playbtn, creditbtn, quitbtn;
     public Text play, creadit, quit;
+    SoundManager inst;
+    [SerializeField] private AudioClip btnSound;
+    private void Start() {
+        inst = SoundManager.inst;
+    }
     public void SetDisabled()
     {
+        inst.ButtonEffectPlay(btnSound);
         playbtn.interactable = false;
         creditbtn.interactable = false;
         quitbtn.interactable = false;
@@ -21,6 +27,7 @@ public class BtnDisabled : MonoBehaviour
 
     public void UnDisabled()
     {
+        inst.ButtonEffectPlay(btnSound);
         playbtn.interactable = true;
         creditbtn.interactable = true;
         quitbtn.interactable = true;

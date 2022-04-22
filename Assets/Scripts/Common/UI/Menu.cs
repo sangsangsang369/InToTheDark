@@ -12,9 +12,10 @@ public class Menu : MonoBehaviour
     SceneLoadManager sceneLoader;
 
     private Button TapOpenBtn, TapCloseBtn, ResumeBtn, SettingsBtn, MainBtn;
-    public GameObject MenuCanvas, pauseTap, settingTap;
+    public GameObject MenuCanvas, pauseTap, settingTap, LastTap;
     public Text Floor;
     public Slider BGM, SFX;
+    [SerializeField] private AudioClip btnSound;
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public class Menu : MonoBehaviour
 
     public void OpenTap() // 메뉴 전체 창 열기
     {
+        inst.ButtonEffectPlay(btnSound);
         MenuCanvas.SetActive(true);
         Floor.text = saveData.currFloor + " - " + saveData.currRoomPos;
         pauseTap.SetActive(true);
@@ -36,6 +38,7 @@ public class Menu : MonoBehaviour
 
     public void CloseTap() // 메뉴 전체 창 닫기 -> 쓸 일 없을 듯
     {
+        inst.ButtonEffectPlay(btnSound);
         if (MenuCanvas)
         {
             MenuCanvas.SetActive(false);
@@ -45,30 +48,47 @@ public class Menu : MonoBehaviour
     
     public void Resume() // 게임 재개
     {
+        inst.ButtonEffectPlay(btnSound);
         Time.timeScale = 1f;
         MenuCanvas.SetActive(false);
     }
 
     public void Settings() // 사운드 셋팅 창 열기
     {
+        inst.ButtonEffectPlay(btnSound);
         BGM.value = saveData.volume1;
         SFX.value = saveData.volume2;
     }
     
+    public void LastQ()
+    {
+        inst.ButtonEffectPlay(btnSound);
+        LastTap.SetActive(true);
+        pauseTap.SetActive(false);
+    }
+    public void NoBtn()
+    {
+        inst.ButtonEffectPlay(btnSound);
+        pauseTap.SetActive(true);
+        LastTap.SetActive(false);
+    }
     public void Mains() // 스타트 화면으로 돌아가기
     {
+        inst.ButtonEffectPlay(btnSound);
         Time.timeScale = 1f;
         sceneLoader.LoadScene("Start");
     }
 
     public void BackBtn() //사운드 셋팅 창 -> 메뉴 전체 창으로 돌아가기
     {
+        inst.ButtonEffectPlay(btnSound);
         settingTap.SetActive(false);
         pauseTap.SetActive(true);
     }
 
     public void MuteAllBtn()
     {
+        inst.ButtonEffectPlay(btnSound);
         inst.bgmSource.volume = 0;
         inst.effectSource.volume = 0;
         inst.buttonSource.volume = 0;
@@ -83,6 +103,7 @@ public class Menu : MonoBehaviour
 
     public void ApplyBtn()
     {
+        inst.ButtonEffectPlay(btnSound);
         saveData.volume1 = inst.bgmSource.volume;
         saveData.volume2 = inst.effectSource.volume;
         saveData.volume2 = inst.buttonSource.volume;
