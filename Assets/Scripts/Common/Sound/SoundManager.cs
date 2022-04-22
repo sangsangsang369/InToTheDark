@@ -142,7 +142,19 @@ public class SoundManager : MonoBehaviour
         bgmSource.clip = B12BGM;
         bgmSource.Play();
     }
-
+    public void EndingPlay()
+    {
+        if (bgmSource.clip == endingBGM)
+        {
+            return;
+        }
+        bgmSource.clip = endingBGM;
+        Invoke("DelayEnding",2f);
+    }
+    void DelayEnding()
+    {
+        bgmSource.Play();
+    }
     //B3
     public void PianoKeysPlay(AudioClip key)
     {

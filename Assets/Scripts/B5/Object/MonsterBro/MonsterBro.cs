@@ -12,11 +12,13 @@ public class MonsterBro : MonoBehaviour
     public Text inputTextUI;
     int monsterBroTextNum = 0;
     SoundManager sound;
+    AudioSource monsterAudioSource;
 
     void Start()
     {
         uiManager = FindObjectOfType<B5_UIManager>();
         sound = SoundManager.inst;
+        monsterAudioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -29,8 +31,8 @@ public class MonsterBro : MonoBehaviour
             if (this.gameObject.transform.position.x < limit)
             {
                 this.gameObject.GetComponent<Animator>().SetBool("isWalking", true);
-                
-                this.gameObject.transform.position += Vector3.right * 1.3f * Time.deltaTime;
+                MonsterStepEffectPlay();
+                this.gameObject.transform.position += Vector3.right * 1.4f * Time.deltaTime;
 
                 if(player.transform.position.x < 48)
                 {
@@ -49,7 +51,7 @@ public class MonsterBro : MonoBehaviour
             else if(monsterBroTextNum ==0)
             {
                 this.gameObject.GetComponent<Animator>().SetBool("isWalking", false);
-
+                monsterAudioSource.Stop();
                 monsterBroUI.SetActive(true);
                 uiManager.StartCoroutine(uiManager.LoadTextOneByOne(monsterBroText.text, inputTextUI));
                 monsterBroTextNum++;
@@ -62,5 +64,13 @@ public class MonsterBro : MonoBehaviour
         {
             player.GetComponent<Animator>().SetBool("leftRight", true);
         }
+    }
+    void MonsterStepEffectPlay()
+    {
+        if(monsterAudioSource.isPlaying)
+        {
+            return;
+        }
+        monsterAudioSource.Play();
     }
 }

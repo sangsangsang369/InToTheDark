@@ -23,6 +23,7 @@ public class PianoMng : MonoBehaviour
     public bool monsterExtractinInventory;
     SaveAlarm saveAlarm;
     SoundManager sound;
+    AudioSource gooAudioSource;
    
 
     private void Start() 
@@ -30,7 +31,7 @@ public class PianoMng : MonoBehaviour
         data = DataManager.singleTon;
         saveData = data.saveData;
         monsterExtractinInventory = saveData.monsterExtractinInventory;
-        sound = SoundManager.inst;
+        gooAudioSource = GetComponent<AudioSource>();
 
         //진액 인벤토리에 있으면
         //피아노 콜라이더 꺼주기
@@ -56,8 +57,8 @@ public class PianoMng : MonoBehaviour
         {
             if(i == 9) //정답일 때
             {
-                sound.EffectPlay(sound.gooEffect);
-
+                //sound.EffectPlay(sound.gooEffect);
+                GooEffectPlay();
                 PianoUI.SetActive(false); //피아노 UI 켜지면 자동으로 피아노 Obj 콜라이더 꺼짐(피아노 Obj 콜라이더 꺼진 상태로)
                 KeyInputsList.Clear(); //음 입력 초기화
                 //정답 맞췄다는 텍스트 나옴
@@ -87,5 +88,10 @@ public class PianoMng : MonoBehaviour
     public void PianoObjColliderOn() //ui끄면 콜라이더 다시 켜주기
     {
         pianoObj.GetComponent<BoxCollider2D>().enabled = true;
+    }
+
+    void GooEffectPlay()
+    {
+        gooAudioSource.Play();
     }
 }

@@ -8,9 +8,15 @@ public class AfterFadeOut : MonoBehaviour
     //엔딩 텍스트 띄움
 
     public GameObject nextText, prevText, endingCredit, endingCreditParent;
-
+    SoundManager sound;
+    void Start()
+    {
+        sound = SoundManager.inst;
+    }
+    
     public void TextOn()
     {
+        sound.EndingPlay();
         if(nextText && !endingCredit)
         {
             if(prevText)

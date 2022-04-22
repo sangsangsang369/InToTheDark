@@ -14,12 +14,15 @@ public class Platform : CollisionObject
     AfterPriestWalk afterPriestWalk;
     int onEstrade = 0;
     SoundManager sound;
+    public GameObject crowd;
+    AudioSource crowdAudioSource;
     
     void Start()
     {
         player = FindObjectOfType<Player>();
         afterPriestWalk = FindObjectOfType<AfterPriestWalk>();
         sound = SoundManager.inst;
+        crowdAudioSource = crowd.GetComponent<AudioSource>();
     }
     void Update() 
     {
@@ -41,6 +44,7 @@ public class Platform : CollisionObject
         coverCanvas.SetActive(true);
         globalLight.GetComponent<Animator>().SetBool("LightOff", true);
         sound.EffectPlay(sound.doorSlideEffect);
+        Invoke("CrowdEffectPlay", 0.8f);
         floor.SetActive(false);
         walls.GetComponent<Animator>().SetTrigger("Open");
         Invoke("PlayerFlip", 3.2f);
@@ -50,5 +54,10 @@ public class Platform : CollisionObject
     {
         //playerObj.GetComponent<Animator>().SetBool("idleAgain", true);
         playerObj.GetComponent<SpriteRenderer>().flipX = false;
+    }
+
+    void CrowdEffectPlay()
+    {
+        crowdAudioSource.Play();
     }
 }
