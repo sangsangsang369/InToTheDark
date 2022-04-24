@@ -15,6 +15,10 @@ public class Monster : MonoBehaviour
     bool isHeadingLeft;
     bool isStanding = false;
     public GameObject gameOverPanel;
+    public GameObject leftBtn;
+    public GameObject rightBtn;
+    public GameObject leftBtnImg;
+    public GameObject rightBtnImg;
     public float monsterSpeed = 4f;
     [HideInInspector] public bool areYouDied = false;
     

@@ -106,7 +106,7 @@ MonoBehaviour:
   ra_hEffect: {fileID: 8300000, guid: 3a136289d45ecf74695640d1458d2068, type: 3}
   si_hEffect: {fileID: 8300000, guid: 05343b9133d92c941ad2939a09d4125c, type: 3}
   consoleTouchEffect: {fileID: 8300000, guid: 6fb52614e7f523b4284ed0276bae7877, type: 3}
-  capsuleBrokenEffect: {fileID: 0}
+  capsuleBrokenEffect: {fileID: 8300000, guid: 9e2417f53f3aebf4b85e5bedf66854de, type: 3}
   doorSlideEffect: {fileID: 8300000, guid: 7f9a884ae513f2f45b73a0beb2deec4c, type: 3}
   playerScreamEffect: {fileID: 8300000, guid: fddac895f73548949ba371b1a8825235, type: 3}
   priestWalkEffect: {fileID: 8300000, guid: 6dc183586e5821a4bb4fbf20ec7871b1, type: 3}

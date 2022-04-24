@@ -6,6 +6,7 @@ public class Player : Detect
 {
     DataManager data;
     SaveDataClass saveData;
+    SoundManager inst;
 
     public string currRoom;
     public float speed = 6f;
@@ -16,6 +17,7 @@ public class Player : Detect
         base.Start();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        inst = SoundManager.inst;
         
         this.transform.position = new Vector2(saveData.playerXstartPoint, this.transform.position.y);
     }
@@ -37,8 +39,20 @@ public class Player : Detect
         //이형체와 닿으면 죽는거
         if(collider.GetComponent<Monster>())
         {
-            collider.GetComponent<Monster>().areYouDied = true;
-            collider.GetComponent<Monster>().GetComponent<Animator>().enabled = false;
+            if(!collider.GetComponent<Monster>().areYouDied)
+            {
+                inst.playerAudioSource.Stop();
+                GetComponent<Animator>().SetBool("isWalking", false);
+                collider.GetComponent<Monster>().areYouDied = true;
+                collider.GetComponent<Monster>().leftBtn.SetActive(false);
+                collider.GetComponent<Monster>().rightBtn.SetActive(false);
+                collider.GetComponent<Monster>().leftBtnImg.SetActive(true);
+                collider.GetComponent<Monster>().rightBtnImg.SetActive(true);
+            }
+            if(collider.GetComponent<Monster>().GetComponent<Animator>().enabled)
+            {
+                collider.GetComponent<Monster>().GetComponent<Animator>().enabled = false;
+            }
         }
     }
 
