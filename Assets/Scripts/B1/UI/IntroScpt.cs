@@ -35,11 +35,11 @@ public class IntroScpt : MonoBehaviour
         {
             if(prevText)
             {
-                //prevText.GetComponent<Animator>().SetBool("TextingOn",false);
+                prevText.GetComponent<Animator>().SetBool("TextingOn",false);
                 prevText.SetActive(false);
             }
             nextText.SetActive(true);
-            //nextText.GetComponent<Animator>().SetBool("TextingOn",true);
+            nextText.GetComponent<Animator>().SetBool("TextingOn",true);
         }  
     }
 }
