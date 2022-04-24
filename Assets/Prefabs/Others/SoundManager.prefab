@@ -81,7 +81,7 @@ MonoBehaviour:
   unlockEffect: {fileID: 8300000, guid: e6eb2b6f7da7d6b4fadaca17082f3a9a, type: 3}
   unlockFailedEffect: {fileID: 8300000, guid: 4c93ac94ffa65e54b9c14f0930d6a899, type: 3}
   doorUnlockEffect: {fileID: 8300000, guid: 15f4baf1728e5324a9e277210d69561f, type: 3}
-  lockNumberChangeEffect: {fileID: 8300000, guid: b41250216f1774043b156eceb1cf89c7,
+  lockNumberChangeEffect: {fileID: 8300000, guid: 0eb044247b673c143a0d016a0b76ba73,
     type: 3}
   pocketwatchEffect: {fileID: 8300000, guid: e6eb2b6f7da7d6b4fadaca17082f3a9a, type: 3}
   swipeStatueEffect: {fileID: 8300000, guid: 1d21d673118d0714eab6652627cb7a2c, type: 3}
