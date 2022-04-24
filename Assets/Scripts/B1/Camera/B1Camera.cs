@@ -5,6 +5,8 @@ using UnityEngine;
 public class B1Camera : CameraScript
 {
     FloorTxt Ft;
+    IntroScpt IntroScpt;
+    public GameObject introCanvas;
     SoundManager sound;
 
     new void Start()
@@ -18,6 +20,11 @@ public class B1Camera : CameraScript
         //saveData.currRoomPos = "복도";
         data.Save();
         Ft.PosUI();
+        if(!saveData.texton)
+        {
+            introCanvas.SetActive(true);
+            //인트로 시작을 어케해주냐는 말이야,,
+        }
     }
 
     // Update is called once per frame

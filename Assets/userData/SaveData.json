@@ -16,19 +16,13 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": 15.699999809265137,
-    "currFloor": "B5",
+    "playerXstartPoint": -35.0,
+    "currFloor": "B1",
     "currRoomPos": "복도",
-    "volume1": 0.31163033843040469,
+    "volume1": 1.0,
     "volume2": 1.0,
-    "itemList": [
-        {
-            "prefabOrder": 12
-        },
-        {
-            "prefabOrder": 13
-        }
-    ],
+    "itemList": [],
+    "texton": false,
     "isFirstGB": true,
     "isUnlocked": false,
     "isDiaryClicked": false,
@@ -43,11 +37,11 @@
     "ReB2": false,
     "s1On": false,
     "s2On": false,
-    "isB3ReEntered": true,
+    "isB3ReEntered": false,
     "OnB3CandleOnce": false,
     "playB3StatueOnce": false,
-    "isPianoMemoGained": true,
-    "monsterExtractinInventory": true,
+    "isPianoMemoGained": false,
+    "monsterExtractinInventory": false,
     "isLabTableReEntered": false,
     "isB4DoorOpened": false,
     "isTreesapPicked": false,
@@ -55,7 +49,7 @@
     "isLeafPicked": false,
     "isFruitPicked": false,
     "fruitNum": 5,
-    "isB4ReEntered": true,
+    "isB4ReEntered": false,
     "isDaggerPicked": false,
     "isJewelGained": false,
     "isB4LockUnlocked": false,
