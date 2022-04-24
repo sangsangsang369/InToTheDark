@@ -3751,7 +3751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introCanvas: {fileID: 634465381}
   prevText: {fileID: 0}
-  nextText: {fileID: 0}
+  nextText: {fileID: 90602395}
   introTexts:
   - {fileID: 90602397}
   - {fileID: 1785149971}

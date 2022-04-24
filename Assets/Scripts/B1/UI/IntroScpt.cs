@@ -7,7 +7,6 @@ public class IntroScpt : MonoBehaviour
 {
     public GameObject introCanvas, prevText, nextText;
     public List<Text> introTexts;
-    public bool texton = false;
     // public string[] introScripts = {"두 달 전, 동생이 집을 나갔다.",
     // "아무리 수소문을 해봐도 동생을 본 사람은 없었다.", 
     // "그러던 중, 경찰서에서 동생을 발견했다는 연락이 왔다.",
@@ -18,9 +17,11 @@ public class IntroScpt : MonoBehaviour
     // "카펫을 들추니 작은 문 손잡이가 나타났다.",
     // "나는 홀린 듯 그 문을 열고 내려갔다."};
     SoundManager sound;
+    SceneLoadManager sceneLoader;
     void Start()
     {
         sound = SoundManager.inst;
+        sceneLoader = SceneLoadManager.instance;
     }
 
     public void nowstart()
@@ -40,7 +41,12 @@ public class IntroScpt : MonoBehaviour
             }
             nextText.SetActive(true);
             nextText.GetComponent<Animator>().SetBool("TextingOn",true);
-        }  
+        } 
+        else
+        {
+            sound.ItemEffectPlaying(sound.stairEffect);
+            sceneLoader.LoadScene("B1");
+        }
     }
 }
 

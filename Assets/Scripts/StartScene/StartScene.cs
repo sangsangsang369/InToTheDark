@@ -35,9 +35,5 @@ public class StartScene : MonoBehaviour
         data.Save();
         IntroScpt.nowstart();
         IntroScpt.introCanvas.SetActive(true);
-        if (IntroScpt.texton)
-        {
-            sceneLoader.LoadScene("B1");
-        }
     }
 }

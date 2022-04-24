@@ -25,7 +25,6 @@ public class SaveDataClass
     public List<ItemClass> itemList;
 
     //지하 1층
-    public bool texton;
     public bool isFirstGB;
     public bool isUnlocked;
     public bool isDiaryClicked;
@@ -81,7 +80,6 @@ public class SaveDataClass
         itemList = new List<ItemClass>();
 
         //지하 1층
-        texton = false;
         isFirstGB = true;
         isUnlocked = false;
         isDiaryClicked = false;
