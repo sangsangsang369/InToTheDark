@@ -11,6 +11,7 @@ public class DoorToGallery : Object
     Player player;
     DataManager data;
     SaveDataClass saveData;
+    SoundManager inst;
     FloorTxt Ft;
 
     // Start is called before the first frame update
@@ -19,12 +20,13 @@ public class DoorToGallery : Object
         player = FindObjectOfType<Player>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        inst = SoundManager.inst;
         Ft = FindObjectOfType<FloorTxt>();
     }
 
     public override void ObjectFunction()
     {
-        LoadRoom("LoadGallery");
+        LoadRoom("LoadGallery", inst.doorOpenEffect);
     }
 
     void LoadGallery()

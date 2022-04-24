@@ -13,11 +13,27 @@ public class AfterPriestWalk : MonoBehaviour
     public Text inputTextUI;
     B5_UIManager uiManager;
     public int scptOn = 0;
-
+    SoundManager sound;
+    AudioSource priestAudioSource;
+    bool noPWalking = false;
 
      void Start()
     {
         uiManager = FindObjectOfType<B5_UIManager>();
+        sound = SoundManager.inst;
+        priestAudioSource = GetComponent<AudioSource>();
+    }
+    void Update()
+    {
+        if(this.gameObject.GetComponent<Animator>().GetBool("WalkOn") == true
+           && !this.gameObject.GetComponent<Animator>().GetBool("HandsUp") == true)
+        {
+            priestEffectPlay();
+        }
+        else if(this.gameObject.GetComponent<Animator>().GetBool("HandsUp") == true)
+        {
+            priestAudioSource.Stop();
+        }
     }
 
     public void PriestScptOn()
@@ -25,5 +41,21 @@ public class AfterPriestWalk : MonoBehaviour
         scptOn = 1; 
         priestUI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTexts(priestTexts, inputTextUI, 10));
+    }
+
+    public void priestEffectPlay()
+    {
+        if(noPWalking == false) 
+        {
+            if(priestAudioSource.isPlaying)
+            {
+                return;
+            }
+            else if(!priestAudioSource.isPlaying)
+            {
+                noPWalking = true;
+            }
+            priestAudioSource.Play();
+        }
     }
 }

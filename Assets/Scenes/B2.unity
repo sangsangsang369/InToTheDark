@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6641,8 +6641,6 @@ MonoBehaviour:
   s2On: 0
   doorText: {fileID: 145396212}
   inputTextUI: {fileID: 695523062}
-  swipeStatueEffect: {fileID: 0}
-  knifeEffect: {fileID: 0}
 --- !u!61 &672103006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13428,9 +13426,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uCE84\uCE84\uD55C \uC9C0\uD558\uC2E4 \uC548\uC744 \uD76C\uBBF8\uD558\uAC8C
-    \uBE44\uCD94\uACE0 \uC788\uB2E4.\n\uC791\uC740 \uBC14\uB78C\uC5D0\uB3C4 \uBD88\uAF43\uC774
-    \uAE08\uBC29 \uC0AC\uADF8\uB77C\uB4E4 \uAC83 \uAC19\uB2E4."
+  m_Text: "\uC5B4\uB450\uC6B4 \uC9C0\uD558\uC2E4 \uC18D\uC5D0\uC11C \uBD84\uC704\uAE30\uC640
+    \uB2E4\uB974\uAC8C \uCD1B\uBD88\uC774 \uD0C0\uACE0 \uC788\uB2E4.\r \uD750\uB9BF\uD558\uAC8C
+    \uD0C0\uC624\uB974\uB294 \uBD88\uAF43\uC774 \uB0B4 \uC57D\uD55C \uB9C8\uC74C\uC744
+    \uB300\uBCC0\uD558\uB294 \uAC83 \uAC19\uB2E4."
 --- !u!1 &1352080665
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,7 +27,7 @@ public class LabToHW : Object
 
     public override void ObjectFunction()
     {
-        LoadRoom("LoadHallway");
+        LoadRoom("LoadHallway", inst.doorUnlockEffect);
     }
 
     void LoadHallway()

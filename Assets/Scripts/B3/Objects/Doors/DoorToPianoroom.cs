@@ -10,6 +10,7 @@ public class DoorToPianoroom : Object
     Player player;
     DataManager data;
     SaveDataClass saveData;
+    SoundManager inst;
     FloorTxt Ft;
 
 
@@ -18,13 +19,14 @@ public class DoorToPianoroom : Object
         player = FindObjectOfType<Player>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        inst = SoundManager.inst;
         Ft = FindObjectOfType<FloorTxt>();
     }
 
     // Update is called once per frame
     public override void ObjectFunction()
     {
-        LoadRoom("LoadPianoroom");
+        LoadRoom("LoadPianoroom", inst.doorOpenEffect);
     }
 
     void LoadPianoroom()
