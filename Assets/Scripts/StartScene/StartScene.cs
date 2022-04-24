@@ -32,7 +32,14 @@ public class StartScene : MonoBehaviour
         inst.ButtonEffectPlay(inst.buttonOnStartScene);
         data.saveData = new SaveDataClass();
         data.Save();
+        Invoke("SetNonFirst", 0.3f);
         IntroScpt.nowstart();
         IntroScpt.introCanvas.SetActive(true);
+    }
+
+    public void SetNonFirst()
+    {
+        saveData.isFirstPlay = false;
+        data.Save();
     }
 }

@@ -24,7 +24,7 @@ public class DataManager : MonoBehaviour
 //nalsdkfjasd
     void Awake()
     {
-        Screen.SetResolution(1080, 1920, true);
+        Screen.SetResolution(1920, 1080, true);
         if (singleTon == null)
         {
             singleTon = this;

@@ -51,11 +51,7 @@ public class B3SetOff : MonoBehaviour
     public void OffAndLoadScene(string sceneName)
     {
         if(!uiManager.nowTexting)
-        {
-            inputTextUI.GetComponent<Text>().text = "";
-            inputTextUI.gameObject.SetActive(false);
-            this.gameObject.SetActive(false);
-            
+        { 
             saveData.playerXstartPoint = saveData.playerXstartPoints[(int)SaveDataClass.playerStartPoint.B4leftDoor];
             saveData.currRoomPos = "이형체의 복도";
             Ft.PosUI();

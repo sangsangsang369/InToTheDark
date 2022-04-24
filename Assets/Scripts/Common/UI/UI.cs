@@ -41,10 +41,8 @@ public class UI : MonoBehaviour
 
             if(Input.GetMouseButtonDown(0))
             {
-                if(inst.conversationAudioSource.clip == inst.conversationEffect)
-                {
-                    inst.conversationAudioSource.clip = null;
-                }
+
+                inst.conversationAudioSource.Stop();
                 break;
             }
 

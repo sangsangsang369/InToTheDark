@@ -13,7 +13,6 @@ public class QuitGame : MonoBehaviour
     public void GameOff()
     {
         inst.ButtonEffectPlay(inst.buttonOnStartScene);
-        //Application.Quit();
-        Debug.Log("게임이 꺼집니다.");
+        Application.Quit();
     }
 }

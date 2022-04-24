@@ -44,8 +44,9 @@ public class DoorToB5 : Object
             saveData.currFloor = "B5";
             saveData.currRoomPos = "복도";
             data.Save();
-            inst.monsterWalkingSource.clip = null;
-            inst.monsterGrowlingSource.clip = null;
+            inst.monsterWalkingSource.Stop();
+            inst.monsterGrowlingSource.Stop();
+            inst.playerHeartBeatSource.Stop();
             LoadScene("B5");
         }
     }

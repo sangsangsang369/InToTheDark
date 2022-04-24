@@ -450,7 +450,6 @@ MonoBehaviour:
   prevText: {fileID: 90602395}
   nextText: {fileID: 1785149968}
   introTexts: []
-  texton: 0
 --- !u!95 &90602400
 Animator:
   serializedVersion: 3
@@ -613,7 +612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d263d44fba1f5408cff85f897bc76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnSound: {fileID: 8300000, guid: 2e01c96af2367524bb6c0946d0bdd944, type: 3}
 --- !u!1 &124380340
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d263d44fba1f5408cff85f897bc76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnSound: {fileID: 8300000, guid: 2e01c96af2367524bb6c0946d0bdd944, type: 3}
 --- !u!114 &238035144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,7 +1088,6 @@ MonoBehaviour:
   prevText: {fileID: 414944210}
   nextText: {fileID: 0}
   introTexts: []
-  texton: 0
 --- !u!114 &414944213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,7 +1200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d263d44fba1f5408cff85f897bc76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnSound: {fileID: 8300000, guid: 2e01c96af2367524bb6c0946d0bdd944, type: 3}
 --- !u!114 &466617064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,7 +1346,6 @@ MonoBehaviour:
   prevText: {fileID: 493080159}
   nextText: {fileID: 965463165}
   introTexts: []
-  texton: 0
 --- !u!114 &493080162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1625,7 +1619,6 @@ MonoBehaviour:
   prevText: {fileID: 965463165}
   nextText: {fileID: 1928749319}
   introTexts: []
-  texton: 0
 --- !u!114 &965463168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1845,10 +1838,11 @@ MonoBehaviour:
   playbtn: {fileID: 1008556920}
   creditbtn: {fileID: 1312925580}
   quitbtn: {fileID: 1600352165}
+  continueBtn: {fileID: 92752821}
   play: {fileID: 84351809}
   creadit: {fileID: 1998430414}
   quit: {fileID: 1088143552}
-  btnSound: {fileID: 8300000, guid: 2e01c96af2367524bb6c0946d0bdd944, type: 3}
+  con: {fileID: 1365047368}
 --- !u!1 &1031403953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,6 +2162,7 @@ MonoBehaviour:
   - {fileID: 8882906234017663501, guid: 7bd80e8c460e755469629f05f09897dc, type: 3}
   - {fileID: 7202987858791076646, guid: 4627dde752c309f4c8b114e56870636a, type: 3}
   saveData:
+    isFirstPlay: 1
     playerXstartPoints:
     - 30.7
     - -32.4
@@ -2183,7 +2178,6 @@ MonoBehaviour:
     volume1: 1
     volume2: 1
     itemList: []
-    texton: 0
     isFirstGB: 1
     isUnlocked: 0
     isDiaryClicked: 0
@@ -2559,7 +2553,6 @@ MonoBehaviour:
   prevText: {fileID: 1443000511}
   nextText: {fileID: 493080159}
   introTexts: []
-  texton: 0
 --- !u!114 &1443000514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2753,7 +2746,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8965381359914ae41b5cfbf3db0eb6b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnSound: {fileID: 8300000, guid: 2e01c96af2367524bb6c0946d0bdd944, type: 3}
 --- !u!114 &1600352165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3167,7 +3159,6 @@ MonoBehaviour:
   prevText: {fileID: 1785149968}
   nextText: {fileID: 1443000511}
   introTexts: []
-  texton: 0
 --- !u!114 &1785149971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3552,7 +3543,6 @@ MonoBehaviour:
   prevText: {fileID: 1928749319}
   nextText: {fileID: 414944210}
   introTexts: []
-  texton: 0
 --- !u!114 &1928749322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3760,7 +3750,6 @@ MonoBehaviour:
   - {fileID: 965463168}
   - {fileID: 1928749322}
   - {fileID: 414944213}
-  texton: 0
 --- !u!1001 &5960547633202801968
 PrefabInstance:
   m_ObjectHideFlags: 0

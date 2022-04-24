@@ -7,6 +7,7 @@ public class B3MapLoader : MonoBehaviour
     [SerializeField] GameObject B3Hallway;
     [SerializeField] GameObject B3TreeRoom;
     [SerializeField] GameObject B3PianoRoom;
+    [SerializeField] GameObject doorKeeper;
     DataManager data;
     SaveDataClass saveData;
 
@@ -18,6 +19,7 @@ public class B3MapLoader : MonoBehaviour
 
         //Invoke("LoadB3Map", 0.1f);
         LoadB3Map();
+        doorKeeper.SetActive(!saveData.isB4DoorOpened);
     }
 
     void LoadB3Map()

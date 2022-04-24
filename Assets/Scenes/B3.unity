@@ -248,8 +248,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7057149}
   - component: {fileID: 7057150}
-  - component: {fileID: 7057152}
-  - component: {fileID: 7057151}
   m_Layer: 9
   m_Name: B3_Hallway_Statue(3)
   m_TagString: Statue
@@ -322,47 +320,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7057151
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7057148}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.02, y: 4.56}
-    newSize: {x: 3, y: 4.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 4.56}
-  m_EdgeRadius: 0
---- !u!114 &7057152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7057148}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae7cb38c3c9fe04cbf9c1a515d5a528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statueUI: {fileID: 591876335}
-  statueText: {fileID: 308141731}
-  inputTextUI: {fileID: 300144543}
 --- !u!1 &28771309
 GameObject:
   m_ObjectHideFlags: 0
@@ -2301,7 +2258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233373384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1168609378}
@@ -2500,7 +2457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d263d44fba1f5408cff85f897bc76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnSound: {fileID: 0}
 --- !u!1 &241646969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3253,7 +3209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -655, y: -418}
+  m_AnchoredPosition: {x: -652, y: -378}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &300144543
@@ -3282,7 +3238,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -3989,7 +3945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d263d44fba1f5408cff85f897bc76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnSound: {fileID: 0}
 --- !u!1 &395925868
 GameObject:
   m_ObjectHideFlags: 0
@@ -4000,8 +3955,6 @@ GameObject:
   m_Component:
   - component: {fileID: 395925869}
   - component: {fileID: 395925871}
-  - component: {fileID: 395925872}
-  - component: {fileID: 395925870}
   m_Layer: 9
   m_Name: B3_Hallway_Statue (6)
   m_TagString: Statue
@@ -4024,32 +3977,6 @@ Transform:
   m_Father: {fileID: 1229201899}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &395925870
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395925868}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.04, y: 4.57}
-    newSize: {x: 3, y: 4.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 4.56}
-  m_EdgeRadius: 0
 --- !u!212 &395925871
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4100,21 +4027,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &395925872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395925868}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae7cb38c3c9fe04cbf9c1a515d5a528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statueUI: {fileID: 591876335}
-  statueText: {fileID: 308141731}
-  inputTextUI: {fileID: 300144543}
 --- !u!1 &403858307
 GameObject:
   m_ObjectHideFlags: 0
@@ -4496,8 +4408,6 @@ GameObject:
   m_Component:
   - component: {fileID: 450991799}
   - component: {fileID: 450991800}
-  - component: {fileID: 450991802}
-  - component: {fileID: 450991801}
   m_Layer: 9
   m_Name: B3_Hallway_Statue(2)
   m_TagString: Statue
@@ -4570,47 +4480,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &450991801
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450991798}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.04, y: 4.57}
-    newSize: {x: 3, y: 4.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 4.56}
-  m_EdgeRadius: 0
---- !u!114 &450991802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450991798}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae7cb38c3c9fe04cbf9c1a515d5a528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statueUI: {fileID: 591876335}
-  statueText: {fileID: 308141731}
-  inputTextUI: {fileID: 300144543}
 --- !u!1 &451640239
 GameObject:
   m_ObjectHideFlags: 0
@@ -5333,7 +5202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509094384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0.14, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 824633189}
@@ -6822,7 +6691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608805009}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.58, y: 0.12, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 966651571}
@@ -7729,8 +7598,6 @@ GameObject:
   m_Component:
   - component: {fileID: 704890747}
   - component: {fileID: 704890748}
-  - component: {fileID: 704890751}
-  - component: {fileID: 704890749}
   - component: {fileID: 704890750}
   m_Layer: 9
   m_Name: B3_Hallway_Candle (3)
@@ -7804,32 +7671,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &704890749
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 704890746}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.69, y: 0.95}
-    newSize: {x: 0.77, y: 1.43}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.77, y: 1.43}
-  m_EdgeRadius: 0
 --- !u!114 &704890750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7871,21 +7712,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &704890751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 704890746}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd8386926e32fd49bd4264e11b0c0f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  candleUI: {fileID: 1607563094}
-  candleText: {fileID: 1284145376}
-  inputTextUI: {fileID: 300144543}
 --- !u!1 &705092998
 GameObject:
   m_ObjectHideFlags: 0
@@ -8345,8 +8171,6 @@ GameObject:
   m_Component:
   - component: {fileID: 793543637}
   - component: {fileID: 793543639}
-  - component: {fileID: 793543640}
-  - component: {fileID: 793543638}
   m_Layer: 9
   m_Name: B3_Hallway_Statue (5)
   m_TagString: Statue
@@ -8369,32 +8193,6 @@ Transform:
   m_Father: {fileID: 1229201899}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &793543638
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793543636}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.02, y: 4.56}
-    newSize: {x: 3, y: 4.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 4.56}
-  m_EdgeRadius: 0
 --- !u!212 &793543639
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8445,21 +8243,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &793543640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793543636}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae7cb38c3c9fe04cbf9c1a515d5a528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statueUI: {fileID: 591876335}
-  statueText: {fileID: 308141731}
-  inputTextUI: {fileID: 300144543}
 --- !u!1 &800333581
 GameObject:
   m_ObjectHideFlags: 0
@@ -8889,7 +8672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873590171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.58, y: 0.12, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 395925869}
@@ -9241,7 +9024,7 @@ PrefabInstance:
     - target: {fileID: 4939504528248802930, guid: 13bc679c6cfb072438cd5b61dd4870f4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4939504528248802933, guid: 13bc679c6cfb072438cd5b61dd4870f4,
         type: 3}
@@ -9604,7 +9387,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896305106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.22, y: 0.12, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7057149}
@@ -10266,8 +10049,6 @@ GameObject:
   m_Component:
   - component: {fileID: 966651571}
   - component: {fileID: 966651572}
-  - component: {fileID: 966651574}
-  - component: {fileID: 966651573}
   m_Layer: 9
   m_Name: B3_Hallway_Statue(4)
   m_TagString: Statue
@@ -10340,47 +10121,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &966651573
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966651570}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.04, y: 4.57}
-    newSize: {x: 3, y: 4.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 4.56}
-  m_EdgeRadius: 0
---- !u!114 &966651574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966651570}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae7cb38c3c9fe04cbf9c1a515d5a528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statueUI: {fileID: 591876335}
-  statueText: {fileID: 308141731}
-  inputTextUI: {fileID: 300144543}
 --- !u!1 &970572110
 GameObject:
   m_ObjectHideFlags: 0
@@ -10675,6 +10415,7 @@ MonoBehaviour:
   B3Hallway: {fileID: 1229201898}
   B3TreeRoom: {fileID: 1744735131}
   B3PianoRoom: {fileID: 2040903368}
+  doorKeeper: {fileID: 1652631890}
 --- !u!1 &983786139
 GameObject:
   m_ObjectHideFlags: 0
@@ -10700,7 +10441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983786139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.58, y: 0.12, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 793543637}
@@ -10766,8 +10507,6 @@ GameObject:
   m_Component:
   - component: {fileID: 991170197}
   - component: {fileID: 991170199}
-  - component: {fileID: 991170200}
-  - component: {fileID: 991170198}
   m_Layer: 9
   m_Name: B3_Pianoroom_Statue
   m_TagString: Statue
@@ -10790,32 +10529,6 @@ Transform:
   m_Father: {fileID: 2040903369}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &991170198
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991170196}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.67, y: 5.6}
-    newSize: {x: 3, y: 4.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 4.56}
-  m_EdgeRadius: 0
 --- !u!212 &991170199
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10866,21 +10579,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &991170200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991170196}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae7cb38c3c9fe04cbf9c1a515d5a528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statueUI: {fileID: 591876335}
-  statueText: {fileID: 308141731}
-  inputTextUI: {fileID: 300144543}
 --- !u!1 &1020169428
 GameObject:
   m_ObjectHideFlags: 0
@@ -10906,7 +10604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020169428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13, y: 0.21, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2044415048}
@@ -11703,7 +11401,6 @@ MonoBehaviour:
     volume1: 1
     volume2: 1
     itemList: []
-    texton: 0
     isFirstGB: 1
     isUnlocked: 0
     isDiaryClicked: 0
@@ -12952,7 +12649,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\uAE30\uC774\uD55C \uD48D\uACBD \uC18D \uCD1B\uBD88\uC774 \uC544\uC9C0\uB791\uC774\uCC98\uB7FC
-    \uD754\uB4E4\uB9B0\uB2E4.\r\n\uD604\uC2E4\uAC10\uC744 \uB5A8\uC5B4\uB728\uB9AC\uB294
+    \uD754\uB4E4\uB9B0\uB2E4.\r \n\uD604\uC2E4\uAC10\uC744 \uB5A8\uC5B4\uB728\uB9AC\uB294
     \uC7A5\uBA74 \uC18D\uC5D0\uC11C \uADF8 \uBD88\uAF43\uC740 \uB098\uB97C \uBE68\uC544\uB4E4\uC774\uB294
     \uB4EF\uD558\uB2E4."
 --- !u!222 &1284145377
@@ -13528,8 +13225,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1400040955}
   - component: {fileID: 1400040956}
-  - component: {fileID: 1400040959}
-  - component: {fileID: 1400040957}
   - component: {fileID: 1400040958}
   m_Layer: 9
   m_Name: B3_Hallway_Candle (1)
@@ -13603,32 +13298,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1400040957
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400040954}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.69, y: 0.95}
-    newSize: {x: 0.77, y: 1.43}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.77, y: 1.43}
-  m_EdgeRadius: 0
 --- !u!114 &1400040958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13670,21 +13339,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &1400040959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400040954}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd8386926e32fd49bd4264e11b0c0f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  candleUI: {fileID: 1607563094}
-  candleText: {fileID: 1284145376}
-  inputTextUI: {fileID: 300144543}
 --- !u!1 &1405562654
 GameObject:
   m_ObjectHideFlags: 0
@@ -15182,8 +14836,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1500464869}
   - component: {fileID: 1500464870}
-  - component: {fileID: 1500464872}
-  - component: {fileID: 1500464871}
   m_Layer: 9
   m_Name: B3_Hallway_Statue
   m_TagString: Statue
@@ -15256,47 +14908,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1500464871
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500464868}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.04, y: 4.57}
-    newSize: {x: 3, y: 4.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 4.56}
-  m_EdgeRadius: 0
---- !u!114 &1500464872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500464868}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae7cb38c3c9fe04cbf9c1a515d5a528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statueUI: {fileID: 591876335}
-  statueText: {fileID: 308141731}
-  inputTextUI: {fileID: 300144543}
 --- !u!1 &1501129202
 GameObject:
   m_ObjectHideFlags: 0
@@ -17550,7 +17161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668261295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.26, y: 0.67, z: 0}
+  m_LocalPosition: {x: -0.14, y: 0.57, z: 0}
   m_LocalScale: {x: 0.46, y: 0.829, z: 0.5769173}
   m_Children: []
   m_Father: {fileID: 241646970}
@@ -17743,7 +17354,6 @@ MonoBehaviour:
   Floor: {fileID: 1818572719}
   BGM: {fileID: 1137529330}
   SFX: {fileID: 973780022}
-  btnSound: {fileID: 0}
 --- !u!1 &1689080747
 GameObject:
   m_ObjectHideFlags: 0
@@ -20378,8 +19988,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1866993471}
   - component: {fileID: 1866993472}
-  - component: {fileID: 1866993475}
-  - component: {fileID: 1866993473}
   - component: {fileID: 1866993474}
   m_Layer: 9
   m_Name: B3_Hallway_Candle (2)
@@ -20453,32 +20061,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1866993473
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866993470}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.69, y: 0.95}
-    newSize: {x: 0.77, y: 1.43}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.77, y: 1.43}
-  m_EdgeRadius: 0
 --- !u!114 &1866993474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20520,21 +20102,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &1866993475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866993470}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd8386926e32fd49bd4264e11b0c0f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  candleUI: {fileID: 1607563094}
-  candleText: {fileID: 1284145376}
-  inputTextUI: {fileID: 300144543}
 --- !u!1 &1874851407
 GameObject:
   m_ObjectHideFlags: 0
@@ -22779,9 +22346,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2044415048}
   - component: {fileID: 2044415049}
-  - component: {fileID: 2044415052}
   - component: {fileID: 2044415050}
   - component: {fileID: 2044415051}
+  - component: {fileID: 2044415052}
   m_Layer: 9
   m_Name: B3_Hallway_Candle
   m_TagString: Candle
@@ -22930,7 +22497,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2044415047}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd8386926e32fd49bd4264e11b0c0f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 612200bf71e5a694dad6d1a5779161f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   candleUI: {fileID: 1607563094}
@@ -23024,8 +22591,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2072621841}
   - component: {fileID: 2072621842}
-  - component: {fileID: 2072621844}
-  - component: {fileID: 2072621843}
   m_Layer: 9
   m_Name: B3_Hallway_Statue(1)
   m_TagString: Statue
@@ -23098,47 +22663,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2072621843
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072621840}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.02, y: 4.56}
-    newSize: {x: 3, y: 4.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 4.56}
-  m_EdgeRadius: 0
---- !u!114 &2072621844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072621840}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae7cb38c3c9fe04cbf9c1a515d5a528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statueUI: {fileID: 591876335}
-  statueText: {fileID: 308141731}
-  inputTextUI: {fileID: 300144543}
 --- !u!1 &2080787284
 GameObject:
   m_ObjectHideFlags: 0
