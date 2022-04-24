@@ -12,7 +12,7 @@ public class MonsterBro : MonoBehaviour
     public Text inputTextUI;
     int monsterBroTextNum = 0;
     SoundManager sound;
-    AudioSource monsterAudioSource;
+    public AudioSource monsterAudioSource;
 
     void Start()
     {
@@ -24,6 +24,14 @@ public class MonsterBro : MonoBehaviour
     {
         MonsterBroWalking(41);
         AfterMonsterBroWalking();
+        if(this.gameObject.GetComponent<Animator>().GetBool("isWalking") == true)
+        {
+            MonsterStepEffectPlay();
+        }
+        else
+        {
+            MonsterStepEffectStop();
+        }
     }
     private void MonsterBroWalking(float limit)
     {    
@@ -31,7 +39,7 @@ public class MonsterBro : MonoBehaviour
             if (this.gameObject.transform.position.x < limit)
             {
                 this.gameObject.GetComponent<Animator>().SetBool("isWalking", true);
-                MonsterStepEffectPlay();
+                //MonsterStepEffectPlay();
                 this.gameObject.transform.position += Vector3.right * 1.4f * Time.deltaTime;
 
                 if(player.transform.position.x < 48)
@@ -51,7 +59,7 @@ public class MonsterBro : MonoBehaviour
             else if(monsterBroTextNum ==0)
             {
                 this.gameObject.GetComponent<Animator>().SetBool("isWalking", false);
-                monsterAudioSource.Stop();
+                //MonsterStepEffectStop();
                 monsterBroUI.SetActive(true);
                 uiManager.StartCoroutine(uiManager.LoadTextOneByOne(monsterBroText.text, inputTextUI));
                 monsterBroTextNum++;
@@ -65,12 +73,17 @@ public class MonsterBro : MonoBehaviour
             player.GetComponent<Animator>().SetBool("leftRight", true);
         }
     }
-    void MonsterStepEffectPlay()
+    public void MonsterStepEffectPlay()
     {
         if(monsterAudioSource.isPlaying)
         {
             return;
         }
         monsterAudioSource.Play();
+    }
+
+    public void MonsterStepEffectStop()
+    {
+        monsterAudioSource.Stop();
     }
 }

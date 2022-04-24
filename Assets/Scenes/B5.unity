@@ -4762,6 +4762,7 @@ MonoBehaviour:
   monsterBroUI: {fileID: 1231266660}
   monsterBroText: {fileID: 790614857}
   inputTextUI: {fileID: 1820403738}
+  monsterAudioSource: {fileID: 0}
 --- !u!82 &1017497199
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6947,7 +6948,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterBro: {fileID: 1017497194}
   fadeOut: {fileID: 2093249780}
+  monsterBroTrigger: 0
   floorTxt: {fileID: 6293109}
+  crowd: {fileID: 1630301578}
+  monster_Bro: {fileID: 1017497194}
 --- !u!1 &1490520113
 GameObject:
   m_ObjectHideFlags: 0
