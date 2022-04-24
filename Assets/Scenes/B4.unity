@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8867,9 +8867,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uCE84\uCE84\uD55C \uC9C0\uD558\uC2E4 \uC548\uC744 \uD76C\uBBF8\uD558\uAC8C
-    \uBE44\uCD94\uACE0 \uC788\uB2E4.\n\uC791\uC740 \uBC14\uB78C\uC5D0\uB3C4 \uBD88\uAF43\uC774
-    \uAE08\uBC29 \uC0AC\uADF8\uB77C\uB4E4 \uAC83 \uAC19\uB2E4."
+  m_Text: "\uC774\uACF3\uC5D0 \uC815\uC0C1\uC801\uC778 \uAC83\uC740 \uAEBC\uC9C8
+    \uAC83 \uAC19\uC740 \uC774 \uCD1B\uBD88\uBC16\uC5D0 \uC5C6\uB2E4.\r\n\uC5B4\uCA4C\uBA74
+    \uC774 \uD658\uACBD\uACFC \uAC19\uC774 \uD658\uC0C1\uC774\uB77C\uACE0 \uBBFF\uACE0
+    \uC2F6\uC744 \uBFD0\uC774\uB2E4."
 --- !u!222 &820141133
 CanvasRenderer:
   m_ObjectHideFlags: 0
