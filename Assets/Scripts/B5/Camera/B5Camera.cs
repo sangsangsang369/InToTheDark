@@ -6,8 +6,11 @@ public class B5Camera : CameraScript
 {
     float player_xPosition;
     FloorTxt Ft;
+    SoundManager sound;
     new void Start()
     {
+        sound = SoundManager.inst;
+        sound.bgmSource.Stop();
         base.Start();
         Ft = FindObjectOfType<FloorTxt>();
         player.currRoom = "B5_Hallway";

@@ -16,7 +16,7 @@ public class AfterFadeOut : MonoBehaviour
     
     public void TextOn()
     {
-        sound.EndingPlay();
+        //sound.EndingPlay();
         if(nextText && !endingCredit)
         {
             if(prevText)
@@ -32,5 +32,14 @@ public class AfterFadeOut : MonoBehaviour
             endingCreditParent.SetActive(true);
             endingCredit.GetComponent<Animator>().SetTrigger("TheEnd");
         }
+    }
+
+    public void EndingBGMOn()
+    {
+        if (sound.effectSource.clip == sound.endingBGM)
+        {
+            return;
+        }
+        sound.EffectPlay(sound.endingBGM);
     }
 }
