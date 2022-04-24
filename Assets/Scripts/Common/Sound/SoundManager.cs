@@ -18,6 +18,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource playerHeartBeatSource; //
     public AudioSource monsterWalkingSource; //
     public AudioSource monsterGrowlingSource; //
+    public AudioSource itemSource;
 
     //BGM
     public AudioClip mainBGM;
@@ -48,10 +49,12 @@ public class SoundManager : MonoBehaviour
     //B2 Effect
     // public AudioClip cabinetOpenLongEffect;
     // public AudioClip cabinetOpenShortEffect;
-    // public AudioClip pocketwatchEffect;
+    public AudioClip pocketwatchEffect;
     // public AudioClip lockerOpenEffect;
-    // public AudioClip swipeStatueEffect;
-    // public AudioClip knifeEffect;
+    public AudioClip swipeStatueEffect;
+    public AudioClip knifeEffect;
+    public AudioClip knifefalling;
+    public AudioClip swipePicture;
     // public AudioClip moveClockEffect;
 
     //B3 Effect
@@ -96,6 +99,7 @@ public class SoundManager : MonoBehaviour
         monsterGrowlingSource.volume = saveData.volume2;
         monsterWalkingSource.volume = saveData.volume2;
         conversationAudioSource.volume = saveData.volume2;
+        itemSource.volume = saveData.volume2;
 
         if(inst == null)
         {
@@ -194,5 +198,10 @@ public class SoundManager : MonoBehaviour
     public bool EffectPlaying()
     {
         return effectSource.isPlaying;
+    }
+    public void ItemEffectPlaying(AudioClip clip)
+    {
+        itemSource.clip = clip;
+        itemSource.Play();
     }
 }

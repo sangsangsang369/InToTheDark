@@ -16,7 +16,7 @@ public class Cabinet3 : Object
     DataManager data;
     SaveDataClass saveData;
     SoundManager SM;
-    public AudioClip cabinetOpenShortEffect;
+    public AudioClip cabinetOpenShortEffect, cabinetOpenLongEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +38,9 @@ public class Cabinet3 : Object
         {
             if (!alreadyOpen)
             {
-                SM.EffectPlay(cabinetOpenShortEffect);
+                SM.EffectPlay(cabinetOpenLongEffect);
                 //SM.cabinetOpenLongEffectPlay();
                 cabinet3UI.SetActive(true);
-                SM.EffectPlay(SM.getItemEffect);
                 StartCoroutine(uiManager.LoadTexts(cabinet3Texts, inputTextUI, 3));
                 GameObject clock = clockImg;
                 inventoryMng.AddToInventory(clock, 1f, ItemClass.ItemPrefabOrder.PocketWatch);

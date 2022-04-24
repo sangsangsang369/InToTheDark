@@ -1642,6 +1642,7 @@ MonoBehaviour:
     volume1: 1
     volume2: 1
     itemList: []
+    texton: 0
     isFirstGB: 1
     isUnlocked: 0
     isDiaryClicked: 0

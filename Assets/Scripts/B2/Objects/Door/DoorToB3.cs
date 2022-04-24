@@ -26,8 +26,6 @@ public class DoorToB3 : Object
     FloorTxt Ft;
     SoundManager SM;
     SaveAlarm saveAlarm;
-    public AudioClip swipeStatueEffect;
-    public AudioClip knifeEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -69,7 +67,7 @@ public class DoorToB3 : Object
             data.Save();
             if (slotSelectMng.usableItem == "sword1Selected")
             {
-                SM.EffectPlay(knifeEffect);
+                SM.EffectPlay(SM.knifeEffect);
                 s1.SetActive(true);
                 s1On = true;
                 saveData.s1On = true;
@@ -79,7 +77,7 @@ public class DoorToB3 : Object
             }
             if (slotSelectMng.usableItem == "sword2Selected")
             {
-                SM.EffectPlay(knifeEffect);
+                SM.EffectPlay(SM.knifeEffect);
                 s2.SetActive(true);
                 s2On = true;
                 saveData.s2On = true;
@@ -89,7 +87,7 @@ public class DoorToB3 : Object
             }
             if (s1On && s2On)
             {
-                SM.EffectPlay(swipeStatueEffect);
+                SM.EffectPlay(SM.swipeStatueEffect);
                 if (!OnScript)
                 {
                     DoorUI.SetActive(true);

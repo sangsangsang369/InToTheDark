@@ -44,6 +44,7 @@ public class AnsCheck : MonoBehaviour
         {
             if ((moveHour.firstHour == true) && (moveMin.firstMin == true))
             {
+                SM.EffectPlay(SM.swipePicture);
                 Imgs.GetComponent<Animator>().SetTrigger("GoOn");
                 ImgNum = 2;
             }
@@ -53,6 +54,7 @@ public class AnsCheck : MonoBehaviour
             if ((moveHour.secHour == true) && (moveMin.secMin == true))
             {
                 Img1.SetActive(false);
+                SM.EffectPlay(SM.swipePicture);
                 Imgs.GetComponent<Animator>().SetTrigger("GGoOn");
                 ImgNum = 3;
             }
@@ -62,6 +64,7 @@ public class AnsCheck : MonoBehaviour
             if ((moveHour.thrHour == true) && (moveMin.thrMin == true))
             {
                 Img2.SetActive(false);
+                SM.EffectPlay(SM.swipePicture);
                 Imgs.GetComponent<Animator>().SetTrigger("GGGoOn");
                 ImgNum = 4;
             }
@@ -71,6 +74,7 @@ public class AnsCheck : MonoBehaviour
             if ((moveHour.fourHour == true) && (moveMin.fourMin == true))
             {
                 Img3.SetActive(false);
+                SM.EffectPlay(SM.swipePicture);
                 isClockOpen = true;
                 Invoke("ClockOpen", 0.5f);
             }
@@ -85,7 +89,7 @@ public class AnsCheck : MonoBehaviour
         inventoryMng.RemoveFromInventory(clock.gameObject, ItemClass.ItemPrefabOrder.PocketWatch);
         inventoryMng.AddToInventory(keyImg, 1f, ItemClass.ItemPrefabOrder.CabinetKey);
         clockUI.SetActive(false);
-        SM.EffectPlay(SM.getItemEffect);
+        SM.ItemEffectPlaying(SM.getItemEffect);
         key1UI.SetActive(true);
         uiManager.StartCoroutine(uiManager.LoadTextOneByOne(key1Text.text, inputTextUI));
     }

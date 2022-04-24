@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1385,7 +1385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9843077ce833e4848a4813a693378292, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dad92fc9c26d20f4fa625d6664b43772, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3099,7 +3099,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statue3Fliped: 0
-  swipeStatueEffect: {fileID: 0}
 --- !u!1 &352062543
 GameObject:
   m_ObjectHideFlags: 0
@@ -5277,7 +5276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statue2Fliped: 0
-  swipeStatueEffect: {fileID: 0}
 --- !u!1 &527326885
 GameObject:
   m_ObjectHideFlags: 0
@@ -8218,7 +8216,8 @@ MonoBehaviour:
   cabinet4UI: {fileID: 1687115827}
   cabinet4Text: {fileID: 870337909}
   inputTextUI: {fileID: 695523062}
-  cabinetOpenShortEffect: {fileID: 0}
+  cabinetOpenShortEffect: {fileID: 8300000, guid: 1bb847d19d909cd4b9c1ff31ba407c67,
+    type: 3}
 --- !u!1 &814561944
 GameObject:
   m_ObjectHideFlags: 0
@@ -10342,6 +10341,7 @@ MonoBehaviour:
     volume1: 0
     volume2: 0
     itemList: []
+    texton: 0
     isFirstGB: 1
     isUnlocked: 0
     isDiaryClicked: 0
@@ -10629,7 +10629,10 @@ MonoBehaviour:
   - {fileID: 1547133648}
   inputTextUI: {fileID: 695523062}
   alreadyOpen: 0
-  cabinetOpenShortEffect: {fileID: 0}
+  cabinetOpenShortEffect: {fileID: 8300000, guid: 1bb847d19d909cd4b9c1ff31ba407c67,
+    type: 3}
+  cabinetOpenLongEffect: {fileID: 8300000, guid: 214699ce683814c4aa12980e71242078,
+    type: 3}
 --- !u!1 &1056937000
 GameObject:
   m_ObjectHideFlags: 0
@@ -11259,7 +11262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9843077ce833e4848a4813a693378292, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dad92fc9c26d20f4fa625d6664b43772, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11416,9 +11419,10 @@ MonoBehaviour:
   cabinet2openedText: {fileID: 1989804026}
   inputTextUI: {fileID: 695523062}
   keyUsed: 0
-  cabinetOpenShortEffect: {fileID: 0}
-  cabinetOpenLongEffect: {fileID: 0}
-  lockerOpenEffect: {fileID: 0}
+  cabinetOpenShortEffect: {fileID: 8300000, guid: 58867b54901cd694982f16e238696ac7,
+    type: 3}
+  cabinetOpenLongEffect: {fileID: 8300000, guid: 214699ce683814c4aa12980e71242078,
+    type: 3}
 --- !u!114 &1145542109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13208,7 +13212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9843077ce833e4848a4813a693378292, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dad92fc9c26d20f4fa625d6664b43772, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15211,7 +15215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9843077ce833e4848a4813a693378292, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dad92fc9c26d20f4fa625d6664b43772, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16317,7 +16321,8 @@ MonoBehaviour:
   cabinet1UI: {fileID: 1687115827}
   cabinet1Text: {fileID: 2008956437}
   inputTextUI: {fileID: 695523062}
-  cabinetOpenShortEffect: {fileID: 0}
+  cabinetOpenShortEffect: {fileID: 8300000, guid: 58867b54901cd694982f16e238696ac7,
+    type: 3}
 --- !u!1 &1732196232
 GameObject:
   m_ObjectHideFlags: 0
@@ -19235,7 +19240,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statue1Fliped: 0
-  swipeStatueEffect: {fileID: 0}
 --- !u!1 &1960811583
 GameObject:
   m_ObjectHideFlags: 0
@@ -19359,7 +19363,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statue4Fliped: 0
-  swipeStatueEffect: {fileID: 0}
 --- !u!1 &1973453150
 GameObject:
   m_ObjectHideFlags: 0
@@ -20489,7 +20492,8 @@ MonoBehaviour:
   - {fileID: 1431460518}
   - {fileID: 138023059}
   inputTextUI: {fileID: 695523062}
-  cabinetOpenShortEffect: {fileID: 0}
+  cabinetOpenShortEffect: {fileID: 8300000, guid: 1bb847d19d909cd4b9c1ff31ba407c67,
+    type: 3}
 --- !u!1 &2087916311
 GameObject:
   m_ObjectHideFlags: 0

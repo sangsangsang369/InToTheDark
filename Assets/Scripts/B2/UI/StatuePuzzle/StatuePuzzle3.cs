@@ -9,7 +9,6 @@ public class StatuePuzzle3 : Object
     Player player;
     public bool statue3Fliped = false;
     SoundManager SM;
-    public AudioClip swipeStatueEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +25,13 @@ public class StatuePuzzle3 : Object
             if (!statue3Fliped)
             {
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
-                SM.EffectPlay(swipeStatueEffect);
+                SM.EffectPlay(SM.swipeStatueEffect);
                 statue3Fliped = true;
             }
             else
             {
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
-                SM.EffectPlay(swipeStatueEffect);
+                SM.EffectPlay(SM.swipeStatueEffect);
                 statue3Fliped = false;
             }
         }

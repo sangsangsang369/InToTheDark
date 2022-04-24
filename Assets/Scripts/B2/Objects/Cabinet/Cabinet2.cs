@@ -20,7 +20,7 @@ public class Cabinet2 : Object
     SaveAlarm saveAlarm;
     public AudioClip cabinetOpenShortEffect;
     public AudioClip cabinetOpenLongEffect;
-    public AudioClip lockerOpenEffect;
+    //public AudioClip lockerOpenEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -46,9 +46,8 @@ public class Cabinet2 : Object
                 {
                     SM.EffectPlay(cabinetOpenLongEffect);
                     saveAlarm.SaveAlarmPopUp();
-                    SM.EffectPlay(lockerOpenEffect);
                     sword1UI.SetActive(true);
-                    SM.EffectPlay(SM.getItemEffect);
+                    SM.ItemEffectPlaying(SM.knifefalling);
                     StartCoroutine(uiManager.LoadTextOneByOne(sword1Text.text, inputTextUI));
                     inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.CabinetKey);
                     slotSelectMng.SelectionClear();
