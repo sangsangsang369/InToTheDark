@@ -6,7 +6,6 @@ public class B1Camera : CameraScript
 {
     FloorTxt Ft;
     IntroScpt IntroScpt;
-    public GameObject introCanvas;
     SoundManager sound;
 
     new void Start()
@@ -15,6 +14,7 @@ public class B1Camera : CameraScript
         sound.B12BGMPlay();
         base.Start();
         Ft = FindObjectOfType<FloorTxt>();
+        IntroScpt = FindObjectOfType<IntroScpt>();
         //player.currRoom = "B1_Hallway";
         saveData.currFloor = "B1";
         //saveData.currRoomPos = "복도";
@@ -22,8 +22,7 @@ public class B1Camera : CameraScript
         Ft.PosUI();
         if(!saveData.texton)
         {
-            introCanvas.SetActive(true);
-            //인트로 시작을 어케해주냐는 말이야,,
+            IntroScpt.nowstart();
         }
     }
 

@@ -22,7 +22,7 @@
     "volume1": 1.0,
     "volume2": 1.0,
     "itemList": [],
-    "texton": false,
+    "texton": true,
     "isFirstGB": true,
     "isUnlocked": false,
     "isDiaryClicked": false,
