@@ -10,7 +10,6 @@ public class StartScene : MonoBehaviour
     SceneLoadManager sceneLoader;
     SoundManager inst;
     IntroScpt IntroScpt;
-    [SerializeField] private AudioClip btnSound;
 
     void Start()
     {
@@ -23,14 +22,14 @@ public class StartScene : MonoBehaviour
     
     public void LoadGame() // 버튼 누르면 실행될 함수
     {
-        inst.ButtonEffectPlay(btnSound);
+        inst.ButtonEffectPlay(inst.buttonOnStartScene);
         data.Load();
         sceneLoader.LoadScene(saveData.currFloor); // ()안에 있는 이름을 가진 씬으로 전환됨
     }
 
     public void StartNewGame()
     {
-        inst.ButtonEffectPlay(btnSound);
+        inst.ButtonEffectPlay(inst.buttonOnStartScene);
         data.saveData = new SaveDataClass();
         data.Save();
         IntroScpt.nowstart();

@@ -29,7 +29,6 @@ public class SoundManager : MonoBehaviour
     //Common Effect
     public AudioClip getItemEffect;
     public AudioClip playerWalkEffect;
-    public AudioClip monsterWalkEffect;
     public AudioClip buttonOnStartScene;
     public AudioClip buttonEffect;
     public AudioClip conversationEffect;
@@ -85,7 +84,6 @@ public class SoundManager : MonoBehaviour
     //B5 Effect
     public AudioClip doorSlideEffect;
     public AudioClip playerScreamEffect;
-    public AudioClip priestWalkEffect;
 
     // Start is called before the first frame update
     void Start()
