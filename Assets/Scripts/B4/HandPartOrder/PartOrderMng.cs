@@ -43,6 +43,8 @@ public class PartOrderMng : MonoBehaviour
             {
                 wrongUI.SetActive(true);
                 StartCoroutine(uiManager.LoadTextOneByOne(wrongText.text, inputTextUI));
+                sound.EffectPlay(sound.handsScreamEffect);
+                hands.GetComponent<Animator>().SetTrigger("ShakeTrigger");
                 answerSheet = new List<string>();
                 isCorrect = false;
                 break;

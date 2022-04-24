@@ -6141,7 +6141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: {fileID: 4939504528286474604}
-  laboratory: {fileID: 659123871}
   brokenCapsule: {fileID: 802986875}
   lockHole: {fileID: 481384614}
   lockObj: {fileID: 305930883}

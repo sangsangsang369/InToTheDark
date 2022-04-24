@@ -11,6 +11,7 @@ public class CabinetToHW : Object
     Player player;
     DataManager data;
     SaveDataClass saveData;
+    SoundManager inst;
     FloorTxt Ft;
 
     // Start is called before the first frame update
@@ -20,12 +21,13 @@ public class CabinetToHW : Object
         player = FindObjectOfType<Player>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        inst = SoundManager.inst;
     }
 
     // Update is called once per frame
     public override void ObjectFunction()
     {
-        LoadRoom("LoadHallway");
+        LoadRoom("LoadHallway", inst.doorOpenEffect);
     }
 
     void LoadHallway()

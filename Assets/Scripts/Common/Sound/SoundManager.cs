@@ -80,6 +80,7 @@ public class SoundManager : MonoBehaviour
     //B4 Effect
     public AudioClip consoleTouchEffect;
     public AudioClip capsuleBrokenEffect;
+    public AudioClip handsScreamEffect;
 
     //B5 Effect
     public AudioClip doorSlideEffect;

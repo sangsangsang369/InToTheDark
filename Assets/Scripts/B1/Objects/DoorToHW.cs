@@ -11,6 +11,7 @@ public class DoorToHW : Object
     Camera mainCamera;
     DataManager data;
     SaveDataClass saveData;
+    SoundManager inst;
     FloorTxt Ft; 
 
     void Start()
@@ -19,12 +20,13 @@ public class DoorToHW : Object
         mainCamera = FindObjectOfType<Camera>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        inst = SoundManager.inst;
         Ft = FindObjectOfType<FloorTxt>();
     }
 
     public override void ObjectFunction()
     {
-        LoadRoom("LoadHallway");
+        LoadRoom("LoadHallway", inst.doorOpenEffect);
     }
 
     void LoadHallway()

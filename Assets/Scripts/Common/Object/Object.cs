@@ -27,9 +27,9 @@ public class Object : MonoBehaviour
         sceneLoader.LoadScene(sceneName);
     }
 
-    public void LoadRoom(string functionName)
+    public void LoadRoom(string functionName, AudioClip clip)
     {
-        SoundManager.inst.EffectPlay(SoundManager.inst.doorOpenEffect);
+        SoundManager.inst.EffectPlay(clip);
         sceneLoader = SceneLoadManager.instance;
         sceneLoader.LoadRoom();
         Invoke(functionName, 0.5f);

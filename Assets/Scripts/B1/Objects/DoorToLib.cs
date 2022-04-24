@@ -10,6 +10,7 @@ public class DoorToLib : Object
     Player player;
     DataManager data;
     SaveDataClass saveData;
+    SoundManager inst;
     FloorTxt Ft;
 
     void Start()
@@ -17,12 +18,13 @@ public class DoorToLib : Object
         player = FindObjectOfType<Player>();
         data = DataManager.singleTon;
         saveData = data.saveData;
+        inst = SoundManager.inst;
         Ft = FindObjectOfType<FloorTxt>();  
     }
 
     public override void ObjectFunction()
     {
-        LoadRoom("LoadLibrary");
+        LoadRoom("LoadLibrary", inst.doorOpenEffect);
     }
 
     void LoadLibrary()
