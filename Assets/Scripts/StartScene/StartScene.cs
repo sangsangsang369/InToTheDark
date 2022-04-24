@@ -9,6 +9,7 @@ public class StartScene : MonoBehaviour
     SaveDataClass saveData;
     SceneLoadManager sceneLoader;
     SoundManager inst;
+    IntroScpt IntroScpt;
     [SerializeField] private AudioClip btnSound;
 
     void Start()
@@ -17,6 +18,7 @@ public class StartScene : MonoBehaviour
         saveData = data.saveData;
         inst = SoundManager.inst;
         sceneLoader = SceneLoadManager.instance;
+        IntroScpt = FindObjectOfType<IntroScpt>();
     }
     
     public void LoadGame() // 버튼 누르면 실행될 함수
@@ -31,6 +33,11 @@ public class StartScene : MonoBehaviour
         inst.ButtonEffectPlay(btnSound);
         data.saveData = new SaveDataClass();
         data.Save();
-        sceneLoader.LoadScene("B1");
+        IntroScpt.nowstart();
+        IntroScpt.introCanvas.SetActive(true);
+        if (IntroScpt.texton)
+        {
+            sceneLoader.LoadScene("B1");
+        }
     }
 }

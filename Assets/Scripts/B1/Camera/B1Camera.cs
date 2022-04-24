@@ -5,7 +5,6 @@ using UnityEngine;
 public class B1Camera : CameraScript
 {
     FloorTxt Ft;
-    IntroScpt IntroScpt;
     SoundManager sound;
 
     new void Start()
@@ -14,16 +13,11 @@ public class B1Camera : CameraScript
         sound.B12BGMPlay();
         base.Start();
         Ft = FindObjectOfType<FloorTxt>();
-        IntroScpt = FindObjectOfType<IntroScpt>();
         //player.currRoom = "B1_Hallway";
         saveData.currFloor = "B1";
         //saveData.currRoomPos = "복도";
         data.Save();
         Ft.PosUI();
-        if(!saveData.texton)
-        {
-            IntroScpt.nowstart();
-        }
     }
 
     // Update is called once per frame
