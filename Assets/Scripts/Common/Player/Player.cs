@@ -41,13 +41,7 @@ public class Player : Detect
         {
             if(!collider.GetComponent<Monster>().areYouDied)
             {
-                inst.playerAudioSource.Stop();
-                GetComponent<Animator>().SetBool("isWalking", false);
-                collider.GetComponent<Monster>().areYouDied = true;
-                collider.GetComponent<Monster>().leftBtn.SetActive(false);
-                collider.GetComponent<Monster>().rightBtn.SetActive(false);
-                collider.GetComponent<Monster>().leftBtnImg.SetActive(true);
-                collider.GetComponent<Monster>().rightBtnImg.SetActive(true);
+                WhenYouDied(collider);
             }
             if(collider.GetComponent<Monster>().GetComponent<Animator>().enabled)
             {
@@ -73,5 +67,16 @@ public class Player : Detect
             Transform magnifier = activatedObj.transform.GetChild(0);
             magnifier.gameObject.SetActive(boolean);
         }
+    }
+
+    void WhenYouDied(Collider2D collider)
+    {
+        inst.playerAudioSource.Stop();
+        GetComponent<Animator>().SetBool("isWalking", false);
+        collider.GetComponent<Monster>().areYouDied = true;
+        collider.GetComponent<Monster>().leftBtn.SetActive(false);
+        collider.GetComponent<Monster>().rightBtn.SetActive(false);
+        collider.GetComponent<Monster>().leftBtnImg.SetActive(true);
+        collider.GetComponent<Monster>().rightBtnImg.SetActive(true);
     }
 }
