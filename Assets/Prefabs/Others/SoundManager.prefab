@@ -65,10 +65,9 @@ MonoBehaviour:
   mainBGM: {fileID: 8300000, guid: 7dbc12bb779156a4a89f298da2519397, type: 3}
   B12BGM: {fileID: 8300000, guid: 9417dd2cbb927ce46aeb9572a061e557, type: 3}
   B34BGM: {fileID: 0}
-  endingBGM: {fileID: 8300000, guid: 120fe3780bf63ab438939859e97eec13, type: 3}
+  endingBGM: {fileID: 8300000, guid: c817db61fa63a894b9a5f24e1f369c8b, type: 3}
   getItemEffect: {fileID: 8300000, guid: d5dcdd2bb6a1391479f7bca99f725ab4, type: 3}
   playerWalkEffect: {fileID: 8300000, guid: 817c3cb7eb93fe943adc8c20215e495e, type: 3}
-  monsterWalkEffect: {fileID: 0}
   buttonOnStartScene: {fileID: 8300000, guid: 0038df261c90a7946a938a15ff8363e2, type: 3}
   buttonEffect: {fileID: 8300000, guid: 2e01c96af2367524bb6c0946d0bdd944, type: 3}
   conversationEffect: {fileID: 8300000, guid: 9c4fc030722aee9479b326324ffd5d36, type: 3}
@@ -110,7 +109,6 @@ MonoBehaviour:
   handsScreamEffect: {fileID: 8300000, guid: 26af1bd346fef2a41ac541a49ceeec15, type: 3}
   doorSlideEffect: {fileID: 8300000, guid: 7f9a884ae513f2f45b73a0beb2deec4c, type: 3}
   playerScreamEffect: {fileID: 8300000, guid: fddac895f73548949ba371b1a8825235, type: 3}
-  priestWalkEffect: {fileID: 8300000, guid: 6dc183586e5821a4bb4fbf20ec7871b1, type: 3}
 --- !u!82 &5960547632288174875
 AudioSource:
   m_ObjectHideFlags: 0

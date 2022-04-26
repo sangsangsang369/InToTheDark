@@ -102,9 +102,9 @@ public class UIManager : UI
                         if(isFirstGB)
                         {
                             inventoryMng.AddToInventory(note, 0.1f, ItemClass.ItemPrefabOrder.Note);
+                            sound.EffectPlay(sound.getItemEffect);
                         }
                         nameText.text = "책에서 발견된 쪽지";
-                        sound.EffectPlay(sound.getItemEffect);
                         //다시 텍스트 베이스 바꿔주고
                         goldenBookScrpt.GetComponent<Image>().sprite = textBase;
                         illust.GetComponent<Image>().sprite = letterImage;

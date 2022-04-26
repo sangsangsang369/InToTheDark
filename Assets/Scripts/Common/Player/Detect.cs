@@ -60,7 +60,6 @@ public class Detect : MonoBehaviour
             Object obj = hit.collider.GetComponent<Object>();
             if(obj.enabled && !uiManager.nowTexting)
             {
-                //Debug.Log("지금은 check 돌아감");
                 obj.ObjectFunction(); 
             }
         }

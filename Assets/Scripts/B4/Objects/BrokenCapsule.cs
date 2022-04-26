@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Capsule : Object
+public class BrokenCapsule : Object
 {
-    public GameObject capsuleUI;
-    public List<Text> capsuleTexts;
+    public GameObject brokenCapsuleUI;
+    public Text brokenCapsuleText;
     public Text inputTextUI;
     UI uiManager;
 
@@ -17,7 +17,7 @@ public class Capsule : Object
 
     public override void ObjectFunction()
     {
-        capsuleUI.SetActive(true);
-        StartCoroutine(uiManager.LoadTexts(capsuleTexts, inputTextUI, 2));
+        brokenCapsuleUI.SetActive(true);
+        StartCoroutine(uiManager.LoadTextOneByOne(brokenCapsuleText.text, inputTextUI));
     }
 }
