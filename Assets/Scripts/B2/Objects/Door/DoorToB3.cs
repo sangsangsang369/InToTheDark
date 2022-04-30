@@ -19,6 +19,7 @@ public class DoorToB3 : Object
     public GameObject s1, s2, cover, blood, upblood, swordDown, DoorUI, fullSword;
     public bool s1On = false;
     public bool s2On = false;
+    public bool doorCheck = false;
     public Text doorText, inputTextUI;
 
     DataManager data;
@@ -60,7 +61,7 @@ public class DoorToB3 : Object
             endAllAnim = false;
             LoadScene("B3");
         }
-        if (!isB3DoorOpened)
+        if (!isB3DoorOpened & !doorCheck)
         {
             ReB2 = false;
             saveData.ReB2 = false;
@@ -87,18 +88,22 @@ public class DoorToB3 : Object
             }
             if (s1On && s2On)
             {
-                SM.EffectPlay(SM.swipeStatueEffect);
-                if (!OnScript)
+                doorCheck = true;
+                if (doorCheck)
                 {
-                    DoorUI.SetActive(true);
-                    StartCoroutine(uiManager.LoadTextOneByOne(doorText.text, inputTextUI));
-                    OnScript = true;
-                    if (Input.GetKeyDown(KeyCode.Mouse0))
+                    SM.EffectPlay(SM.swipeStatueEffect);
+                    if (!OnScript)
                     {
-                        GetComponent<Animator>().SetTrigger("GoDown");
-                        s1.SetActive(false);
-                        s2.SetActive(false);
-                        Invoke("WaitSec", 3f);
+                        DoorUI.SetActive(true);
+                        StartCoroutine(uiManager.LoadTextOneByOne(doorText.text, inputTextUI));
+                        OnScript = true;
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+                            GetComponent<Animator>().SetTrigger("GoDown");
+                            s1.SetActive(false);
+                            s2.SetActive(false);
+                            Invoke("WaitSec", 3f);
+                        }
                     }
                 }
             }
