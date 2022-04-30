@@ -6854,6 +6854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
+  canvas: {fileID: 1814571858}
   currRoom: B4_Hallway
   speed: 6
   limit: 0

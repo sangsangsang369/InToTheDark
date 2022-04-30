@@ -22,19 +22,29 @@
     "currRoomPos": "복도",
     "volume1": 1.0,
     "volume2": 1.0,
-    "itemList": [],
+    "itemList": [
+        {
+            "prefabOrder": 0
+        },
+        {
+            "prefabOrder": 1
+        },
+        {
+            "prefabOrder": 3
+        }
+    ],
     "isFirstGB": true,
-    "isUnlocked": false,
-    "isDiaryClicked": false,
-    "isMufflerPicked": false,
-    "isLetterPicked": false,
+    "isUnlocked": true,
+    "isDiaryClicked": true,
+    "isMufflerPicked": true,
+    "isLetterPicked": true,
     "keyUsed": true,
     "alreadyOpen": true,
     "playPuzzleOnce": true,
     "isB3DoorOpened": true,
     "OnB2CandleOnce": false,
     "playB2StatueOnce": false,
-    "ReB2": false,
+    "ReB2": true,
     "s1On": true,
     "s2On": true,
     "isB3ReEntered": false,

@@ -6596,6 +6596,7 @@ MonoBehaviour:
   fullSword: {fileID: 1831526650}
   s1On: 0
   s2On: 0
+  doorCheck: 0
   doorText: {fileID: 145396212}
   inputTextUI: {fileID: 695523062}
 --- !u!61 &672103006
@@ -17789,6 +17790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
+  canvas: {fileID: 925423298}
   currRoom: 
   speed: 6
   limit: 0

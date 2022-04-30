@@ -20875,6 +20875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
+  canvas: {fileID: 1858847773}
   currRoom: 
   speed: 6
   limit: 0

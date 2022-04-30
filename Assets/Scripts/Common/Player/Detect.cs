@@ -13,7 +13,7 @@ public class Detect : MonoBehaviour
     public Camera mainCamera;
 
     SlotSelectionMng slotSelectMng;
-    Canvas canvas;
+    public Canvas canvas;
     GraphicRaycaster graphicRay;
     List<RaycastResult> results = new List<RaycastResult>();
     
@@ -23,7 +23,7 @@ public class Detect : MonoBehaviour
         uiManager = FindObjectOfType<UI>();
         
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
-        canvas = FindObjectOfType<Canvas>();
+        //canvas = FindObjectOfType<Canvas>();
         graphicRay = canvas.transform.GetComponent<GraphicRaycaster>();
     }
 
