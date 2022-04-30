@@ -17,37 +17,31 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": -1.340000033378601,
-    "currFloor": "B3",
-    "currRoomPos": "합주실",
+    "playerXstartPoint": -31.399999618530275,
+    "currFloor": "B2",
+    "currRoomPos": "시체의 방",
     "volume1": 1.0,
     "volume2": 1.0,
     "itemList": [
         {
-            "prefabOrder": 0
-        },
-        {
-            "prefabOrder": 1
-        },
-        {
-            "prefabOrder": 3
+            "prefabOrder": 4
         }
     ],
     "isFirstGB": true,
-    "isUnlocked": true,
-    "isDiaryClicked": true,
-    "isMufflerPicked": true,
-    "isLetterPicked": true,
-    "keyUsed": true,
+    "isUnlocked": false,
+    "isDiaryClicked": false,
+    "isMufflerPicked": false,
+    "isLetterPicked": false,
+    "keyUsed": false,
     "alreadyOpen": true,
-    "playPuzzleOnce": true,
-    "isB3DoorOpened": true,
+    "playPuzzleOnce": false,
+    "isB3DoorOpened": false,
     "OnB2CandleOnce": false,
     "playB2StatueOnce": false,
-    "ReB2": true,
-    "s1On": true,
-    "s2On": true,
-    "isB3ReEntered": true,
+    "ReB2": false,
+    "s1On": false,
+    "s2On": false,
+    "isB3ReEntered": false,
     "OnB3CandleOnce": false,
     "playB3StatueOnce": false,
     "isPianoMemoGained": false,
@@ -59,7 +53,7 @@
     "isLeafPicked": false,
     "isFruitPicked": false,
     "fruitNum": 5,
-    "isB4ReEntered": true,
+    "isB4ReEntered": false,
     "isDaggerPicked": false,
     "isJewelGained": false,
     "isB4LockUnlocked": false,

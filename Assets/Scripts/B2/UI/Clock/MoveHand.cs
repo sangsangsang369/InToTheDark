@@ -7,6 +7,7 @@ public class MoveHand : MonoBehaviour
     public GameObject hourHand;
     RectTransform rectHour;
     SoundManager SM;
+    public Camera mainCamera;
     Vector3 mousePos;
     public bool firstHour = false;
     public bool secHour = false;
@@ -16,6 +17,7 @@ public class MoveHand : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mainCamera = FindObjectOfType<Camera>();
         rectHour = hourHand.GetComponent<RectTransform>();
         SM = SoundManager.inst;
     }
@@ -25,7 +27,8 @@ public class MoveHand : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            mousePos = Input.mousePosition;
+            //mousePos = Input.mousePosition;
+            mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             //Debug.Log("x pos = " + mousePos.x);
             //Debug.Log("y pos = " + mousePos.y);
             //SM.moveClockEffectPlay();

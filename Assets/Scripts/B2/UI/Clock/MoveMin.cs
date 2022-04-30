@@ -7,6 +7,7 @@ public class MoveMin : MonoBehaviour
     public GameObject minuteHand;
     RectTransform rectMin;
     SoundManager SM;
+    public Camera mainCamera;
     Vector3 mousePos;
     public bool firstMin = false;
     public bool secMin = false;
@@ -16,6 +17,7 @@ public class MoveMin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mainCamera = FindObjectOfType<Camera>();
         rectMin = minuteHand.GetComponent<RectTransform>();
         SM = SoundManager.inst;
     }
@@ -25,7 +27,8 @@ public class MoveMin : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            mousePos = Input.mousePosition;
+            //mousePos = Input.mousePosition;
+            mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             //Debug.Log("x pos = " + mousePos.x);
             //Debug.Log("y pos = " + mousePos.y);
             //SM.moveClockEffectPlay();
@@ -37,7 +40,6 @@ public class MoveMin : MonoBehaviour
                 rectMin.rotation = Quaternion.Euler(0, 0, 90.0f);
                 firstMin = true;
                 thrMin = true;
-                
             }
             else if (((mousePos.x > 1000) && (mousePos.x < 1045)) && ((mousePos.y > 645) && (mousePos.y <706)))
             {
