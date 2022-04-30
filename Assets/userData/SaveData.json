@@ -1,5 +1,5 @@
 {
-    "isFirstPlay": true,
+    "isFirstPlay": false,
     "playerXstartPoints": [
         30.700000762939454,
         7.099999904632568,
@@ -17,19 +17,23 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": -35.0,
-    "currFloor": "B1",
-    "currRoomPos": "복도",
+    "playerXstartPoint": -31.399999618530275,
+    "currFloor": "B2",
+    "currRoomPos": "시체의 방",
     "volume1": 1.0,
     "volume2": 1.0,
-    "itemList": [],
+    "itemList": [
+        {
+            "prefabOrder": 4
+        }
+    ],
     "isFirstGB": true,
     "isUnlocked": false,
     "isDiaryClicked": false,
     "isMufflerPicked": false,
     "isLetterPicked": false,
     "keyUsed": false,
-    "alreadyOpen": false,
+    "alreadyOpen": true,
     "playPuzzleOnce": false,
     "isB3DoorOpened": false,
     "OnB2CandleOnce": false,

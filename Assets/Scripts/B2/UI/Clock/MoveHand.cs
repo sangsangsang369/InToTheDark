@@ -56,7 +56,7 @@ public class MoveHand : MonoBehaviour
                 // 4시
                 rectHour.rotation = Quaternion.Euler(0, 0, -30.0f);
             }
-            else if (((mousePos.x > 983) && (mousePos.x < 1150)) && ((mousePos.y > 309) && (mousePos.y < 425)))
+            else if (((mousePos.x > 985) && (mousePos.x < 1150)) && ((mousePos.y > 309) && (mousePos.y < 425)))
             {
                 // 5시
                 firstHour = false;
