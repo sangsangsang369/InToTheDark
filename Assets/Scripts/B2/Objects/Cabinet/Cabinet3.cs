@@ -9,6 +9,7 @@ public class Cabinet3 : Object
     public GameObject cabinet3UI, clockImg;
     public GameObject clockPanel;
     public List<Text> cabinet3Texts;
+    public Text cabinet3openedText;
     public Text inputTextUI;
     public bool alreadyOpen;
     Player player;
@@ -51,7 +52,8 @@ public class Cabinet3 : Object
             else
             {
                 SM.EffectPlay(cabinetOpenShortEffect);
-                Debug.Log("이미 얻은 물품입니다.");
+                cabinet3UI.SetActive(true);
+                StartCoroutine(uiManager.LoadTextOneByOne(cabinet3openedText.text, inputTextUI));
             }
         }
     }
