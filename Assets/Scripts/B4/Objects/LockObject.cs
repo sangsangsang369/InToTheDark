@@ -21,6 +21,7 @@ public class LockObject : MonoBehaviour
     [SerializeField] private GameObject lockUIObj;
     [SerializeField] private GameObject researchRecord;
     [SerializeField] private GameObject DoorToB5Obj;
+    [SerializeField] private Button closeBtn;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,8 @@ public class LockObject : MonoBehaviour
         lockerWithLock = FindObjectOfType<LockerWithLock>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         slotSelectMng = FindObjectOfType<SlotSelectionMng>();
+
+        closeBtn.onClick.AddListener(delegate { ResearchRecordCloseBtn(); });
     }
 
     public void Unlock()
@@ -65,8 +68,15 @@ public class LockObject : MonoBehaviour
         monster.SetActive(true);
         monster.GetComponent<Monster>().monsterSpeed = 0f;
         monster.GetComponent<Animator>().speed = 0f;
-        saveData.isMonsterAppeared = true;
-        data.Save();
-        inst.EffectPlay(inst.capsuleBrokenEffect);
+    }
+
+    private void ResearchRecordCloseBtn()
+    {
+        if(!saveData.isMonsterAppeared)
+        {
+            saveData.isMonsterAppeared = true;
+            inst.EffectPlay(inst.capsuleBrokenEffect);
+            data.Save();
+        }
     }
 }

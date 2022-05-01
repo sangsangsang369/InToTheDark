@@ -108,12 +108,14 @@ public class UIManager : UI
                         //다시 텍스트 베이스 바꿔주고
                         goldenBookScrpt.GetComponent<Image>().sprite = textBase;
                         illust.GetComponent<Image>().sprite = letterImage;
+                        illust.GetComponent<Image>().SetNativeSize();
                         illust.SetActive(true);
                     }
                     else if(textOrder == 3)
                     {
                         nameText.text = "금테가 둘러진 책";
                         illust.GetComponent<Image>().sprite = bookImage;
+                        illust.GetComponent<Image>().SetNativeSize();
                     }
 
                     if(isFirstGB)

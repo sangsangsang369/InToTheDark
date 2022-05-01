@@ -51,6 +51,7 @@ public class EnterB4Lab : MonoBehaviour
         player.currRoom = "B4_Lab";
         saveData.currFloor = "B4";
         saveData.currRoomPos = "수상한 실험실";
+        FindObjectOfType<B4MapLoader>().LoadB4Map();
         data.Save();
         Ft.PosUI();
         inst.monsterWalkingSource.clip = null;

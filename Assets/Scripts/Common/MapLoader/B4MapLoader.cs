@@ -14,6 +14,7 @@ public class B4MapLoader : MonoBehaviour
     public Light2D globalLight;
     [SerializeField] private GameObject monster;
     [SerializeField] private GameObject brokenCapsule;
+    [SerializeField] private GameObject lockImage;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class B4MapLoader : MonoBehaviour
         LoadB4Map();
     }
 
-    void LoadB4Map()
+    public void LoadB4Map()
     {
         if(saveData.currRoomPos == "이형체의 복도")
         {
@@ -46,8 +47,9 @@ public class B4MapLoader : MonoBehaviour
             B4Chapel.SetActive(false);
             B4Lab.SetActive(true);
             inst.monsterWalkingSource.volume = 0;
-            if(saveData.isMonsterAppeared)
+            if(saveData.isB4LockUnlocked)
             {
+                lockImage.SetActive(false);
                 monster.SetActive(true);
                 monster.GetComponent<Animator>().speed = 0f;
                 brokenCapsule.SetActive(true);

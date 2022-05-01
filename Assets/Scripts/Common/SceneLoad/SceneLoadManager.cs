@@ -8,9 +8,9 @@ public class SceneLoadManager : MonoBehaviour
     public static SceneLoadManager instance;
 
     [SerializeField] private CanvasGroup sceneLoaderCanvasGroup;
-    [SerializeField] private Image progressBar;
-    [SerializeField] private GameObject myKoala;
-    [SerializeField] private GameObject loadingBar;
+    [SerializeField] private Image backGround;
+    [SerializeField] private GameObject gradation1;
+    [SerializeField] private GameObject gradation2;
     private string loadSceneName;
 
     private void Awake()
@@ -34,8 +34,8 @@ public class SceneLoadManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         gameObject.SetActive(true);
-        myKoala.SetActive(true);
-        loadingBar.SetActive(true);
+        gradation1.SetActive(true);
+        gradation2.SetActive(true);
         SceneManager.sceneLoaded += LoadSceneEnd;
         loadSceneName = sceneName;
 
@@ -46,15 +46,15 @@ public class SceneLoadManager : MonoBehaviour
     public void LoadRoom()
     {
         gameObject.SetActive(true);
-        myKoala.SetActive(true);
-        loadingBar.SetActive(true);
+        gradation1.SetActive(true);
+        gradation2.SetActive(true);
 
         StartCoroutine(LoadRoomCoroutine());
     }
 
     private IEnumerator Load(string sceneName)
     {
-        progressBar.fillAmount = 0f;
+        backGround.fillAmount = 0f;
         yield return StartCoroutine(Fade(true));
         AsyncOperation op = SceneManager.LoadSceneAsync(sceneName);
         op.allowSceneActivation = false;
@@ -67,18 +67,18 @@ public class SceneLoadManager : MonoBehaviour
 
             if (op.progress < 0.9f)
             {
-                progressBar.fillAmount = Mathf.Lerp(progressBar.fillAmount, op.progress, timer);
+                backGround.fillAmount = Mathf.Lerp(backGround.fillAmount, op.progress, timer);
 
-                if (progressBar.fillAmount >= op.progress)
+                if (backGround.fillAmount >= op.progress)
                 {
                     timer = 0f;
                 }
             }
             else
             {
-                progressBar.fillAmount = Mathf.Lerp(progressBar.fillAmount, 1f, timer);
+                backGround.fillAmount = Mathf.Lerp(backGround.fillAmount, 1f, timer);
 
-                if (progressBar.fillAmount == 1.0f)
+                if (backGround.fillAmount == 1.0f)
                 {
                     op.allowSceneActivation = true;
                     yield break;
@@ -89,7 +89,7 @@ public class SceneLoadManager : MonoBehaviour
 
     private IEnumerator LoadRoomCoroutine()
     {
-        progressBar.fillAmount = 0f;
+        backGround.fillAmount = 0f;
         yield return StartCoroutine(Fade(true));
         yield return StartCoroutine(Fade(false));
     }

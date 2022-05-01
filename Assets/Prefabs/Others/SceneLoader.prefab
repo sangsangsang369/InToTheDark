@@ -55,9 +55,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoaderCanvasGroup: {fileID: 6955684338221094934}
-  progressBar: {fileID: 6955684339254168868}
-  myKoala: {fileID: 6955684339556736146}
-  loadingBar: {fileID: 6955684339063152433}
+  backGround: {fileID: 6955684339254168868}
+  gradation1: {fileID: 6955684339556736146}
+  gradation2: {fileID: 6955684339063152433}
 --- !u!223 &6955684338221094932
 Canvas:
   m_ObjectHideFlags: 0
