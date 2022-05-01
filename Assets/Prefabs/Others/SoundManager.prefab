@@ -70,6 +70,7 @@ MonoBehaviour:
   playerWalkEffect: {fileID: 8300000, guid: 817c3cb7eb93fe943adc8c20215e495e, type: 3}
   buttonOnStartScene: {fileID: 8300000, guid: 0038df261c90a7946a938a15ff8363e2, type: 3}
   buttonEffect: {fileID: 8300000, guid: 2e01c96af2367524bb6c0946d0bdd944, type: 3}
+  stabButtonEffect: {fileID: 8300000, guid: fc74f22c5f42eda4e8f31bfb6c10b8a9, type: 3}
   conversationEffect: {fileID: 8300000, guid: 9c4fc030722aee9479b326324ffd5d36, type: 3}
   puzzleFailedEffect: {fileID: 8300000, guid: 156a4b049186d31488fa606e39cda544, type: 3}
   doorOpenEffect: {fileID: 8300000, guid: 220dc2c186f8e3245bc9c12c076fb28c, type: 3}

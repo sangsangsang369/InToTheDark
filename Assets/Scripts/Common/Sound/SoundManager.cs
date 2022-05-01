@@ -31,6 +31,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip playerWalkEffect;
     public AudioClip buttonOnStartScene;
     public AudioClip buttonEffect;
+    public AudioClip stabButtonEffect;
     public AudioClip conversationEffect;
     public AudioClip puzzleFailedEffect;
     public AudioClip doorOpenEffect;

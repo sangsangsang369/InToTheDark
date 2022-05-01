@@ -5,18 +5,21 @@ using UnityEngine.UI;
 
 public class HandPartBtn : MonoBehaviour
 {
+    SoundManager inst;
     PartOrderMng partOrderMng;
     string partName;
 
     // Start is called before the first frame update
     void Start()
     {
+        inst = SoundManager.inst;
         partOrderMng = FindObjectOfType<PartOrderMng>();
         partName = this.gameObject.name;
     }
 
     public void PartBtn()
     {
+        inst.ButtonEffectPlay(inst.stabButtonEffect);
         if(partOrderMng.answerSheet.Count < 6)
         {
             partOrderMng.answerSheet.Add(partName);
