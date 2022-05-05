@@ -137,13 +137,13 @@ public class SoundManager : MonoBehaviour
         bgmSource.Play();
     }
 
-    public void B12BGMPlay()
+    public void PlayBGM(AudioClip clip)
     {
-        if (bgmSource.clip == B12BGM)
+        if (bgmSource.clip == clip)
         {
             return;
         }
-        bgmSource.clip = B12BGM;
+        bgmSource.clip = clip;
         bgmSource.Play();
     }
     public void EndingPlay()
@@ -159,6 +159,7 @@ public class SoundManager : MonoBehaviour
     {
         bgmSource.Play();
     }
+    
     //B3
     public void PianoKeysPlay(AudioClip key)
     {

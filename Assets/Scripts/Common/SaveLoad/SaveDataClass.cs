@@ -8,6 +8,7 @@ public class SaveDataClass
 {
     //영광의 첫 플레이
     public bool isFirstPlay;
+    public bool isGameEnded;
 
     public enum playerStartPoint
     {
@@ -20,7 +21,7 @@ public class SaveDataClass
     public float playerXstartPoint;
     public string currFloor;
     public string currRoomPos;
-
+    
     // 사운드
     public float volume1, volume2;
 
@@ -72,6 +73,7 @@ public class SaveDataClass
     public SaveDataClass()
     {
         isFirstPlay = true;
+        isGameEnded = false;
         
         //플레이어 위치
         playerXstartPoint = -35f;

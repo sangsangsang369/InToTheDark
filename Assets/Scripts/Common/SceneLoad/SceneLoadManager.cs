@@ -39,7 +39,7 @@ public class SceneLoadManager : MonoBehaviour
         SceneManager.sceneLoaded += LoadSceneEnd;
         loadSceneName = sceneName;
 
-        StartCoroutine(Load(sceneName));
+        StartCoroutine(Load(sceneName));  
     }
 
     //방 이동할 때 이 함수

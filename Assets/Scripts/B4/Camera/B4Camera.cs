@@ -7,6 +7,7 @@ public class B4Camera : CameraScript
 {
     FloorTxt Ft;
     UI uiManager;
+    SoundManager inst;
     public bool isB4ReEntered;
     public GameObject startUI;
     public Text startText;
@@ -16,6 +17,8 @@ public class B4Camera : CameraScript
         base.Start();
         Ft = FindObjectOfType<FloorTxt>();
         uiManager = FindObjectOfType<UI>();
+        inst = SoundManager.inst;
+        inst.PlayBGM(inst.B34BGM);
         saveData.currFloor = "B4";
         isB4ReEntered = saveData.isB4ReEntered;
         data.Save();

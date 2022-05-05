@@ -10,12 +10,10 @@ public class B1Camera : CameraScript
     new void Start()
     {
         sound = SoundManager.inst;
-        sound.B12BGMPlay();
+        sound.PlayBGM(sound.B12BGM);
         base.Start();
         Ft = FindObjectOfType<FloorTxt>();
-        //player.currRoom = "B1_Hallway";
         saveData.currFloor = "B1";
-        //saveData.currRoomPos = "복도";
         data.Save();
         Ft.PosUI();
     }

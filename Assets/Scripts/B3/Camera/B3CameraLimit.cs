@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class B3CameraLimit : CameraScript
 {
+    SoundManager inst;
     FloorTxt Ft;
 
     new void Start()
     {
         base.Start();
+        inst = SoundManager.inst;
+        inst.PlayBGM(inst.B34BGM);
         Ft = FindObjectOfType<FloorTxt>();
-        //player.currRoom="B3_Hallway";
         saveData.currFloor = "B3";
-        //saveData.currRoomPos = "피투성이 복도";
         data.Save();
         Ft.PosUI();
     }

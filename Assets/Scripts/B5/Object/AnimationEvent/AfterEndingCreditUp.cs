@@ -8,10 +8,14 @@ public class AfterEndingCreditUp : MonoBehaviour
     public GameObject creditBGBtn; 
 
     SceneLoadManager sceneLoader;
+    DataManager data;
+    SaveDataClass saveData;
 
     private void Start()
     {
         sceneLoader = SceneLoadManager.instance;
+        data = DataManager.singleTon;
+        saveData = data.saveData;
         creditBGBtn.GetComponent<Button>().enabled = false;
     }
 
@@ -22,6 +26,8 @@ public class AfterEndingCreditUp : MonoBehaviour
 
     public void GoToMainScene()
     {
+        saveData.isGameEnded = true;
+        data.Save();
         sceneLoader.LoadScene("Start");
         creditBGBtn.GetComponent<Button>().enabled = false;
     }

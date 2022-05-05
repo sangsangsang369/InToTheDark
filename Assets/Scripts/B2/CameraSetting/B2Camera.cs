@@ -14,7 +14,7 @@ public class B2Camera : CameraScript
         Ft = FindObjectOfType<FloorTxt>();
         SM = SoundManager.inst;
         ToB3 = FindObjectOfType<DoorToB3>();
-        SM.B12BGMPlay();
+        SM.PlayBGM(SM.B12BGM);
         base.Start();
         if (saveData.isB3DoorOpened)
         {

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BtnDisabled : MonoBehaviour
 {
+    [SerializeField] private GameObject startScenePlayer;
     public Button playbtn, creditbtn, quitbtn, continueBtn;
     public Text play, creadit, quit, con;
     SoundManager inst;
@@ -20,6 +21,10 @@ public class BtnDisabled : MonoBehaviour
         {
             continueBtn.interactable = false;
             con.color = Color.gray;
+        }
+        if(saveData.isGameEnded)
+        {
+            startScenePlayer.SetActive(false);
         }
     }
     public void SetDisabled()

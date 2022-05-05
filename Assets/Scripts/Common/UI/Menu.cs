@@ -74,6 +74,8 @@ public class Menu : MonoBehaviour
     public void Mains() // 스타트 화면으로 돌아가기
     {
         inst.ButtonEffectPlay(inst.buttonEffect);
+        inst.monsterGrowlingSource.Stop();
+        inst.monsterWalkingSource.Stop();
         Time.timeScale = 1f;
         sceneLoader.LoadScene("Start");
     }
