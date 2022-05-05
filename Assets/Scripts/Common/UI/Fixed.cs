@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Fixed : MonoBehaviour
 {
-    private void Start()
+    [SerializeField] private Canvas myCanvas;
+    private void Awake()
     {
         SetResolution(); // 초기에 게임 해상도 고정
     }
@@ -24,11 +26,13 @@ public class Fixed : MonoBehaviour
         {
             float newWidth = ((float)setWidth / setHeight) / ((float)deviceWidth / deviceHeight); // 새로운 너비
             Camera.main.rect = new Rect((1f - newWidth) / 2f, 0f, newWidth, 1f); // 새로운 Rect 적용
+            myCanvas.GetComponent<CanvasScaler>().matchWidthOrHeight = 1f;
         }
         else // 게임의 해상도 비가 더 큰 경우
         {
             float newHeight = ((float)deviceWidth / deviceHeight) / ((float)setWidth / setHeight); // 새로운 높이
             Camera.main.rect = new Rect(0f, (1f - newHeight) / 2f, 1f, newHeight); // 새로운 Rect 적용
+            myCanvas.GetComponent<CanvasScaler>().matchWidthOrHeight = 0;
         }
     }
 }
