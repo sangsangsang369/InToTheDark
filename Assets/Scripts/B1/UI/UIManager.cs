@@ -58,7 +58,7 @@ public class UIManager : UI
                     {
                         sound.EffectPlay(sound.getItemEffect);
                         cardkeyScrpt.GetComponent<Image>().sprite = textBase;
-                        cardkeyNameText.text = "실험실 카드키";
+                        cardkeyNameText.text = "카드키";
                         cardImage.GetComponent<Image>().enabled = true;
                     }
                     StartCoroutine(LoadTextOneByOne(cardkeyTexts[j].text, inputTextUI));
