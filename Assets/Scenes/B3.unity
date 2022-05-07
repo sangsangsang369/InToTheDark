@@ -1351,7 +1351,7 @@ RectTransform:
   m_GameObject: {fileID: 132443432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children:
   - {fileID: 598723173}
   - {fileID: 1527881243}
@@ -1360,7 +1360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 279}
+  m_AnchoredPosition: {x: 17, y: 275}
   m_SizeDelta: {x: 824, y: 440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &132443434
@@ -6355,7 +6355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -189, y: -15}
+  m_AnchoredPosition: {x: -189, y: -7}
   m_SizeDelta: {x: 282, y: 353.7611}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &598723174
@@ -6379,27 +6379,21 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 09122f1b87e04cb4fa1eea214a099d02, type: 3}
-    m_FontSize: 18
+    m_FontSize: 33
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 40
+    m_MaxSize: 56
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.3
-  m_Text: " \uC5B4\uBA38\uB2C8\uB294 \uC790\uC2DD\uC758 \uD3B8\uC548\uD55C \uC219\uBA74\uC744
-    \n\uC704\uD574 \uC790\uC7A5\uAC00\uB97C \uBD80\uB974\uACE0\uB294 \uD558\uC2E0\r\uB2E4.
-    \uC6B0\uB9AC \uC790\uC2DD\uB4E4\uC740 \uC751\uB2F9 \uADF8\uC5D0 \uB9DE\uB294
-    \uBCF4\uB2F5\uC744 \uD574\uC57C \uD558\uBBC0\uB85C \uC5B4\uBA38\uB2C8\r\uC5D0\uAC8C
-    \uC74C\uC545\uC744 \uC5F0\uC8FC\uD560 \uC218 \uC788\uC5B4\uC57C \uD55C\uB2E4.
-    \uD558\uC9C0\uB9CC \uADF8 \uACE0\uACB0\uD568\uC5D0 \uB9DE\uAC8C\r \uC544\uBB34\uB7F0
-    \uC74C\uC774 \uC11E\uC778 \uB178\uB798\uB97C \uC5B4\uBA38\uB2C8\uAED8 \uB4E4\uB824\uC8FC\uB294
-    \uAC83\uC740 \uC6A9\uB0A9\uB420 \uC218 \uC5C6\r\uB2E4. \n \uADF8\uB7EC\uB2C8
-    \uC5B4\uBA38\uB2C8\uC5D0\uAC8C \uB4E4\uB824\uB4DC\uB9B4 \uB178\uB798\uC5D0 \uC8FC\uC758\uD574\uC57C
-    \uD560 \uC810\uC744 \uC219\uC9C0\r\uD574\uC57C \uD55C\uB2E4."
+  m_Text: "1. \uC8FD\uC74C\uC758 \uC774\uBBF8\uC9C0\uC758 \uCE78\uACFC \uC904\uC5D0
+    \uC788\uB294 \uC74C\uC740 \uC5F0\uC8FC\r\uD574\uC11C\uB294 \uC548\uB41C\uB2E4.\n2.
+    \uD3C9\uC628\uC744 \uAE68\uB294 \uC5F0\uC8FC \uAE30\uBC95\uB3C4 \uC6A9\uB0A9\uB420
+    \uC218\r \uC5C6\uB2E4. "
 --- !u!222 &598723175
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14992,7 +14986,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 195, y: -15}
+  m_AnchoredPosition: {x: 195, y: -6}
   m_SizeDelta: {x: 282, y: 353.7611}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1527881244
@@ -15016,7 +15010,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 09122f1b87e04cb4fa1eea214a099d02, type: 3}
-    m_FontSize: 18
+    m_FontSize: 33
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -15027,13 +15021,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.3
-  m_Text: " \uC774\uB97C \uC5B4\uAE30\uB294 \uC790\uC5D0\uAC8C\uB294 \uADF8 \uBD88\uACB0\uD568\uC5D0
-    \uC5B4\uC6B8\uB9AC\uB294 \uCC98\uBC8C\uC774\r \uAC00\uD574\uC9C8 \uC9C0\uC5B4\uB2C8.\r\n\uC8FD\uC74C\uC758
-    \uC774\uBBF8\uC9C0\uB97C \uC5F0\uC0C1\uC2DC\uD0A4\uB294 \uC21C\uC11C\uC758 \uCE78\uACFC
-    \uC904\uC5D0 \uC788\uB294 \uC74C\uC740 \uC5F0\uC8FC\r\uD574\uC11C\uB294 \uC548\uB41C\uB2E4.
-    \uD3C9\uC628\uC744 \uAE70 \uC218 \uC788\uB294 \uD280\uB294 \uC5F0\uC8FC \uAE30\uBC95\uB3C4
-    \uC6A9\uB0A9\uB420 \uC218\r \uC5C6\uB2E4. \uC74C\uC545\uC758 \uB9C8\uC9C0\uB9C9\uC740
-    \uBB34\uC870\uAC74 \u2018\uB3C4\u2019\uC74C\uC73C\uB85C \uB05D\uB098\uC57C \uD55C\uB2E4."
+  m_Text: "3. \uC74C\uC545\uC758 \uB9C8\uC9C0\uB9C9\uC740 \uC545\uBCF4\uC640 \uC0C1\uAD00\uC5C6\uC774 
+    \u2018\uB3C4\u2019 \uB85C \uB05D\uB098\uC57C \uD55C\uB2E4."
 --- !u!222 &1527881245
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15547,7 +15536,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e1ee6ea8549c1a94fbd9bc76446e99f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d31c7ba2fd669ce4db3819b8286a137a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

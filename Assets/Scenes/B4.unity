@@ -636,10 +636,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -647,28 +647,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
-  m_Text: "#34\r\n\uAE30\uB3C4\uC2E4\uC758 \uAC08\uB9DD\uD558\uB294 \uD314\uB4E4\r
+  m_Text: "#34\r\n \uAE30\uB3C4\uC2E4\uC758 \uAC08\uB9DD\uD558\uB294 \uD314\uB4E4\r
     \uADF8\uAC83\uB4E4\uC740 \uC5B4\uBA38\uB2C8\uB97C \uBC30\uC2E0\uD55C \uBC30\uC2E0\uC790\uC758
     \uD314\uC744 \uC5EC\uB7EC\uAC1C\uB85C \uB9CC\uB4E4\uC5B4\r \uBCBD\uC5D0 \uBD99\uC778
-    \uC0C1\uD0DC\uB85C \uAD6C\uD604\uD55C \uAC83\uC774\uB2E4. \uC5B4\uBA38\uB2C8\uB97C
-    \uAC00\uC7A5 \uC0AC\uB791\uD588\uB358\r \uC790\uC2DD \uC911 \uD558\uB098\uC600\uC9C0\uB9CC,
-    \uADF8 \uB9C8\uC74C\uC73C\uB85C \uC778\uD574 \uBC30\uC2E0\uD588\uB358 \uADF8\uC5D0
-    \uAC78\uB9DE\r\uAC8C \uADF8 \uD314\uB4E4\uC740 \uD56D\uC0C1 \uC5B4\uBA38\uB2C8\uC758
-    \uC870\uAC01\uC0C1\uC744 \uD5A5\uD574 \uBED7\uC5B4\uC788\uB2E4. \uC774 \uBD88\r\uACB0\uD568\uC744
-    \uC0C1\uC9D5\uD558\uB294 \uC874\uC7AC\uB97C \uAD6C\uD604\uD55C \uC774\uC720\uB294
-    \uC2E0\uC790\uB4E4\uC774 \uAE30\uB3C4\uC2E4\uC5D0\r\uC11C \uC5B4\uBA38\uB2C8\uB97C
-    \uC704\uD55C \uAE30\uB3C4\uB97C \uD558\uBA70 \uADF8 \uBD88\uACB0\uD55C \uC874\uC7AC\uCC98\uB7FC
-    \uD0C0\uB77D\uD558\uC9C0\r \uC54A\uAE30\uB97C \uB04A\uC784\uC5C6\uC774 \uB418\uC0C8\uAE30\uB3C4\uB85D
-    \uD558\uAE30 \uC704\uD574\uC11C\uC774\uB2E4. \uC5F0\uAD6C\uC6D0\uB4E4\uC740\r
-    \uADF8 \uD314\uB4E4\uC744 \uD574\uBD80\uD574 \uC774\uD6C4 \uC2E4\uD5D8\uC5D0
-    \uC4F8\uB9CC\uD55C \uAC83\uB4E4\uC744 \uAE30\uB85D\uD558\uB824\uACE0 \uD588\r\uC73C\uBA70
-    \uADF8 \uACFC\uC815 \uC18D\uC5D0\uC11C \uC54C\uAC8C\uB41C \uD314\uB4E4\uC758
-    \uD2B9\uC9D5\uC740 \uB2E4\uC74C\uACFC \uAC19\uB2E4.\r\n\u25CF \uD314\uC758 \uC548\uCABD\uC774
-    \uAC00\uC7A5 \uC57D\uD558\uB2E4.\r\n\u25CF \uADF8 \uD314\uC5D0\uAC8C \uBD89\uC740
-    \uC0C9\uC758 \uBB3C\uAC74\uC744 \uC8FC\uBA74 \uC190\uC73C\uB85C \uAF49 \uC950\uC5EC
-    \uD314 \uC18D\r\n\uC73C\uB85C \uD761\uC218\uD55C\uB2E4.\r\n\u25CF \uD314\uC744
-    \uACC4\uC18D\uD574\uC11C \uC798\uB77C\uB0B4\uC11C \uC8FD\uC774\uBA74 \uD314\uC774
-    \uC0C8\uB86D\uAC8C \uC790\uB77C\uB09C\uB2E4."
+    \uC0C1\uD0DC\uB85C \uAD6C\uD604\uD55C \uAC83\uC774\uB2E4.  \uC5F0\uAD6C\uC6D0\uB4E4\uC740\r\n\uADF8
+    \uD314\uB4E4\uC744 \uD574\uBD80\uD574 \uC774\uD6C4 \uC2E4\uD5D8\uC5D0 \uC4F8\uB9CC\uD55C
+    \uAC83\uB4E4\uC744 \uAE30\uB85D\uD558\uB824\uACE0 \uD588\r\uC73C\uBA70, \uADF8
+    \uACFC\uC815 \uC18D\uC5D0\uC11C \uC54C\uAC8C\uB41C \uD314\uB4E4\uC758 \uD2B9\uC9D5\uC740
+    \uB2E4\uC74C\uACFC \uAC19\uB2E4.\r\n\u25CF \uD314\uC758 \uC548\uCABD\uC774 \uAC00\uC7A5
+    \uC57D\uD558\uB2E4.\r\n\u25CF \uADF8 \uD314\uC5D0\uAC8C \uBD89\uC740 \uC0C9\uC758
+    \uBB3C\uAC74\uC744 \uC8FC\uBA74 \uC190\uC73C\uB85C \uAF49 \uC950\uC5EC \uD314
+    \uC18D\r\uC73C\uB85C \uD761\uC218\uD55C\uB2E4.\r\n\u25CF \uD314\uC744 \uACC4\uC18D\uD574\uC11C
+    \uC798\uB77C\uB0B4\uC11C \uC8FD\uC774\uBA74 \uD314\uC774 \uC0C8\uB86D\uAC8C \uC790\uB77C\uB09C\uB2E4."
 --- !u!222 &83685314
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4808,7 +4798,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -343.25, y: 224}
+  m_AnchoredPosition: {x: -343.25, y: 263}
   m_SizeDelta: {x: 564.82996, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474834229
@@ -4832,7 +4822,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 09122f1b87e04cb4fa1eea214a099d02, type: 3}
-    m_FontSize: 22
+    m_FontSize: 33
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -4845,21 +4835,11 @@ MonoBehaviour:
     m_LineSpacing: 1.5
   m_Text: "\uC544\uC544, \uC5B4\uBA38\uB2C8\uB97C \uBC30\uC2E0\uD55C \uBB34\uB8B0\uD55C\uC774\uC790
     \uD328\uB95C\uC744 \uC11C\uC2B4\uC9C0 \uC54A\uB294 \uAE08\uC218\uB9CC\uB3C4 \uBABB\uD55C
-    \uADF8 \uB140\uC11D\uC744 \uC8FD\r\uC5EC\uC57C \uD55C\uB2E4. \uADF8 \uBB34\uAC70\uC6B4
-    \uC8C4\uC5D0 \uAC78\uB9DE\uB294 \uCC98\uD615\uC740 \uBB34\uC5C7\uC77C\uAE4C.
-    \uB140\uC11D\uC744 \uCE7C\uB85C \uAC08\uAC00\uB9AC \uCC22\uC5B4 \uCC9C\uCC9C\r\uD788
-    \uC8FD\uC74C\uC744 \uC2E4\uAC10\uCF00 \uD558\uB294 \uAC83\uC774 \uB9C8\uB545\uD568\uC740
-    \uAE4A\uAC8C \uC0DD\uAC01\uD558\uC9C0 \uC54A\uC544\uB3C4 \uC54C \uC218 \uC788\uB2E4.
-    \uADF8\uB807\uB2E4\uBA74\r \uC5B4\uB514\uBD80\uD130 \uC5B4\uB5BB\uAC8C \uCC22\uC5B4\uC904\uAE4C.
-    \uAC00\uC7A5 \uC5B4\uBA38\uB2C8\uB97C \uC0AC\uB791\uD558\uB294 \uC2E0\uC790\uC778
-    ***\uC740 \uCE7C\uC744 \uB4E4\uACE0 \uC0DD\uAC01\uD588\r\uB2E4. \uC6B0\uC120
-    ***\uB294 \uB140\uC11D\uC758 \uD314\uC5D0 \uAC00\uC7A5 \uC5F0\uD55C \uBD80\uBD84\uC5D0
-    \uCE7C\uC744 \uBC15\uACE0 \uAC08\uB77C\uB0C8\uB2E4. \uADF8\uB9AC\uACE0 \uB4F1\uC744
-    \uCE7C\uB85C\r \uCC0C\uB974\uACE0, \uAC00\uC7A5 \uAC1C\uC218\uAC00 \uB9CE\uC740
-    \uBD80\uC704\uB97C \uC798\uB77C\uB0C8\uB2E4. \uADF8 \uB2E4\uC74C, \uB4F1\uC758
-    \uBC18\uB300\uBA74\uC744 \uCC0C\uB974\uACE0 \uBD84\uC774 \uD480\r\uB9AC\uC9C0
-    \uC54A\uB294\uC9C0 \uADF8 \uC804\uC5D0 \uC790\uB978 \uBD80\uBD84\uC744 \uB610
-    \uC798\uB77C\uB0C8\uB2E4."
+    \uADF8 \uB140\uC11D\uC744 \uC8FD\r\uC5EC\uC57C \uD55C\uB2E4.\n\n\uAC00\uC7A5
+    \uC5B4\uBA38\uB2C8\uB97C \uC0AC\uB791\uD558\uB294 \uC2E0\uC790\uC778 ***\uC740
+    \uCE7C\uC744 \uB4E4\uACE0 \uC0DD\uAC01\uD588\r\uB2E4. \uC6B0\uC120 ***\uB294
+    \uB140\uC11D\uC758 \uD314\uC5D0 \uAC00\uC7A5 \uC5F0\uD55C \uBD80\uBD84\uC5D0
+    \uCE7C\uC744 \uBC15\uACE0 \uAC08\uB77C\uB0C8\uB2E4. "
 --- !u!222 &474834230
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7322,7 +7302,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 54, y: -47}
-  m_SizeDelta: {x: 104, y: 104}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &708438313
 MonoBehaviour:
@@ -8149,7 +8129,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 104, y: 5}
-  m_SizeDelta: {x: 104, y: 104}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &762269790
 MonoBehaviour:
@@ -8903,7 +8883,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -101}
-  m_SizeDelta: {x: 104, y: 104}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &821986160
 MonoBehaviour:
@@ -9923,7 +9903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 869, y: 426}
+  m_AnchoredPosition: {x: 752, y: 458}
   m_SizeDelta: {x: 102, y: 102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &922830388
@@ -10587,7 +10567,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -104, y: 5}
-  m_SizeDelta: {x: 104, y: 104}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &977781638
 MonoBehaviour:
@@ -13284,7 +13264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 366, y: 222}
+  m_AnchoredPosition: {x: 366, y: 263}
   m_SizeDelta: {x: 564.82996, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1256778409
@@ -13308,7 +13288,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 09122f1b87e04cb4fa1eea214a099d02, type: 3}
-    m_FontSize: 22
+    m_FontSize: 33
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -13319,14 +13299,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
-  m_Text: "\uB610\uD55C, \uB9C8\uC9C0\uB9C9\uC73C\uB85C \uCC98\uC74C\uC5D0 \uCE7C\uC744
-    \uBC15\uC740\r \uBD80\uBD84\uC758 \uBC18\uB300\uBA74\uC5D0 \uB2E4\uC2DC \uCE7C\uC744
-    \uBC15\uACE0 \uAC08\uB77C\uB0C8\uB2E4. \uB140\uC11D\uC774 \uBE44\uBA85\uC744
-    \uC9C0\uB97C \uB54C\uB9C8\uB2E4 \uADF8\uB294 \uD589\uBCF5\uD55C\r \uB4EF \uD070
-    \uC18C\uB9AC\uB85C \uC6C3\uC5C8\uACE0, \uB9C8\uC9C0\uB9C9\uC73C\uB85C \uCE7C\uC744
-    \uBC15\uACE0 \uB140\uC11D\uC774 \uC8FD\uC740 \uAC83\uC744 \uD655\uC778\uD55C
-    \uB4A4\uC5D0\uB294 \uD070 \uC18C\r\uB9AC\uB85C \uC678\uCCE4\uB2E4.\r\n\u201C\uB098\uC758
-    \uC5B4\uBA38\uB2C8\uC640 \uC5B4\uBA38\uB2C8\uC758 \uC131\uC804\uC744 \uC704\uD558\uC5EC!\u201D"
+  m_Text: "\uADF8\uB9AC\uACE0 \uC190\uB4F1\uC744 \uCE7C\uB85C\r \uCC0C\uB974\uACE0,
+    \uAC00\uC7A5 \uAC1C\uC218\uAC00 \uB9CE\uC740 \uBD80\uC704\uB97C \uC798\uB77C\uB0C8\uB2E4.
+    \uADF8 \uB2E4\uC74C, \uC190\uB4F1\uC758 \uBC18\uB300\uBA74\uC744 \uCC0C\uB974\uACE0
+    \uBD84\uC774 \uD480\r\uB9AC\uC9C0 \uC54A\uB294\uC9C0 \uADF8 \uC804\uC5D0 \uC790\uB978
+    \uBD80\uBD84\uC744 \uB610 \uC798\uB77C\uB0C8\uB2E4. \uB610\uD55C, \uB9C8\uC9C0\uB9C9\uC73C\uB85C
+    \uCC98\uC74C\uC5D0 \uCE7C\uC744 \uBC15\uC740\r \uBD80\uBD84\uC758 \uBC18\uB300\uBA74\uC5D0
+    \uB2E4\uC2DC \uCE7C\uC744 \uBC15\uACE0 \uAC08\uB77C\uB0C8\uB2E4. \r"
 --- !u!222 &1256778410
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14157,6 +14136,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332229236}
   m_CullTransparentMesh: 0
+--- !u!1 &1349692642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1349692643}
+  - component: {fileID: 1349692645}
+  - component: {fileID: 1349692644}
+  m_Layer: 5
+  m_Name: MainText2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1349692643
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349692642}
+  m_LocalRotation: {x: -0, y: -0, z: 0.07501277, w: 0.9971826}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1569142216}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 8.604}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 389, y: -139}
+  m_SizeDelta: {x: 564.82996, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1349692644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349692642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5566038, g: 0.09451762, b: 0.09451762, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 2e248117226460b4abcd3bc3aec13bad, type: 3}
+    m_FontSize: 53
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 111
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1.5
+  m_Text: "\uB098\uC758 \uC5B4\uBA38\uB2C8\uC640 \uC5B4\uBA38\uB2C8\uC758 \uC131\uC804\uC744
+    \uC704\uD558\uC5EC!"
+--- !u!222 &1349692645
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349692642}
+  m_CullTransparentMesh: 0
 --- !u!1 &1358459338
 GameObject:
   m_ObjectHideFlags: 0
@@ -14821,10 +14879,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -14833,22 +14891,16 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
   m_Text: "#97\r\n\uC774\uBC88\uC5D0\uB294 \uC544\uC27D\uAC8C \uC2E4\uD328\uD588\uB2E4.
-    \uC774 \uC774\uD615\uCCB4\uB294 \uBA87\uBA87 \uAE30\uC900\uCE58\uC5D0 \uC870\uAE08\r
-    \uC801\uD569\uD558\uC9C0 \uC54A\uC544 \uD3D0\uAE30\uB418\uC9C0\uB294 \uC54A\uACE0,
+    \n\uC774 \uC774\uD615\uCCB4\uB294 \uD3D0\uAE30\uB418\uC9C0\uB294 \uC54A\uACE0,
     \uC2E4\uD328\uD55C \uC6D0\uC778\uC744 \uBD84\uC11D\uD558\uAE30 \uC704\r\uD55C
     \uC790\uB8CC\uB85C \uC4F0\uC77C \uAC83\uC774\uB2E4. \uC778\uAC04\uBCF4\uB2E4
-    \uC870\uAE08 \uD070 \uD06C\uAE30\uC5D0 \uD798\uB3C4 \uC544\uC8FC\r \uAC15\uD558\uACE0,
-    \uC2E4\uD5D8\uD558\uAE30 \uC774\uC804\uC758 \uD2B9\uC131\uC774 \uBC1C\uD604\uB41C
-    \uAC83\uC778\uC9C0 \uC544\uC8FC \uC798 \uC228\r\uC5C8\uB2E4. \uC774\uD615\uCCB4\uAC00
-    \uB41C \uC774\uD6C4\uC5D0\uB3C4 \uBD89\uC740 \uBA38\uD50C\uB7EC \uACC4\uC18D\uD574\uC11C
+    \uD070 \uD06C\uAE30\uC5D0 \uD798\uB3C4 \uC544\uC8FC\r \uAC15\uD588\uB2E4. \uC774\uD615\uCCB4\uAC00
+    \uB41C \uC774\uD6C4\uC5D0\uB3C4 \uBD89\uC740 \uBA38\uD50C\uB7EC\uB97C \uACC4\uC18D\uD574\uC11C
     \uB450\uB974\uACE0\r \uC788\uC73C\uBA70 \uC774\uB97C \uAC74\uB4DC\uB9AC\uB294
-    \uC790\uB294 \uD798\uC73C\uB85C \uC9D3\uBB49\uAC1C \uBC84\uB838\uB2E4. \uC774\uAC83\uB3C4\r
-    \uACFC\uAC70\uC758 \uC601\uD5A5\uC778\uC9C0\uB294 \uBAA8\uB974\uACA0\uC9C0\uB9CC,
-    \uC790\uC2E0\uACFC \uBE44\uC2B7\uD55C \uC790\uC5D0\uAC8C \uAD00\uC2EC\r\uC744
-    \uBCF4\uC774\uBA70, \uADF8 \uC911 \uBA87\uBA87\uC5D0\uAC8C\uB294 \uC5C4\uCCAD\uB09C
-    \uD3ED\uB825\uC131\uC744 \uBCF4\uC778\uB2E4. \uC2E4\uD5D8\r\uACB0\uACFC\uB97C
-    \uC774\uD615\uCCB4\uC758 \uACFC\uAC70\uACFC \uBD84\uB9AC\uD574\uC11C \uC5BB\uC5B4\uB0B4\uAE30
-    \uC704\uD574\uC11C\uB294 \uB354 \uAD00\r\uCC30\uC774 \uD544\uC694\uD574 \uBCF4\uC778\uB2E4."
+    \uC790\uB294 \uD798\uC73C\uB85C \uC9D3\uBB49\uAC1C \uBC84\uB838\uB2E4. \uC790\uC2E0\uACFC
+    \uBE44\uC2B7\uD55C \uC790\uC5D0\uAC8C \uAD00\uC2EC\r\uC744 \uBCF4\uC774\uBA70,
+    \uADF8 \uC911 \uBA87\uBA87\uC5D0\uAC8C\uB294 \uC5C4\uCCAD\uB09C \uD3ED\uB825\uC131\uC744
+    \uBCF4\uC778\uB2E4.\n\uC880 \uB354 \uAD00\r\uCC30\uC774 \uD544\uC694\uD574 \uBCF4\uC778\uB2E4."
 --- !u!222 &1400956083
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15908,10 +15960,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -15920,24 +15972,15 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
   m_Text: "#61\r\n\uC6B0\uB9B0 \uADF8 \uB140\uC11D\uC774 \uC2A4\uC2A4\uB85C \uC6C0\uC9C1\uC77C
-    \uC218 \uC5C6\uB294 \uAC83\uC744 \uD655\uC778\uD558\uC790 \uADF8\uB300\r\n\uB85C
-    \uD3D0\uAE30\uCC98\uBD84\uD558\uB824\uACE0 \uD588\uC9C0\uB9CC, \uD55C \uC5F0\uAD6C\uC6D0\uC774
-    \uC7AC\uD65C\uC6A9\uC744 \uD558\uC790\uB294 \uC758\r\uACAC\uC744 \uC81C\uAE30\uD574
+    \uC218 \uC5C6\uB294 \uAC83\uC744 \uD655\uC778\uD558\uC790 \uD3D0\uAE30\uCC98\uBD84\uD558\uB824\uACE0
+    \uD588\uC9C0\uB9CC,  \uC7AC\uD65C\uC6A9\uC744 \uD558\uC790\uB294 \uC758\r\uACAC\uC73C\uB85C
     \uD3D0\uAE30\uCC98\uBD84\uC744 \uD558\uC9C0\uB294 \uC54A\uC558\uB2E4. \uADF8\uB798\uC11C
     \uC2E4\uD5D8 \uC774\uC804\uC5D0\r \uC74C\uC545\uC744 \uC5F0\uC8FC\uD558\uB358
-    \uC774\uD615\uCCB4\uC758 \uACFC\uAC70\uB97C \uC774\uC6A9\uD574 \uD53C\uC544\uB178\uC2E4\uC5D0
-    \uBD80\uCC29\r\uD588\uACE0, \uC5F0\uC8FC\uC790\uAC00 \uAE08\uAE30\uB97C \uC5B4\uAE38
-    \uB54C\uB9C8\uB2E4 \uC5F0\uC8FC\uC790\uB97C \uCC99\uC0B4\uD558\uB294 \uC5ED\uD560\r\uC744
-    \uC8FC\uB824\uACE0 \uD588\uC9C0\uB9CC \uB140\uC11D\uC740 \uACF5\uACA9\uC131\uC774
-    \uBD80\uC871\uD588\uB2E4. \uAE08\uAE30\uB97C \uC5B4\uAE30\uC9C0\r \uC54A\uC740
-    \uC5F0\uC8FC\uC5D0\uB294 \uBC18\uC751\uD558\uC9C0\uB9CC, \uAE08\uAE30\uB97C \uC5B4\uAE30\uB294
+    \uACFC\uAC70\uB97C \uC774\uC6A9\uD574 \uD53C\uC544\uB178\uC2E4\uC5D0 \uBD80\uCC29\r\uD588\uACE0,
+    \uB140\uC11D\uC740 \uAE08\uAE30\uB97C \uC5B4\uAE30\uC9C0\r \uC54A\uC740 \uC5F0\uC8FC\uC5D0\uB294
+    \uCCB4\uC561\uC744 \uB5A8\uC5B4\uB728\uB9AC\uC9C0\uB9CC, \uAE08\uAE30\uB97C \uC5B4\uAE30\uB294
     \uC5F0\uC8FC\uC5D0\uB294 \uB531\uD788 \uC544\r\uBB34\uB7F0 \uBC18\uC751\uB3C4
-    \uD558\uC9C0 \uC54A\uC558\uB2E4. \uC989, \uC7AC\uD65C\uC6A9\uB3C4 \uC2E4\uD328\uD55C
-    \uAC83\uC774\uB2E4. \uC6B0\uB9AC\r\uB294 \uADF8 \uB140\uC11D\uC744 \uBD88\uB85C
-    \uC9C0\uC838\uC11C \uC5C6\uC560\uB824\uACE0 \uD588\uC9C0\uB9CC, \uADF8\uB7AC\uB2E4\uAC00\uB294
-    \uBC29\r\uC744 \uBABB\uC4F0\uAC8C \uB420 \uC218 \uC788\uB2E4\uBA70 \uB9D0\uB9AC\uB294
-    \uC758\uACAC\uC774 \uC788\uC5B4 \uC77C\uB2E8 \uBC29\uCE58\uD558\uAE30\r\uB85C
-    \uD588\uB2E4."
+    \uD558\uC9C0 \uC54A\uC558\uB2E4."
 --- !u!222 &1507450178
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16456,6 +16499,7 @@ RectTransform:
   - {fileID: 1256778408}
   - {fileID: 481916795}
   - {fileID: 1081684966}
+  - {fileID: 1349692643}
   m_Father: {fileID: 546012619}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17395,7 +17439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 869, y: 426}
+  m_AnchoredPosition: {x: 752, y: 458}
   m_SizeDelta: {x: 102, y: 102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693702058
@@ -18188,7 +18232,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 33}
-  m_SizeDelta: {x: 104, y: 104}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789026022
 MonoBehaviour:
@@ -18413,7 +18457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 869, y: 426}
+  m_AnchoredPosition: {x: 752, y: 458}
   m_SizeDelta: {x: 102, y: 102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1801572831
@@ -19007,7 +19051,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -54, y: -47}
-  m_SizeDelta: {x: 104, y: 104}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1833142468
 MonoBehaviour:
@@ -19628,7 +19672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: 327}
+  m_AnchoredPosition: {x: 11, y: 343}
   m_SizeDelta: {x: 564.82996, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1906845963
@@ -19652,10 +19696,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -19663,18 +19707,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
-  m_Text: "#8\r\n\uC774\uBC88\uC5D0\uB3C4 \uACB0\uACFC\uB294 \uC369 \uC88B\uC9C0
-    \uBABB\uD588\uB2E4. \uC774\uD615\uCCB4\uC758 \uD06C\uAE30\uB294 \uCEE4\uC84C\uC9C0\uB9CC,\r
-    \uC9C0\uB2A5\uC774 \uB5A8\uC5B4\uC838\uC11C \uC5B4\uB514\uC5D0 \uC368\uBA39\uAE30\uB3C4
-    \uD798\uB4E4\uB2E4. \uC544\uC9C1 \uC2E4\uD5D8 \uCD08\uAE30\r \uB2E8\uACC4\uC774\uBBC0\uB85C
-    \uD070 \uAE30\uB300\uB294 \uC548 \uD588\uC9C0\uB9CC, \uC774 \uC774\uD615\uCCB4\uC5D0\uAC8C\uC11C\uB294
-    \uC4F8\uB9CC\uD55C\r \uB370\uC774\uD130\uB3C4 \uC5BB\uAE30 \uD798\uB4E4\uB2E4.
-    \uD3ED\uB825\uC131\uC740 \uAC15\uD574\uC9C0\uACE0, \uD55C \uC790\uB9AC\uC5D0
-    \uAC00\uB9CC\r\uD788 \uC788\uC9C0\uB97C \uBABB\uD574\uC11C \uAD00\uB9AC\uD558\uAE30\uB3C4
-    \uD3D0\uAE30\uD558\uAE30\uB3C4 \uACE8\uCE58 \uC544\uD30C\uC84C\uB2E4. \uADF8\r\uB098\uB9C8
-    \uC4F8 \uB370\uB97C \uCC3E\uC544\uBCF4\uC790\uBA74, \uD2B9\uC815 \uCE35\uC5D0
+  m_Text: "#8\r\n \uC774\uBC88\uC5D0\uB3C4 \uACB0\uACFC\uB294 \uC369 \uC88B\uC9C0
+    \uBABB\uD588\uB2E4.\n \uC774\uD615\uCCB4\uC758 \uD06C\uAE30\uB294 \uCEE4\uC84C\uC9C0\uB9CC,\r
+    \uC9C0\uB2A5\uC774 \uB5A8\uC5B4\uC84C\uB2E4. \uD3ED\uB825\uC131\uC740 \uAC15\uD574\uC9C0\uACE0,
+    \uD55C \uC790\uB9AC\uC5D0 \uAC00\uB9CC\r\uD788 \uC788\uC9C0\uB97C \uBABB\uD574\uC11C
+    \uAD00\uB9AC\uC640 \uD3D0\uAE30 \uBAA8\uB450 \uACE8\uCE58 \uC544\uD30C\uC84C\uB2E4.\n
+    \uC544\uC9C1 \uC2E4\uD5D8 \uCD08\uAE30\r \uB2E8\uACC4\uC774\uBBC0\uB85C \uB370\uC774\uD130\uB97C
+    \uC5BB\uAE30\uB294 \uD798\uB4E4\uC9C0\uB9CC, \uC4F8 \uB370\uB97C \uCC3E\uC544\uBCF4\uC790\uBA74
     \uC544\uBB34\uB3C4 \uB2E4\uB2D0 \uC218 \uC5C6\uB3C4\uB85D\r \uD1B5\uC81C\uD574\uC57C
-    \uD560 \uB54C \uB140\uC11D\uC744 \uD480\uC5B4\uB193\uC744 \uC218\uB3C4 \uC788\uACA0\uB2E4.
+    \uD560 \uB54C \uB140\uC11D\uC744 \uD480\uC5B4\uB193\uC744 \uC218\uB3C4 \uC788\uACA0\uB2E4.\n
     \uADF8\uB798\uB3C4 \uBE44\uC57D\r\uC801\uC73C\uB85C \uD798\uC774 \uAC15\uD574\uC9C0\uAC8C
     \uB9CC\uB4DC\uB294 \uBB3C\uC9C8\uC744 \uC720\uCD94\uD574\uB0BC \uC218 \uC788\uAC8C
     \uB418\uC5C8\r\uC73C\uB2C8 \uC644\uC804\uD788 \uAC74\uC9C4 \uAC83\uC774 \uC5C6\uC9C0\uB294
@@ -21285,7 +21326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 869, y: 426}
+  m_AnchoredPosition: {x: 752, y: 458}
   m_SizeDelta: {x: 102, y: 102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2108155640

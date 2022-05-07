@@ -147,6 +147,7 @@ public class DoorToB3 : Object
         cover.SetActive(false);
         endAllAnim = true;
         saveAlarm.SaveAlarmPopUp();
+        SM.EffectPlay(SM.gooEffect);
     }
 
     IEnumerator MakeDark()
