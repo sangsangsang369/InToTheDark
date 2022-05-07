@@ -5,11 +5,13 @@ using UnityEngine;
 public class InventoryBtn : MonoBehaviour
 {
     InventoryMng inventoryMng;
+    SoundManager inst;
 
     // Start is called before the first frame update
     void Start()
     {
         inventoryMng = FindObjectOfType<InventoryMng>();
+        inst = SoundManager.inst;
     }
 
     public void TurnPage(bool isLeftBtn)
@@ -22,6 +24,8 @@ public class InventoryBtn : MonoBehaviour
                 inventoryMng.inventoryList[currentPage - 1].SetActive(false);
                 inventoryMng.inventoryList[currentPage - 2].SetActive(true);
                 inventoryMng.currentPage--;
+                inst.itemSource.clip = inst.buttonEffect;
+                inst.itemSource.Play();
             }
         }
         else
@@ -31,6 +35,8 @@ public class InventoryBtn : MonoBehaviour
                 inventoryMng.inventoryList[currentPage - 1].SetActive(false);
                 inventoryMng.inventoryList[currentPage].SetActive(true);
                 inventoryMng.currentPage++;
+                inst.itemSource.clip = inst.buttonEffect;
+                inst.itemSource.Play();
             }
         }
     }
