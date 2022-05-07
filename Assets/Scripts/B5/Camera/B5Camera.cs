@@ -13,6 +13,7 @@ public class B5Camera : CameraScript
         sound.bgmSource.Stop();
         sound.monsterWalkingSource.Stop();
         sound.monsterGrowlingSource.Stop();
+        sound.playerHeartBeatSource.Stop();
         base.Start();
         Ft = FindObjectOfType<FloorTxt>();
         player.currRoom = "B5_Hallway";

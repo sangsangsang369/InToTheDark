@@ -15,6 +15,9 @@ public class B2Camera : CameraScript
         SM = SoundManager.inst;
         ToB3 = FindObjectOfType<DoorToB3>();
         SM.PlayBGM(SM.B12BGM);
+        SM.monsterGrowlingSource.Stop();
+        SM.monsterWalkingSource.Stop();
+        SM.playerHeartBeatSource.Stop();
         base.Start();
         if (saveData.isB3DoorOpened)
         {

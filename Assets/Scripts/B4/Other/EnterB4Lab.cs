@@ -56,6 +56,7 @@ public class EnterB4Lab : MonoBehaviour
         Ft.PosUI();
         inst.monsterWalkingSource.clip = null;
         inst.monsterGrowlingSource.clip = null;
+        inst.playerHeartBeatSource.clip = null;
         playerObj.transform.position = new Vector2(1.5f, -0.83f);
     }
 }

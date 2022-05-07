@@ -136,6 +136,7 @@ public class DoorToB3 : Object
         isB3DoorOpened = true;
         saveData.isB3DoorOpened = true;
         data.Save();
+        Invoke("GooSound", 3f);
         Invoke("Keeping", 4f);
     }
 
@@ -147,6 +148,9 @@ public class DoorToB3 : Object
         cover.SetActive(false);
         endAllAnim = true;
         saveAlarm.SaveAlarmPopUp();
+    }
+    private void GooSound()
+    {
         SM.EffectPlay(SM.gooEffect);
     }
 

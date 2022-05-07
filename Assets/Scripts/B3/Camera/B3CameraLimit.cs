@@ -12,6 +12,7 @@ public class B3CameraLimit : CameraScript
         base.Start();
         inst = SoundManager.inst;
         inst.PlayBGM(inst.B34BGM);
+        inst.effectSource.clip = null;
         Ft = FindObjectOfType<FloorTxt>();
         saveData.currFloor = "B3";
         data.Save();

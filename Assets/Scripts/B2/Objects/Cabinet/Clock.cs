@@ -44,7 +44,7 @@ public class Clock : Object
             SM.EffectPlay(SM.pocketwatchEffect);
             clockPanel.SetActive(true);
             clockTipUI.SetActive(true);
-            StartCoroutine(uiManager.LoadTexts(clockText, inputTextUI, 2));
+            StartCoroutine(uiManager.LoadTexts(clockText, inputTextUI, 3));
             if(Input.GetKeyDown(KeyCode.Mouse0))
             {
                 clockTipUI.SetActive(false);

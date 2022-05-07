@@ -91,6 +91,8 @@ MonoBehaviour:
   leavesShortEffect: {fileID: 8300000, guid: 09726acc8fd8c214a9b0bccde80c470f, type: 3}
   monsterGrowlEffect: {fileID: 8300000, guid: 3dda44f1888bc514faa24b6adf469e87, type: 3}
   gooEffect: {fileID: 8300000, guid: 7ed205320e2214a41ab43647d37ead4e, type: 3}
+  goo2Effect: {fileID: 8300000, guid: 4a91e2b87d93bba44a663ba36640f107, type: 3}
+  goo3Effect: {fileID: 8300000, guid: 7cc72ee0979ef3d47814f7c9db0266d8, type: 3}
   doEffect: {fileID: 8300000, guid: 40fb4611b27079b409535888166b11a6, type: 3}
   reEffect: {fileID: 8300000, guid: a289fbfcec1d9e34dbc9e36bdc5f2444, type: 3}
   miEffect: {fileID: 8300000, guid: 8b68a2183b96d0b4f9caa62ce9f51d25, type: 3}

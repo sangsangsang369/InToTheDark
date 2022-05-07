@@ -80,6 +80,8 @@ public class DoorToB4 : Object
 
     IEnumerator FadeOut()
     {
+        SoundManager inst = SoundManager.inst;
+        inst.EffectPlay(inst.goo2Effect);
         for(int i = 10; i >= 0; i--)
         {
             float f = i / 10f;

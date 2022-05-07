@@ -33,7 +33,6 @@ public class SoundManager : MonoBehaviour
     public AudioClip buttonEffect;
     public AudioClip stabButtonEffect;
     public AudioClip conversationEffect;
-    public AudioClip puzzleFailedEffect;
     public AudioClip doorOpenEffect;
     public AudioClip stairEffect;
 
@@ -59,8 +58,9 @@ public class SoundManager : MonoBehaviour
 
     //B3 Effect
     public AudioClip leavesShortEffect;
-    public AudioClip monsterGrowlEffect;
     public AudioClip gooEffect;
+    public AudioClip goo2Effect;
+    public AudioClip goo3Effect;
     //Piano Effect
     public AudioClip doEffect;
     public AudioClip reEffect;
@@ -191,15 +191,6 @@ public class SoundManager : MonoBehaviour
         effectSource.Play();
     }
 
-    public void Mute(bool muteOnTrue)
-    {
-        bgmSource.mute = muteOnTrue;
-    }
-
-    public bool EffectPlaying()
-    {
-        return effectSource.isPlaying;
-    }
     public void ItemEffectPlaying(AudioClip clip)
     {
         itemSource.clip = clip;
