@@ -23,7 +23,7 @@ public class MoveHand : MonoBehaviour
         rectHour = hourHand.GetComponent<RectTransform>();
         SM = SoundManager.inst;
         centerPos = new Vector2(Screen.width/2, clockCenter.transform.position.y);
-        Debug.Log(clockCenter.transform.position.y);
+        //Debug.Log(clockCenter.transform.position.y);
     }
 
     // Update is called once per frame

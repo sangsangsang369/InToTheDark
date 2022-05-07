@@ -13,6 +13,9 @@ public class Clock : Object
     public AnsCheck ansCheck;
     SlotSelectionMng slotSelectMng;
     SoundManager SM;
+    public GameObject clockTipUI;
+    public List<Text> clockText;
+    public Text inputTextUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +42,13 @@ public class Clock : Object
         else
         {
             SM.EffectPlay(SM.pocketwatchEffect);
-            clockPanel.SetActive(true); 
+            clockPanel.SetActive(true);
+            clockTipUI.SetActive(true);
+            StartCoroutine(uiManager.LoadTexts(clockText, inputTextUI, 2));
+            if(Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                clockTipUI.SetActive(false);
+            }
         }
     }
 
