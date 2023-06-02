@@ -13,7 +13,6 @@ public class AfterLeftRight : MonoBehaviour
     public GameObject floorTxt;
 
     bool crowdEffectStopTrigger = false;
-    bool screamEffectStopTrigger = false;
     bool noScream = false;
     SoundManager sound;
     public GameObject crowd;
