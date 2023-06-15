@@ -424,7 +424,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: "\uB450 \uB2EC \uC804, \uB3D9\uC0DD\uC774 \uC9D1\uC744 \uB098\uAC14\uB2E4."
 --- !u!222 &90602398
 CanvasRenderer:
@@ -1151,7 +1151,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: "\uB098\uB294 \uD640\uB9B0 \uB4EF \uADF8 \uBB38\uC744 \uC5F4\uACE0 \uB0B4\uB824\uAC14\uB2E4."
 --- !u!222 &414944214
 CanvasRenderer:
@@ -1409,7 +1409,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: "\uB09C \uB3D9\uC0DD\uC744 \uCC3E\uC544 \uADF8 \uAC74\uBB3C\uB85C \uB4E4\uC5B4\uAC14\uB2E4.\r\n\uC544\uBB34
     \uACF3\uC5D0\uB098 \uC788\uC744 \uBC95\uD55C \uC791\uC740 \uC608\uBC30\uB2F9\uC774\uC5C8\uB2E4."
 --- !u!222 &493080163
@@ -1682,7 +1682,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: "\uCC9C\uCC9C\uD788 \uC8FC\uC704\uB97C \uC0B4\uD53C\uBA70 \uC55E\uC73C\uB85C
     \uAC78\uC5B4\uAC00\uB294 \uC911, \uBB34\uC5B8\uAC00\uC5D0 \uBC1C\uC774 \uAC78\uB824
     \uB118\uC5B4\uC84C\uB2E4."
@@ -2643,7 +2643,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 100}
+  m_SizeDelta: {x: 300, y: 161.76324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1443000513
 MonoBehaviour:
@@ -2692,7 +2692,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: "\uADF8\uB7EC\uB358 \uC911, \uACBD\uCC30\uC11C\uC5D0\uC11C \uB3D9\uC0DD\uC744
     \uBC1C\uACAC\uD588\uB2E4\uB294 \uC5F0\uB77D\uC774 \uC654\uB2E4.\nCCTV\uC5D0\uC11C 
     \uB3D9\uC0DD\uC740 \uC678\uB534 \uAC74\uBB3C\uB85C \uB4E4\uC5B4\uAC14\uACE0,
@@ -3372,7 +3372,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: "\uC544\uBB34\uB9AC \uC218\uC18C\uBB38\uC744 \uD574\uBD10\uB3C4 \uB3D9\uC0DD\uC744
     \uBCF8 \uC0AC\uB78C\uC740 \uC5C6\uC5C8\uB2E4."
 --- !u!222 &1785149972
@@ -3848,7 +3848,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: "\uCE74\uD3AB\uC744 \uB4E4\uCD94\uB2C8 \uC791\uC740 \uBB38 \uC190\uC7A1\uC774\uAC00
     \uB098\uD0C0\uB0AC\uB2E4."
 --- !u!222 &1928749323

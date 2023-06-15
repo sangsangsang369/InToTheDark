@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryBtn : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class InventoryBtn : MonoBehaviour
     {
         inventoryMng = FindObjectOfType<InventoryMng>();
         inst = SoundManager.inst;
+        int totalInventoryPage = inventoryMng.inventoryList.Count % 6 + 1;
+        if(inventoryMng.currentPage == totalInventoryPage && inventoryMng.currentPage == 1){
+            this.GetComponent<Button>().interactable = false;
+            Debug.Log("btn disabled");
+        }
     }
 
     public void TurnPage(bool isLeftBtn)
