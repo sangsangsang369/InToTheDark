@@ -18,32 +18,23 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": 10.819999694824219,
-    "currFloor": "B3",
-    "currRoomPos": "거대한 정원",
+    "playerXstartPoint": -31.399999618530275,
+    "currFloor": "B1",
+    "currRoomPos": "시체의 방",
     "volume1": 1.0,
     "volume2": 1.0,
     "itemList": [
         {
-            "prefabOrder": 1
+            "prefabOrder": 0
         },
         {
-            "prefabOrder": 0
+            "prefabOrder": 1
         },
         {
             "prefabOrder": 3
         },
         {
-            "prefabOrder": 9
-        },
-        {
-            "prefabOrder": 8
-        },
-        {
-            "prefabOrder": 11
-        },
-        {
-            "prefabOrder": 10
+            "prefabOrder": 4
         }
     ],
     "isFirstGB": true,
@@ -51,15 +42,15 @@
     "isDiaryClicked": true,
     "isMufflerPicked": true,
     "isLetterPicked": true,
-    "keyUsed": true,
+    "keyUsed": false,
     "alreadyOpen": true,
-    "playPuzzleOnce": true,
-    "isB3DoorOpened": true,
+    "playPuzzleOnce": false,
+    "isB3DoorOpened": false,
     "OnB2CandleOnce": false,
     "playB2StatueOnce": false,
     "ReB2": false,
-    "s1On": true,
-    "s2On": true,
+    "s1On": false,
+    "s2On": false,
     "isB3ReEntered": true,
     "OnB3CandleOnce": false,
     "playB3StatueOnce": false,
@@ -67,11 +58,11 @@
     "monsterExtractinInventory": false,
     "isLabTableReEntered": false,
     "isB4DoorOpened": false,
-    "isTreesapPicked": true,
-    "isBranchPicked": true,
-    "isLeafPicked": true,
-    "isFruitPicked": true,
-    "fruitNum": 3,
+    "isTreesapPicked": false,
+    "isBranchPicked": false,
+    "isLeafPicked": false,
+    "isFruitPicked": false,
+    "fruitNum": 5,
     "isB4ReEntered": false,
     "isDaggerPicked": false,
     "isJewelGained": false,

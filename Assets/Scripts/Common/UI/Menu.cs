@@ -54,6 +54,7 @@ public class Menu : MonoBehaviour
 
     public void Settings() // 사운드 셋팅 창 열기
     {
+        pauseTap.SetActive(false);
         inst.ButtonEffectPlay(inst.buttonEffect);
         BGM.value = saveData.volume1;
         SFX.value = saveData.volume2;
