@@ -15,7 +15,7 @@ public class MoveStatue : MonoBehaviour
     public GameObject sword2UI, sword2Img;
     public Text sword2Text;
     public Text inputTextUI;
-    bool playPuzzleOnce = false;
+    public bool playPuzzleOnce = false;
 
     DataManager data;
     SaveDataClass saveData;

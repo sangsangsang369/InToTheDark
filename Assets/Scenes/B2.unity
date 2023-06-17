@@ -2885,6 +2885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statue3Fliped: 0
+  ms: {fileID: 1516755042}
 --- !u!1 &352062543
 GameObject:
   m_ObjectHideFlags: 0
@@ -5061,6 +5062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2386d1d6b9e6a47b69f3b6b8054496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ms: {fileID: 1516755042}
   statue2Fliped: 0
 --- !u!1 &527326885
 GameObject:
@@ -14857,6 +14859,7 @@ MonoBehaviour:
     type: 3}
   sword2Text: {fileID: 2034842755}
   inputTextUI: {fileID: 695523062}
+  playPuzzleOnce: 0
 --- !u!1 &1534142925
 GameObject:
   m_ObjectHideFlags: 0
@@ -19793,6 +19796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b523971382fe3904a94b4952f076c79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ms: {fileID: 1516755042}
   statue1Fliped: 0
 --- !u!1 &1960811583
 GameObject:
@@ -19917,6 +19921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statue4Fliped: 0
+  ms: {fileID: 1516755042}
 --- !u!1 &1973453150
 GameObject:
   m_ObjectHideFlags: 0

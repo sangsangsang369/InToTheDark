@@ -8,6 +8,7 @@ public class StatuePuzzle2 : Object
     B2_UIManager uiManager;
     Player player;
     SoundManager SM;
+    public MoveStatue ms;
     public bool statue2Fliped = false;
 
     // Start is called before the first frame update
@@ -21,19 +22,21 @@ public class StatuePuzzle2 : Object
     // Update is called once per frame
     public override void ObjectFunction()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if (!statue2Fliped)
+        if(!ms.playPuzzleOnce){
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
-                SM.EffectPlay(SM.swipeStatueEffect);
-                statue2Fliped = true;
-            }
-            else
-            {
-                this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
-                SM.EffectPlay(SM.swipeStatueEffect);
-                statue2Fliped = false;
+                if (!statue2Fliped)
+                {
+                    this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                    SM.EffectPlay(SM.swipeStatueEffect);
+                    statue2Fliped = true;
+                }
+                else
+                {
+                    this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                    SM.EffectPlay(SM.swipeStatueEffect);
+                    statue2Fliped = false;
+                }
             }
         }
     }

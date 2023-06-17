@@ -23,11 +23,15 @@
     "currRoomPos": "복도",
     "volume1": 1.0,
     "volume2": 1.0,
-    "itemList": [],
+    "itemList": [
+        {
+            "prefabOrder": 0
+        }
+    ],
     "isFirstGB": true,
     "isUnlocked": false,
     "isDiaryClicked": false,
-    "isMufflerPicked": false,
+    "isMufflerPicked": true,
     "isLetterPicked": false,
     "keyUsed": false,
     "alreadyOpen": false,
