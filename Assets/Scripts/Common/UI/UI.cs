@@ -45,7 +45,6 @@ public class UI : MonoBehaviour
                 inst.conversationAudioSource.Stop();
                 break;
             }
-
             miniTimer += Time.deltaTime;
             currentTargetNumber = miniTimer / eachTime;
         }
@@ -57,7 +56,6 @@ public class UI : MonoBehaviour
         inputTextUI.text = builder.ToString();
         yield return null;
         
-
         while(true)
         {
             yield return null;

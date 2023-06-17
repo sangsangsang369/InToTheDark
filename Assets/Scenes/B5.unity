@@ -1159,7 +1159,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1857940595}
         m_MethodName: Mains
         m_Mode: 1
         m_Arguments:
@@ -3188,7 +3188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &499922391
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3464,7 +3464,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1857940595}
         m_MethodName: NoBtn
         m_Mode: 1
         m_Arguments:
@@ -3545,6 +3545,9 @@ MonoBehaviour:
   inventoryList: []
   slotList: []
   filledCheck: 
+  inventBtn:
+  - {fileID: 0}
+  - {fileID: 0}
   inventoryPrefab: {fileID: 1350711542630775657, guid: 252b7bbcd1842004db10b65face8a44b,
     type: 3}
   inventoryParent: {fileID: 1654525377}
@@ -4229,7 +4232,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1857940595}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -4949,7 +4952,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1857940595}
         m_MethodName: LastQ
         m_Mode: 1
         m_Arguments:
@@ -6309,7 +6312,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2144115405}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -6320,7 +6323,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1755390221}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -6567,7 +6570,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1857940595}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -9615,7 +9618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

@@ -6253,7 +6253,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1833504686}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -6932,7 +6932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.627451}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -11114,7 +11114,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1833504686}
         m_MethodName: NoBtn
         m_Mode: 1
         m_Arguments:
@@ -14026,7 +14026,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1833504686}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -16182,7 +16182,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1682459923}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -16193,7 +16193,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 656527275}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -16991,8 +16991,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Mains
+      - m_Target: {fileID: 1833504686}
+        m_MethodName: MuteAllBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17195,7 +17195,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1833504686}
         m_MethodName: LastQ
         m_Mode: 1
         m_Arguments:
@@ -17994,8 +17994,8 @@ MonoBehaviour:
   MenuCanvas: {fileID: 652310320}
   pauseTap: {fileID: 1029752808}
   settingTap: {fileID: 1375778466}
-  LastTap: {fileID: 0}
-  Floor: {fileID: 0}
+  LastTap: {fileID: 80163885}
+  Floor: {fileID: 374740871}
   BGM: {fileID: 1840136953}
   SFX: {fileID: 382660437}
 --- !u!1 &1839633043
@@ -21550,6 +21550,9 @@ MonoBehaviour:
   inventoryList: []
   slotList: []
   filledCheck: 
+  inventBtn:
+  - {fileID: 0}
+  - {fileID: 0}
   inventoryPrefab: {fileID: 1350711542630775657, guid: 252b7bbcd1842004db10b65face8a44b,
     type: 3}
   inventoryParent: {fileID: 718849027}
