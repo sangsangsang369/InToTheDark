@@ -18,9 +18,9 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": -31.399999618530275,
+    "playerXstartPoint": 7.099999904632568,
     "currFloor": "B1",
-    "currRoomPos": "시체의 방",
+    "currRoomPos": "낡은 서재",
     "volume1": 1.0,
     "volume2": 1.0,
     "itemList": [
@@ -29,21 +29,15 @@
         },
         {
             "prefabOrder": 1
-        },
-        {
-            "prefabOrder": 3
-        },
-        {
-            "prefabOrder": 4
         }
     ],
     "isFirstGB": true,
-    "isUnlocked": true,
-    "isDiaryClicked": true,
+    "isUnlocked": false,
+    "isDiaryClicked": false,
     "isMufflerPicked": true,
     "isLetterPicked": true,
     "keyUsed": false,
-    "alreadyOpen": true,
+    "alreadyOpen": false,
     "playPuzzleOnce": false,
     "isB3DoorOpened": false,
     "OnB2CandleOnce": false,
@@ -51,7 +45,7 @@
     "ReB2": false,
     "s1On": false,
     "s2On": false,
-    "isB3ReEntered": true,
+    "isB3ReEntered": false,
     "OnB3CandleOnce": false,
     "playB3StatueOnce": false,
     "isPianoMemoGained": false,
