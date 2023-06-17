@@ -7,17 +7,20 @@ public class InventoryBtn : MonoBehaviour
 {
     InventoryMng inventoryMng;
     SoundManager inst;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         inventoryMng = FindObjectOfType<InventoryMng>();
         inst = SoundManager.inst;
-        int totalInventoryPage = inventoryMng.inventoryList.Count % 6 + 1;
-        if(inventoryMng.currentPage == totalInventoryPage && inventoryMng.currentPage == 1){
-            this.GetComponent<Button>().interactable = false;
-            Debug.Log("btn disabled");
-        }
+    }
+
+    public void OffBtninteractable(){
+        this.GetComponent<Button>().interactable = false;
+    }
+    public void OnBtninteractable(){
+        this.GetComponent<Button>().interactable = true;
     }
 
     public void TurnPage(bool isLeftBtn)

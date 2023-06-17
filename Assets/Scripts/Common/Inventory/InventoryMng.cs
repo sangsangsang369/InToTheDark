@@ -7,11 +7,13 @@ public class InventoryMng : MonoBehaviour
 {
     DataManager data;
     SaveDataClass saveData;
+    InventoryBtn invenBtn;
 
     public int currentPage = 1;
     public List<GameObject> inventoryList;
     public List<GameObject> slotList;
     public List<bool> filledCheck;
+    public InventoryBtn[] inventBtn = new InventoryBtn[2];
     [SerializeField] private GameObject inventoryPrefab;
     [SerializeField] private GameObject inventoryParent;
     [SerializeField] private Sprite unselectedSlot;
@@ -21,6 +23,8 @@ public class InventoryMng : MonoBehaviour
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+        inventBtn = FindObjectsOfType<InventoryBtn>();
+        
         
         //아이템의 갯수가 0이나 6의 배수가 아니면
         if(saveData.itemList.Count % 6 != 0)
@@ -60,6 +64,7 @@ public class InventoryMng : MonoBehaviour
             {
                 AddNewInventory(true);
             }
+            
         }
 
         for(int i = 0; i < saveData.itemList.Count; i++)
@@ -81,6 +86,13 @@ public class InventoryMng : MonoBehaviour
             {
                 InstantiateItemsOnInventory(data.itemPrefabs[itemIndex].gameObject, 0.4f);
             }
+        }
+        if(inventoryList.Count == 1 && currentPage == 1){
+            foreach(InventoryBtn i in inventBtn)
+            {
+                i.OffBtninteractable();
+            }
+            //invenBtn.OffBtninteractable();
         }
     }
 
@@ -137,6 +149,9 @@ public class InventoryMng : MonoBehaviour
         ItemClass itemPicked = new ItemClass(order);
         saveData.itemList.Add(itemPicked);
         data.Save();
+        if(inventoryList.Count > 1){
+            invenBtn.OnBtninteractable();
+        }
     }
 
     public void AddToInventory(GameObject item, float size, ItemClass.ItemPrefabOrder order) //월드에 없는 아이템 줍기
@@ -161,6 +176,9 @@ public class InventoryMng : MonoBehaviour
         ItemClass itemPicked = new ItemClass(order);
         saveData.itemList.Add(itemPicked);
         data.Save();
+        if(inventoryList.Count > 1){
+            invenBtn.OnBtninteractable();
+        }
     }
 
     private void AddNewInventory(bool OnOff) // 새로운 인벤토리창 추가
@@ -227,6 +245,10 @@ public class InventoryMng : MonoBehaviour
                 break;
             }
         }
+
+        if(inventoryList.Count > 1){
+            invenBtn.OnBtninteractable();
+        }
     }
 
     //위의 함수에서 정리하는 부분만 떼서 함수 만들었습니다
@@ -275,6 +297,9 @@ public class InventoryMng : MonoBehaviour
             inventoryList[0].gameObject.SetActive(true);
             slotList.RemoveRange(6, 6);
         }
+        if(inventoryList.Count > 1){
+            invenBtn.OnBtninteractable();
+        }
     }
 
     //B3InventoryMng에서 옮긴 함수(B3F에서만 사용)
@@ -293,6 +318,9 @@ public class InventoryMng : MonoBehaviour
     
                 break;
             }
+        }
+        if(inventoryList.Count > 1){
+            invenBtn.OnBtninteractable();
         }
     }
   
