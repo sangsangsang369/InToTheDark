@@ -18,21 +18,24 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": -35.0,
+    "playerXstartPoint": 7.099999904632568,
     "currFloor": "B1",
-    "currRoomPos": "복도",
+    "currRoomPos": "낡은 서재",
     "volume1": 1.0,
     "volume2": 1.0,
     "itemList": [
         {
             "prefabOrder": 0
+        },
+        {
+            "prefabOrder": 1
         }
     ],
     "isFirstGB": true,
     "isUnlocked": false,
     "isDiaryClicked": false,
     "isMufflerPicked": true,
-    "isLetterPicked": false,
+    "isLetterPicked": true,
     "keyUsed": false,
     "alreadyOpen": false,
     "playPuzzleOnce": false,
