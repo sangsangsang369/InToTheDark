@@ -25,17 +25,15 @@
     "volume2": 1.0,
     "itemList": [
         {
-            "prefabOrder": 0
-        },
-        {
-            "prefabOrder": 1
+            "prefabOrder": 3
         }
     ],
     "isFirstGB": true,
-    "isUnlocked": false,
-    "isDiaryClicked": false,
-    "isMufflerPicked": true,
-    "isLetterPicked": true,
+    "isUnlocked": true,
+    "isDiaryClicked": true,
+    "isMufflerPicked": false,
+    "isLetterPicked": false,
+    "isB2DoorOpened": false,
     "keyUsed": false,
     "alreadyOpen": false,
     "playPuzzleOnce": false,

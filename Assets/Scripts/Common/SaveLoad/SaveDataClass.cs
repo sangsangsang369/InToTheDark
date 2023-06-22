@@ -35,6 +35,7 @@ public class SaveDataClass
 
     public bool isMufflerPicked;
     public bool isLetterPicked;
+    public bool isB2DoorOpened;
 
     //지하 2층
     public bool keyUsed;
@@ -93,6 +94,7 @@ public class SaveDataClass
 
         isMufflerPicked = false;
         isLetterPicked = false;
+        isB2DoorOpened = false;
 
         //지하 2층
         keyUsed = false;

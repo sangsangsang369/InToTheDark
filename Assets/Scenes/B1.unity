@@ -5356,7 +5356,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC9C0\uD558 2\uCE35\uC758 \uBB38\uC744 \uC5F4 \uC218 \uC788\uB294 \uCE74\uB4DC\uD0A4\uC774\uB2E4."
+  m_Text: "B2\uB77C\uACE0 \uC368\uC838\uC788\uB294 \uCE74\uB4DC\uD0A4\uC774\uB2E4.\r"
 --- !u!222 &513977516
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13773,7 +13773,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "B2 \uC785\uAD6C"
+  m_Text: "\uC7A0\uACA8\uC788\uB294 \uBB38"
 --- !u!222 &1311698549
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15573,7 +15573,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "B2 \uC785\uAD6C"
+  m_Text: "\uC7A0\uACA8\uC788\uB294 \uBB38"
 --- !u!222 &1435348624
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15885,10 +15885,10 @@ MonoBehaviour:
   m_Text: " \uC774\uAC83\uC73C\uB85C 2\uCE35, 3\uCE35\uC73C\uB85C \uB0B4\uB824\uAC00\uB294
     \uBC29\uBC95\uC744 \uBAA8\uB450 \uC54C\uC558\uB2E4. 2\uCE35\uC758 \uBB38\uC740
     \uAD50\uB2E8\uC5D0\uC11C \uC9C0\uAE09\uD558\uB294 \uCE74\uB4DC\r\uD0A4\uAC00
-    \uC788\uC5B4\uC57C \uB0B4\uB824\uAC08 \uC218 \uC788\uACE0, 3\uCE35\uC740 \uAD50\uB2E8\uC758
-    \uC131\uC11C\uC5D0 \uC4F0\uC5EC\uC788\uB358, \uC5B4\uBA38\uB2C8\uAC00 2\uAC1C\uC758
-    \uCE7C\uC5D0 \uCC14\uB9AC\uB294\r \uBD88\uACB0\uD55C \uBC29\uD574\uB97C \uB2F9\uD588\uB2E4\uB294
-    \uB0B4\uC6A9\uACFC \uAD00\uB828\uB418\uC5B4 \uC788\uC5C8\uB2E4."
+    \uC788\uC5B4\uC57C \uB0B4\uB824\uAC08 \uC218 \uC788\uACE0, 3\uCE35\uC758 \uBB38\uC740
+    \uAD50\uB2E8\uC758 \uC131\uC11C\uC5D0 \uC4F0\uC5EC\uC788\uB358, \uC5B4\uBA38\uB2C8\uAC00
+    2\uAC1C\uC758 \uCE7C\uC5D0 \uCC14\uB9AC\uB294\r \uBD88\uACB0\uD55C \uBC29\uD574\uB97C
+    \uB2F9\uD588\uB2E4\uB294 \uB0B4\uC6A9\uACFC \uAD00\uB828\uB418\uC5B4 \uC788\uC5C8\uB2E4."
 --- !u!222 &1452950380
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19865,6 +19865,7 @@ MonoBehaviour:
     isDiaryClicked: 0
     isMufflerPicked: 0
     isLetterPicked: 0
+    isB2DoorOpened: 0
     keyUsed: 0
     alreadyOpen: 0
     playPuzzleOnce: 0
