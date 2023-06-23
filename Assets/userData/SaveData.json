@@ -18,21 +18,24 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": 7.099999904632568,
+    "playerXstartPoint": -35.0,
     "currFloor": "B1",
-    "currRoomPos": "낡은 서재",
+    "currRoomPos": "복도",
     "volume1": 1.0,
     "volume2": 1.0,
     "itemList": [
         {
-            "prefabOrder": 3
+            "prefabOrder": 1
+        },
+        {
+            "prefabOrder": 0
         }
     ],
     "isFirstGB": true,
-    "isUnlocked": true,
-    "isDiaryClicked": true,
-    "isMufflerPicked": false,
-    "isLetterPicked": false,
+    "isUnlocked": false,
+    "isDiaryClicked": false,
+    "isMufflerPicked": true,
+    "isLetterPicked": true,
     "isB2DoorOpened": false,
     "keyUsed": false,
     "alreadyOpen": false,

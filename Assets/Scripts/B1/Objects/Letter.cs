@@ -9,6 +9,7 @@ public class Letter : Object
     UI uiManager;
     InventoryMng inventoryMng;
     SlotSelectionMng slotSelectMng;
+    public GameObject inventUI, btnsUI;
 
     DataManager data;
     SaveDataClass saveData;
@@ -40,6 +41,8 @@ public class Letter : Object
     {
         sound.EffectPlay(sound.getItemEffect);
         letterUI.SetActive(true);
+        inventUI.SetActive(false);
+        btnsUI.SetActive(false);
         GameObject letter = this.gameObject;
         inventoryMng.PickUp(letter, 0.1f, ItemClass.ItemPrefabOrder.Letter);
         saveData.isLetterPicked = true;
