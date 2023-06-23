@@ -11,6 +11,7 @@ public class MoveHand : MonoBehaviour
     Vector2 mousePos, centerPos;
     float newValue, newDist;
     [SerializeField] private GameObject clockCenter;
+    [SerializeField] private GameObject scriptPanel;
     public bool firstHour = false;
     public bool secHour = false;
     public bool thrHour = false;
@@ -29,6 +30,13 @@ public class MoveHand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!scriptPanel.activeSelf)
+        {
+            moveHandle();
+        }
+    }
+
+    void moveHandle(){
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             mousePos = Input.mousePosition;

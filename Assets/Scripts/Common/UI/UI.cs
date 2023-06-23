@@ -87,4 +87,31 @@ public class UI : MonoBehaviour
         }
         textOrder = 0;
     }
+
+    public IEnumerator LoadClockTutorialTexts(List<Text> texts, Text inputTextUI, int numOfTexts, List<GameObject> tutorialImgs)
+    {
+        yield return null;
+        for(int i = 0; i < numOfTexts; i++)
+        {
+            while(nowTexting)
+            {
+                yield return null;
+            }
+            for(int j = 0; j < numOfTexts; j++)
+            {
+                if(textOrder == j)
+                {
+                    StartCoroutine(LoadTextOneByOne(texts[j].text, inputTextUI));
+                }
+            }
+            textOrder++;
+            if(i > 2){
+                tutorialImgs[i-3].SetActive(false);
+            }
+            if(i > 1){
+                tutorialImgs[i-2].SetActive(true);
+            }
+        }
+        textOrder = 0;
+    }
 }

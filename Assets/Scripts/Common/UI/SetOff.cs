@@ -94,4 +94,12 @@ public class SetOff : MonoBehaviour
             sceneLoader.LoadScene(sceneName);
         }
     }
+
+    public void ClockOff(GameObject adder)
+    {
+        if(!uiManager.nowTexting)
+        {
+            adder.SetActive(false);
+        }
+    }
 }

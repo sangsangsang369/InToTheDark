@@ -41,6 +41,7 @@ public class SaveDataClass
     public bool keyUsed;
     public bool alreadyOpen;
     public bool playPuzzleOnce;
+    public bool destoryCursor;
     public bool isB3DoorOpened;
     public bool OnB2CandleOnce;
     public bool playB2StatueOnce;
@@ -100,6 +101,7 @@ public class SaveDataClass
         keyUsed = false;
         alreadyOpen = false;
         playPuzzleOnce = false;
+        destoryCursor=false;
         isB3DoorOpened = false;
         OnB2CandleOnce = false;
         playB2StatueOnce = false;

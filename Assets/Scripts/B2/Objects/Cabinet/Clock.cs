@@ -16,6 +16,9 @@ public class Clock : Object
     public GameObject clockTipUI;
     public List<Text> clockText;
     public Text inputTextUI;
+    public GameObject mainTutorialPanel;
+
+    public List<GameObject> TutorialsPanels;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,11 +47,8 @@ public class Clock : Object
             SM.EffectPlay(SM.pocketwatchEffect);
             clockPanel.SetActive(true);
             clockTipUI.SetActive(true);
-            StartCoroutine(uiManager.LoadTexts(clockText, inputTextUI, 3));
-            if(Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                clockTipUI.SetActive(false);
-            }
+            mainTutorialPanel.SetActive(true);
+            StartCoroutine(uiManager.LoadClockTutorialTexts(clockText, inputTextUI, 5, TutorialsPanels));
         }
     }
 

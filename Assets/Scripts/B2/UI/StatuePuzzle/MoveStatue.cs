@@ -16,6 +16,7 @@ public class MoveStatue : MonoBehaviour
     public Text sword2Text;
     public Text inputTextUI;
     public bool playPuzzleOnce = false;
+    public bool destoryCursor = false;
 
     DataManager data;
     SaveDataClass saveData;
@@ -26,6 +27,7 @@ public class MoveStatue : MonoBehaviour
         data = DataManager.singleTon;
         saveData = data.saveData;
         playPuzzleOnce = saveData.playPuzzleOnce;
+        destoryCursor = saveData.destoryCursor;
         uiManager = FindObjectOfType<B2_UIManager>();
         inventoryMng = FindObjectOfType<InventoryMng>();
         SM = SoundManager.inst;
@@ -52,6 +54,12 @@ public class MoveStatue : MonoBehaviour
         inventoryMng.AddToInventory(sword2, 1f, ItemClass.ItemPrefabOrder.Sword2);
         playPuzzleOnce = true;
         saveData.playPuzzleOnce = true;
+        // Object.Destroy(SP.transform.GetChild(0).gameObject);
+        // Object.Destroy(SP2.transform.GetChild(0).gameObject);
+        // Object.Destroy(SP3.transform.GetChild(0).gameObject);
+        // Object.Destroy(SP4.transform.GetChild(0).gameObject);
+        destoryCursor = true;
+        saveData.destoryCursor = true;
         data.Save();
     }
 }

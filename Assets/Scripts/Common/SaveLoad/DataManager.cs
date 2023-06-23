@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 //게임 시작 및 씬을 넘나들 때 사용하는 스크립트
-//매우중요!!!!!!!!!!!!!!!!!!!
 //왜냐면은 씬을 넘나들 때는 dont destroy on load를 사용하게 된다.
 //그렇기 때문에 single ton 이란 스킬을 사용하게 된다.
 //single ton은 똑같은 객체가 여러 개 생기는 걸 방지하는 스킬이다.

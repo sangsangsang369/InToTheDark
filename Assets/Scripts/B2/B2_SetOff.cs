@@ -27,4 +27,19 @@ public class B2_SetOff : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
+    public void OffObjects(GameObject obj)
+    {
+        if(!uiManager.nowTexting)
+        {
+            uiManager.numOfClicked++;
+            inputTextUI.GetComponent<Text>().text = "";
+            inputTextUI.gameObject.SetActive(false);
+            if(uiManager.numOfClicked == 1)
+            {
+                obj.SetActive(false);
+                uiManager.numOfClicked = 0;
+            }
+            //this.gameObject.SetActive(false);
+        }
+    }
 }

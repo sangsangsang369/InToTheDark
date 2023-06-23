@@ -21,6 +21,8 @@ public class DoorToB3 : Object
     public bool s2On = false;
     public bool doorCheck = false;
     public Text doorText, inputTextUI;
+    [SerializeField] private Text doorWithoutKnifeText;
+    [SerializeField] private GameObject doorWithoutKnifeUI;
 
     DataManager data;
     SaveDataClass saveData;
@@ -76,7 +78,7 @@ public class DoorToB3 : Object
                 inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.Sword1);
                 slotSelectMng.SelectionClear();
             }
-            if (slotSelectMng.usableItem == "sword2Selected")
+            else if (slotSelectMng.usableItem == "sword2Selected")
             {
                 SM.EffectPlay(SM.knifeEffect);
                 s2.SetActive(true);
@@ -86,6 +88,11 @@ public class DoorToB3 : Object
                 inventoryMng.RemoveFromInventory(slotSelectMng.selectedItem, ItemClass.ItemPrefabOrder.Sword2);
                 slotSelectMng.SelectionClear();
             }
+            else{
+                doorWithoutKnifeUI.SetActive(true);
+                StartCoroutine(uiManager.LoadTextOneByOne(doorWithoutKnifeText.text, inputTextUI));
+            }
+
             if (s1On && s2On)
             {
                 doorCheck = true;
