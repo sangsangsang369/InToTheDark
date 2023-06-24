@@ -41,16 +41,10 @@ TagManager:
   - Cabinet5
   - StatueSp
   - Note
-  - Body
-  - Clock
   - Question
   - StatuePz
-  - Key1
-  - Key2
-  - Sword1
-  - Sword2
-  - Material
-  - UsableObj
+  - InventoryUI
+  - ButtonsUI
   layers:
   - Default
   - TransparentFX

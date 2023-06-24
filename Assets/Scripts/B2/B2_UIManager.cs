@@ -12,5 +12,6 @@ public class B2_UIManager : UI
     void Start()
     {
         inventoryManager = FindObjectOfType<InventoryMng>();
+        // FindUI();
     }
 }

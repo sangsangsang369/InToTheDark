@@ -10,6 +10,7 @@ public class UI : MonoBehaviour
     public int textOrder = 0;
     public Text inputTextUI;
     [HideInInspector] public int numOfClicked = 0;
+    // public GameObject inventoryUI, buttonsUI;
 
     // Start is called before the first frame update
     void Start()
@@ -113,5 +114,10 @@ public class UI : MonoBehaviour
             }
         }
         textOrder = 0;
+    }
+
+    public void FindUI(){
+        // inventoryUI = GameObject.FindGameObjectWithTag("InventoryUI");
+        // buttonsUI = GameObject.FindGameObjectWithTag("ButtonsUI");
     }
 }

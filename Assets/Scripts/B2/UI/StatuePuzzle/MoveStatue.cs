@@ -54,10 +54,10 @@ public class MoveStatue : MonoBehaviour
         inventoryMng.AddToInventory(sword2, 1f, ItemClass.ItemPrefabOrder.Sword2);
         playPuzzleOnce = true;
         saveData.playPuzzleOnce = true;
-        // Object.Destroy(SP.transform.GetChild(0).gameObject);
-        // Object.Destroy(SP2.transform.GetChild(0).gameObject);
-        // Object.Destroy(SP3.transform.GetChild(0).gameObject);
-        // Object.Destroy(SP4.transform.GetChild(0).gameObject);
+        Object.Destroy(SP.transform.GetChild(0).gameObject);
+        Object.Destroy(SP2.transform.GetChild(0).gameObject);
+        Object.Destroy(SP3.transform.GetChild(0).gameObject);
+        Object.Destroy(SP4.transform.GetChild(0).gameObject);
         destoryCursor = true;
         saveData.destoryCursor = true;
         data.Save();

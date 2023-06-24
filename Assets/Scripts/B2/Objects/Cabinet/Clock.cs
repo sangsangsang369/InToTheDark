@@ -45,11 +45,25 @@ public class Clock : Object
         else
         {
             SM.EffectPlay(SM.pocketwatchEffect);
+            // Image[] inventroyImgs = uiManager.inventoryUI.GetComponents<Image>();
+            // for(int i = 0; i < inventroyImgs.Length; i++){
+            //     inventroyImgs[i].color = new Color(255, 255, 255, 0);
+            // }
+            
+            // Image[] btnImgs = uiManager.buttonsUI.GetComponents<Image>();
+            // for(int i = 0; i < btnImgs.Length; i++){
+            //     btnImgs[i].color = new Color(255, 255, 255, 0);
+            // }
             clockPanel.SetActive(true);
             clockTipUI.SetActive(true);
             mainTutorialPanel.SetActive(true);
             StartCoroutine(uiManager.LoadClockTutorialTexts(clockText, inputTextUI, 5, TutorialsPanels));
         }
+    }
+
+    public void SetUI(){
+        // uiManager.inventoryUI.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+        // uiManager.buttonsUI.GetComponent<Image>().color = new Color(255, 255, 255, 1);
     }
 
 }

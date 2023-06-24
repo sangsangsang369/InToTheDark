@@ -7,6 +7,7 @@ public class B2MapLoader : MonoBehaviour
     [SerializeField] GameObject B2Hallway;
     [SerializeField] GameObject B2CabinetRoom;
     [SerializeField] GameObject B2Gallery;
+    [SerializeField] List<GameObject> sps;
     DataManager data;
     SaveDataClass saveData;
 
@@ -15,6 +16,15 @@ public class B2MapLoader : MonoBehaviour
     {
         data = DataManager.singleTon;
         saveData = data.saveData;
+
+        if(saveData.destoryCursor){
+            for(int i = 0; i< sps.Count; i++){
+                Object.Destroy(sps[i].transform.GetChild(0).gameObject);
+                if(i != 2){
+                    sps[i].gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                }
+            }
+        }
 
         //Invoke("LoadB2Map", 0.1f);
         LoadB2Map();
