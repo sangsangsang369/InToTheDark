@@ -117,6 +117,9 @@ public class Menu : MonoBehaviour
         saveData.volume2 = inst.conversationAudioSource.volume;
         saveData.volume2 = inst.itemSource.volume;
         data.Save();
+        inst.ButtonEffectPlay(inst.buttonEffect);
+        settingTap.SetActive(false);
+        pauseTap.SetActive(true);
     }
     
 }

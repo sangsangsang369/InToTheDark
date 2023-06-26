@@ -25,13 +25,13 @@
     "volume2": 1.0,
     "itemList": [
         {
-            "prefabOrder": 3
+            "prefabOrder": 0
         }
     ],
     "isFirstGB": true,
     "isUnlocked": true,
-    "isDiaryClicked": true,
-    "isMufflerPicked": false,
+    "isDiaryClicked": false,
+    "isMufflerPicked": true,
     "isLetterPicked": false,
     "isB2DoorOpened": false,
     "keyUsed": false,
