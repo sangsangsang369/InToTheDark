@@ -14,7 +14,7 @@ public class AfterFadeOut : MonoBehaviour
         sound = SoundManager.inst;
     }
     
-    public void TextOn()
+    public void TextOn() // 엔딩텍스트재생 -> 분기선택에 따라 다르게 띄우기 + 텍스트랑 ui도 동시 재생
     {
         //sound.EndingPlay();
         if(nextText && !endingCredit)

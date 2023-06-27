@@ -62,7 +62,17 @@ public class MonsterBro : MonoBehaviour
                 //MonsterStepEffectStop();
                 monsterBroUI.SetActive(true);
                 uiManager.StartCoroutine(uiManager.LoadTextOneByOne(monsterBroText.text, inputTextUI));
+                //여기에 선택지 띄움
+                //만약에 선택하지 않음이면 숫자증가
                 monsterBroTextNum++;
+
+                //단검 선택시,
+                // 주인공이 먼저 달려나가는 애니메이션 ㄱㄱ
+
+                // 머플러 선택시,
+                // 주인공 대사창 하나 띄우고 기존 애니메이션 재생
+
+                
             }
     }
 
