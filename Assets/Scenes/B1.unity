@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -465,8 +465,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "\uC544, 2\uCE35\uC5D0 \uCC3D\uACE0 \uAC19\uC544 \uBCF4\uC774\uB294 \uACF3\uC744
-    \uBD10\uB480\uB294\uB370 \uD55C \uBC88 \uCC3E\uC544\uBD10\uC57C\uACA0\uB2E4.\r"
+  m_Text: "\uB208\uC73C\uB85C\uB294 \uBCF4\uC9C0 \uBABB\uD588\uC9C0\uB9CC \uBB54\uAC00
+    \uBB34\uAC70\uC6B4 \uAC83\uC744 \uB044\uB294 \uC18C\uB9AC\uAC00 \uB4E4\uB838\uB358
+    \uAC83 \uAC19\uB2E4.\r\r"
 --- !u!222 &24320775
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4007,7 +4008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 354855301}
   m_Layer: 5
-  m_Name: Day30-1
+  m_Name: Day21-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5725,7 +5726,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "-30\uC77C-"
+  m_Text: "-21\uC77C-"
 --- !u!222 &497427601
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9249,7 +9250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 878985168}
   m_Layer: 5
-  m_Name: Day30
+  m_Name: Day21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12934,9 +12935,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "\uB208\uC73C\uB85C\uB294 \uBCF4\uC9C0 \uBABB\uD588\uC9C0\uB9CC \uBB54\uAC00
-    \uBB34\uAC70\uC6B4 \uAC83\uC744 \uB044\uB294 \uC18C\uB9AC\uAC00 \uB4E4\uB838\uB358
-    \uAC83 \uAC19\uB2E4.\r"
+  m_Text: "\uC5C6\uC5C8\uB2E4.\r\n\uC544, 2\uCE35\uC5D0 \uCC3D\uACE0 \uAC19\uC544
+    \uBCF4\uC774\uB294 \uACF3\uC744 \uBD10\uB480\uB294\uB370 \uD55C \uBC88 \uCC3E\uC544\uBD10\uC57C\uACA0\uB2E4."
 --- !u!222 &1148680543
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14629,7 +14629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1280197377}
   m_Layer: 5
-  m_Name: Day21
+  m_Name: Day30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17680,7 +17680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540592898}
   m_Layer: 5
-  m_Name: Day21-1
+  m_Name: Day30-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19492,13 +19492,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "\uC774\uAC83\uC73C\uB85C 3\uCE35\uC73C\uB85C \uB0B4\uB824\uAC00\uB294
-    \uBC29\uBC95\uAE4C\uC9C0 \uBAA8\uB450 \uC54C\uC558\uB2E4. 2\uCE35\uC740 \uAD50\uB2E8\uC5D0\uC11C
-    \uC9C0\uAE09\uD558\uB294 \uCE74\uB4DC\uD0A4\uAC00 \uC788\uC5B4\uC57C \uB0B4\uB824\uAC08
-    \uC218 \uC788\uACE0, 3\uCE35\uC740 2\uAC1C\uC758 \uCE7C\uC744 \uBB38\uC5D0 \uB07C\uC6CC
-    \uB123\uC73C\uBA74 \uC5F4\uB9AC\uAC8C \uC124\uACC4\uB418\uC5B4 \uC788\uC5C8\uB2E4.
-    \uADF8\uB7EC\uB098 \uCE7C\uC744 \uC5B4\uB514\uC11C \uAD6C\uD558\uB294 \uC9C0\uB294
-    \uBAA8\uB978\uB2E4. "
+  m_Text: " 2\uC8FC \uC815\uB3C4\uB97C \uAD50\uB2E8\uC6D0\uC73C\uB85C\uC11C \uC0DD\uD65C\uC5D0
+    \uCDA9\uC2E4\uD558\uAC8C \uC9C0\uB0B4\uB2E4\uBCF4\uB2C8 \uAD50\uB2E8\uC5D0\uC11C
+    \uB098\uB97C \uC778\uC815\uD574\uC8FC\uB294 \uAC83 \uAC19\uC558\uB2E4. \uADF8\uB798\uC11C
+    \uACE0\uC704\uC9C1 \uAC19\uC740 \uAD50\uB2E8\uC6D0\uC774 \uB0B4\uAC8C \uC9C0\uD558
+    3\uCE35\uC73C\uB85C \uB0B4\uB824\uAC00\uB294 \uBC95\uC744 \uC54C\uB824\uC900\uB2E4\uACE0
+    \uD588\uB2E4.\r \n\n\uB3C8\uC774 \uB420\uB9CC\uD55C \uAC83\uB4E4\uC744 \uCC3E\uB290\uB77C
+    \uACC4\uC18D \uB0A8\uC544\uC788\uC5C8\uB294\uB370 \uC544\uC9C1\uAE4C\uC9C4 \uC544\uBB34
+    \uAC83\uB3C4"
 --- !u!222 &1666375991
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21894,7 +21895,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "-21\uC77C-"
+  m_Text: "-30\uC77C-"
 --- !u!222 &1860745814
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23393,14 +23394,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: " 2\uC8FC \uC815\uB3C4\uB97C \uAD50\uB2E8\uC6D0\uC73C\uB85C\uC11C \uC0DD\uD65C\uC5D0
-    \uCDA9\uC2E4\uD558\uAC8C \uC9C0\uB0B4\uB2E4\uBCF4\uB2C8 \uAD50\uB2E8\uC5D0\uC11C
-    \uB098\uB97C \uC778\uC815\uD574\uC8FC\uB294 \uAC83 \uAC19\uC558\uB2E4. \uADF8\uB798\uC11C
-    \uACE0\uC704\uC9C1 \uAC19\uC740 \uAD50\uB2E8\uC6D0\uC774 \uB0B4\uAC8C \uC9C0\uD558
-    3\uCE35\uC73C\uB85C \uB0B4\uB824\uAC00\uB294 \uBC95\uC744 \uC54C\uB824\uC900\uB2E4\uACE0
-    \uD588\uB2E4.\r \n \uB3C8\uC774 \uB420\uB9CC\uD55C \uAC83\uB4E4\uC744 \uCC3E\uB290\uB77C
-    \uACC4\uC18D \uB0A8\uC544\uC788\uC5C8\uB294\uB370 \uC544\uC9C1\uAE4C\uC9C4 \uC544\uBB34
-    \uAC83\uB3C4 \uC5C6\uC5C8\uB2E4.\r "
+  m_Text: "\uC774\uAC83\uC73C\uB85C 3\uCE35\uC73C\uB85C \uB0B4\uB824\uAC00\uB294
+    \uBC29\uBC95\uAE4C\uC9C0 \uBAA8\uB450 \uC54C\uC558\uB2E4. 2\uCE35\uC740 \uAD50\uB2E8\uC5D0\uC11C
+    \uC9C0\uAE09\uD558\uB294 \uCE74\uB4DC\uD0A4\uAC00 \uC788\uC5B4\uC57C \uB0B4\uB824\uAC08
+    \uC218 \uC788\uACE0, 3\uCE35\uC740 2\uAC1C\uC758 \uCE7C\uC744 \uBB38\uC5D0 \uB07C\uC6CC
+    \uB123\uC73C\uBA74 \uC5F4\uB9AC\uAC8C \uC124\uACC4\uB418\uC5B4 \uC788\uC5C8\uB2E4.
+    \uADF8\uB7EC\uB098 \uCE7C\uC744 \uC5B4\uB514\uC11C \uAD6C\uD558\uB294 \uC9C0\uB294
+    \uBAA8\uB978\uB2E4. "
 --- !u!222 &1983556142
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25781,12 +25781,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2143936517}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 511352435}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1540592897}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1670145196}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
