@@ -20,7 +20,7 @@ public class FleshTwo : Object
         {
             if(slotSelectMng.selectedItem != this.gameObject)
             {
-                slotSelectMng.itemName = "살덩어리2";
+                slotSelectMng.itemName = "축축한 살덩어리";
                 slotSelectMng.SelectSlot(this.gameObject);
             }
             else

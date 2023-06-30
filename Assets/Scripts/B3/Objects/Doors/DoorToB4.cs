@@ -16,7 +16,7 @@ public class DoorToB4 : Object
     DataManager data;
     SaveDataClass saveData;
     public bool isB4DoorOpened;
-    public GameObject creature;
+    public GameObject creatureBody, creatureLeg;
 
     
     FloorTxt Ft;
@@ -35,7 +35,8 @@ public class DoorToB4 : Object
         
         if(isB4DoorOpened)
         {
-            creature.SetActive(false);
+            creatureBody.SetActive(false);
+            creatureLeg.SetActive(false);
         }
         saveAlarm = FindObjectOfType<SaveAlarm>();
     }
@@ -85,11 +86,13 @@ public class DoorToB4 : Object
         for(int i = 10; i >= 0; i--)
         {
             float f = i / 10f;
-            Color c = creature.GetComponent<SpriteRenderer>().color; 
+            Color c = creatureBody.GetComponent<SpriteRenderer>().color; 
             c.a = f;
-            creature.GetComponent<SpriteRenderer>().color = c;
+            creatureBody.GetComponent<SpriteRenderer>().color = c;
+            creatureLeg.GetComponent<SpriteRenderer>().color = c;
             yield return new WaitForSeconds(0.05f); //시간 조절하는거??
         }
-        creature.SetActive(false);  
+        creatureBody.SetActive(false);  
+        creatureLeg.SetActive(false); 
     }
 }

@@ -1,6 +1,6 @@
 {
     "isFirstPlay": false,
-    "isGameEnded": true,
+    "isGameEnded": false,
     "playerXstartPoints": [
         30.700000762939454,
         7.099999904632568,
@@ -18,57 +18,57 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": 3.5,
-    "currFloor": "B1",
-    "currRoomPos": "복도",
+    "playerXstartPoint": -1.340000033378601,
+    "currFloor": "B3",
+    "currRoomPos": "합주실",
     "volume1": 1.0,
     "volume2": 1.0,
     "itemList": [
         {
-            "prefabOrder": 0
-        },
-        {
-            "prefabOrder": 1
-        },
-        {
-            "prefabOrder": 2
-        },
-        {
             "prefabOrder": 3
+        },
+        {
+            "prefabOrder": 16
+        },
+        {
+            "prefabOrder": 14
+        },
+        {
+            "prefabOrder": 12
         }
     ],
-    "isFirstGB": false,
+    "isFirstGB": true,
     "isUnlocked": true,
     "isDiaryClicked": true,
-    "isMufflerPicked": true,
-    "isLetterPicked": true,
+    "isMufflerPicked": false,
+    "isLetterPicked": false,
     "isB2DoorOpened": true,
     "keyUsed": true,
     "alreadyOpen": true,
     "playPuzzleOnce": true,
     "destoryCursor": true,
     "isB3DoorOpened": true,
-    "OnB2CandleOnce": true,
-    "playB2StatueOnce": true,
-    "ReB2": true,
+    "OnB2CandleOnce": false,
+    "playB2StatueOnce": false,
+    "ReB2": false,
     "s1On": true,
     "s2On": true,
     "isB3ReEntered": true,
-    "OnB3CandleOnce": true,
-    "playB3StatueOnce": true,
+    "OnB3CandleOnce": false,
+    "playB3StatueOnce": false,
     "isPianoMemoGained": true,
-    "monsterExtractinInventory": true,
+    "monsterExtractinInventory": false,
     "isLabTableReEntered": true,
-    "isB4DoorOpened": true,
+    "isB4DoorOpened": false,
     "isTreesapPicked": true,
     "isBranchPicked": true,
     "isLeafPicked": true,
     "isFruitPicked": true,
-    "fruitNum": 5,
-    "isB4ReEntered": true,
-    "isDaggerPicked": true,
-    "isJewelGained": true,
-    "isB4LockUnlocked": true,
-    "isB5DoorOpened": true,
+    "fruitNum": 2,
+    "isB4ReEntered": false,
+    "isDaggerPicked": false,
+    "isJewelGained": false,
+    "isB4LockUnlocked": false,
+    "isB5DoorOpened": false,
     "isMonsterAppeared": false
 }

@@ -51,7 +51,7 @@ public class ItemCombinationMng : MonoBehaviour
                 labtableMng.itemActive["fleshOneActive"] = true; //살덩어리1 활성화   
                 flesh1Made = true;
 
-                slotSelectMng.itemName = "살덩어리1";
+                slotSelectMng.itemName = "딱딱한 살덩어리";
                 slotSelectMng.ResultItemNamePopUp(); 
 
                 sound.EffectPlay(sound.getItemEffect);
@@ -88,7 +88,7 @@ public class ItemCombinationMng : MonoBehaviour
                 labtableMng.itemActive["fleshTwoActive"] = true; //살덩어리2 활성화
                 flesh1Made = false;
 
-                slotSelectMng.itemName = "살덩어리2";
+                slotSelectMng.itemName = "축축한 살덩어리";
                 slotSelectMng.ResultItemNamePopUp();
                 sound.EffectPlay(sound.getItemEffect);
                 
@@ -113,6 +113,9 @@ public class ItemCombinationMng : MonoBehaviour
 
                 slotSelectMng.itemName = "투명한 액체";
                 slotSelectMng.ResultItemNamePopUp();
+
+                uiManager.getLiquidUI.SetActive(true);  //조합 실패했을 때 뜨는 스크립트 띄워주기
+                StartCoroutine(uiManager.LoadTextOneByOne(uiManager.getLiquidText.text, uiManager.inputTextUI));
         
                 sound.EffectPlay(sound.getItemEffect);
             }

@@ -6,12 +6,13 @@ using System.Text;
 
 public class B3UIManager : UI
 {
-    public GameObject startUI, wrongCombineUI, wrongMaterialUI;
-    public Text startText, wrongCombineText, wrongMaterialText;
+    public GameObject startUI, wrongCombineUI, wrongMaterialUI, getLiquidUI;
+    public Text startText, wrongCombineText, wrongMaterialText, getLiquidText;
     
     DataManager data;
     SaveDataClass saveData;
     public bool isB3ReEntered;
+    public List<Text> pianoroomStatueTexts;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,27 @@ public class B3UIManager : UI
             saveData.isB3ReEntered = true;
             data.Save();
         }
+    }
+
+     public IEnumerator LoadPianoStatueTexts()
+    {
+        yield return null;
+        for(int i = 0; i < 2; i++)
+        {
+            while(nowTexting)
+            {
+                yield return null;
+            }
+            for(int j = 0; j < 2; j++)
+            {
+                if(textOrder == j)
+                {
+                    StartCoroutine(LoadTextOneByOne(pianoroomStatueTexts[j].text, inputTextUI));
+                }
+            }
+            textOrder++;
+        }
+        textOrder = 0;
     }
 }
 
