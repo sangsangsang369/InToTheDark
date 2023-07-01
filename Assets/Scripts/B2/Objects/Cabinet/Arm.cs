@@ -7,7 +7,7 @@ public class Arm : Object
 {
     B2_UIManager UIManager;
     public GameObject armUI;
-    public List<Text> armTexts;
+    public Text armText;
     public Text inputTextUI;
     Player player;
 
@@ -23,7 +23,7 @@ public class Arm : Object
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             armUI.SetActive(true);
-            StartCoroutine(UIManager.LoadTexts(armTexts, inputTextUI, 2));
+            StartCoroutine(UIManager.LoadTextOneByOne(armText.text, inputTextUI));
         }
     } 
 }

@@ -53,6 +53,9 @@ public class MoveHand : MonoBehaviour
                 if((newValue > 45) && (newValue <= 75))
                 {
                     //1시
+                    secHour = false;
+                    thrHour = false;
+                    fourHour = false;
                     rectHour.localRotation = Quaternion.Euler(0, 0, -30.0f);
                     firstHour = true;
                 }
@@ -74,9 +77,7 @@ public class MoveHand : MonoBehaviour
                 else if((newValue > -75) && (newValue <= -45))
                 {
                     //5시
-                    firstHour = false;
                     rectHour.localRotation = Quaternion.Euler(0, 0, -150.0f);
-                    fourHour = true;
                 }
                 else if((newValue > -105) && (newValue <= -75))
                 {
@@ -119,7 +120,11 @@ public class MoveHand : MonoBehaviour
                 else if((newValue > 75) && (newValue <= 105))
                 {
                     //12시
+                    thrHour = false;
+                    firstHour = false;
+                    secHour = false;
                     rectHour.localRotation = Quaternion.Euler(0, 0, -360.0f);
+                    fourHour = true;
                 }
             }
             

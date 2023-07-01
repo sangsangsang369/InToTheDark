@@ -12,6 +12,7 @@ public class LockerWithLock : Object
     [SerializeField] private GameObject lockImage;
     [SerializeField] private GameObject lockObj;
     [SerializeField] private GameObject researchRecord;
+    [SerializeField] private GameObject inventoryUI, buttonUI;
 
     void Start()
     {
@@ -36,6 +37,9 @@ public class LockerWithLock : Object
                 saveAlarmNum++;
             }
             lockObj.SetActive(true);
+            inventoryUI.SetActive(false);
+            buttonUI.SetActive(false);
+
         }
         else
         {

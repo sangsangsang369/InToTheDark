@@ -7,7 +7,7 @@ public class Leg : Object
 {
     B2_UIManager UIManager;
     public GameObject legUI;
-    public List<Text> legTexts;
+    public Text legText;
     public Text inputTextUI;
     Player player;
     void Start()
@@ -22,7 +22,7 @@ public class Leg : Object
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             legUI.SetActive(true);
-           StartCoroutine(UIManager.LoadTexts(legTexts, inputTextUI, 2));
+            StartCoroutine(UIManager.LoadTextOneByOne(legText.text, inputTextUI));
         }
     } 
 }
