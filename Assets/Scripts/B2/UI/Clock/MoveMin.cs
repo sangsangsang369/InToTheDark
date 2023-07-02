@@ -53,9 +53,9 @@ public class MoveMin : MonoBehaviour
                 {
                     //0.0 00분
                     secMin = false;
-                    fourMin = false;
                     rectMin.localRotation = Quaternion.Euler(0, 0, 0.0f);
                     firstMin = true;
+                    fourMin = true;
                     thrMin = true;
                 }
                 else if ((newValue > 67.5) && (newValue <= 82.5))
@@ -118,7 +118,7 @@ public class MoveMin : MonoBehaviour
                     // 6.0 30분
                     firstMin = false;
                     thrMin = false;
-                    fourMin = true;
+                    fourMin = false;
                     rectMin.localRotation = Quaternion.Euler(0, 0, -180.0f);
                     secMin = true;
                 }

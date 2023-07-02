@@ -21,7 +21,7 @@ public class Sack2 : Object
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             sack2UI.SetActive(true);
-            StartCoroutine(UIManager.LoadTexts(sack2Texts, inputTextUI, 2));
+            StartCoroutine(UIManager.LoadTexts(sack2Texts, inputTextUI, 4));
         }
     } 
 }

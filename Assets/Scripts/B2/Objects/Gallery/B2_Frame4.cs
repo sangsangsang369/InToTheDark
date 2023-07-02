@@ -7,7 +7,7 @@ public class B2_Frame4 : Object
 {
     public B2_UIManager uiManager;
     public GameObject frame4UI;
-    public Text frame4Text;
+    public List<Text> frame4Texts;
     public Text inputTextUI;
     Player player;
     // Start is called before the first frame update
@@ -21,6 +21,6 @@ public class B2_Frame4 : Object
     public override void ObjectFunction()
     {
         frame4UI.SetActive(true);
-        StartCoroutine(uiManager.LoadTextOneByOne(frame4Text.text, inputTextUI));
+        StartCoroutine(uiManager.LoadTexts(frame4Texts, inputTextUI, 2));
     }
 }
