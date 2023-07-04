@@ -12,6 +12,7 @@ public class OptionTool : MonoBehaviour
     public bool haveMuf, haveKnife = false;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,8 @@ public class OptionTool : MonoBehaviour
         haveMuf = saveData.isMufflerPicked;
     }
 
-    public void MufBtnOn(){
+    public void MufBtnOn()
+    {
         if(haveMuf)
         {
             optionPanel.SetActive(true);
@@ -29,11 +31,18 @@ public class OptionTool : MonoBehaviour
         }
     }
 
-    public void KnifeBtnOn(){
+    public void KnifeBtnOn()
+    {
         if(haveKnife)
         {
             optionPanel.SetActive(true);
             knifeBtn.SetActive(true);
         }
+    }
+
+    public void OptionPanelOn()
+    {
+        MufBtnOn();
+        KnifeBtnOn();
     }
 }

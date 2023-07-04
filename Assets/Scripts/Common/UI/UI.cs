@@ -42,7 +42,6 @@ public class UI : MonoBehaviour
 
             if(Input.GetMouseButtonDown(0))
             {
-
                 inst.conversationAudioSource.Stop();
                 break;
             }

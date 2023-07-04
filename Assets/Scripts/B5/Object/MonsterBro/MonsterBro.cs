@@ -10,13 +10,18 @@ public class MonsterBro : MonoBehaviour
     public GameObject monsterBroUI;
     public Text monsterBroText;
     public Text inputTextUI;
-    int monsterBroTextNum = 0;
+    public int monsterBroTextNum = 0;
     SoundManager sound;
     public AudioSource monsterAudioSource;
+    OptionTool optionTool;
+    bool isMonsterbroTextOn = false;
+    public bool monsterBroTrigger = false;
+    public GameObject blackCanvas;
 
     void Start()
     {
         uiManager = FindObjectOfType<B5_UIManager>();
+        optionTool = FindObjectOfType<OptionTool>();
         sound = SoundManager.inst;
         monsterAudioSource = GetComponent<AudioSource>();
     }
@@ -24,6 +29,7 @@ public class MonsterBro : MonoBehaviour
     {
         MonsterBroWalking(41);
         AfterMonsterBroWalking();
+        MonsterBroWalking_Two();
         if(this.gameObject.GetComponent<Animator>().GetBool("isWalking") == true)
         {
             MonsterStepEffectPlay();
@@ -60,19 +66,13 @@ public class MonsterBro : MonoBehaviour
             {
                 this.gameObject.GetComponent<Animator>().SetBool("isWalking", false);
                 //MonsterStepEffectStop();
-                monsterBroUI.SetActive(true); // 우리의형제들을위해기도합시다 멘트 뜸
-                uiManager.StartCoroutine(uiManager.LoadTextOneByOne(monsterBroText.text, inputTextUI));
-                //여기에 선택지 띄움
-                //만약에 선택하지 않음이면 숫자증가
-                monsterBroTextNum++;
-
-                //단검 선택시,
-                // 주인공이 먼저 달려나가는 애니메이션 ㄱㄱ
-
-                // 머플러 선택시,
-                // 주인공 대사창 하나 띄우고 기존 애니메이션 재생
-
                 
+                if(!isMonsterbroTextOn)
+                {
+                    monsterBroUI.SetActive(true); // 우리의형제들을위해기도합시다 멘트 뜸
+                    isMonsterbroTextOn = true;
+                    StartCoroutine(uiManager.LoadTextOneByOne(monsterBroText.text, inputTextUI));
+                }
             }
     }
 
@@ -95,5 +95,21 @@ public class MonsterBro : MonoBehaviour
     public void MonsterStepEffectStop()
     {
         monsterAudioSource.Stop();
+    }
+
+    private void MonsterBroWalking_Two()
+    {
+        if (monsterBroTrigger)
+        {
+            this.GetComponent<Animator>().SetBool("isWalking", true);
+            this.transform.position += Vector3.right * 0.65f * Time.deltaTime;
+            player.GetComponent<Animator>().SetBool("isWalking", true);
+            player.transform.position -= Vector3.right * 2f * Time.deltaTime;
+            if(player.transform.position.x <= 46f)
+            {
+                blackCanvas.SetActive(true);
+                this.gameObject.SetActive(false);
+            }
+        }
     }
 }

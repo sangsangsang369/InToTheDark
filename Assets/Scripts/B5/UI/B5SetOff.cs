@@ -25,5 +25,15 @@ public class B5SetOff : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
-
+    
+    public void OffAndOptionOn()
+    {
+        if (!uiManager.nowTexting)
+        {
+            this.gameObject.SetActive(false);
+            inputTextUI.GetComponent<Text>().text = "";
+            inputTextUI.gameObject.SetActive(false);
+            uiManager.Option();
+        }
+    }
 }
