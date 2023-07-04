@@ -40,7 +40,7 @@ public class MonsterBro : MonoBehaviour
             {
                 this.gameObject.GetComponent<Animator>().SetBool("isWalking", true);
                 //MonsterStepEffectPlay();
-                this.gameObject.transform.position += Vector3.right * 1.4f * Time.deltaTime;
+                this.gameObject.transform.position += Vector3.right * 1.5f * Time.deltaTime;
 
                 if(player.transform.position.x < 48)
                 {
@@ -60,7 +60,7 @@ public class MonsterBro : MonoBehaviour
             {
                 this.gameObject.GetComponent<Animator>().SetBool("isWalking", false);
                 //MonsterStepEffectStop();
-                monsterBroUI.SetActive(true);
+                monsterBroUI.SetActive(true); // 우리의형제들을위해기도합시다 멘트 뜸
                 uiManager.StartCoroutine(uiManager.LoadTextOneByOne(monsterBroText.text, inputTextUI));
                 //여기에 선택지 띄움
                 //만약에 선택하지 않음이면 숫자증가
