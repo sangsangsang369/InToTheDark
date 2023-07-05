@@ -6245,7 +6245,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "B2\uB77C\uACE0 \uC368\uC838\uC788\uB294 \uCE74\uB4DC\uD0A4\uC774\uB2E4.\r"
+  m_Text: "KEY\uB77C\uACE0 \uC368\uC838\uC788\uB294 \uCE74\uB4DC\uD0A4\uC774\uB2E4.\r"
 --- !u!222 &513977516
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21168,6 +21168,7 @@ MonoBehaviour:
     isFruitPicked: 0
     fruitNum: 5
     isB4ReEntered: 0
+    isLabDoorOpened: 0
     isDaggerPicked: 0
     isJewelGained: 0
     isB4LockUnlocked: 0

@@ -14,7 +14,7 @@ public class StartSceneLoader : MonoBehaviour
         data = DataManager.singleTon;
         saveData = data.saveData;
 
-        if(saveData.isFirstPlay != false){
+        if(!saveData.isFirstPlay){
             skipBtn.SetActive(true);
         }
         else
