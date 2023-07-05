@@ -4,22 +4,12 @@ using UnityEngine;
 
 public class BlackCanvas : MonoBehaviour
 {
-    private float time_current = 3f;
-    private bool isEnded;
-    public GameObject NewsCanvas;
+    public GameObject EndingAnim;
 
-    void Update()
+    public void EndingAnimOn()
     {
-        if (0 < time_current)
-        {
-            time_current -= Time.deltaTime;
-            if(0 >= time_current)
-            {
-                NewsCanvas.SetActive(true);
-                //this.gameObject.SetActive(false);
-                return;
-            }
-        }
-    }   
+        EndingAnim.SetActive(true);
+        this.gameObject.SetActive(false);
+    } 
     
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PianoMng : MonoBehaviour
 {
     static List<string> AnswerList = new List<string> 
-    {"Ra", "Do_h", "Ra_h", "Sol_h", "Si", "Do_h", "Fa", "Re", "Sol", "Do"};
+    {"Do_h", "Re_h", "Mi_h", "Ra", "Ra_h"};
     public List<string> KeyInputsList = new List<string>();
     public GameObject PianoUI;
     public GameObject pianoMemoUI; 
@@ -55,7 +55,7 @@ public class PianoMng : MonoBehaviour
         int i = KeyInputsList.Count -1;
         if(KeyInputsList[i] == AnswerList[i])
         {
-            if(i == 9) //정답일 때
+            if(i == 4) //정답일 때
             {
                 //sound.EffectPlay(sound.gooEffect);
                 GooEffectPlay();

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -958,7 +958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &77931736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -972,9 +972,10 @@ RectTransform:
   m_Children:
   - {fileID: 134625165}
   - {fileID: 132443433}
+  - {fileID: 1083356699}
+  - {fileID: 759714246}
   - {fileID: 1702666164}
   - {fileID: 1540102008}
-  - {fileID: 1083356699}
   m_Father: {fileID: 1858847774}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1515,7 +1516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &132443433
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8605,6 +8606,80 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &759714245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 759714246}
+  - component: {fileID: 759714248}
+  - component: {fileID: 759714247}
+  m_Layer: 5
+  m_Name: 'PianoNote '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &759714246
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759714245}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 77931736}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 265}
+  m_SizeDelta: {x: 1048, y: 456}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &759714247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759714245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e587b46e4f73d3d4b865af15b5048511, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &759714248
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759714245}
+  m_CullTransparentMesh: 0
 --- !u!1 &763007707
 GameObject:
   m_ObjectHideFlags: 0
@@ -9027,7 +9102,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1672, y: 717.5}
+  m_SizeDelta: {x: 993, y: 686}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &800333583
 MonoBehaviour:
@@ -9048,7 +9123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1aa96c2c59b2d354699cdbb5081f576f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f60e79962347d494caaa831f2156d711, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12374,12 +12449,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 77931736}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -670.8, y: 300}
-  m_SizeDelta: {x: 362, y: 103}
+  m_AnchoredPosition: {x: -537, y: 237}
+  m_SizeDelta: {x: 441, y: 367}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1083356700
 MonoBehaviour:
@@ -12467,7 +12542,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fa0272151657e714686822dcaf00ffee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5f548e8c4e9f2e439878d88521682e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12661,6 +12736,7 @@ MonoBehaviour:
     isFruitPicked: 0
     fruitNum: 5
     isB4ReEntered: 0
+    isLabDoorOpened: 0
     isDaggerPicked: 0
     isJewelGained: 0
     isB4LockUnlocked: 0
@@ -16355,7 +16431,7 @@ SpriteRenderer:
   m_Size: {x: 31.83, y: 10.801685}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1465242131
@@ -17189,7 +17265,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 77931736}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19408,7 +19484,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 77931736}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21494,9 +21570,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD53C\uC544\uB178\uC5D0 \uC545\uBCF4 \uB300\uC2E0\uC5D0 \uCC45\uC774
-    \uD3BC\uCCD0\uC838 \uC788\uACE0, \uADF8 \uC606\uC5D0\uB294 \uCABD\uC9C0\uAC00
-    \uB193\uC5EC\uC788\uB2E4."
+  m_Text: "\uD53C\uC544\uB178\uC5D0 \uC545\uBCF4 \uB300\uC2E0  \uB099\uC11C\uCC98\uB7FC
+    \uBCF4\uC774\uB294 \uC885\uC774\uAC00 \uD3BC\uCCD0\uC838 \uC788\uACE0, \uADF8
+    \uC606\uC5D0 \uCABD\uC9C0\uAC00 \uB193\uC5EC\uC788\uB2E4."
 --- !u!222 &1808708559
 CanvasRenderer:
   m_ObjectHideFlags: 0

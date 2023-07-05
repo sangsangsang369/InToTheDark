@@ -16,7 +16,8 @@ public class MonsterBro : MonoBehaviour
     OptionTool optionTool;
     bool isMonsterbroTextOn = false;
     public bool monsterBroTrigger = false;
-    public GameObject blackCanvas;
+    public bool monsterBroTrigger_Muf = false;
+    public GameObject KnifeEnding, MufflerEnding;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class MonsterBro : MonoBehaviour
         MonsterBroWalking(41);
         AfterMonsterBroWalking();
         MonsterBroWalking_Two();
+        MonsterBroWalking_Muffler();
         if(this.gameObject.GetComponent<Animator>().GetBool("isWalking") == true)
         {
             MonsterStepEffectPlay();
@@ -104,6 +106,19 @@ public class MonsterBro : MonoBehaviour
         monsterAudioSource.Stop();
     }
 
+    private void MonsterBroWalking_Muffler()
+    {
+        if (monsterBroTrigger_Muf)
+        {
+            this.GetComponent<Animator>().SetBool("isWalking", true);
+            this.transform.position += Vector3.right * 0.2f * Time.deltaTime;
+            if(this.transform.position.x <= 42f)
+            {
+                MufflerEnding.SetActive(true);
+            }
+        }
+    }
+
     private void MonsterBroWalking_Two()
     {
         if (monsterBroTrigger)
@@ -114,7 +129,7 @@ public class MonsterBro : MonoBehaviour
             player.transform.position -= Vector3.right * 3f * Time.deltaTime;
             if(player.transform.position.x <= 46f)
             {
-                blackCanvas.SetActive(true);
+                KnifeEnding.SetActive(true);
                 this.gameObject.SetActive(false);
             }
         }

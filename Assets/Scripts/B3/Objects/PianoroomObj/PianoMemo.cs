@@ -26,7 +26,7 @@ public class PianoMemo : Object
         }
         if(slotSelectMng.selectedItem != this.gameObject)
         {
-            slotSelectMng.itemName = "악보가 적힌 쪽지";
+            slotSelectMng.itemName = "글이 적힌 쪽지";
             slotSelectMng.SelectSlot(this.gameObject);
         }
         else
