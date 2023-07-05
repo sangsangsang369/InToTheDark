@@ -33,5 +33,6 @@ public class B5_UIManager : UI
             monsterBro.monsterBroTextNum++;
         }   
     }
+
 }
 

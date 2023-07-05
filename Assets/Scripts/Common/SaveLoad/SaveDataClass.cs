@@ -66,6 +66,7 @@ public class SaveDataClass
 
     //지하 4층
     public bool isB4ReEntered;
+    public bool isLabDoorOpened;
     public bool isDaggerPicked;
     public bool isJewelGained;
     public bool isB4LockUnlocked;
@@ -126,6 +127,7 @@ public class SaveDataClass
 
         //지하 4층
         isB4ReEntered = false;
+        isLabDoorOpened = false;
         isDaggerPicked = false;
         isJewelGained = false;
         isB4LockUnlocked = false;

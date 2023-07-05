@@ -18,17 +18,17 @@
         15.699999809265137,
         3.5
     ],
-    "playerXstartPoint": 15.699999809265137,
+    "playerXstartPoint": 3.5,
     "currFloor": "B5",
     "currRoomPos": "복도",
     "volume1": 1.0,
     "volume2": 1.0,
     "itemList": [
         {
-            "prefabOrder": 0
+            "prefabOrder": 1
         },
         {
-            "prefabOrder": 1
+            "prefabOrder": 0
         },
         {
             "prefabOrder": 3
@@ -53,7 +53,7 @@
     "isB3DoorOpened": true,
     "OnB2CandleOnce": false,
     "playB2StatueOnce": false,
-    "ReB2": true,
+    "ReB2": false,
     "s1On": true,
     "s2On": true,
     "isB3ReEntered": true,
@@ -67,8 +67,9 @@
     "isBranchPicked": true,
     "isLeafPicked": true,
     "isFruitPicked": true,
-    "fruitNum": 3,
+    "fruitNum": 2,
     "isB4ReEntered": true,
+    "isLabDoorOpened": false,
     "isDaggerPicked": true,
     "isJewelGained": true,
     "isB4LockUnlocked": true,

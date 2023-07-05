@@ -73,6 +73,7 @@ public class MonsterBro : MonoBehaviour
                     isMonsterbroTextOn = true;
                     StartCoroutine(uiManager.LoadTextOneByOne(monsterBroText.text, inputTextUI));
                 }
+                optionTool.OptionPanelOn();
             }
     }
 
@@ -102,9 +103,9 @@ public class MonsterBro : MonoBehaviour
         if (monsterBroTrigger)
         {
             this.GetComponent<Animator>().SetBool("isWalking", true);
-            this.transform.position += Vector3.right * 0.65f * Time.deltaTime;
+            this.transform.position += Vector3.right * 0.2f * Time.deltaTime;
             player.GetComponent<Animator>().SetBool("isWalking", true);
-            player.transform.position -= Vector3.right * 2f * Time.deltaTime;
+            player.transform.position -= Vector3.right * 3f * Time.deltaTime;
             if(player.transform.position.x <= 46f)
             {
                 blackCanvas.SetActive(true);
