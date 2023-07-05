@@ -25,6 +25,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip B12BGM;
     public AudioClip B34BGM;
     public AudioClip endingBGM;
+    public AudioClip endingBGM2;
 
     //Common Effect
     public AudioClip getItemEffect;

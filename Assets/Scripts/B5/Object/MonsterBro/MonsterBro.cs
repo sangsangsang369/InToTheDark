@@ -73,7 +73,13 @@ public class MonsterBro : MonoBehaviour
                     isMonsterbroTextOn = true;
                     StartCoroutine(uiManager.LoadTextOneByOne(monsterBroText.text, inputTextUI));
                 }
-                optionTool.OptionPanelOn();
+                if(!uiManager.nowTexting)
+                {
+                    monsterBroUI.SetActive(false);
+                    inputTextUI.text = "";
+                    optionTool.OptionPanelOn();
+                }
+                
             }
     }
 
