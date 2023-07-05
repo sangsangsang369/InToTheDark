@@ -28,6 +28,7 @@ public class IntroScpt : MonoBehaviour
     {
         introCanvas.SetActive(true);
         IntroOn();
+        
     }
     
     public void IntroOn()

@@ -612,6 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d263d44fba1f5408cff85f897bc76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skipBtn: {fileID: 0}
 --- !u!1 &124380340
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d263d44fba1f5408cff85f897bc76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skipBtn: {fileID: 0}
 --- !u!114 &238035144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1232,6 +1234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d263d44fba1f5408cff85f897bc76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skipBtn: {fileID: 576151201}
 --- !u!114 &466617064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1531,7 +1534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &576151202
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1728,7 +1731,6 @@ GameObject:
   m_Component:
   - component: {fileID: 941615352}
   - component: {fileID: 941615351}
-  - component: {fileID: 941615353}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -1802,19 +1804,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &941615353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941615350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbe289afc86098e45908f084ef060e6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skipBtn: {fileID: 576151201}
 --- !u!1 &965463165
 GameObject:
   m_ObjectHideFlags: 0

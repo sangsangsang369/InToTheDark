@@ -8,6 +8,7 @@ public class LabTable : Object
     public GameObject labTableUI, labTableExplainUI;
     public Text labTableText, labTableExplainText;
     public Text inputTextUI;
+    public GameObject pausebtn;
     LabTableItemManager labtableMng;
     B3UIManager uiManager;
     public GameObject labTableObj; //ui틀면 콜라이더 겹쳐지는 거 땜에 추가
@@ -16,6 +17,7 @@ public class LabTable : Object
     SaveDataClass saveData;
     public bool isLabTableReEntered;
     public bool isLabTableOn;
+    
 
     void Start()
     {
@@ -35,6 +37,7 @@ public class LabTable : Object
     public override void ObjectFunction()
     {
         labTableUI.SetActive(true);  //실험대 ui 켜기
+        pausebtn.SetActive(false);
         if (labTableUI.activeSelf == true)  //실험대 ui 켜지면
         {
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;  //실험대 콜라이더 끄기

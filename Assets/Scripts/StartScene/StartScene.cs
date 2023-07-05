@@ -10,6 +10,7 @@ public class StartScene : MonoBehaviour
     SceneLoadManager sceneLoader;
     SoundManager inst;
     IntroScpt IntroScpt;
+    [SerializeField] GameObject skipBtn;
 
     void Start()
     {
@@ -29,11 +30,17 @@ public class StartScene : MonoBehaviour
 
     public void StartNewGame()
     {
+        if(!saveData.isFirstPlay){
+            skipBtn.SetActive(true);
+        }
+        else
+            skipBtn.SetActive(false);
         inst.ButtonEffectPlay(inst.buttonOnStartScene);
         data.saveData = new SaveDataClass();
         data.saveData.isFirstPlay = false;
         data.Save();
         IntroScpt.nowstart();
         IntroScpt.introCanvas.SetActive(true);
+        
     }
 }

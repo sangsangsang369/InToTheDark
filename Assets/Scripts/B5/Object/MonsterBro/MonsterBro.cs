@@ -111,9 +111,10 @@ public class MonsterBro : MonoBehaviour
         if (monsterBroTrigger_Muf)
         {
             this.GetComponent<Animator>().SetBool("isWalking", true);
-            this.transform.position += Vector3.right * 0.2f * Time.deltaTime;
+            this.transform.position += Vector3.right * 1.5f * Time.deltaTime;
             if(this.transform.position.x <= 42f)
             {
+                
                 MufflerEnding.SetActive(true);
             }
         }
@@ -124,7 +125,7 @@ public class MonsterBro : MonoBehaviour
         if (monsterBroTrigger)
         {
             this.GetComponent<Animator>().SetBool("isWalking", true);
-            this.transform.position += Vector3.right * 0.2f * Time.deltaTime;
+            this.transform.position += Vector3.right * 0.5f * Time.deltaTime;
             player.GetComponent<Animator>().SetBool("isWalking", true);
             player.transform.position -= Vector3.right * 3f * Time.deltaTime;
             if(player.transform.position.x <= 46f)
