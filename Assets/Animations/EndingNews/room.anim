@@ -399,7 +399,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 22.4
+    m_StopTime: 22.416666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -850,4 +850,12 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 22.416666
+    functionName: TextOn
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 0ca9f8aff4b87044a95c4aaf868517a4,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
