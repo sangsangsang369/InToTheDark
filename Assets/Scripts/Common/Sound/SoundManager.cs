@@ -37,6 +37,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip doorOpenEffect;
     public AudioClip stairEffect;
 
+
     //B1 Effect
     public AudioClip bookSelectEffect;
     public AudioClip dropEffect;
@@ -86,6 +87,7 @@ public class SoundManager : MonoBehaviour
     //B5 Effect
     public AudioClip doorSlideEffect;
     public AudioClip playerScreamEffect;
+    public AudioClip knifepookEffect;
 
     // Start is called before the first frame update
     void Start()
