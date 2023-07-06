@@ -6,37 +6,30 @@ using UnityEngine.UI;
 public class MufflerBtn : MonoBehaviour
 {
     B5_UIManager uiManager;
-    MonsterBro monsterBro;
+    public MonsterBro monsterBro;
     public GameObject textUI;
-    public GameObject textsUI;
     public List<Text> muffTexts;
-    public List<Text> newsTexts;
-    public Text inputTextUI, inputText2UI;
+    public Text inputTextUI;
 
-    public GameObject fadeOut;
     SoundManager inst;
-    public AudioClip endingBGM2;
-    public GameObject newsScene1;
-    public List<GameObject> covers;
-    public GameObject cover;
 
 
     // Start is called before the first frame update
     void Start()
     {
         uiManager = FindObjectOfType<B5_UIManager>();
-        monsterBro  = FindObjectOfType<MonsterBro>();
+        //monsterBro  = FindObjectOfType<MonsterBro>();
         inst = SoundManager.inst;
     }
 
     public void Clicked(){
         textUI.SetActive(true);
         StartCoroutine(uiManager.LoadTexts(muffTexts, inputTextUI,2));
-        fadeOut.SetActive(true);
         PlayOnBGM();
+        monsterBro.monsterBroTrigger_Muf = true;
     }
 
     public void PlayOnBGM(){
-        inst.PlayBGM(endingBGM2);
+        inst.PlayBGM(inst.endingBGM2);
     }
 }
