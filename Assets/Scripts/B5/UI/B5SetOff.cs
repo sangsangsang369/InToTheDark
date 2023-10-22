@@ -32,9 +32,9 @@ public class B5SetOff : MonoBehaviour
     {
         if (!uiManager.nowTexting)
         {
+            this.gameObject.SetActive(false);
             inputTextUI.GetComponent<Text>().text = "";
             inputTextUI.gameObject.SetActive(false);
-            this.gameObject.SetActive(false);
             uiManager.Option();
         }
     }
@@ -43,9 +43,10 @@ public class B5SetOff : MonoBehaviour
     {
         if (!uiManager.nowTexting)
         {
+            this.gameObject.SetActive(false);
             inputTextUI.GetComponent<Text>().text = "";
             inputTextUI.gameObject.SetActive(false);
-            this.gameObject.SetActive(false);
+            monsterBro.monsterBroTrigger_Muf = true;
         }
     }
 
@@ -59,7 +60,6 @@ public class B5SetOff : MonoBehaviour
             if(uiManager.numOfClicked == 1)
             {
                 obj.SetActive(true);
-                inputTextUI.gameObject.SetActive(false);
                 uiManager.numOfClicked = 0;
             }
             this.gameObject.SetActive(false);

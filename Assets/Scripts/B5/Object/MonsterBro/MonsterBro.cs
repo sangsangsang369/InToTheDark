@@ -13,14 +13,11 @@ public class MonsterBro : MonoBehaviour
     public int monsterBroTextNum = 0;
     SoundManager sound;
     public AudioSource monsterAudioSource;
-    public AudioClip playerScreamEffect;
-    //public AudioClip knifeEffect;
-
     OptionTool optionTool;
     bool isMonsterbroTextOn = false;
     public bool monsterBroTrigger = false;
     public bool monsterBroTrigger_Muf = false;
-    public GameObject KnifeEnding;
+    public GameObject KnifeEnding, MufflerEnding;
 
     void Start()
     {
@@ -109,16 +106,16 @@ public class MonsterBro : MonoBehaviour
         monsterAudioSource.Stop();
     }
 
-    public void MonsterBroWalking_Muffler()
+    private void MonsterBroWalking_Muffler()
     {
-        if(monsterBroTrigger_Muf)
+        if (monsterBroTrigger_Muf)
         {
             this.GetComponent<Animator>().SetBool("isWalking", true);
-            this.transform.position += Vector3.right * 0.8f * Time.deltaTime;
-            if(this.transform.position.x >= 45f)
+            this.transform.position += Vector3.right * 1.5f * Time.deltaTime;
+            if(this.transform.position.x <= 42f)
             {
-                monsterBroTrigger_Muf = false;
-                this.gameObject.SetActive(false);
+                
+                MufflerEnding.SetActive(true);
             }
         }
     }
@@ -134,11 +131,7 @@ public class MonsterBro : MonoBehaviour
             if(player.transform.position.x <= 46f)
             {
                 KnifeEnding.SetActive(true);
-                monsterBroTrigger = false;
                 this.gameObject.SetActive(false);
-                sound.ItemEffectPlaying(sound.knifepookEffect);
-                sound.EffectPlay(sound.playerScreamEffect);
-                
             }
         }
     }
