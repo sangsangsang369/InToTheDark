@@ -66,7 +66,7 @@ public class InventoryMng : MonoBehaviour
             }
             
         }
-        if(saveData.currFloor == "B1" || saveData.currFloor == "B2")
+        if(saveData.currFloor == "B1" || saveData.currFloor == "B2" || saveData.currFloor == "B3")
         {
             BtnCheck();
         }
@@ -146,9 +146,6 @@ public class InventoryMng : MonoBehaviour
         ItemClass itemPicked = new ItemClass(order);
         saveData.itemList.Add(itemPicked);
         data.Save();
-        if(saveData.currFloor == "B1" || saveData.currFloor == "B2"){
-            BtnSetOn();
-        }
     }
 
 
@@ -174,7 +171,7 @@ public class InventoryMng : MonoBehaviour
         ItemClass itemPicked = new ItemClass(order);
         saveData.itemList.Add(itemPicked);
         data.Save();
-        if(saveData.currFloor == "B1" || saveData.currFloor == "B2"){
+        if(saveData.currFloor == "B1" || saveData.currFloor == "B2" || saveData.currFloor == "B3"){
             BtnSetOn();
         }
     }
@@ -244,7 +241,7 @@ public class InventoryMng : MonoBehaviour
                 break;
             }
         }
-        if(saveData.currFloor == "B1" || saveData.currFloor == "B2"){
+        if(saveData.currFloor == "B1" || saveData.currFloor == "B2" || saveData.currFloor == "B3"){
             BtnSetOn();
         }
     }
@@ -346,4 +343,8 @@ public class InventoryMng : MonoBehaviour
             invenBtn.OnBtninteractable();
         }
     }
+
+    // public void B3TreeRoomBtnSetOn(){
+    //     invenBtn.OnBtninteractable();
+    // }
 }

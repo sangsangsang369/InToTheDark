@@ -36,5 +36,7 @@ public class CloseBtnMng : MonoBehaviour
             alarmNum++;
         }
         slotSelectMng.DestoryItemName();
+        inventoryMng.BtnCheck();
+        inventoryMng.BtnSetOn();
     }
 }

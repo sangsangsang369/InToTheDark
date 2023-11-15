@@ -12,6 +12,7 @@ public class DoorToTreeroom : Object
     SaveDataClass saveData;
     SoundManager inst;
     FloorTxt Ft; 
+    InventoryMng inventoryMng;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class DoorToTreeroom : Object
         saveData = data.saveData;
         inst = SoundManager.inst;
         Ft = FindObjectOfType<FloorTxt>();
+        inventoryMng = FindObjectOfType<InventoryMng>();
     }
 
     // Update is called once per frame
@@ -42,5 +44,6 @@ public class DoorToTreeroom : Object
         inst.monsterWalkingSource.clip = null;
         inst.monsterGrowlingSource.clip = null;
         playerObj.transform.position = new Vector2(11.0f, -0.83f);
+        // inventoryMng.B3TreeRoomBtnSetOn();
     }
 }
