@@ -23,6 +23,11 @@ public class ForAnim : MonoBehaviour
         textsUI.SetActive(true);
     }
 
+    public void SetOffPrevText(){
+        prevText.gameObject.SetActive(false);
+        preTextUI.SetActive(false);
+    }
+
     public void SetOffScpt(){
         textsUI.SetActive(false);
     }

@@ -18,13 +18,13 @@ public class MufflerBtn : MonoBehaviour
     void Start()
     {
         uiManager = FindObjectOfType<B5_UIManager>();
-        //monsterBro  = FindObjectOfType<MonsterBro>();
+        monsterBro  = FindObjectOfType<MonsterBro>();
         inst = SoundManager.inst;
     }
 
     public void Clicked(){
         textUI.SetActive(true);
-        StartCoroutine(uiManager.LoadTexts(muffTexts, inputTextUI,2));
+        StartCoroutine(uiManager.LoadTexts(muffTexts, inputTextUI, 3));
         PlayOnBGM();
         monsterBro.monsterBroTrigger_Muf = true;
     }
